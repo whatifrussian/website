@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords" content="xkcd, what if, what if перевод, xkcd перевод, что если">
+    <link rel="shortcut icon" href="{{ SITEURL }}/theme/img/favicon.ico">
+    <link rel="canonical" href="{{ SITEURL }}">
+    
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/content.css">
+
+    <script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="{{ SITEURL }}/theme/js/main.js"></script>
+    {% if FEED_ALL_ATOM %}
+        <link href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate"
+              title="{{ SITENAME }} ATOM Feed"/>
+    {% endif %}
+    {% if FEED_ALL_RSS %}
+        <link href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" type="application/atom+xml" rel="alternate"
+              title="{{ SITENAME }} RSS Feed"/>
+    {% endif %}
+
+</head>
+<body>
+    <div class="all">
+        <header>
+
+            <a class="logo" href="#">
+                <div class="logo-main">
+                    <div class="logo-trex"></div>
+                    <div class="logo-front"></div>
+                </div>
+                <img src="{{ SITEURL }}/theme/img/logo.png" class="logo-img" alt="Что если?"/>
+            </a>
+            
+            <div class="header-title">
+                <span>Каждый четверг отвечаем на ваши гипотетические вопросы с точки зрения физики</span>
+                <b class="t1"></b><b class="t2"></b><b class="t3"></b>
+            </div>
+            
+            <nav>
+                <a class="menu-button"></a>
+                <ul class="menu">
+                    <li class="menu-item translations selected"><a><b></b><span>Переводы</span></a></li>
+                    <li class="menu-item news"><a href="#"><b></b><span>Новости</span></a></li>
+                    <li class="menu-item help"><a href="how-to-help.html"><b></b><span>Как нам помочь</span></a></li>
+                    <li class="menu-item about"><a href="#"><b></b><span>О нас</span></a></li>
+                    <li class="menu-item search"><input type="search" name="search"></li>
+                </ul>
+                <ul class="menu-social">
+                    <li class="menu-item vk"><a href="#"><b title="Мы ВКонтакте"></b><span>Мы ВКонтакте</span></a></li>
+                    <li class="menu-item twitter"><a href="#"><b title="Наш Twitter"></b><span>Наш Twitter</span></a></li>
+                </ul>
+            </nav>
+
+        </header>
+        <div class="content">
+            <div class="border-top"></div>
+            <div class="border-left"></div>
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div class="border-bottom"><hr></div>
+            <script type="text/javascript">(function() {
+              if (window.pluso)if (typeof window.pluso.start == "function") return;
+              if (window.ifpluso==undefined) { window.ifpluso = 1;
+                var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+                var h=d[g]('body')[0];
+                h.appendChild(s);
+              }})();</script>
+            <div class="social-buttons"><div class="pluso" data-background="transparent" data-options="medium,round,line,horizontal,nocounter,theme=01" data-services="vkontakte,facebook,twitter,google"></div></div>
+    </div>
+    <footer>
+        <a href="http://xkcd.ru"><img src="{{ SITEURL }}/theme/img/xkcd.png" alt="xkcd.ru" title="xkcd по-русски!"></a>
+        
+        <p><strong>© What If? по-русски, 2014</strong><br><span>(а еще мы переводим комиксы на сайте <a href="http://xkcd.ru">xkcd.ru</a>!)</span></p>
+        <p>
+            В материалах сайта используются оригинальные тексты и изображения с сайта <a href="http://what-if.xkcd.com/">what-if.xkcd.com</a>.<br>
+            Материалы сайта источника и этого сайта распространяются по лицензии <a href="http://creativecommons.org/licenses/by-nc/2.5/">Creative Commons Attribution-NonCommercial 2.5 License</a>. Также авторы этого сайта полностью солидарны с <a href="http://xkcd.com/license.html">комментариями к лицензии</a>.
+        </p>
+        <p>
+            Ах, да, создатели этого сайта:
+            <a class="usericon whitehat" href="https://libc6.org/"><b></b>librarian</a>, 
+            <a class="usericon" href="http://virtualmind.ru"><b></b>bober_maniac</a>, 
+            <a class="usericon" href="https://vk.com/andront89"><b></b>Dront</a>, 
+            <a class="usericon" href="https://vk.com/bakuutin"><b></b>Bakuutin</a>, 
+            <a class="usericon female" href="http://birulik.ru"><b></b>birulik</a>, 
+            <a class="usericon" href="http://vk.com/id56054954"><b></b>manwithrifle</a>, 
+            <span class="usericon"><b></b>Irish_Cadle</span>, 
+            <a class="usericon" href="http://vk.com/viktor.love"><b></b>nsinreal</a>, 
+            <a class="usericon" href="http://vk.com/sarnetsky"><b></b>UGN</a>, 
+            <a class="usericon tux" href="http://totktonada.ru"><b></b>Totktonada</a>, 
+            <span class="usericon"><b></b>rlax</span>, 
+            <span class="usericon"><b></b>Antitemniy</span>, 
+            <a class="usericon blackhat" href="https://twitter.com/uncleLem"><b></b>uncle Lem</a>, 
+            <span class="usericon"><b></b>borisano</span>, 
+            <span class="usericon female"><b></b>daria_ko</span>, 
+            <span class="usericon female"><b></b>murfel</span>, 
+            <span class="usericon"><b></b>Бакланов</span>, 
+            <span class="usericon female"><b></b>KatyMarinina</span>, 
+            <span class="usericon female"><b></b>littledespair</span>, 
+            <a class="usericon glasses" href="http://deepasm.livejournal.com"><b></b>deepasm</a>, 
+            <span class="usericon"><b></b>escyth</span>, 
+            <span class="usericon"><b></b>Agamidae</span>, 
+            <a class="usericon beret" href="https://vk.com/13x666"><b></b>13x666</a>, 
+            <span class="usericon female"><b></b>klux</span>,
+            <span class="usericon"><b></b>porcupinity</span>, 
+            <span class="usericon"><b></b>CreepMaH</span>, 
+            <span class="usericon"><b></b>Sharkus</span>.
+        </p>
+        <p style="opacity: 0.6">Дизайн — <a class="usericon beret" href="https://vk.com/13x666"><b></b>13x666</a></p>
+    </footer>
+</body>
+</html>

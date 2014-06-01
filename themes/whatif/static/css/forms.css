@@ -1,0 +1,89 @@
+.hidden {
+	display: none;
+}
+
+#feedback table {
+	width: 100%;
+}
+
+#feedback {
+	margin-bottom: 30px;
+}
+
+#feedback td.label-cell {
+	max-width: 160px;
+	min-width: 120px;
+	width: 20%;
+
+	vertical-align: baseline;
+	padding: 15px;
+	padding-left: 0;
+	text-align: right;
+}
+
+#feedback input[type=text], #feedback textarea, #feedback select {
+	width: 98%;
+	padding: 3px;
+	-webkit-box-shadow: inset 0px 2px 1px 0px rgba(0, 0, 0, 0.03);
+	-moz-box-shadow: inset 0px 2px 1px 0px rgba(0, 0, 0, 0.03);
+	box-shadow: inset 0px 2px 1px 0px rgba(0, 0, 0, 0.03);
+	border: 1px solid #9f9f9f;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	cursor: text;
+	vertical-align: baseline;
+}
+
+#feedback label {
+	cursor: pointer;
+}
+
+#feedback textarea {
+	height: 100px;
+}
+
+.big-button {
+	cursor: pointer;
+	margin-top: 10px;
+	width: 200px;
+	height: 40px;
+	color: #fff;
+	background-color: rgb(141,199,63);
+	border: none;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 2px 3px 0px rgba(141,199,63,0.4);
+	-moz-box-shadow: 0px 2px 3px 0px rgba(141,199,63,0.4);
+	box-shadow: 0px 2px 3px 0px rgba(141,199,63,0.4);
+}
+
+.small-button {
+	cursor: pointer;
+	border: none;
+	display: inline;
+	background: none;
+	text-decoration: underline;
+	margin-left: 20px;
+
+	height: 40px;
+	color: #aaa;
+}
+
+/* Small form */
+@media all and (max-width: 450px) {
+	#feedback td {
+		display: block;
+	}
+	#feedback td.label-cell {
+		max-width: 100%;
+		width: 100%;
+		text-align: left;
+		padding: 1em 0 0.4em 0;
+	}
+	.button-cell {
+		text-align: center;
+	}
+	.small-button {
+		margin: 0 1em;
+	}
+}

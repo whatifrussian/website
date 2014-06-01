@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if articles %}
+        {% for article in (articles_page.object_list if articles_page else articles) %}
+            <div class="main">
+                <ul class="menu-page clearfix">
+                {% if article.prev_article %}
+                    <li class="prev"><a href="{{ SITEURL }}/{{ article.prev_article.url}}" title="{{ article.prev_article.title }}">Раньше</a></li>
+                {% endif %}
+                    <li class="contents"><a href="{{ SITEURL }}/translations">Оглавление</a></li>
+                {% if article.next_article %}    
+                    <li class="next"><a href="{{ SITEURL }}/{{ article.next_article.url}}" title="{{ article.next_article.title}}">Позже</a></li>
+                {% endif %}
+                </ul>
+                <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+                <span class="original">Оригинал: <a href="{{ article.source }}" target="blank">{{ article.source }}<b></b></a></span>
+
+                <div class="page">
+                    {{ article.content }}
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock content %}
