@@ -9,7 +9,7 @@ Formulas: True
 > 
 > — Джеймс Зетлен
 
-![Ёмкость перфокарты — 0,57 твита.](/uploads/063-googles-datacenters-on-punch-cards/google_punchcard.png)
+![](/uploads/063-googles-datacenters-on-punch-cards/google_punchcard.png "Ёмкость перфокарты — 0,57 твита.")
 
 Пожалуй, Google может хранить больше данных, чем любая другая организация на Земле.
 
@@ -96,11 +96,11 @@ Google очень скрытен в отношении своей деятель
 
 Перфокарта хранит около 80 символов, а в коробке 2000 карт:
 
-![Четырех коробок перфокарт хватит всем.](/uploads/063-googles-datacenters-on-punch-cards/google_160kb_ru.png )
+![](/uploads/063-googles-datacenters-on-punch-cards/google_160kb_ru.png  "Четырех коробок перфокарт хватит всем.")
 
 Пятнадцати эксабайт перфокарт хватит, чтобы покрыть мою родину, Новую Англию, слоем толщиной около 4,5 километра. Это в три раза больше, чем толщина ледяного покрова над регионом в последний ледниковый период.
 
-![Иллюстрация любезно предоставлена с разрешения xkcd.com.](/uploads/063-googles-datacenters-on-punch-cards/google_ice_ru.png)
+![](/uploads/063-googles-datacenters-on-punch-cards/google_ice_ru.png "Иллюстрация любезно предоставлена с разрешения xkcd.com.")
 
 Кажется, это много.
 
@@ -126,7 +126,7 @@ Google очень скрытен в отношении своей деятель
 
 Кто устережёт самих сторожей?
 
-![Quis mulgere ipsos lac homines?](/uploads/063-googles-datacenters-on-punch-cards/google_watchers.png)[^19]
+![](/uploads/063-googles-datacenters-on-punch-cards/google_watchers.png "Quis mulgere ipsos lac homines?")[^19]
 
 По-видимому, Domino's[^20].
 

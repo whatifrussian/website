@@ -117,7 +117,7 @@ _Что произойдет, если молния ударит в пулю, л
 
 _Что случится, если молния ударит, когда вы перепрошиваете BIOS в грозу?_
 
-[![Буря устанавливает Microsoft Bob (версия для Gateway 2000).] (/uploads/016-lightning/lightning_bios_ru.png)](http://www.youtube.com/watch?v=N5HGhZaLUMc)
+[![](http://www.youtube.com/watch?v=N5HGhZaLUMc "Буря устанавливает Microsoft Bob (версия для Gateway 2000).] (/uploads/016-lightning/lightning_bios_ru.png)")
 
 [^1]: [Национальная метеорологическая служба](http://ru.wikipedia.org/wiki/Национальная_метеорологическая_служба).
 [^2]: [Райан Норт](http://en.wikipedia.org/wiki/Ryan_North) — автор веб-комиксов про тираннозавра (согласно Википедии эти животные были до 6 метров высотой).

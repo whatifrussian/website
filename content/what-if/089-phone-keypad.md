@@ -19,25 +19,11 @@ Formulas: True
 
 Редко встретишь слово, _все_ буквы которого соответствуют одной цифре; распространённые слова[^2] с этим свойством не длиннее нескольких букв. И всё же, мы можем составить из них “**a high def MMO on TV**” («MMO в высоком разрешении по телевизору») — фразу, каждое слово которой задействует единственную клавишу.
 
-![Ещё один часок, и всё.](/uploads/075-phone-keypad/t9_mmo_ru.png)
-[transcription]
-[Парень и Девушка смотрят телевизор.]
-Парень: Умоляю, давай посмотрим что угодно, кроме игровых роликов!
-Девушка: Чшш.
-Подпись: A high-def MMO on TV / ММО в высоком разрешении по телевизору
-[/transcription]
+![](/uploads/075-phone-keypad/t9_mmo_ru.png "Ещё один часок, и всё.")
 
 Таких фраз сколько угодно, но некоторые из них слегка перегибают палку:
 
-![Раскошеливайся!](/uploads/075-phone-keypad/t9_mom_ru.png)
-[transcription]
-[Человек, передающий другому человеку мешок с едой для полёта на Луну, где ждёт Мать.]
-Мать: Сынок?
-Человек принимающий: $?
-Надпись на мешке: Еда
-Надпись на табличке: Запуск
-Подпись: A high fee 2 feed mom on moon / Покормить маму на Луне не дёшево
-[/transcription]
+![](/uploads/075-phone-keypad/t9_mom_ru.png "Раскошеливайся!")
 
 Подобные проблемы с набором текста характерны не только для старых телефонных клавиатур. Для любой системы ввода можно найти фразы, набирать которые неудобно.
 
@@ -52,82 +38,33 @@ Formulas: True
 
 **Только левая рука**
 
-![Оно того стоило.](/uploads/075-phone-keypad/t9_arrested_ru.png)
-[transcription]
-[Полицейский, арестовывающий Отца и Детей.]
-Подпись: We were arrested after dad ate deer eggs / Нас арестовали после того, как папа съел оленьи яйца
-[/transcription]
+![](/uploads/075-phone-keypad/t9_arrested_ru.png "Оно того стоило.")
 
-![ВСТРЕТЬ ХОРЬКА ИЗ СВОЕГО ГОРОДА СЕГОДНЯ!](/uploads/075-phone-keypad/t9_ferret_ru.png)
-[transcription]
-[Табличка, анонсирующая сношение хорьков.]
-Надпись на табличке: Бесплатно! Сегодня!
-Подпись: Ferret sex at great rates / Высокоскоростной секс хорьков
-[/transcription]
+![](/uploads/075-phone-keypad/t9_ferret_ru.png "ВСТРЕТЬ ХОРЬКА ИЗ СВОЕГО ГОРОДА СЕГОДНЯ!")
 
 **Только правая рука**
 
-![Да как ты СМЕЕШЬ!](/uploads/075-phone-keypad/t9_honolulu_ru.png)
-[transcription]
-[Девочка, упрекающая Парня в том, что он посмотрел на Девушку.]
-Подпись: You look upon my mom in Honolulu! / Ты смотришь свысока на мою маму в Гонолулу!
-[/transcription]
+![](/uploads/075-phone-keypad/t9_honolulu_ru.png "Да как ты СМЕЕШЬ!")
 
-![ОБОЖЕМОЙ, щенячье молоко!](/uploads/075-phone-keypad/t9_milk_ru.png)
-[transcription]
-[Парень, предлагающий Девушке бутылку молока.]
-Парень: Лол
-Девушка: Wtf?
-Подпись: Buy my puppy milk, lol / Купи щенячьего молока, лол
-[/transcription]
+![](/uploads/075-phone-keypad/t9_milk_ru.png "ОБОЖЕМОЙ, щенячье молоко!")
 
 **Только средний ряд**
 
-![Он глянул, что на нём записано, и моментально умер.](/uploads/075-phone-keypad/t9_galahad_ru.png)
-[transcription]
-[Рыцарь с мечом в одной руке и SSD-картой в другой.]
-Подпись: Galahad has a flash SSD / У Галахада флэш-SSD
-[/transcription]
+![](/uploads/075-phone-keypad/t9_galahad_ru.png "Он глянул, что на нём записано, и моментально умер.")
 
-![Но всё-таки она очень мила!](/uploads/075-phone-keypad/t9_sasha_ru.png)
-[transcription]
-[Влюблённая парочка.]
-Саша: Ух ты, птичка!
-Подпись: Sasha has a GF; GF has ADHD / У Саши есть девушка; у девушки — СДВГ
-[/transcription]
+![](/uploads/075-phone-keypad/t9_sasha_ru.png "Но всё-таки она очень мила!")
 
-![Хрустит.](/uploads/075-phone-keypad/t9_salad_ru.png)
-[transcription]
-[Парень, поедающий салат из стекла.]
-Парень: Вкусно, но до оленьих яиц далеко.
-Звук хруста: *хрум*
-Подпись: Alas, Dad had a glass salad / Увы, папин салат был стеклянным
-[/transcription]
+![](/uploads/075-phone-keypad/t9_salad_ru.png "Хрустит.")
 
 **Только верхний ряд**
 
-![А ещё мы принесли молока!](/uploads/075-phone-keypad/t9_puppy_ru.png)
-[transcription]
-[Парень и Девушка посыпают щенка перцем. Девушка с хвостиком в ужасе.]
-Девушка: Это меньшее, что мы можем сделать!
-Подпись: We owe it to you to pepper your puppy / Мы вам задолжали поперчить щенка 
-[/transcription]
+![](/uploads/075-phone-keypad/t9_puppy_ru.png "А ещё мы принесли молока!")
 
-![А хуже всего то, что стишок-то был неплох.](/uploads/075-phone-keypad/t9_poetry_ru.png)
-[transcription]
-[Парень и Девушка рвут в клочки бумагу с поэзией Взъерошенного парня.]
-Взъерошенный парень: Но…
-Парень: Всё равно хреновое было.
-Подпись: To torture you, we tore up your poetry / Мы порвали твоё стихотворение в качестве пытки
-[/transcription]
+![](/uploads/075-phone-keypad/t9_poetry_ru.png "А хуже всего то, что стишок-то был неплох.")
 
 И наконец, если кто-нибудь спросит, почему вы свернули активность в социальных сетях, вам хватит верхнего ряда, чтобы объяснить:
 
-![…или ретвитить](/uploads/075-phone-keypad/t9_tweet_ru.png)
-[transcription]
-[Парень красуется перед зеркалом.]
-Подпись: Too pretty to tweet / Слишком красив, чтобы твитить
-[/transcription]
+![](/uploads/075-phone-keypad/t9_tweet_ru.png "…или ретвитить")
 
 **От переводчиков**
 
@@ -143,28 +80,13 @@ Formulas: True
 
 **Только левая рука**
 
-![Актуально в ноябре.](/uploads/075-phone-keypad/chtoesli_mustache.png)
-[transcription]
-[Трое усатых мужчин и девушка с усами.]
-Мужчина: Тебе… идёт. Нет, правда…
-Надпись: Усы, вас мы все сейчас имеем!
-[/transcription]
+![](/uploads/075-phone-keypad/chtoesli_mustache.png "Актуально в ноябре.")
 
-![Два раза!](/uploads/075-phone-keypad/chtoesli_kin_dza_dza.png)
-[transcription]
-[Пацак и Главарь контрабандистов.]
-Пацак: Ку!
-Надпись: Пацак, выкупи пачку КЦ!
-[/transcription]
+![](/uploads/075-phone-keypad/chtoesli_kin_dza_dza.png "Два раза!")
 
 **Только средний ряд**
 
-![А я накупил Bitcoin’ов год назад.](/uploads/075-phone-keypad/chtoesli_btc.png)
-[transcription]
-[Парень, график BTC/USD и Чёрная Шляпа с мешками долларов.]
-Чёрная Шляпа: Я всегда прав.
-Надпись: А вы правы, продал доллары.
-[/transcription]
+![](/uploads/075-phone-keypad/chtoesli_btc.png "А я накупил Bitcoin’ов год назад.")
 
 [^1]: У этого слова ничья с “nonmonotonic” («немонотонный»). Несомненно, оба победителя проигрывают более неочевидным словам, которых не было в моих списках.
 

@@ -11,11 +11,11 @@ Formulas: True
 
 Самый высокий отвесный склон на Земле — канадский [пик Тор](http://en.wikipedia.org/wiki/Mount_Thor), имеет такую форму:
 
-![AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA](/uploads/051-free-fall/freefall_thor_ru.png)
+![](/uploads/051-free-fall/freefall_thor_ru.png "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 
 Чтобы всё не казалось таким ужасным, давайте наполним яму внизу склона чем-нибудь мягким, например сахарной ватой, чтобы смягчить падение. (Сработает ли это? Хмм ...)
 
-![Сработает ли это? Следите за следующими выпусками ...](/uploads/051-free-fall/freefall_candy_ru.png)
+![](/uploads/051-free-fall/freefall_candy_ru.png "Сработает ли это? Следите за следующими выпусками ...")
 
 Максимальная скорость человека, падающего с раскинутыми руками и ногами, составляет около 55 метров в секунду. Потребуется несколько сотен метров, чтобы набрать эту скорость, так что полное падение будет длиться чуть больше 26 секунд.
 
@@ -27,7 +27,7 @@ Formulas: True
 
 Это значит, что если кто-то позвонит вам, и телефон зазвонит в момент вашего прыжка, то звонок уйдёт в голосовую почту за три секунды до того, как вы достигнете земли.
 
-![Удивительно хороший уровень сигнала для заброшенной скалы в Нунавуте.](/uploads/051-free-fall/freefall_voicemail_ru.png) [^3]
+![](/uploads/051-free-fall/freefall_voicemail_ru.png "Удивительно хороший уровень сигнала для заброшенной скалы в Нунавуте.") [^3]
 
 С другой стороны, прыгнув с ирландских [утёсов Мохер](http://www.cliffsofmoher.ie/) высотой 210 метров, вы бы падали около восьми секунд — девять, если бы вы подпрыгнули перед падением.
 
@@ -37,7 +37,7 @@ Formulas: True
 
 Даже без специального оборудования опытный скайдайвер — как только наберет максимальную скорость — может планировать под углом почти 45 градусов[^5]. Если скользить от основания утёса, то, вероятно, падение продлится значительно дольше.
 
-![AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA ::вдох:: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA](/uploads/051-free-fall/freefall_extended_ru.png)
+![](/uploads/051-free-fall/freefall_extended_ru.png "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA ::вдох:: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 
 Сложно сказать, _насколько_ дальше вы улетите; всё зависит от вашей одежды. Комментарий на странице [рекорды бэйсджампинга](http://www.blincmagazine.com/forum/wiki/Records) сообщает нам:
 
@@ -64,7 +64,7 @@ Formulas: True
 
 Если бы мы могли дать им возможность управлять вингсьютом на полной скорости и поглощать при этом еду, и они совершили бы прыжок с Эйгера, они могли бы — теоретически — съесть около 45 хот-догов к моменту приземления ...
 
-![Учитывая предстоящее противостояние Кобаяши и Честната, такой потенциал для саботажа мог бы сделать эту ситуацию еще более опасной.](/uploads/051-free-fall/freefall_hotdogs_ru.png)
+![](/uploads/051-free-fall/freefall_hotdogs_ru.png "Учитывая предстоящее противостояние Кобаяши и Честната, такой потенциал для саботажа мог бы сделать эту ситуацию еще более опасной.")
 
 ... сделав их совместными обладателями возможно самого странного мирового рекорда всех времен.
 
