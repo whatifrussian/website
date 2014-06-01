@@ -26,12 +26,15 @@ $(document).ready(function(){
 		var title = $(this).attr('title');
 		
 		var $parent = $(this).parent();
-		var $transcript = $parent.next();
+		// var $transcript = $parent.next();
+		// $('<div/>', {
+		// 	class: 'transcript',
+		// 	text: '[transcript]' + $transcript.html() + '[/transcript]'
+		// }).appendTo($parent).wrap('<figcaption></figcaption>').after($('<em/>', {text: title}));
+		// $transcript.remove();
 		$('<div/>', {
-			class: 'transcript',
-			text: '[transcript]' + $transcript.html() + '[/transcript]'
-		}).appendTo($parent).wrap('<figcaption></figcaption>').after($('<em/>', {text: title}));
-		$transcript.remove();
+			html: '<em>' + title + '</em>'
+		}).appendTo($parent).wrap('<figcaption></figcaption>');
 
 		$parent.replaceWith('<figure>' + $parent.html() + '</figure>');
 	});
@@ -42,7 +45,7 @@ $(document).ready(function(){
 	$('a[rel=footnote]').each(function(){
 		var num = $(this).html();
 		var rel = $(this).attr('href').substring(1).replace(':', '\\:');
-		var body = $('.footnotes li#' + rel + ' p').html();
+		var body = $('.footnote li#' + rel + ' p').html();
 
 		var $footnote = $('<sup/>', {class: 'refnum', text: num});
 		$footnote
@@ -59,7 +62,7 @@ $(document).ready(function(){
 			.after('<span class="ellipsis">&#8627;</span>')
 			.after($('<span/>', {class: 'refbody', html: body}));
 	});
-	$('.footnotes').remove();
+	$('.footnote').remove();
 
 
 	//=======================================================

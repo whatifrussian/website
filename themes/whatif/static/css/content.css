@@ -531,8 +531,11 @@ figure.active figcaption {
 .usericon.whitehat b {
 	background-position: -398px -270px;
 }
-.usericon.glasses b {
+.usericon.spider b {
 	background-position: -411px -270px;
+}
+.usericon.ninja b {
+	background-position: -424px -270px;
 }
 
 footer img {
