@@ -64,18 +64,9 @@
             <div class="border-left"></div>
             {% block content %}
             {% endblock %}
+            <div class="border-bottom"></div>
         </div>
-        <div class="border-bottom"><hr></div>
-            <script type="text/javascript">(function() {
-              if (window.pluso)if (typeof window.pluso.start == "function") return;
-              if (window.ifpluso==undefined) { window.ifpluso = 1;
-                var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-                s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
-                s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
-                var h=d[g]('body')[0];
-                h.appendChild(s);
-              }})();</script>
-            <div class="social-buttons"><div class="pluso" data-background="transparent" data-options="medium,round,line,horizontal,nocounter,theme=01" data-services="vkontakte,facebook,twitter,google"></div></div>
+
     </div>
     <footer>
         <a href="http://xkcd.ru"><img src="{{ SITEURL }}/theme/img/xkcd.png" alt="xkcd.ru" title="xkcd по-русски!"></a>

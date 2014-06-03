@@ -1,0 +1,13 @@
+{% if article %}
+	{% if article.prev_article %}
+	    <li class="prev"><a href="{{ SITEURL }}/{{ article.prev_article.url}}" title="{{ article.prev_article.title }}">Раньше</a></li>
+	{% else %}
+		 <li class="prev disabled"><a title="Кончилось!">Раньше</a></li>
+	{% endif %}
+	    <li class="contents"><a href="{{ SITEURL }}/translations">Оглавление</a></li>
+	{% if article.next_article %}    
+	    <li class="next"><a href="{{ SITEURL }}/{{ article.next_article.url}}" title="{{ article.next_article.title}}">Позже</a></li>
+	{% else %}
+		 <li class="next disabled"><a title="Скоро!">Позже</a></li>
+	{% endif %}
+{% endif %}

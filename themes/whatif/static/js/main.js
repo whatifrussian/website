@@ -47,11 +47,11 @@ $(document).ready(function(){
 		var rel = $(this).attr('href').substring(1).replace(':', '\\:');
 		var body = $('.footnote li#' + rel + ' p').html();
 
-		var $footnote = $('<sup/>', {class: 'refnum', text: num});
-		$footnote
-			.prepend('<span class="bracket">[</span>')
-			.append('<span class="bracket">]</span>')
-			.append('<b></b>');
+		var $footnote = $('<sup/>', {class: 'refnum', html: '<span>' + num + '</span>'});
+  		$footnote
+		   .prepend('<span class="bracket">[</span>')
+		   .append('<span class="bracket">]</span>')
+		   .append('<b></b>');
 		$(this).parent().replaceWith($footnote);
 		$footnote
 			.wrap('<nobr></nobr>')
