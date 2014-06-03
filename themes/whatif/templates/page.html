@@ -1,31 +1,30 @@
 {% extends "base.html" %}
-{% block title %}{{ page.title }}{% endblock %}
+{% block title %}{{ page.title|striptags }}{% endblock %}
 {% block content %}
-    <ul>
-    {% if article.prev_article %}
-        <li>
-            <a href="{{ SITEURL }}/{{ article.prev_article.url}}">
-                {{ article.prev_article.title }}
-            </a>
-        </li>
+            <div class="main">
+                <h1><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></h1>
+
+                <div class="page">
+                    {{ page.content }}
+                </div>
+                <div class="border-bottom"><hr></div>
+                {% include 'includes/social.html' %}
+                <ul class="menu-page clearfix bottom">
+                </ul>
+            </div>
+{% endblock content %}
+{% block help %}
+    {% if page.url == "help/" or page.url == "contact/" %}
+        <li class="menu-item help selected"><a href="{{ SITEURL }}/help/"><b></b><span>Как нам помочь</span></a></li>
+    {% else %}
+        <li class="menu-item help"><a href="{{ SITEURL }}/help/"><b></b><span>Как нам помочь</span></a></li>
     {% endif %}
-    {% if article.next_article %}
-        <li>
-            <a href="{{ SITEURL }}/{{ article.next_article.url}}">
-                {{ article.next_article.title }}
-            </a>
-        </li>
-    {% endif %}
-    </ul>
-    <section id="content" class="body">
-        <h1 class="entry-title">{{ page.title }}</h1>
-        {% if PDF_PROCESSOR %}
-            <a href="{{ SITEURL }}/pdf/{{ page.slug }}.pdf">
-                get the pdf
-            </a>
-        {% endif %}
-        <div class="entry-content">
-            {{ page.content }}
-        </div>
-    </section>
-{% endblock %}
+{% endblock help %}
+
+{% block about %}
+{% if page.url == "about/" %}
+    <li class="menu-item about selected"><a href="{{ SITEURL }}/about/"><b></b><span>О нас</span></a></li>
+{% else %}
+    <li class="menu-item about"><a href="{{ SITEURL }}/about/"><b></b><span>О нас</span></a></li>
+{% endif %}
+{% endblock about %}

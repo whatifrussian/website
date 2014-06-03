@@ -6,8 +6,7 @@
                     {% include 'includes/pagination.html' %}
                 </ul>
                 <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
-                <span class="original">Оригинал: <a href="{{ article.source }}" target="blank">{{ article.source }}<b></b></a></span>
-
+               {% if article.source != "False" %}<span class="original">Оригинал: <a href="{{ article.source }}" target="blank">{{ article.source }}<b></b></a></span> {% endif %}
                 <div class="page">
                     {{ article.content }}
                 </div>
@@ -17,4 +16,20 @@
                     {% include 'includes/pagination.html' %}
                 </ul>
             </div>
-{% endblock %}
+{% endblock content %}
+
+{% block news %}
+{% if category == "Новости проекта" %}
+    <li class="menu-item news selected"><a href="{{ SITEURL }}/category/news/"><b></b><span>Новости</span></a></li>
+{% else %}
+    <li class="menu-item news"><a href="{{ SITEURL }}/category/news/"><b></b><span>Новости</span></a></li>
+{% endif %}
+{% endblock news %}
+
+{% block translations %}
+{% if category == "What If?" %}
+    <li class="menu-item translations selected"><a href="{{ SITEURL }}/"><b></b><span>Переводы</span></a></li>
+{% else %}
+    <li class="menu-item translations"><a href="{{ SITEURL }}/"><b></b><span>Переводы</span></a></li>
+{% endif %}
+{% endblock translations %}

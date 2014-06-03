@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/layout.css">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/content.css">
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/forms.css">
 
     <script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery-2.1.0.min.js"></script>
     <script type="text/javascript" src="{{ SITEURL }}/theme/js/main.js"></script>
@@ -35,7 +36,7 @@
                     <div class="logo-trex"></div>
                     <div class="logo-front"></div>
                 </div>
-                <img src="{{ SITEURL }}/theme/img/logo.png" class="logo-img" alt="Что если?"/>
+                <a href="{{ SITEURL }}"><img src="{{ SITEURL }}/theme/img/logo.png" class="logo-img" alt="Что если?"/></a>
             </a>
             
             <div class="header-title">
@@ -46,15 +47,23 @@
             <nav>
                 <a class="menu-button"></a>
                 <ul class="menu">
-                    <li class="menu-item translations selected"><a><b></b><span>Переводы</span></a></li>
-                    <li class="menu-item news"><a href="#"><b></b><span>Новости</span></a></li>
-                    <li class="menu-item help"><a href="how-to-help.html"><b></b><span>Как нам помочь</span></a></li>
-                    <li class="menu-item about"><a href="#"><b></b><span>О нас</span></a></li>
-                    <li class="menu-item search"><input type="search" name="search"></li>
+                    {% block translations %}
+                        <li class="menu-item translations"><a href="{{ SITEURL }}/"><b></b><span>Переводы</span></a></li>
+                    {% endblock %}
+                    {% block news %}
+                        <li class="menu-item news"><a href="{{ SITEURL }}/category/news/"><b></b><span>Новости</span></a></li>
+                    {% endblock %}
+                    {% block help %}
+                        <li class="menu-item help"><a href="{{ SITEURL }}/help/"><b></b><span>Как нам помочь</span></a></li>
+                    {% endblock %}
+                    {% block about %}
+                        <li class="menu-item about"><a href="{{ SITEURL }}/about/"><b></b><span>О нас</span></a></li>
+                    {% endblock %}
+                    <li class="menu-item search"><form action="http://yandex.ru/yandsearch" method="GET"><input type="hidden" name="site" value="chtoes.li" /><input type="search" name="text"/></form></li>
                 </ul>
                 <ul class="menu-social">
-                    <li class="menu-item vk"><a href="#"><b title="Мы ВКонтакте"></b><span>Мы ВКонтакте</span></a></li>
-                    <li class="menu-item twitter"><a href="#"><b title="Наш Twitter"></b><span>Наш Twitter</span></a></li>
+                    <li class="menu-item vk"><a href="https://vk.com/whatifrussian"><b title="Мы ВКонтакте"></b><span>Мы ВКонтакте</span></a></li>
+                    <li class="menu-item twitter"><a href="https://twitter.com/whatifrussian"><b title="Наш Twitter"></b><span>Наш Twitter</span></a></li>
                 </ul>
             </nav>
 

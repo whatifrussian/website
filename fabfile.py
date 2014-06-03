@@ -10,10 +10,6 @@ DEPLOY_PATH = env.deploy_path
 production = 'chtoes_li@shared.libc6.org:22'
 dest_path = '/var/www/chtoes_li/data/www/dev.chtoes.li/'
 
-# Rackspace Cloud Files configuration settings
-env.cloudfiles_username = 'my_rackspace_username'
-env.cloudfiles_api_key = 'my_rackspace_api_key'
-env.cloudfiles_container = 'my_cloudfiles_container'
 
 
 def clean():
@@ -22,14 +18,14 @@ def clean():
         local('mkdir {deploy_path}'.format(**env))
 
 def build():
-    local('pelican -s pelicanconf.py')
+    local('pelican -q -s pelicanconf.py')
 
 def rebuild():
     clean()
     build()
 
 def regenerate():
-    local('pelican -r -s pelicanconf.py')
+    local('pelican -q -r -s pelicanconf.py')
 
 def serve():
     local('cd {deploy_path} && python -m SimpleHTTPServer'.format(**env))
@@ -41,17 +37,9 @@ def reserve():
 def preview():
     local('pelican -s publishconf.py')
 
-def cf_upload():
-    rebuild()
-    local('cd {deploy_path} && '
-          'swift -v -A https://auth.api.rackspacecloud.com/v1.0 '
-          '-U {cloudfiles_username} '
-          '-K {cloudfiles_api_key} '
-          'upload -c {cloudfiles_container} .'.format(**env))
-
 @hosts(production)
 def publish():
-    local('pelican -s pelicanconf.py')
+    local('pelican -q -s pelicanconf.py')
     project.rsync_project(
         remote_dir=dest_path,
         exclude=".DS_Store",

@@ -1,11 +1,11 @@
 Title: О нас
-Slug: contact
-URL: contact/
-Save_as: contact/index.html
+Slug: about
 Category: Прочее
 Date: 2013-02-15 05:30
 Source: False
 Formulas: True
+save_as: about/index.html
+url: about/
 
 Всем привет!
 

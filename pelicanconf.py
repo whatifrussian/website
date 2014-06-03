@@ -12,8 +12,11 @@ TIMEZONE = 'Europe/Moscow'
 DEFAULT_LANG = u'ru'
 
 PLUGIN_PATH = "plugins"
-PLUGINS = ["neighbors"]
+PLUGINS = ["neighbors", "sitemap"]
 THEME = "themes/whatif"
+PATH = 'content'
+OUTPUT_PATH = 'output'
+
 
 # Feed generation is usually not desired when developing
 FEED_DOMAIN = SITEURL
@@ -26,10 +29,12 @@ ARTICLE_URL = 'page/{slug}/'
 ARTICLE_SAVE_AS = 'page/{slug}/index.html'
 CATEGORY_URL = 'category/{slug}/'
 CATEGORY_SAVE_AS = 'category/{slug}/index.html'
-TAG_URL = 'tag/{slug}/'
-TAG_SAVE_AS = 'tag/{slug}/index.html'
-TAGS_URL = 'tag/'
-TAGS_SAVE_AS = 'tag/index.html'
+TAGS_SAVE_AS = ''
+TAG_SAVE_AS = ''
+AUTHOR_SAVE_AS = ''
+AUTHORS_SAVE_AS = ''
+ARCHIVES_SAVE_AS = ''
+CATEGORIES_SAVE_AS = ''
 
 LOG_FILTER = [
     (logging.WARN, 'Empty alt attribute for image {} in {}')
@@ -43,9 +48,7 @@ SLUG_SUBSTITUTIONS = [
 #("",""),
 ]
 
-
-
-DEFAULT_PAGINATION = 1
+DEFAULT_PAGINATION = False
 
 EXTRA_PATH_METADATA = {
     'extras/robots.txt': {'path': 'robots.txt'},
@@ -62,4 +65,16 @@ STATIC_PATHS = [
 READERS={'html':None}
 
 
-
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}
