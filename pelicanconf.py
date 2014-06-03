@@ -16,7 +16,7 @@ PLUGINS = ["neighbors", "sitemap"]
 THEME = "themes/whatif"
 PATH = 'content'
 OUTPUT_PATH = 'output'
-
+DELETE_OUTPUT_DIRECTORY = True
 
 # Feed generation is usually not desired when developing
 FEED_DOMAIN = SITEURL
@@ -48,11 +48,13 @@ SLUG_SUBSTITUTIONS = [
 #("",""),
 ]
 
-DEFAULT_PAGINATION = False
+DEFAULT_PAGINATION = 1
 
 EXTRA_PATH_METADATA = {
     'extras/robots.txt': {'path': 'robots.txt'},
 }
+
+FILES_TO_COPY = (("uploads", "uploads"))
 
 STATIC_PATHS = [
     'uploads',
