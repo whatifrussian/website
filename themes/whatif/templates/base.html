@@ -32,6 +32,25 @@
             <meta property="og:image" content="{{ page.image }}" />
         {% endif %}
     {% elif article %}
+        {% if article.formulas == 'True' %}
+          <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+            extensions: ["tex2jax.js"],
+            messageStyle: "none",
+            jax: ["input/TeX", "output/SVG"],
+            tex2jax: {
+                inlineMath: [ ['$','$'] ],
+                displayMath: [ ['$$','$$'] ],
+                processEscapes: true
+            },
+            TeX: {
+              extensions: ["AMSmath.js", "AMSsymbols.js"]
+            },
+            "SVG": { availableFonts: ["TeX"],  linebreaks: { automatic: true } }
+            });
+          </script>
+          <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+        {% endif %}
         {% if article.title %}
             <meta property="og:title" content="{{ article.title }}" />
         {% endif %}
@@ -48,6 +67,25 @@
     {% elif articles %}
         {% for article in (articles_page.object_list if articles_page else articles) %}
             {% if loop.index <= 1 %}
+                {% if article.formulas == 'True' %}
+                  <script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({
+                    extensions: ["tex2jax.js"],
+                    messageStyle: "none",
+                    jax: ["input/TeX", "output/SVG"],
+                    tex2jax: {
+                        inlineMath: [ ['$','$'] ],
+                        displayMath: [ ['$$','$$'] ],
+                        processEscapes: true
+                    },
+                    TeX: {
+                      extensions: ["AMSmath.js", "AMSsymbols.js"]
+                    },
+                    "SVG": { availableFonts: ["TeX"],  linebreaks: { automatic: true } }
+                    });
+                  </script>
+                  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+                {% endif %}
                 {% if article.title %}
                     <meta property="og:title" content="{{ article.title }}" />
                 {% endif %}
