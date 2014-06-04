@@ -40,6 +40,7 @@ LOG_FILTER = [
     (logging.WARN, 'Empty alt attribute for image {} in {}')
 ]
 
+TEMPLATE_PAGES = {'translations.html': 'translations/index.html'}
 
 SLUG_SUBSTITUTIONS = [
     ("what if?", "what-if"),

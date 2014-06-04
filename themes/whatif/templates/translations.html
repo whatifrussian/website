@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ SITENAME }} — Оглавление{% endblock %}
+{% block content %}
+    <div class="main">
+        <ul>
+    {% if articles %}
+        {% for article in (articles_page.object_list if articles_page else articles) %}
+            {% if article.category == "What If?" %}   
+                <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+        </ul>
+    </div>
+{% endblock content %}
