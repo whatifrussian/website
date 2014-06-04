@@ -4,7 +4,7 @@ Category: What If?
 Date: 2014-04-06 23:28
 Source: http://what-if.xkcd.com/90/
 SourceTitle: Great Tree, Great Axe
-Formulas: True
+Formulas: False
 
 > Кабы все моря планеты
 &nbsp;

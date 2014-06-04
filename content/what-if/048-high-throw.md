@@ -4,7 +4,7 @@ Category: What If?
 Date: 2013-05-09 18:18
 Source: http://what-if.xkcd.com/44/
 SourceTitle: High Throw
-Formulas: True
+Formulas: False
 
 > Насколько высоко человек может что-либо подбросить?
 > 

@@ -4,7 +4,7 @@ Category: What If?
 Date: 2012-11-13 23:41
 Source: http://what-if.xkcd.com/20/
 SourceTitle: Diamond
-Formulas: True
+Formulas: False
 
 > Что произойдет, если алмазный метеорит диаметром в 30 метров, летящий со скоростью света, ударится о Землю?
 >

@@ -4,7 +4,7 @@ Category: What If?
 Date: 2012-08-21 12:52
 Source: http://what-if.xkcd.com/8/
 SourceTitle: Everybody Jump
-Formulas: True
+Formulas: False
 
 > Что произойдёт, если все люди на Земле будут стоять так близко друг к другу, насколько это возможно, а потом они прыгнут и приземлятся в один миг?
 >

@@ -4,7 +4,7 @@ Category: What If?
 Date: 2013-02-21 10:54
 Source: http://what-if.xkcd.com/33/
 SourceTitle: Ships
-Formulas: True
+Formulas: False
 
 > Насколько понизится уровень мирового океана, если в один момент вытащить все корабли на Земле из воды?
 >

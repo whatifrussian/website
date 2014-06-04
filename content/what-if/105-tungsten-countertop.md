@@ -4,7 +4,7 @@ Category: What If?
 Date: 2014-03-27 23:03
 Source: http://what-if.xkcd.com/89/
 SourceTitle: Tungsten Countertop
-Formulas: True
+Formulas: False
 
 > Если сбросить в Солнце вольфрамовую столешницу, насколько глубоко она погрузится?
 > 

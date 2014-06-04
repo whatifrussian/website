@@ -4,7 +4,7 @@ Category: What If?
 Date: 2013-11-07 12:42
 Source: http://what-if.xkcd.com/70/
 SourceTitle: The Constant Groundskeeper
-Formulas: True
+Formulas: False
 
 > Насколько большим должен быть газон, чтобы к моменту окончания стрижки трава подросла настолько, что пришлось бы начинать заново?
 > 
@@ -47,4 +47,4 @@ Formulas: True
 [^4]: Максимальная скорость, указанная в [таблице производительности газонокосилок на сайте магазина Cub Cadet](http://www.cubcadet.com/webapp/wcs/stores/servlet/CubCadetFullPageArticleDisplayView?langId=-1&storeId=10051&catalogId=14101&pageView=Cubcadet_Commercial/AcresPerHour.html) 
 [^5]: [В самом деле](http://reviews.cnet.com/8301-13746_7-20017942-48.html).
 [^6]: «[Первые испытания газонокосилки, способной разогнаться до 210 км/ч](http://www.bbc.co.uk/news/technology-23342347)», BBC News Technology, 17 July 2013
-[^7]: Игра слов. Надпись «Deere» на предыдущей картинке — отсылка к компании [Deere](http://ru.wikipedia.org/wiki/Deere_%26_Company), хотя deer — ещё и «олень». Cougare – стилизованное под Deere слово «пума». — _Прим. пер._
+[^7]: Игра слов. Надпись «Deere» на предыдущей картинке — отсылка к компании [Deere](http://ru.wikipedia.org/wiki/Deere_%26_Company), хотя deer — ещё и «олень». Cougare – стилизованное под Deere слово «пума». — *Прим. пер.*

@@ -4,7 +4,7 @@ Category: What If?
 Date: 2012-12-11 23:12
 Source: http://what-if.xkcd.com/24/
 SourceTitle: Model Rockets
-Formulas: True
+Formulas: False
 
 > Сколько потребуется моделей реактивных двигателей для того, чтобы поднять в космос настоящую ракету?
 >

@@ -4,7 +4,7 @@ Category: What If?
 Date: 2014-01-02 22:29
 Source: http://what-if.xkcd.com/77/
 SourceTitle: Growth Rate
-Formulas: True
+Formulas: False
 
 > Какого роста люди могли бы быть, если бы продолжали расти в течение всего периода развития (то есть до 19-20 лет) с той скоростью, что и в первый месяц жизни?
 > 

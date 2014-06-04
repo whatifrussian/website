@@ -4,7 +4,7 @@ Category: What If?
 Date: 2013-02-15 05:05
 Source: http://what-if.xkcd.com/32/
 SourceTitle: Hubble
-Formulas: True
+Formulas: False
 
 > Насколько детализированым получится изображение, если мы направим телескоп Хаббл на Землю?
 >

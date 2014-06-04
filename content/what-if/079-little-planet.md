@@ -4,7 +4,7 @@ Category: What If?
 Date: 2013-10-24 12:40
 Source: http://what-if.xkcd.com/68/
 SourceTitle: Little Planet
-Formulas: True
+Formulas: False
 
 > Правда ли, что на очень маленьком, но сверхмассивном астероиде можно жить, как Маленький принц?
 > 
@@ -70,5 +70,5 @@ Formulas: True
 [^2]: [Вот](http://nssdc.gsfc.nasa.gov/imgcat/html/object_page/m09_mtvs4109_09.html) фотография, на которой Фобос выглядит как типичный астероид. Архив фотографий с миссии находится в [центре анализа данных космических исследований NASA](http://nssdc.gsfc.nasa.gov/nmc/masterCatalog.do?ds=PSPG-00235) (NASA Space Science Data Center), но вот что странно: NSSDC направляет читателей за самими изображениями на чью-то персональную [страничку сайта Tripod](http://petermasek.tripod.com/mariner9.html).
 [^3]: Забавно, что Фобос и Деймос, судя по свежим исследованиям — не астероиды, хоть и _похожи_. См. Роберт А. Крэддок [«Фобос и Деймос — результат мощного удара?»](http://www.sciencedirect.com/science/article/pii/S0019103510004100). _Icarus_ (2010).
 [^4]: Не всегда; многие догадывались, как выглядят астероиды. Кроме того, возникали и [более странные идеи](http://pencilink.blogspot.com/2010/08/uncle-scrooge-29-carl-barks-art-cover.html).
-[^5]: Здесь автор подметил, что общепринятый английский термин Escape velocity следует заменить на Escape speed, поскольку velocity — это вектор, тогда как speed — единственно уместный здесь скаляр. — _Прим. пер._
+[^5]: Здесь автор подметил, что общепринятый английский термин Escape velocity следует заменить на Escape speed, поскольку velocity — это вектор, тогда как speed — единственно уместный здесь скаляр. — *Прим. пер.*
 [^6]: Раду Д. Руджеску, Даньеле Мортари. [Ультрадлинные орбитальные тросы не подчиняются законам Кеплера и нестабильны](http://www.academia.edu/3453325/Ultra_Long_Orbital_Tethers_Behave_Highly_Non-Keplerian_and_Unstable) // _WSEAS Transactions on Mathematics_. — Том 7, №3, март 2008. Стр. 87–94.

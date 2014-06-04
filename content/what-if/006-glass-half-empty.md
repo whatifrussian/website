@@ -4,7 +4,7 @@ Category: What If?
 Date: 2012-08-14 23:59
 Source: http://what-if.xkcd.com/6/
 SourceTitle: Glass Half Empty
-Formulas: True
+Formulas: False
 
 > Что будет, если стакан воды внезапно станет наполовину пуст?
 >

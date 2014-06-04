@@ -4,7 +4,7 @@ Category: What If?
 Date: 2013-01-31 21:38
 Source: http://what-if.xkcd.com/30/
 SourceTitle: Interplanetary Cessna
-Formulas: True
+Formulas: False
 
 > Что произойдёт, если мы попробуем полетать над разными телами Солнечной системы в обычном земном самолете?
 > 

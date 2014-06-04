@@ -4,7 +4,7 @@ Category: What If?
 Date: 2014-03-20 23:20
 Source: http://what-if.xkcd.com/88/
 SourceTitle: Soda Sequestration
-Formulas: True
+Formulas: False
 
 > Как много CO<sub>2</sub> содержит мировой запас газированных напитков в бутылках? Сколько газировки потребуется, чтобы вернуть уровень CO<sub>2</sub> до уровня предындустриальной эпохи?
 > 
@@ -34,7 +34,7 @@ Formulas: True
 ![](/uploads/088-soda-sequestration/soda_annoying_ru.png "Следуя покрытию территории, карта диалектов "soda/coke/pop" дойдёт до того, что определит национальные политические подразделения.")
 [^4]
 
-[^4]: Tab — разновидность диетической колы. Подробнее: [en:w:Tab (soft drink)](http://en.wikipedia.org/wiki/Tab_%28soft_drink%29). — _Прим. пер._
+[^4]: Tab — разновидность диетической колы. Подробнее: [en:w:Tab (soft drink)](http://en.wikipedia.org/wiki/Tab_%28soft_drink%29). — *Прим. пер.*
 
 Есть ли способы выйти из затруднительного положения?
 

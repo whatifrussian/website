@@ -4,7 +4,7 @@ Category: What If?
 Date: 2013-10-17 13:41
 Source: http://what-if.xkcd.com/67/
 SourceTitle: Expanding Earth
-Formulas: True
+Formulas: False
 
 > Как скоро люди заметят прирост в весе, если средний радиус Земли будет ежесекундно увеличиваться на 1 см? (При условии, что средний состав породы меняться не будет.)
 > 
@@ -143,6 +143,6 @@ Formulas: True
 [^10]: Спустя десятилетия гравитация станет увеличиваться быстрее, чем может показаться, ввиду того, что горные породы станут сжиматься под собственным весом. Давление внутри планеты [примерно равно площади её поверхности в четвёртой степени](http://cseligman.com/text/planets/internalpressure.htm), поэтому земное ядро окажется серьёзно сжато.
 [^11]: Хотя некоторые радиоактивные элементы, такие как уран, обладают большой массой, они не опускаются до нижних слоёв Земли, потому что их атомы не соединяются с кристаллической решёткой каменных пород на такой глубине. Больше информации можно найти [в этой главе](http://igppweb.ucsd.edu/~guy/sio103/chap3.pdf) и [этой статье](http://world-nuclear.org/info/Nuclear-Fuel-Cycle/Uranium-Resources/The-Cosmic-Origins-of-Uranium/#.UlxuGmRDJf4).
 [^12]: Sasselov, Dimitar D. _The life of super-Earths: how the hunt for alien worlds and artificial cells will revolutionize life on our planet_. New York: Basic Books, 2012. _(Димитар Д., Сасселов «Существование супер-Земель: как поиск других планет и искусственное создание клеток произведёт революцию в жизни на нашей планете»)_.
-[^13]: [w:Акватическая теория](http://ru.wikipedia.org/wiki/Акватическая_теория). — _Прим. пер._
+[^13]: [w:Акватическая теория](http://ru.wikipedia.org/wiki/Акватическая_теория). — *Прим. пер.*
 [^14]: Р. М. Франц и П. К. Щутте. [Barometric hazards within the context of deep-level mining](http://www.saimm.co.za/Journal/v105n06p387.pdf) _(Опасности высокого давления в контексте разработки глубоких шахт)_, _Журнал Южно-африканского института горного промысла и металлургии_.
 [^15]: Пламмер Х. К., [Note on the motion about an attracting centre of slowly increasing mass](http://adsabs.harvard.edu/full/1906MNRAS..66...83P) _(Заметка о движении вокруг центра тяготения тела медленно увеличивающейся массы)_, _Ежемесячные заметки Королевского астрономического общества_, том 66, стр. 83.

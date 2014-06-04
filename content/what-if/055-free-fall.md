@@ -4,7 +4,7 @@ Category: What If?
 Date: 2013-06-27 20:11
 Source: http://what-if.xkcd.com/51/
 SourceTitle: Free Fall
-Formulas: True
+Formulas: False
 
 > С какого места на Земле надо прыгнуть, чтобы находиться в свободном падении дольше всего? А если использовать вингсьют [^1]? 
 >

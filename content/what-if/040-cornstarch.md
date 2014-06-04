@@ -4,7 +4,7 @@ Category: What If?
 Date: 2013-03-13 14:13
 Source: http://what-if.xkcd.com/36/
 SourceTitle: Cornstarch
-Formulas: True
+Formulas: False
 
 > Сколько кукурузного крахмала я смогу высыпать в канализацию до момента, когда произойдёт какая-нибудь неприятность?
 > 

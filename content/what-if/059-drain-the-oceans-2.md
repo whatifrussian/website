@@ -4,7 +4,7 @@ Category: What If?
 Date: 2013-07-18 15:38
 Source: http://what-if.xkcd.com/54/
 SourceTitle: Drain the Oceans: Part II
-Formulas: True
+Formulas: False
 
 > Положим, что мы уже совершили [осушение океанов](http://chtoes.li/page/drain-the-oceans) и сбросили воду прямо на ровер Curiosity. Как будет меняться Марс по мере накопления воды?
 > 

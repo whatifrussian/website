@@ -4,7 +4,7 @@ Category: What If?
 Date: 2013-09-19 12:58
 Source: http://what-if.xkcd.com/63
 SourceTitle: 
-Formulas: True
+Formulas: False
 
 > Если хранить данные на перфокартах, насколько большим будет хранилище дата-центра Google?
 > 
@@ -149,5 +149,5 @@ Google очень скрытен в отношении своей деятель
 [^16]: Salt-Lake City Tribune: [Дата-центр АНБ в Блаффдэйле не будет пожирать питание Юты](http://www.sltrib.com/sltrib/news/56493868-78/power-center-electricity-utah.html.csp).
 [^17]: Dailykos: [Дата-центр в штате Юта хранит от 1 эксабайта до 1 йоттабайта данных](http://www.dailykos.com/story/2013/08/05/1228923/-Utah-Data-Center-stores-data-between-1-exabyte-and-1-yottabyte).
 [^18]: reddit: [Может ли r/Australia помочь найти дата-центр Google в Сиднее? Кажется немного таинственным…](http://www.reddit.com/r/australia/comments/1hctj4/can_raustralia_help_find_googles_sydney_data/catef4f).
-[^19]: Примерный перевод с латыни: «Кто доит молочников?» Намёк на изречение из предыдущего абзаца, являющееся устоявшимся переводом фразы "Quis custodiet ipsos custodes?" — _Прим. пер._
-[^20]: Игра слов: Domino's — популярная сеть пиццерий; в то же время намёк на слово Domini (Всевышний). — _Прим. пер._
+[^19]: Примерный перевод с латыни: «Кто доит молочников?» Намёк на изречение из предыдущего абзаца, являющееся устоявшимся переводом фразы "Quis custodiet ipsos custodes?" — *Прим. пер.*
+[^20]: Игра слов: Domino's — популярная сеть пиццерий; в то же время намёк на слово Domini (Всевышний). — *Прим. пер.*

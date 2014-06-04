@@ -4,7 +4,7 @@ Category: What If?
 Date: 2013-04-04 14:25
 Source: http://what-if.xkcd.com/39/
 SourceTitle: Hockey Puck
-Formulas: True
+Formulas: False
 
 > С какой силой нужно ударить по шайбе, чтобы забить вратаря в ворота?
 > 

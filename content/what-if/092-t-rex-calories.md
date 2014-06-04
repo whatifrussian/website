@@ -4,7 +4,7 @@ Category: What If?
 Date: 2014-01-09 23:17
 Source: http://what-if.xkcd.com/78/
 SourceTitle: T-rex Calories
-Formulas: True
+Formulas: False
 
 > Если тираннозавра рекса выпустить в Нью-Йорке, сколько людей в день ему нужно будет съедать, чтобы удовлетворить свои потребности в калориях?
 > 
