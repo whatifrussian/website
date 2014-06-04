@@ -80,3 +80,5 @@ SITEMAP = {
         'pages': 'monthly'
     }
 }
+
+MD_EXTENSIONS = (['extra', 'abbr', 'footnotes'])
