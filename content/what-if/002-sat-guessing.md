@@ -3,6 +3,7 @@ Slug: sat-guessing
 Category: What If?
 Date: 2012-08-09 18:39
 Source: http://what-if.xkcd.com/2/
+SourceTitle: SAT Guessing
 Formulas: True
 
 > Что если каждый, кто принимает участие в SAT[^1], случайным образом проставит ответ? Сколько отличных оценок будет?

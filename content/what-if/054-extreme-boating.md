@@ -3,6 +3,7 @@ Slug: extreme-boating
 Category: What If?
 Date: 2013-06-20 20:44
 Source: http://what-if.xkcd.com/50/
+SourceTitle: Extreme Boating
 Formulas: True
 
 > На что будет похоже плавание на вёсельной лодке по озеру ртути? Что насчет брома? Жидкого галлия? Жидкого вольфрама? Жидкого азота? Жидкого гелия?

@@ -3,6 +3,7 @@ Slug: speed-bump
 Category: What If?
 Date: 2013-09-05 16:41
 Source: http://what-if.xkcd.com/61/
+SourceTitle: Speed Bump
 Formulas: True
 
 > Как быстро можно проехать через лежачий полицейский так, чтобы при этом выжить?

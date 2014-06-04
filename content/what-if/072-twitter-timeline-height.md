@@ -3,6 +3,7 @@ Slug: twitter-timeline-height
 Category: What If?
 Date: 2013-10-03 12:51
 Source: http://what-if.xkcd.com/65/
+SourceTitle: Twitter Timeline Height
 Formulas: True
 
 > Если наши ленты сообщений в Твиттере (твиты людей, на которых мы подписаны) смогут выходить за пределы экрана в обоих направлениях, насколько высокими они станут?

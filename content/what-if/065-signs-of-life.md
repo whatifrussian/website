@@ -3,6 +3,7 @@ Slug: signs-of-life
 Category: What If?
 Date: 2013-08-29 12:45
 Source: http://what-if.xkcd.com/60/
+SourceTitle: Signs of Life
 Formulas: True
 
 > Если телепортироваться в случайное место на поверхности Земли, каковы шансы обнаружить признаки разумной жизни?

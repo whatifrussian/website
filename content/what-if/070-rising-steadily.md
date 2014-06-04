@@ -3,6 +3,7 @@ Slug: rising-steadily
 Category: What If?
 Date: 2013-09-26 15:38
 Source: http://what-if.xkcd.com/64
+SourceTitle: 
 Formulas: True
 
 > Если вы вдруг полетите вверх со скоростью один километр в час, что именно вас убьёт? Замёрзнете вы или задохнётесь? Или же что-то ещё?

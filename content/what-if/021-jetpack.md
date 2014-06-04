@@ -3,6 +3,7 @@ Slug: jetpack
 Category: What If?
 Date: 2012-11-20 22:51
 Source: http://what-if.xkcd.com/21/
+SourceTitle: Machine Gun Jetpack
 Formulas: True
 
 > Возможно ли создать аналог реактивного ранца, стреляющего вниз из пулемётов[^1]?

@@ -3,6 +3,7 @@ Slug: reading-every-book
 Category: What If?
 Date: 2013-12-19 21:03
 Source: http://what-if.xkcd.com/76/
+SourceTitle: Reading Every Book
 Formulas: True
 
 > В какой момент человеческой истории англоязычных книг стало слишком много, чтобы прочесть за одну жизнь?

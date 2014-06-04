@@ -3,6 +3,7 @@ Slug: longest-sunset
 Category: What If?
 Date: 2013-04-25 15:24
 Source: http://what-if.xkcd.com/42/
+SourceTitle: Longest Sunset
 Formulas: True
 
 > Сколько будет длиться самый долгий закат, который можно наблюдать за рулём автомобиля, если ехать по асфальтированным дорогам, не нарушая правил?

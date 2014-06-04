@@ -3,6 +3,7 @@ Slug: short-answers
 Category: What If?
 Date: 2012-10-02 12:34
 Source: http://what-if.xkcd.com/14/
+SourceTitle: Short Answer Section
 Formulas: True
 
 В сегодняшней статье я коротко отвечу на некоторые вопросы читателей.

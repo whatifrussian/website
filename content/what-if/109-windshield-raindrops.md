@@ -3,6 +3,7 @@ Slug: windshield-raindrops
 Category: What If?
 Date: 2014-04-24 23:13
 Source: http://what-if.xkcd.com/93/
+SourceTitle: Windshield Raindrops
 Formulas: True
 
 > С какой скоростью нужно ехать, чтобы дождь разбил ветровое стекло?

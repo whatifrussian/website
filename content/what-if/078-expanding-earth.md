@@ -3,6 +3,7 @@ Slug: expanding-earth
 Category: What If?
 Date: 2013-10-17 13:41
 Source: http://what-if.xkcd.com/67/
+SourceTitle: Expanding Earth
 Formulas: True
 
 > Как скоро люди заметят прирост в весе, если средний радиус Земли будет ежесекундно увеличиваться на 1 см? (При условии, что средний состав породы меняться не будет.)

@@ -3,6 +3,7 @@ Slug: loneliest-human
 Category: What If?
 Date: 2013-11-21 21:43
 Source: http://what-if.xkcd.com/72/
+SourceTitle: Loneliest Human
 Formulas: True
 
 > Какое максимальное расстояние когда-либо отделяло человека от остальных живых людей? Было ли ему одиноко?

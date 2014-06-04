@@ -3,6 +3,7 @@ Slug: everybody-out
 Category: What If?
 Date: 2012-08-16 00:08
 Source: http://what-if.xkcd.com/7/
+SourceTitle: Everybody Out
 Formulas: True
 
 > Достаточно ли энергии, чтобы всех людей убрать с планеты?

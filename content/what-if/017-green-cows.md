@@ -3,6 +3,7 @@ Slug: green-cows
 Category: What If?
 Date: 2012-10-23 17:31
 Source: http://what-if.xkcd.com/17/
+SourceTitle: Green Cows
 Formulas: True
 
 > Насколько уменьшилась бы потребность коров в еде, если бы они могли фотосинтезировать?

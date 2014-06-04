@@ -3,6 +3,7 @@ Slug: one-second-day
 Category: What If?
 Date: 2014-04-17 23:20
 Source: http://what-if.xkcd.com/92/
+SourceTitle: One-Second Day
 Formulas: True
 
 > Что случится, если вращение Земли ускорить так, что день будет длиться только одну секунду?

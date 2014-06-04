@@ -3,6 +3,7 @@ Slug: pennies
 Category: What If?
 Date: 2012-11-27 23:00
 Source: http://what-if.xkcd.com/22/
+SourceTitle: Cost of Pennies
 Formulas: True
 
 > Если у вас есть пенни[^1] в отделении для монеток, сколько потребуется времени, чтобы её стоимость стала больше цента в топливном эквиваленте?

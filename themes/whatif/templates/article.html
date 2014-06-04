@@ -6,7 +6,7 @@
                     {% include 'includes/pagination.html' %}
                 </ul>
                 <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
-               {% if article.source != "False" %}<span class="original">Оригинал: <a href="{{ article.source }}" target="blank">{{ article.source }}<b></b></a></span> {% endif %}
+               {% if article.source != "False" %}<span class="original">Оригинал: <a href="{{ article.source }}" target="blank">{{ article.sourcetitle }}<b></b></a></span> {% endif %}
                 <div class="page">
                     {{ article.content }}
                 </div>

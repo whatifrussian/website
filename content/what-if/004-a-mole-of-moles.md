@@ -3,6 +3,7 @@ Slug: a-mole-of-moles
 Category: What If?
 Date: 2012-08-11 17:43
 Source: http://what-if.xkcd.com/4/
+SourceTitle: A Mole of Moles
 Formulas: True
 
 > Что произойдёт, если вы соберёте моль (единица измерения) кротов (игра слов: mole — это и «крот», и «моль», т. о. mole of moles — моль кротов) в одном месте?

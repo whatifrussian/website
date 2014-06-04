@@ -3,6 +3,7 @@ Slug: googles-datacenters-on-punch-cards
 Category: What If?
 Date: 2013-09-19 12:58
 Source: http://what-if.xkcd.com/63
+SourceTitle: 
 Formulas: True
 
 > Если хранить данные на перфокартах, насколько большим будет хранилище дата-центра Google?

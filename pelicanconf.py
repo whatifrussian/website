@@ -48,7 +48,7 @@ SLUG_SUBSTITUTIONS = [
 #("",""),
 ]
 
-DEFAULT_PAGINATION = 1
+DEFAULT_PAGINATION = False
 
 EXTRA_PATH_METADATA = {
     'extras/robots.txt': {'path': 'robots.txt'},

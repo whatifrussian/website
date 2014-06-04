@@ -3,6 +3,7 @@ Slug: raindrop
 Category: What If?
 Date: 2012-09-18 12:56
 Source: http://what-if.xkcd.com/12/
+SourceTitle: Raindrop
 Formulas: True
 
 > Что если ливень сбросит всю свою воду в одной гигантской капле?

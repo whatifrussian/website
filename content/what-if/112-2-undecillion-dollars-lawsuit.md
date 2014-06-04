@@ -3,6 +3,7 @@ Slug: 2-undecillion-dollars-lawsuit
 Category: What If?
 Date: 2014-05-19 23:02
 Source: http://what-if.xkcd.com/96/
+SourceTitle: $2 Undecillion Lawsuit
 Formulas: True
 
 > Что если бы Au Bon Pain проиграли [этот иск](http://www.loweringthebar.net/2014/05/2-undecillion-dollar-demand.html) и были вынуждены заплатить истцу 2 ундециллиона долларов?

@@ -3,6 +3,7 @@ Slug: pile-of-viruses
 Category: What If?
 Date: 2014-01-23 23:17
 Source: http://what-if.xkcd.com/80/
+SourceTitle: Pile of Viruses
 Formulas: True
 
 > Что будет, если собрать все вирусы мира в одном месте? Какой объём они займут, и как это будет выглядеть?

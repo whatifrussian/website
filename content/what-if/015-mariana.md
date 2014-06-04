@@ -3,6 +3,7 @@ Slug: mariana
 Category: What If?
 Date: 2012-10-09 12:32
 Source: http://what-if.xkcd.com/15/
+SourceTitle: Mariana Trench Explosion
 Formulas: True
 
 > Что произойдёт, если взорвать ядерную бомбу (к примеру, "Кузькину мать") на дне Марианской впадины?

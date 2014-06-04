@@ -2,12 +2,14 @@
 {% block title %}{{ SITENAME }} - {{ category }}{% endblock %}
 {% block content %}
     {% if articles %}
-        {% for article in (articles_page.object_list if articles_page else articles) %}
+    {% set article = articles[0] %}
             <div class="main">
                 <ul class="menu-page clearfix">
                     {% include 'includes/pagination.html' %}
                 </ul>
                 <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+                {% if article.source != "False" %}<span class="original">Оригинал: <a href="{{ article.source }}" target="blank">{{ article.sourcetitle }}<b></b></a></span> {% endif %}
+
                 <div class="page">
                     {{ article.content }}
                 </div>
@@ -17,7 +19,6 @@
                     {% include 'includes/pagination.html' %}
                 </ul>
             </div>
-        {% endfor %}
     {% endif %}
 {% endblock content %}
 

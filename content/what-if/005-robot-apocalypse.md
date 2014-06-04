@@ -3,6 +3,7 @@ Slug: robot-apocalypse
 Category: What If?
 Date: 2012-08-13 21:38
 Source: http://what-if.xkcd.com/5/
+SourceTitle: Robot Apocalypse
 Formulas: True
 
 > Что если случится восстание роботов? Как долго человечество протянет?

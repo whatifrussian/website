@@ -3,6 +3,8 @@ Slug: supersonic-stereo
 Category: What If?
 Date: 2013-03-20 23:04
 Source: http://what-if.xkcd.com/37/
+SourceTitle: 
+SourceTitle: Supersonic Stereo
 Formulas: True
 
 > Что если вам как-нибудь удастся заставить магнитофон двигаться в два раза быстрее скорости звука, проиграется ли звук задом наперёд для человека, который случайно сидел рядом, пока магнитофон пролетал мимо?

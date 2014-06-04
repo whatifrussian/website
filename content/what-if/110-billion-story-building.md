@@ -3,6 +3,7 @@ Slug: billion-story-building
 Category: What If?
 Date: 2014-05-01 23:23
 Source: http://what-if.xkcd.com/94/
+SourceTitle: Billion-Story Building
 Formulas: True
 
 > Моя дочь (4,5 года) говорит, что хочет здание в миллиард этажей. Трудно не только помочь ей оценить размеры такого здания, я вообще не знаю, как объяснить ей все те трудности, которые придётся преодолеть.

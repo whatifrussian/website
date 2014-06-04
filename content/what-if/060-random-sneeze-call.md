@@ -3,6 +3,7 @@ Slug: random-sneeze-call
 Category: What If?
 Date: 2013-07-25 13:09
 Source: http://what-if.xkcd.com/55/
+SourceTitle: Random Sneeze Call
 Formulas: True
 
 > Если позвонить по случайно выбранному номеру и сказать «Будьте здоровы!», какой будет вероятность того, что поднявший трубку только что чихнул? В среднем, не только весной или осенью.

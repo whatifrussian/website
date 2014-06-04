@@ -3,6 +3,7 @@ Slug: little-planet
 Category: What If?
 Date: 2013-10-24 12:40
 Source: http://what-if.xkcd.com/68/
+SourceTitle: Little Planet
 Formulas: True
 
 > Правда ли, что на очень маленьком, но сверхмассивном астероиде можно жить, как Маленький принц?

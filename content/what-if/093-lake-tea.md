@@ -3,6 +3,7 @@ Slug: lake-tea
 Category: What If?
 Date: 2014-01-16 23:53
 Source: http://what-if.xkcd.com/79/
+SourceTitle: Lake Tea
 Formulas: True
 
 > Что, если высыпать весь чай мира в Великие озёра? Насколько крепким он будет по сравнению с обычным чаем?

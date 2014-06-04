@@ -3,6 +3,7 @@ Slug: fedex-bandwidth
 Category: What If?
 Date: 2013-02-06 16:19
 Source: http://what-if.xkcd.com/31/
+SourceTitle: FedEx Bandwidth
 Formulas: True
 
 > Наступит ли когда-нибудь такой момент, что пропускная способность Интернета превзойдёт пропускную способность FedEx[^1]?

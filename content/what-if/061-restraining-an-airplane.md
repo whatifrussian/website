@@ -3,6 +3,7 @@ Slug: restraining-an-airplane
 Category: What If?
 Date: 2013-08-01 12:42
 Source: http://what-if.xkcd.com/56/
+SourceTitle: Restraining an Airplane
 Formulas: True
 
 > Из чего нужно сделать верёвку, чтобы самолёт, привязанный с её помощью к земле, не мог взлететь?

@@ -3,6 +3,7 @@ Slug: updating-a-printed-wikipedia
 Category: What If?
 Date: 2013-08-22 12:53
 Source: http://what-if.xkcd.com/59/
+SourceTitle: Updating a Printed Wikipedia
 Formulas: True
 
 > Если у вас есть полный печатный вариант Википедии (скажем, английской), как много принтеров нужно, чтобы поддерживать её в соответствии с изменениями «живой» версии?

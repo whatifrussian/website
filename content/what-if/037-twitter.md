@@ -3,6 +3,7 @@ Slug: twitter
 Category: What If?
 Date: 2013-02-27 22:43
 Source: http://what-if.xkcd.com/34/
+SourceTitle: Twitter
 Formulas: True
 
 > Насколько много можно написать уникальных твитов на английском языке? Сколько времени потребуется населению нашей планеты, чтобы прочесть их всех вслух?

@@ -3,6 +3,7 @@ Slug: lightning
 Category: What If?
 Date: 2012-10-16 21:40
 Source: http://what-if.xkcd.com/16/
+SourceTitle: Today's topic: Lightning
 Formulas: True
 
 > Насколько в действительности опасно находиться в бассейне в грозу?

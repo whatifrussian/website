@@ -3,6 +3,7 @@ Slug: steak-drop
 Category: What If?
 Date: 2013-01-15 23:47
 Source: http://what-if.xkcd.com/28/
+SourceTitle: Steak Drop
 Formulas: True
 
 > С какой высоты нужно сбросить стейк, чтобы, падая на землю, он приготовился?

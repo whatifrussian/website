@@ -3,6 +3,7 @@ Slug: sunless-earth
 Category: What If?
 Date: 2013-06-13 19:53
 Source: http://what-if.xkcd.com/49/
+SourceTitle: Sunless Earth
 Formulas: True
 
 > Что произойдет с Землёй, если Солнце внезапно отключится?

@@ -3,6 +3,7 @@ Slug: lethal-neutrinos
 Category: What If?
 Date: 2013-11-28 12:39
 Source: http://what-if.xkcd.com/73/
+SourceTitle: Lethal Neutrinos
 Formulas: True
 
 > Насколько близко нужно быть к сверхновой звезде, чтобы получить смертельную дозу нейтринного облучения?

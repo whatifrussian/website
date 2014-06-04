@@ -3,6 +3,7 @@ Slug: droppings
 Category: What If?
 Date: 2012-09-11 16:25
 Source: http://what-if.xkcd.com/11/
+SourceTitle: Droppings
 Formulas: True
 
 > Что если вы выйдете на улицу, ляжете на спину, открыв рот; как долго вам придётся ждать, чтобы птица прилетела и нагадила в него?

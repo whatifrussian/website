@@ -3,6 +3,7 @@ Slug: falling-with-helium
 Category: What If?
 Date: 2013-09-12 14:03
 Source: http://what-if.xkcd.com/62/
+SourceTitle: Falling With Helium
 Formulas: True
 
 > Что, если выпрыгнуть из самолета с парой баллонов гелия и большим сдутым шаром, а потом, в падении, наполнить шар гелием? Как долго нужно падать, чтобы шар замедлил меня достаточно для безопасного приземления?

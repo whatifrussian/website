@@ -3,6 +3,7 @@ Slug: train-loop
 Category: What If?
 Date: 2013-05-01 21:15
 Source: http://what-if.xkcd.com/43/
+SourceTitle: Train Loop
 Formulas: True
 
 > Мог бы скоростной поезд описать «мёртвую петлю», как на американских горках, таким образом, чтобы пассажиры не испытывали дискомфорта?

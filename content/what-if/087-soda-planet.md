@@ -3,6 +3,7 @@ Slug: soda-planet
 Category: What If?
 Date: 2013-12-05 16:11
 Source: http://what-if.xkcd.com/74/
+SourceTitle: Soda Planet
 Formulas: True
 
 > Какая часть находящейся на Земле воды в некоторый момент своей истории была газированным напитком?

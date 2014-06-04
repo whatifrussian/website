@@ -3,6 +3,7 @@ Slug: drain-the-oceans
 Category: What If?
 Date: 2013-07-11 11:05
 Source: http://what-if.xkcd.com/53/
+SourceTitle: Drain the Oceans
 Formulas: True
 
 > Как быстро пересохнут океаны, если в Бездне Челленджера — самой глубокой точке мирового океана — расположить портал диаметром 20 метров, ведущий прямиком в космос? И что произойдет с Землёй в таком случае?

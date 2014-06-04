@@ -3,6 +3,7 @@ Slug: facebook-of-the-dead
 Category: What If?
 Date: 2013-10-31 15:56
 Source: http://what-if.xkcd.com/69/
+SourceTitle: Facebook of the Dead
 Formulas: True
 
 > Будет ли когда-нибудь на Фейсбуке больше страниц, принадлежащих мёртвым, чем живым, и если да, то когда?

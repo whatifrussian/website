@@ -3,6 +3,7 @@ Slug: sunset-on-the-british-empire
 Category: What If?
 Date: 2013-06-06 19:29
 Source: http://what-if.xkcd.com/48/
+SourceTitle: Sunset on the British Empire
 Formulas: True
 
 > Когда (если вообще когда-нибудь) солнце зайдёт для Британской империи?

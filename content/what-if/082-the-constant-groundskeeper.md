@@ -3,6 +3,7 @@ Slug: the-constant-groundskeeper
 Category: What If?
 Date: 2013-11-07 12:42
 Source: http://what-if.xkcd.com/70/
+SourceTitle: The Constant Groundskeeper
 Formulas: True
 
 > Насколько большим должен быть газон, чтобы к моменту окончания стрижки трава подросла настолько, что пришлось бы начинать заново?

@@ -3,6 +3,7 @@ Slug: star-sand
 Category: What If?
 Date: 2014-02-13 23:58
 Source: http://what-if.xkcd.com/83/
+SourceTitle: Star Sand
 Formulas: True
 
 > Как выглядел бы пляж, песчинки на котором пропорциональны звездам Млечного Пути?
