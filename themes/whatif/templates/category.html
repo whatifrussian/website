@@ -1,8 +1,9 @@
 {% extends "base.html" %}
-{% block title %}{{ SITENAME }} - {{ category }}{% endblock %}
+{% block title %}{{ SITENAME }} — {{ category }}{% endblock %}
 {% block content %}
     {% if articles %}
-    {% set article = articles[0] %}
+        {% for article in (articles_page.object_list if articles_page else articles) %}
+        {% if loop.index <= 1 %}
             <div class="main">
                 <ul class="menu-page clearfix">
                     {% include 'includes/pagination.html' %}
@@ -19,6 +20,8 @@
                     {% include 'includes/pagination.html' %}
                 </ul>
             </div>
+        {% endif %}
+        {% endfor %}
     {% endif %}
 {% endblock content %}
 

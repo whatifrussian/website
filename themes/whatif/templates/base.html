@@ -5,7 +5,7 @@
 <head>
     <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
     <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="keywords" content="xkcd, what if, what if перевод, xkcd перевод, что если">
     <link rel="shortcut icon" href="{{ SITEURL }}/theme/img/favicon.ico">
     <link rel="canonical" href="{{ SITEURL }}">
@@ -16,6 +16,54 @@
 
     <script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery-2.1.0.min.js"></script>
     <script type="text/javascript" src="{{ SITEURL }}/theme/js/main.js"></script>
+
+    {% if page %}
+        {% if page.title %}
+            <meta property="og:title" content="{{ page.title }}" />
+        {% endif %}
+        {% if page.description %}
+            <meta property="og:description" content="{{ page.description }}" />
+            <meta name="description" content="{{ page.description }}" />
+        {% endif %}
+        {% if page.url %}
+            <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
+        {% endif %}
+        {% if page.image %}
+            <meta property="og:image" content="{{ page.image }}" />
+        {% endif %}
+    {% elif article %}
+        {% if article.title %}
+            <meta property="og:title" content="{{ article.title }}" />
+        {% endif %}
+        {% if article.description %}
+            <meta property="og:description" content="{{ article.description }}" />
+            <meta name="description" content="{{ article.description }}" />
+        {% endif %}
+        {% if article.url %}
+            <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
+        {% endif %}
+        {% if article.image %}
+            <meta property="og:image" content="{{ article.image }}" />
+        {% endif %}
+    {% elif articles %}
+        {% for article in (articles_page.object_list if articles_page else articles) %}
+            {% if loop.index <= 1 %}
+                {% if article.title %}
+                    <meta property="og:title" content="{{ article.title }}" />
+                {% endif %}
+                {% if article.description %}
+                    <meta property="og:description" content="{{ article.description }}" />
+                    <meta name="description" content="{{ article.description }}" />
+                {% endif %}
+                {% if article.url %}
+                    <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
+                {% endif %}
+                {% if article.image %}
+                    <meta property="og:image" content="{{ article.image }}" />
+                {% endif %}
+            {% endif %}
+        {% endfor %} 
+    {% endif %}
 
     {% if FEED_ALL_ATOM %}
         <link href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate"
