@@ -6,7 +6,7 @@ import logging
 AUTHOR = u'whatif'
 SITENAME = u'Что если?'
 SITEURL = 'http://dev.chtoes.li'
-
+ 
 TIMEZONE = 'Europe/Moscow'
 
 DEFAULT_LANG = u'ru'
