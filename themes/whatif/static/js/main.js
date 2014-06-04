@@ -48,10 +48,10 @@ $(document).ready(function(){
 		var body = $('.footnote li#' + rel + ' p').html();
 
 		var $footnote = $('<sup/>', {class: 'refnum', html: '<span>' + num + '</span>'});
-  		$footnote
-		   .prepend('<span class="bracket">[</span>')
-		   .append('<span class="bracket">]</span>')
-		   .append('<b></b>');
+		$footnote
+			.prepend('<span class="bracket">[</span>')
+			.append('<span class="bracket">]</span>')
+			.append('<b></b>');
 		$(this).parent().replaceWith($footnote);
 		$footnote
 			.wrap('<nobr></nobr>')
@@ -63,6 +63,7 @@ $(document).ready(function(){
 			.after($('<span/>', {class: 'refbody', html: body}));
 	});
 	$('.footnote').remove();
+	$('.refbody a').attr('target', '_blank');
 
 
 	//=======================================================
@@ -85,7 +86,7 @@ $(document).ready(function(){
 		$('nav').removeClass('expanded');
 	});
 
-	$('.ref').click(function(event) {
+	$('.refnum').click(function(event) {
 		event.stopPropagation();
 		return false;
 	});
