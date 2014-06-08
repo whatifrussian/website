@@ -3,7 +3,7 @@ Slug: website-update
 Category: Новости проекта
 Date: 2013-02-21 00:34
 Source: False
-Formulas: True
+Formulas: False
 
 Всем привет!
 

@@ -4,7 +4,7 @@ Category: Прочее
 Date: 2013-10-11 00:38
 Source: http://blog.xkcd.com/2013/09/30/asteroid-4942-munroe/
 SourceTitle: Asteroid 4942 Munroe 
-Formulas: True
+Formulas: False
 
 > Запись в блоге xkcd от 30 сентября 2013 года.
 

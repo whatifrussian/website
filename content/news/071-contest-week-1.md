@@ -3,7 +3,7 @@ Slug: contest-week-1
 Category: Новости проекта
 Date: 2013-10-01 19:36
 Source: False
-Formulas: True
+Formulas: False
 
 <div style="display: block; background-color: #3A87AD; color: #fff;-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; padding: 0 5px;">Победителями первой недели <a href="http://chtoes.li/page/contest-answers-week-1">конкурса</a> стали:
 <ul>

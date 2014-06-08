@@ -3,7 +3,7 @@ Slug: help
 Category: Новости проекта
 Date: 2013-02-17 15:46
 Source: False
-Formulas: True
+Formulas: False
 save_as: help/index.html
 url: help/
 

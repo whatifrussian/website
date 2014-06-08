@@ -3,7 +3,7 @@ Slug: contest-answers-week-3
 Category: Новости проекта
 Date: 2013-11-08 21:56
 Source: False
-Formulas: True
+Formulas: False
 
 До 15 ноября ещё можно прислать свои ответы!
 

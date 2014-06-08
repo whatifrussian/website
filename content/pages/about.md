@@ -3,7 +3,7 @@ Slug: about
 Category: Прочее
 Date: 2013-02-15 05:30
 Source: False
-Formulas: True
+Formulas: False
 save_as: about/index.html
 url: about/
 

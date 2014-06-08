@@ -3,7 +3,7 @@ Slug: one-year
 Category: Новости проекта
 Date: 2013-08-31 21:35
 Source: False
-Formulas: True
+Formulas: False
 
 И снова здравствуйте!
 
