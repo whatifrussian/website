@@ -3,7 +3,7 @@ Slug: contest-week-2
 Category: Новости проекта
 Date: 2013-10-09 12:58
 Source: False
-Formulas: True
+Formulas: False
 
 Товарищи читатели!
 

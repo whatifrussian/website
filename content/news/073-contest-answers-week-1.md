@@ -3,7 +3,7 @@ Slug: contest-answers-week-1
 Category: Новости проекта
 Date: 2013-10-04 19:27
 Source: False
-Formulas: True
+Formulas: False
 
 ## Ответ №1. Автор: Алексей
 

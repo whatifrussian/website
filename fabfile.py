@@ -31,7 +31,7 @@ def regenerate():
     local('pelican -q -r -s pelicanconf.py')
 
 def serve():
-    local('cd {deploy_path} && python -m SimpleHTTPServer'.format(**env))
+    local('cd {deploy_path} && python2 -m SimpleHTTPServer'.format(**env))
 
 def reserve():
     build()
@@ -40,9 +40,7 @@ def reserve():
 def preview():
     local('pelican -s publishconf.py')
 
-
 def publish(environment):
-
     local('pelican -q -s pelicanconf.py')
     project.rsync_project(
         remote_dir=path[environment],

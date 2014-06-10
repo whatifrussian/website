@@ -4,7 +4,7 @@ Category: Новости проекта
 Date: 2014-03-19 22:05
 Source: http://blog.xkcd.com/2014/03/12/what-if-i-wrote-a-book/
 SourceTitle: What if I wrote a book? 
-Formulas: True
+Formulas: False
 
 > Запись в блоге xkcd от 12 марта 2014 года
 

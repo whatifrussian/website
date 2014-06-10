@@ -3,7 +3,7 @@ Slug: and-now-xkcd
 Category: Новости проекта
 Date: 2013-12-06 13:23
 Source: False
-Formulas: True
+Formulas: False
 
 Летом мы говорили, что будем переводить не только «Что если?», но и XKCD.
 
