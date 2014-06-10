@@ -3,6 +3,7 @@ Slug: hitting-a-comet
 Category: What If?
 Date: 2014-02-10 21:27
 Source: http://what-if.xkcd.com/82/
+SourceNum: 82
 SourceTitle: Hitting a comet
 Formulas: False
 

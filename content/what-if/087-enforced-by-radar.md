@@ -3,6 +3,7 @@ Slug: enforced-by-radar
 Category: What If?
 Date: 2014-03-13 16:40
 Source: http://what-if.xkcd.com/87/
+SourceNum: 87
 SourceTitle: Enforced by Radar
 Formulas: False
 

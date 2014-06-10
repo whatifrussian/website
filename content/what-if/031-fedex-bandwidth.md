@@ -3,6 +3,7 @@ Slug: fedex-bandwidth
 Category: What If?
 Date: 2013-02-06 16:19
 Source: http://what-if.xkcd.com/31/
+SourceNum: 31
 SourceTitle: FedEx Bandwidth
 Formulas: False
 

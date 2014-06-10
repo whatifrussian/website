@@ -3,6 +3,7 @@ Slug: green-cows
 Category: What If?
 Date: 2012-10-23 17:31
 Source: http://what-if.xkcd.com/17/
+SourceNum: 17
 SourceTitle: Green Cows
 Formulas: False
 

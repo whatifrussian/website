@@ -3,6 +3,7 @@ Slug: orbital-speed
 Category: What If?
 Date: 2013-08-15 13:10
 Source: http://what-if.xkcd.com/58/
+SourceNum: 58
 SourceTitle: Orbital Speed
 Formulas: True
 

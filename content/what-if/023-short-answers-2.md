@@ -3,6 +3,7 @@ Slug: short-answers-2
 Category: What If?
 Date: 2012-12-04 23:26
 Source: http://what-if.xkcd.com/23/
+SourceNum: 23
 SourceTitle: Short Answer Section II
 Formulas: True
 

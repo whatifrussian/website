@@ -3,6 +3,7 @@ Slug: phone-keypad
 Category: What If?
 Date: 2013-12-12 14:29
 Source: http://what-if.xkcd.com/75/
+SourceNum: 75
 SourceTitle: Phone Keypad
 Formulas: True
 

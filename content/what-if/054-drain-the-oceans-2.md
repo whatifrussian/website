@@ -3,6 +3,7 @@ Slug: drain-the-oceans-2
 Category: What If?
 Date: 2013-07-18 15:38
 Source: http://what-if.xkcd.com/54/
+SourceNum: 54
 SourceTitle: Drain the Oceans: Part II
 Formulas: False
 

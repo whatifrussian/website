@@ -2,7 +2,8 @@ Title: Дата-центры Google на перфокартах
 Slug: googles-datacenters-on-punch-cards
 Category: What If?
 Date: 2013-09-19 12:58
-Source: http://what-if.xkcd.com/63
+Source: http://what-if.xkcd.com/63/
+SourceNum: 63
 SourceTitle: 
 Formulas: False
 

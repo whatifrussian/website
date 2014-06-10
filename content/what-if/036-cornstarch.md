@@ -3,6 +3,7 @@ Slug: cornstarch
 Category: What If?
 Date: 2013-03-13 14:13
 Source: http://what-if.xkcd.com/36/
+SourceNum: 36
 SourceTitle: Cornstarch
 Formulas: False
 

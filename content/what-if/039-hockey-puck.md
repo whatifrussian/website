@@ -3,6 +3,7 @@ Slug: hockey-puck
 Category: What If?
 Date: 2013-04-04 14:25
 Source: http://what-if.xkcd.com/39/
+SourceNum: 39
 SourceTitle: Hockey Puck
 Formulas: False
 

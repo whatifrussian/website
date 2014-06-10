@@ -3,6 +3,7 @@ Slug: pyramid-energy
 Category: What If?
 Date: 2014-05-08 20:59
 Source: http://what-if.xkcd.com/95/
+SourceNum: 95
 SourceTitle: Pyramid Energy
 Formulas: False
 

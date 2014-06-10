@@ -3,6 +3,7 @@ Slug: longest-sunset
 Category: What If?
 Date: 2013-04-25 15:24
 Source: http://what-if.xkcd.com/42/
+SourceNum: 42
 SourceTitle: Longest Sunset
 Formulas: False
 

@@ -3,6 +3,7 @@ Slug: stirring-tea
 Category: What If?
 Date: 2013-11-14 21:25
 Source: http://what-if.xkcd.com/71/
+SourceNum: 71
 SourceTitle: Stirring Tea
 Formulas: True
 

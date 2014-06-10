@@ -3,6 +3,7 @@ Slug: yoda
 Category: What If?
 Date: 2012-08-11 01:24
 Source: http://what-if.xkcd.com/3/
+SourceNum: 3
 SourceTitle: Yoda
 Formulas: True
 

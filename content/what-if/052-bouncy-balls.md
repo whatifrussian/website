@@ -3,6 +3,7 @@ Slug: bouncy-balls
 Category: What If?
 Date: 2013-07-04 22:44
 Source: http://what-if.xkcd.com/52/
+SourceNum: 52
 SourceTitle: Bouncy Balls
 Formulas: False
 

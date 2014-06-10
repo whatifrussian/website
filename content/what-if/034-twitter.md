@@ -3,6 +3,7 @@ Slug: twitter
 Category: What If?
 Date: 2013-02-27 22:43
 Source: http://what-if.xkcd.com/34/
+SourceNum: 34
 SourceTitle: Twitter
 Formulas: True
 

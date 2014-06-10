@@ -3,6 +3,7 @@ Slug: reading-every-book
 Category: What If?
 Date: 2013-12-19 21:03
 Source: http://what-if.xkcd.com/76/
+SourceNum: 76
 SourceTitle: Reading Every Book
 Formulas: False
 

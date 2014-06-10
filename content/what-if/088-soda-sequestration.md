@@ -3,6 +3,7 @@ Slug: soda-sequestration
 Category: What If?
 Date: 2014-03-20 23:20
 Source: http://what-if.xkcd.com/88/
+SourceNum: 88
 SourceTitle: Soda Sequestration
 Formulas: False
 

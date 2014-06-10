@@ -2,7 +2,8 @@ Title: Равномерный подъём
 Slug: rising-steadily
 Category: What If?
 Date: 2013-09-26 15:38
-Source: http://what-if.xkcd.com/64
+Source: http://what-if.xkcd.com/64/
+SourceNum: 64
 SourceTitle: 
 Formulas: False
 

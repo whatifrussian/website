@@ -3,6 +3,7 @@ Slug: 2-undecillion-dollars-lawsuit
 Category: What If?
 Date: 2014-05-19 23:02
 Source: http://what-if.xkcd.com/96/
+SourceNum: 96
 SourceTitle: $2 Undecillion Lawsuit
 Formulas: False
 

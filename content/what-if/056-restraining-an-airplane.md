@@ -3,6 +3,7 @@ Slug: restraining-an-airplane
 Category: What If?
 Date: 2013-08-01 12:42
 Source: http://what-if.xkcd.com/56/
+SourceNum: 56
 SourceTitle: Restraining an Airplane
 Formulas: False
 

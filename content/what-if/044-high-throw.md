@@ -3,6 +3,7 @@ Slug: high-throw
 Category: What If?
 Date: 2013-05-09 18:18
 Source: http://what-if.xkcd.com/44/
+SourceNum: 44
 SourceTitle: High Throw
 Formulas: False
 

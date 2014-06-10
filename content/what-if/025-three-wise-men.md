@@ -3,6 +3,7 @@ Slug: three-wise-men
 Category: What If?
 Date: 2012-12-18 22:24
 Source: http://what-if.xkcd.com/25/
+SourceNum: 25
 SourceTitle: Three Wise Men
 Formulas: False
 

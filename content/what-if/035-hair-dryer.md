@@ -3,6 +3,7 @@ Slug: hair-dryer
 Category: What If?
 Date: 2013-03-07 00:11
 Source: http://what-if.xkcd.com/35/
+SourceNum: 35
 SourceTitle: Hair Dryer
 Formulas: False
 

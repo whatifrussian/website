@@ -3,6 +3,7 @@ Slug: faucet-power
 Category: What If?
 Date: 2014-04-10 23:35
 Source: http://what-if.xkcd.com/91/
+SourceNum: 91
 SourceTitle: Faucet Power
 Formulas: False
 

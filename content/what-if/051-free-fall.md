@@ -3,6 +3,7 @@ Slug: free-fall
 Category: What If?
 Date: 2013-06-27 20:11
 Source: http://what-if.xkcd.com/51/
+SourceNum: 51
 SourceTitle: Free Fall
 Formulas: False
 

@@ -3,6 +3,7 @@ Slug: pennies
 Category: What If?
 Date: 2012-11-27 23:00
 Source: http://what-if.xkcd.com/22/
+SourceNum: 22
 SourceTitle: Cost of Pennies
 Formulas: True
 

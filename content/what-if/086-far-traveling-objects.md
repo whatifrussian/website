@@ -3,6 +3,7 @@ Slug: far-traveling-objects
 Category: What If?
 Date: 2014-03-07 21:20
 Source: http://what-if.xkcd.com/86/
+SourceNum: 86
 SourceTitle: Far-Traveling Objects
 Formulas: False
 

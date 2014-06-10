@@ -3,6 +3,7 @@ Slug: billion-story-building
 Category: What If?
 Date: 2014-05-01 23:23
 Source: http://what-if.xkcd.com/94/
+SourceNum: 94
 SourceTitle: Billion-Story Building
 Formulas: False
 

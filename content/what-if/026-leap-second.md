@@ -3,6 +3,7 @@ Slug: leap-second
 Category: What If?
 Date: 2013-01-02 22:58
 Source: http://what-if.xkcd.com/26/
+SourceNum: 26
 SourceTitle: Leap Seconds
 Formulas: False
 

@@ -3,6 +3,7 @@ Slug: bb-gun
 Category: What If?
 Date: 2012-10-30 22:41
 Source: http://what-if.xkcd.com/18/
+SourceNum: 18
 SourceTitle: BB Gun
 Formulas: False
 

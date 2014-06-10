@@ -3,6 +3,7 @@ Slug: pressure-cooker
 Category: What If?
 Date: 2013-04-11 14:13
 Source: http://what-if.xkcd.com/40/
+SourceNum: 40
 SourceTitle: Pressure Cooker
 Formulas: False
 

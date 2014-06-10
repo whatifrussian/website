@@ -3,6 +3,7 @@ Slug: lake-tea
 Category: What If?
 Date: 2014-01-16 23:53
 Source: http://what-if.xkcd.com/79/
+SourceNum: 79
 SourceTitle: Lake Tea
 Formulas: True
 

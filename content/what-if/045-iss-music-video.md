@@ -3,6 +3,7 @@ Slug: iss-music-video
 Category: What If?
 Date: 2013-05-16 12:16
 Source: http://what-if.xkcd.com/45/
+SourceNum: 45
 SourceTitle: ISS Music Video
 Formulas: True
 

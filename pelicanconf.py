@@ -25,8 +25,8 @@ CATEGORY_FEED_RSS = "feed/category/%s/index.xml"
 TAG_FEED_RSS = "feed/category/%s/index.xml"
 
 # Save as URL
-ARTICLE_URL = 'page/{slug}/'
-ARTICLE_SAVE_AS = 'page/{slug}/index.html'
+ARTICLE_URL = '{slug}/'
+ARTICLE_SAVE_AS = '{slug}/index.html'
 CATEGORY_URL = 'category/{slug}/'
 CATEGORY_SAVE_AS = 'category/{slug}/index.html'
 TAGS_SAVE_AS = ''
@@ -40,7 +40,10 @@ LOG_FILTER = [
     (logging.WARN, 'Empty alt attribute for image {} in {}')
 ]
 
-TEMPLATE_PAGES = {'translations.html': 'translations/index.html'}
+TEMPLATE_PAGES = {
+    'translations.html': 'translations/index.html',
+    'rewrite.html': 'rewrite.map'
+    }
 
 SLUG_SUBSTITUTIONS = [
     ("what if?", "what-if"),

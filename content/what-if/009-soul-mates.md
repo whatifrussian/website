@@ -3,6 +3,7 @@ Slug: soul-mates
 Category: What If?
 Date: 2012-08-28 12:45
 Source: http://what-if.xkcd.com/9/
+SourceNum: 9
 SourceTitle: Soul Mates
 Formulas: False
 

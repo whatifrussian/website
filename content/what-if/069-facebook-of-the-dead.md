@@ -3,6 +3,7 @@ Slug: facebook-of-the-dead
 Category: What If?
 Date: 2013-10-31 15:56
 Source: http://what-if.xkcd.com/69/
+SourceNum: 69
 SourceTitle: Facebook of the Dead
 Formulas: False
 

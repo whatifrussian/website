@@ -3,6 +3,7 @@ Slug: interplanetary-cessna
 Category: What If?
 Date: 2013-01-31 21:38
 Source: http://what-if.xkcd.com/30/
+SourceNum: 30
 SourceTitle: Interplanetary Cessna
 Formulas: False
 

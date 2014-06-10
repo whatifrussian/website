@@ -3,6 +3,7 @@ Slug: everybody-jump
 Category: What If?
 Date: 2012-08-21 12:52
 Source: http://what-if.xkcd.com/8/
+SourceNum: 8
 SourceTitle: Everybody Jump
 Formulas: False
 

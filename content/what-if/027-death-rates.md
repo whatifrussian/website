@@ -3,6 +3,7 @@ Slug: death-rates
 Category: What If?
 Date: 2013-01-08 19:49
 Source: http://what-if.xkcd.com/27/
+SourceNum: 27
 SourceTitle: Death Rates
 Formulas: False
 

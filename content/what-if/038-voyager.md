@@ -3,6 +3,7 @@ Slug: voyager
 Category: What If?
 Date: 2013-03-28 01:17
 Source: http://what-if.xkcd.com/38/
+SourceNum: 38
 SourceTitle: Voyager
 Formulas: False
 

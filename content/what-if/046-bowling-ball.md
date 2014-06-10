@@ -3,6 +3,7 @@ Slug: bowling-ball
 Category: What If?
 Date: 2013-05-23 11:56
 Source: http://what-if.xkcd.com/46/
+SourceNum: 46
 SourceTitle: Bowling Ball
 Formulas: False
 

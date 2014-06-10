@@ -3,6 +3,7 @@ Slug: expanding-earth
 Category: What If?
 Date: 2013-10-17 13:41
 Source: http://what-if.xkcd.com/67/
+SourceNum: 67
 SourceTitle: Expanding Earth
 Formulas: False
 

@@ -3,6 +3,7 @@ Slug: laser-pointer
 Category: What If?
 Date: 2012-09-25 13:04
 Source: http://what-if.xkcd.com/13/
+SourceNum: 13
 SourceTitle: Laser Pointer
 Formulas: True
 

@@ -3,6 +3,7 @@ Slug: spent-fuel-pool
 Category: What If?
 Date: 2013-01-22 23:11
 Source: http://what-if.xkcd.com/29/
+SourceNum: 29
 SourceTitle: Spent Fuel Pool
 Formulas: False
 

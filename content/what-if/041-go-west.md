@@ -3,6 +3,7 @@ Slug: go-west
 Category: What If?
 Date: 2013-04-18 11:00
 Source: http://what-if.xkcd.com/41/
+SourceNum: 41
 SourceTitle: Go West
 Formulas: True
 

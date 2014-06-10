@@ -3,6 +3,7 @@ Slug: falling-with-helium
 Category: What If?
 Date: 2013-09-12 14:03
 Source: http://what-if.xkcd.com/62/
+SourceNum: 62
 SourceTitle: Falling With Helium
 Formulas: False
 

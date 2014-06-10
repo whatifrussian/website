@@ -3,6 +3,7 @@ Slug: cassini
 Category: What If?
 Date: 2012-09-04 15:08
 Source: http://what-if.xkcd.com/10/
+SourceNum: 10
 SourceTitle: Cassini
 Formulas: False
 

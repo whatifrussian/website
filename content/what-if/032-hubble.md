@@ -3,6 +3,7 @@ Slug: hubble
 Category: What If?
 Date: 2013-02-15 05:05
 Source: http://what-if.xkcd.com/32/
+SourceNum: 32
 SourceTitle: Hubble
 Formulas: False
 

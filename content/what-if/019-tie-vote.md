@@ -3,6 +3,7 @@ Slug: tie-vote
 Category: What If?
 Date: 2012-11-06 20:49
 Source: http://what-if.xkcd.com/19/
+SourceNum: 19
 SourceTitle: Tie Vote
 Formulas: True
 

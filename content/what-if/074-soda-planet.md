@@ -3,6 +3,7 @@ Slug: soda-planet
 Category: What If?
 Date: 2013-12-05 16:11
 Source: http://what-if.xkcd.com/74/
+SourceNum: 74
 SourceTitle: Soda Planet
 Formulas: False
 

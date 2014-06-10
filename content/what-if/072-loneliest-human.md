@@ -3,6 +3,7 @@ Slug: loneliest-human
 Category: What If?
 Date: 2013-11-21 21:43
 Source: http://what-if.xkcd.com/72/
+SourceNum: 72
 SourceTitle: Loneliest Human
 Formulas: False
 

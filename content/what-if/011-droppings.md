@@ -3,6 +3,7 @@ Slug: droppings
 Category: What If?
 Date: 2012-09-11 16:25
 Source: http://what-if.xkcd.com/11/
+SourceNum: 11
 SourceTitle: Droppings
 Formulas: True
 

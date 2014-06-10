@@ -3,6 +3,7 @@ Slug: relativistic-baseball
 Category: What If?
 Date: 2012-08-08 15:32
 Source: http://what-if.xkcd.com/1/
+SourceNum: 1
 SourceTitle: Relativistic Baseball
 Formulas: False
 

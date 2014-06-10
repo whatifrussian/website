@@ -3,6 +3,7 @@ Slug: the-constant-groundskeeper
 Category: What If?
 Date: 2013-11-07 12:42
 Source: http://what-if.xkcd.com/70/
+SourceNum: 70
 SourceTitle: The Constant Groundskeeper
 Formulas: False
 

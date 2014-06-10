@@ -3,6 +3,7 @@ Slug: alien-astronomers
 Category: What If?
 Date: 2013-05-30 19:54
 Source: http://what-if.xkcd.com/47/
+SourceNum: 47
 SourceTitle: Alien Astronomers
 Formulas: False
 

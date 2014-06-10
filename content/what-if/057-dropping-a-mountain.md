@@ -3,6 +3,7 @@ Slug: dropping-a-mountain
 Category: What If?
 Date: 2013-08-08 16:47
 Source: http://what-if.xkcd.com/57/
+SourceNum: 57
 SourceTitle: Dropping a Mountain
 Formulas: False
 

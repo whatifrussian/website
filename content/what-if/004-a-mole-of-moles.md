@@ -3,6 +3,7 @@ Slug: a-mole-of-moles
 Category: What If?
 Date: 2012-08-11 17:43
 Source: http://what-if.xkcd.com/4/
+SourceNum: 4
 SourceTitle: A Mole of Moles
 Formulas: True
 

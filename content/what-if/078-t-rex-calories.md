@@ -3,6 +3,7 @@ Slug: t-rex-calories
 Category: What If?
 Date: 2014-01-09 23:17
 Source: http://what-if.xkcd.com/78/
+SourceNum: 78
 SourceTitle: T-rex Calories
 Formulas: False
 

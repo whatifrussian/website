@@ -2,6 +2,7 @@
     {% for article in (articles_page.object_list if articles_page else articles) %}
         {% if article.category == "What If?" %}
 /{{ article.sourcenum }} {{ SITEURL }}/{{ article.url }};
+/{{ article.sourcenum }}/ {{ SITEURL }}/{{ article.url }};
 /page/{{ article.slug }} {{ SITEURL }}/{{ article.url }};
         {% endif %}
     {% endfor %}

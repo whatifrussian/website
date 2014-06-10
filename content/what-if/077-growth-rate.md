@@ -3,6 +3,7 @@ Slug: growth-rate
 Category: What If?
 Date: 2014-01-02 22:29
 Source: http://what-if.xkcd.com/77/
+SourceNum: 77
 SourceTitle: Growth Rate
 Formulas: False
 

@@ -3,6 +3,7 @@ Slug: paint-the-earth
 Category: What If?
 Date: 2014-02-20 23:05
 Source: http://what-if.xkcd.com/84/
+SourceNum: 84
 SourceTitle: Paint the Earth
 Formulas: True
 

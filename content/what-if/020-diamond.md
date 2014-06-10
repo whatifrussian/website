@@ -3,6 +3,7 @@ Slug: diamond
 Category: What If?
 Date: 2012-11-13 23:41
 Source: http://what-if.xkcd.com/20/
+SourceNum: 20
 SourceTitle: Diamond
 Formulas: False
 

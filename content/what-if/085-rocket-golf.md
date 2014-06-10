@@ -3,6 +3,7 @@ Slug: rocket-golf
 Category: What If?
 Date: 2014-02-27 23:02
 Source: http://what-if.xkcd.com/85/
+SourceNum: 85
 SourceTitle: Rocket Golf
 Formulas: True
 
