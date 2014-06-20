@@ -201,6 +201,44 @@ p {
 	padding-bottom: 1em;
 }
 
+/* Markdown */
+
+code {
+    margin: 0 2px;
+    padding: 0px 5px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+pre > code {
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+    border: none;
+    background: transparent;
+}
+
+pre {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    font-size: 13px;
+    line-height: 19px;
+    overflow: auto;
+    padding: 6px 10px;
+    border-radius: 3px;
+}
+
+pre code {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+
+/* ======== */
+
 blockquote {
 	font-style: italic;
 	color: #53830d;
