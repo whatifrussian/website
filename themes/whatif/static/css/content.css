@@ -153,8 +153,8 @@
 
 h1 {
 	font-size: 240%;
-	margin-top: 0px;
-	margin-bottom: 0;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	font-weight: normal;
 }
 h1 a {
@@ -299,6 +299,14 @@ img.illustration {
 .page a:active {
 	background-color: #8dc73f;
 	color: #fff;
+}
+
+.page a:visited {
+	color: #823BDD;
+}
+
+.page a:visited:hover {
+	background-color: #CA97F3;
 }
 
 .ref {
@@ -595,4 +603,19 @@ footer img {
 		max-width: 100px;
 		margin-bottom: 10px;
 	}
+}
+
+.toc li {
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 110%;
+}
+
+.error {
+	text-align: center;
+	padding-top: 20px;
+}
+
+.error img {
+	max-width: 100%;
 }

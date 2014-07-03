@@ -33,3 +33,8 @@
     <li class="menu-item translations"><a href="{{ SITEURL }}/"><b></b><span>Переводы</span></a></li>
 {% endif %}
 {% endblock translations %}
+{% block toc %}
+    {% if category == "What If?" %}
+        <li class="contents"><a href="{{ SITEURL }}/translations/">Оглавление</a></li>
+    {% endif %}
+{% endblock toc %}

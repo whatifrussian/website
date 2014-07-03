@@ -42,6 +42,7 @@ LOG_FILTER = [
 
 TEMPLATE_PAGES = {
     'translations.html': 'translations/index.html',
+    '404.html': '404.html',
     'rewrite.html': 'rewrite.map'
     }
 

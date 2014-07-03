@@ -2,7 +2,8 @@
 {% block title %}{{ SITENAME }} — Оглавление{% endblock %}
 {% block content %}
     <div class="main">
-        <ul>
+        <h1>Все переводы</h1>
+        <ol class="toc page" reversed>
     {% if articles %}
         {% for article in (articles_page.object_list if articles_page else articles) %}
             {% if article.category == "What If?" %}   
@@ -13,3 +14,6 @@
         </ul>
     </div>
 {% endblock content %}
+{% block translations %}
+    <li class="menu-item translations selected"><a href="{{ SITEURL }}/"><b></b><span>Переводы</span></a></li>
+{% endblock translations %}

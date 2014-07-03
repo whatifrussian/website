@@ -1,12 +1,14 @@
 {% if article %}
 	{% if article.prev_article_in_category %}
-	    <li class="prev"><a href="{{ SITEURL }}/{{ article.prev_article_in_category.url}}" title="{{ article.prev_article_in_category.title }}">Раньше</a></li>
+	    <li class="prev"><a href="{{ SITEURL }}/{{ article.prev_article_in_category.url }}" title="{{ article.prev_article_in_category.title }}">Раньше</a></li>
 	{% else %}
 		 <li class="prev disabled"><a title="Кончилось!">Раньше</a></li>
 	{% endif %}
-	    <li class="contents"><a href="{{ SITEURL }}/translations">Оглавление</a></li>
+	{% block toc %}
+		<li class="contents"><a href="{{ SITEURL }}/translations/">Оглавление</a></li>
+	{% endblock toc %}
 	{% if article.next_article_in_category %}    
-	    <li class="next"><a href="{{ SITEURL }}/{{ article.next_article_in_category.url}}" title="{{ article.next_article_in_category.title}}">Позже</a></li>
+	    <li class="next"><a href="{{ SITEURL }}/{{ article.next_article_in_category.url }}" title="{{ article.next_article_in_category.title }}">Позже</a></li>
 	{% else %}
 		 <li class="next disabled"><a title="Скоро!">Позже</a></li>
 	{% endif %}
