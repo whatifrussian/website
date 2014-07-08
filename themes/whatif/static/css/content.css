@@ -334,7 +334,7 @@ img.illustration {
 	background-color: rgba(141,199,63,0.3);
 	color: #7ab130;
 }
-.active .refnum {
+span.active .refnum {
 	background-color: #8dc73f;
 	color: #fff;
 }
@@ -442,7 +442,7 @@ figure.active figcaption {
 	} 
 
 	.ref:hover .refbody,
-	.active .refbody {
+	span.active .refbody {
 		left: -7em;
 		bottom: 2em;
 
@@ -515,7 +515,7 @@ figure.active figcaption {
 		background-color: #fff;
 		opacity: 0;
 	}
-	.active .refbody {
+	span.active .refbody {
 		visibility: visible;
 		font-size: 90%;
 		height: auto;
