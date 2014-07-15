@@ -5,7 +5,6 @@ import logging
 
 AUTHOR = u'whatif'
 SITENAME = u'Что если?'
-SITEURL = 'http://dev.chtoes.li'
  
 TIMEZONE = 'Europe/Moscow'
 
@@ -19,10 +18,10 @@ OUTPUT_PATH = 'output'
 DELETE_OUTPUT_DIRECTORY = True
 
 # Feed generation is usually not desired when developing
-FEED_DOMAIN = SITEURL
 FEED_ALL_RSS = "feed/index.xml"
 CATEGORY_FEED_RSS = "feed/category/%s/index.xml"
 TAG_FEED_RSS = "feed/category/%s/index.xml"
+FEED_MAX_ITEMS = 5
 
 # Save as URL
 ARTICLE_URL = '{slug}/'
@@ -56,14 +55,20 @@ SLUG_SUBSTITUTIONS = [
 DEFAULT_PAGINATION = False
 
 EXTRA_PATH_METADATA = {
-    'extras/robots.txt': {'path': 'robots.txt'},
+    'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/googleb52597a81842d95f.html': {'path': 'googleb52597a81842d95f.html'},
+    'extra/yandex_7e403715421012c7.txt': {'path': 'yandex_7e403715421012c7.txt'},
 }
 
-FILES_TO_COPY = (("uploads", "uploads"))
+FILES_TO_COPY = (
+            ("uploads", "uploads")
+            )
 
 STATIC_PATHS = [
     'uploads',
-    'extras',
+    'extra/robots.txt',
+    'extra/googleb52597a81842d95f.html',
+    'extra/yandex_7e403715421012c7.txt'
 ]
 
 

@@ -1,4 +1,5 @@
 *.pyc
 output/
+cache/
 .*.sw[a-z]
 .DS_Store

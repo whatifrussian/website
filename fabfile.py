@@ -12,7 +12,7 @@ env.user="chtoes_li"
 env.hosts = ["shared.libc6.org"]
 path = {
         "dev": '/var/www/chtoes_li/data/www/dev.chtoes.li/',
-        #"prod": '/var/www/chtoes_li/data/www/chtoes.li/'
+        "prod": '/var/www/chtoes_li/data/www/chtoes.li/'
         }
 
 def clean():
@@ -20,28 +20,28 @@ def clean():
         local('rm -rf {deploy_path}'.format(**env))
         local('mkdir {deploy_path}'.format(**env))
 
-def build():
-    local('pelican -q -s pelicanconf.py')
+def build(environment):
+    local('pelican -q -s pelicanconf-{}.py'.format(environment))
 
-def rebuild():
+def rebuild(environment):
     clean()
-    build()
+    build(environment)
 
-def regenerate():
-    local('pelican -q -r -s pelicanconf.py')
+def regenerate(environment):
+    local('pelican -q -r -s pelicanconf-{}.py'.format(environment))
 
 def serve():
     local('cd {deploy_path} && python2 -m SimpleHTTPServer'.format(**env))
 
-def reserve():
-    build()
+def reserve(environment):
+    build(environment)
     serve()
 
-def preview():
-    local('pelican -s publishconf.py')
+def preview(environment):
+    local('pelican -s pelicanconf-{}.py'.format(environment))
 
 def publish(environment):
-    local('pelican -q -s pelicanconf.py')
+    local('pelican -q -s pelicanconf-{}.py'.format(environment))
     project.rsync_project(
         remote_dir=path[environment],
         exclude=".DS_Store",
