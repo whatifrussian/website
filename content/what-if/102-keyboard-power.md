@@ -7,7 +7,7 @@ SourceNum: 102
 SourceTitle: Keyboard Power
 Formulas: False
 Description: Интересуюсь как писатель: какова общая энергия сотен тысяч ударов по клавишам, необходимых для написания романа?
-Image: http://dev.chtoes.li/uploads/102-keyboard-power/fast_ru.png
+Image: http://chtoes.li/uploads/102-keyboard-power/fast_ru.png
 
 > Интересуюсь как писатель: какова общая энергия сотен тысяч ударов по клавишам, необходимых для написания романа?
 >

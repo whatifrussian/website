@@ -7,7 +7,7 @@ SourceNum: 101
 SourceTitle: Plastic Dinosaurs
 Formulas: False
 Description: Раз пластмасса сделана из нефти, а нефть — из мертвых динозавров, сколько в пластмассовом динозавре настоящего динозавра?
-Image: http://dev.chtoes.li/uploads/101-plastic-dinosaurs/you_ru.png
+Image: http://chtoes.li/uploads/101-plastic-dinosaurs/you_ru.png
 
 > Раз пластмасса сделана из нефти, а нефть — из мертвых динозавров, сколько в пластмассовом динозавре настоящего динозавра?
 >
