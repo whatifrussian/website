@@ -2,8 +2,9 @@
 {% block title %}{% for article in (articles_page.object_list if articles_page else articles) %}{% if loop.index <= 1 %}{{ SITENAME }} — {{ article.title }}{% endif %}{% endfor %}{% endblock %}
 {% block content %}
     {% if articles %}
-        {% for article in (articles_page.object_list if articles_page else articles) %}
-        {% if loop.index <= 1 %}
+        {% set count = 0 %}
+        {% for article in articles %}
+        {% if article.category.slug == "what-if" and count != 1 %}
             <div class="main">
                 <ul class="menu-page clearfix">
                     {% include 'includes/pagination.html' %}
@@ -20,6 +21,7 @@
                     {% include 'includes/pagination.html' %}
                 </ul>
             </div>
+            {% set count = 1 %}
         {% endif %}
         {% endfor %}
     {% endif %}
