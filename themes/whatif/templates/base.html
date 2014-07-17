@@ -65,8 +65,9 @@
             <meta property="og:image" content="{{ article.image }}" />
         {% endif %}
     {% elif articles %}
-        {% for article in (articles_page.object_list if articles_page else articles) %}
-            {% if loop.index <= 1 %}
+        {% set count = 0 %}
+        {% for article in articles %}
+            {% if article.category.slug == "what-if" and count != 1 %}
                 {% if article.formulas == 'True' %}
                   <script type="text/x-mathjax-config">
                     MathJax.Hub.Config({
@@ -99,6 +100,7 @@
                 {% if article.image %}
                     <meta property="og:image" content="{{ article.image }}" />
                 {% endif %}
+                {% set count = 1 %}
             {% endif %}
         {% endfor %} 
     {% endif %}
