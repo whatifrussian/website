@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from fabric.api import *
 import fabric.contrib.project as project
 import os
@@ -14,6 +16,72 @@ path = {
         "dev": '/var/www/chtoes_li/data/www/dev.chtoes.li/',
         "prod": '/var/www/chtoes_li/data/www/chtoes.li/'
         }
+
+TEMPLATE = "Title:\n\
+Date: {{date}}\n\
+Slug: {{slug}}\n\
+Category: {{ category }}\n\
+Source: http://what-if.xkcd.com/{{num}}/\n\
+SourceNum: {{num}}\n\
+SourceTitle: {{title}}\n\
+Formulas: False\n\
+Description: \n\
+Image: \n\
+\n\
+\n"
+
+def new(num, title=None, category="What If?", overwrite="no"):
+    import datetime
+
+    if title is None:
+        import urllib2
+        from bs4 import BeautifulSoup
+        title = BeautifulSoup(urllib2.urlopen("http://what-if.xkcd.com/{}/".format(num))).title.string
+        slug = slugify(title)
+
+    CATEGORIES = {
+        "What If?": "what-if",
+        "Новости проекта": "news",
+        "Прочее": "other",
+    }
+    
+    category_slug = CATEGORIES[category] 
+    now = datetime.datetime.now()
+    post_date = now.strftime("%Y-%m-%d")
+
+    params = dict(
+        date     = post_date,
+        title    = title,
+        slug     = slug,
+        num      = num,
+        category = category
+    )
+
+    out_file = "content/{}/{:03d}-{}.md".format(category_slug, int(num), slug)
+    local("mkdir -p '{}' || true".format(os.path.dirname(out_file)))
+    if not os.path.exists(out_file) or overwrite.lower() == "yes":
+        render(TEMPLATE, out_file, **params)
+    else:
+        print("{} already exists. Pass 'overwrite=yes' to destroy it.".
+            format(out_file))
+
+def slugify(text):
+    import re
+    normalized = "".join([c.lower() if c.isalnum() else "-"
+                    for c in text])
+    no_repetitions = re.sub(r"--+", "-", normalized)
+    clean_start = re.sub(r"^-+", "", no_repetitions)
+    clean_end = re.sub(r"-+$", "", clean_start)
+    return clean_end
+
+def render(template, destination, **kwargs):
+    from jinja2 import Template
+    template = Template(TEMPLATE)
+    text = template.render(**kwargs)
+    with open(destination, "w") as output:
+        puts("Rendering to {}".format(destination))
+        output.write(text.encode("utf-8"))
+
 
 def clean():
     if os.path.isdir(DEPLOY_PATH):
