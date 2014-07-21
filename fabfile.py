@@ -37,7 +37,8 @@ def new(num, title=None, category="What If?", overwrite="no"):
         import urllib2
         from bs4 import BeautifulSoup
         title = BeautifulSoup(urllib2.urlopen("http://what-if.xkcd.com/{}/".format(num))).title.string
-        slug = slugify(title)
+
+    slug = slugify(title)
 
     CATEGORIES = {
         "What If?": "what-if",
