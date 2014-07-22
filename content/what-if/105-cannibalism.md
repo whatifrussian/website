@@ -51,4 +51,4 @@ Image: http://chtoes.li/uploads/105-cannibalism/front.png
 
 ![](/uploads/105-cannibalism/bracket_ru.png "Я хотел записать вероятность предсказания финальной таблицы -- в виде 1/[число] -- здесь, но мне кажется, что 2-гигабайтный текст при наведении курсором будет немного раздражать.")
 
-… такая [турнирная таблица](https://en.wikipedia.org/wiki/Bracket_(tournament)), которая положит конец всем турнирным таблицам.
+…такая [турнирная таблица](https://en.wikipedia.org/wiki/Bracket_(tournament)), которая положит конец всем турнирным таблицам.
