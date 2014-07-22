@@ -7,7 +7,7 @@ SourceNum: 105
 SourceTitle: Cannibalism
 Formulas: False
 Description:  Сколько времени человечество сможет протянуть на людоедстве?
-Image: http://dev.chtoes.li/uploads/105-cannibalism/proposal_ru.png
+Image: http://chtoes.li/uploads/105-cannibalism/front.png
 
 > Сколько времени человечество сможет протянуть на людоедстве?
 >
