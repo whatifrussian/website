@@ -4,7 +4,6 @@ Category: What If?
 Date: 2013-03-20 23:04
 Source: http://what-if.xkcd.com/37/
 SourceNum: 37
-SourceTitle:
 SourceTitle: Supersonic Stereo
 Formulas: False
 
