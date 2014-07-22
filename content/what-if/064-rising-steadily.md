@@ -4,11 +4,11 @@ Category: What If?
 Date: 2013-09-26 15:38
 Source: http://what-if.xkcd.com/64/
 SourceNum: 64
-SourceTitle: 
+SourceTitle:
 Formulas: False
 
 > Если вы вдруг полетите вверх со скоростью один километр в час, что именно вас убьёт? Замёрзнете вы или задохнётесь? Или же что-то ещё?
-> 
+>
 > — Ребекка Б
 
 Вы прихватили пальто?

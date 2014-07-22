@@ -8,7 +8,7 @@ SourceTitle: The Constant Groundskeeper
 Formulas: False
 
 > Насколько большим должен быть газон, чтобы к моменту окончания стрижки трава подросла настолько, что пришлось бы начинать заново?
-> 
+>
 > — Ник Нельсон
 
 Согласно программе [«Газоноведение в массы»](http://www.turf.uiuc.edu/extension/ext-mow.html) (обучение содержанию газонов) Иллинойского университета в Урбане-Шампейне (UIUC)[^1], при каждом покосе траву следует состригать на треть её высоты.
@@ -45,7 +45,7 @@ Formulas: False
 [^1]: [Поля будущего дня](http://admissions.illinois.edu/visit/selfguided/quad.html#morrow), находящиеся во владении университета — самые ценные в мире — являются также объектом наиболее продолжительных научных экспериментов.
 [^2]: или 6 акров, или 2,5 гектара, или 7500 квадратных саженей, или 8500 квадратных смутов, или 5300 Туринских плащаниц.
 [^3]: Вероятно, в результате неудачного курсового проекта студентов UIUC.
-[^4]: Максимальная скорость, указанная в [таблице производительности газонокосилок на сайте магазина Cub Cadet](http://www.cubcadet.com/webapp/wcs/stores/servlet/CubCadetFullPageArticleDisplayView?langId=-1&storeId=10051&catalogId=14101&pageView=Cubcadet_Commercial/AcresPerHour.html) 
+[^4]: Максимальная скорость, указанная в [таблице производительности газонокосилок на сайте магазина Cub Cadet](http://www.cubcadet.com/webapp/wcs/stores/servlet/CubCadetFullPageArticleDisplayView?langId=-1&storeId=10051&catalogId=14101&pageView=Cubcadet_Commercial/AcresPerHour.html)
 [^5]: [В самом деле](http://reviews.cnet.com/8301-13746_7-20017942-48.html).
 [^6]: «[Первые испытания газонокосилки, способной разогнаться до 210 км/ч](http://www.bbc.co.uk/news/technology-23342347)», BBC News Technology, 17 July 2013
 [^7]: Игра слов. Надпись «Deere» на предыдущей картинке — отсылка к компании [Deere](http://ru.wikipedia.org/wiki/Deere_%26_Company), хотя deer — ещё и «олень». Cougare – стилизованное под Deere слово «пума». — *Прим. пер.*

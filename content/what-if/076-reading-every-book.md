@@ -19,9 +19,9 @@ Formulas: False
 
 В признание общеупотребимого английского языка литературным внесли свой вклад «Кентерберийские рассказы», написанные в конце XIV века. Правда, носителю современного английского они даются с трудом:
 
->Wepyng and waylyng, care and oother sorwe  
->I knowe ynogh, on even and a-morwe,'  
->Quod the Marchant, 'and so doon oother mo  
+>Wepyng and waylyng, care and oother sorwe
+>I knowe ynogh, on even and a-morwe,'
+>Quod the Marchant, 'and so doon oother mo
 >That wedded been. [^4]
 
 ![](/uploads/076-reading-every-book/books_what_ru.png "Если это читает моя учительница английского в 9 классе, не обращайте внимания. Я ПОЛНОСТЬЮ понял этот фрагмент.")

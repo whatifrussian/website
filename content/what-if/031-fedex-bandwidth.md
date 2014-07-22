@@ -23,7 +23,7 @@ Formulas: False
 
 Но всегда ли такой способ будет быстрее?
 
-Cisco [оценивает](http://www.cisco.com/en/US/solutions/collateral/ns341/ns525/ns537/ns705/ns827/white_paper_c11-481360_ns827_Networking_Solutions_White_Paper.html) общий поток трафика в 167 терабит в секунду. 
+Cisco [оценивает](http://www.cisco.com/en/US/solutions/collateral/ns341/ns525/ns537/ns705/ns827/white_paper_c11-481360_ns827_Networking_Solutions_White_Paper.html) общий поток трафика в 167 терабит в секунду.
 У FedEx есть эскадра из 654 самолётов с [общей ежедневной грузоподъёмностью в 12 миллионов килограмм](http://www.fedex.com/sv_english/about/facts.html). Твердотельный накопитель для лэптопа (SSD) весит [порядка 78 грамм](http://download.intel.com/newsroom/kits/ssd/pdfs/intel_ssd_520_product_spec_325968.pdf) и может хранить до терабайта.
 
 Это значит, что FedEx может передавать 150 экзабайт данных в день или 14 петабит в секунду, что почти в сто раз больше текущей пропускной способности Интернета.

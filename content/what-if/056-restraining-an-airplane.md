@@ -8,7 +8,7 @@ SourceTitle: Restraining an Airplane
 Formulas: False
 
 > Из чего нужно сделать верёвку, чтобы самолёт, привязанный с её помощью к земле, не мог взлететь?
-> 
+>
 > — Коннор Чайлдерхос
 
 О, прямо [сценарий для _Just Cause 2_](http://www.youtube.com/results?search_query=just+cause+2+plane+grapple).

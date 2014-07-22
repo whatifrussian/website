@@ -4,11 +4,11 @@ Category: What If?
 Date: 2013-09-19 12:58
 Source: http://what-if.xkcd.com/63/
 SourceNum: 63
-SourceTitle: 
+SourceTitle:
 Formulas: False
 
 > Если хранить данные на перфокартах, насколько большим будет хранилище дата-центра Google?
-> 
+>
 > — Джеймс Зетлен
 
 ![](/uploads/063-googles-datacenters-on-punch-cards/google_punchcard.png "Ёмкость перфокарты — 0,57 твита.")
