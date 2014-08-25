@@ -7,7 +7,7 @@ SourceNum: 109
 SourceTitle: Into the Blue
 Formulas: False
 Description: Если направить лазерный луч бесконечной мощности в случайную точку неба, сколько вреда он нанесет?
-Image: http://dev.chtoes.li/uploads/109-into-the-blue/front.png
+Image: http://chtoes.li/uploads/109-into-the-blue/front.png
 
 > Если направить лазерный луч бесконечной мощности в случайную точку неба, сколько вреда он нанесет?
 > 
