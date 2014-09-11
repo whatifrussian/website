@@ -45,7 +45,9 @@ $(document).ready(function(){
 	$('a[rel=footnote]').each(function(){
 		var num = $(this).html();
 		var rel = $(this).attr('href').substring(1).replace(':', '\\:');
-		var body = $('.footnote li#' + rel + ' p').html();
+		var body = $('.footnote li#' + rel + ' p').map(function(){
+		    return $(this).html();
+		}).get().join('<br><br>');
 
 		var $footnote = $('<sup/>', {class: 'refnum', html: '<span>' + num + '</span>'});
 		$footnote
