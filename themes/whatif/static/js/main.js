@@ -65,7 +65,7 @@ $(document).ready(function(){
 			.after($('<span/>', {class: 'refbody', html: body}));
 	});
 	$('.footnote').remove();
-	$('div.page a').attr('target', '_blank');
+	$('.original+.page a').attr('target', '_blank');
 
 
 	//=======================================================
