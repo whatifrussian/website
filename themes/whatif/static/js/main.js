@@ -1,5 +1,5 @@
 
-$(document).ready(function(){ 
+$(document).ready(function(){
 
 	// Modify MD-generated HTML
 	//=======================================================
@@ -24,7 +24,7 @@ $(document).ready(function(){
 	$('p img').each(function(){
 		$(this).addClass('illustration');
 		var title = $(this).attr('title');
-		
+
 		var $parent = $(this).parent();
 		// var $transcript = $parent.next();
 		// $('<div/>', {
@@ -32,11 +32,19 @@ $(document).ready(function(){
 		// 	text: '[transcript]' + $transcript.html() + '[/transcript]'
 		// }).appendTo($parent).wrap('<figcaption></figcaption>').after($('<em/>', {text: title}));
 		// $transcript.remove();
-		$('<div/>', {
-			html: '<em>' + title + '</em>'
-		}).appendTo($parent).wrap('<figcaption></figcaption>');
+		// http://stackoverflow.com/questions/3614212/
+		var img = $('<div/>').append($(this).clone()).html();
+		var figcaption = '<figcaption><div><em>' + title + '</em></div></figcaption>';
+		var figure = '<figure>' + img + figcaption + '</figure>';
 
-		$parent.replaceWith('<figure>' + $parent.html() + '</figure>');
+		if ($parent.parent().hasClass('page')) {
+			// article content
+			$parent.replaceWith(figure);
+		} else {
+			// footnote content
+			$(this).remove();
+			$parent.prepend(figure);
+		}
 	});
 
 	// Footnotes
@@ -46,7 +54,7 @@ $(document).ready(function(){
 		var num = $(this).html();
 		var rel = $(this).attr('href').substring(1).replace(':', '\\:');
 		var body = $('.footnote li#' + rel + ' p').map(function(){
-		    return $(this).html();
+			return $(this).html();
 		}).get().join('<br><br>');
 
 		var $footnote = $('<sup/>', {class: 'refnum', html: '<span>' + num + '</span>'});
@@ -72,8 +80,8 @@ $(document).ready(function(){
 
 	// Menu
 	function toggleNav(event) {
-	  	var $nav = $("nav");
-	  	$nav.toggleClass("expanded");
+		var $nav = $("nav");
+		$nav.toggleClass("expanded");
 	}
 
 	$(".menu-button, .menu-item.selected a").click(toggleNav);
