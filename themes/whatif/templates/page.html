@@ -7,6 +7,7 @@
                 <div class="page">
                     {{ page.content }}
                 </div>
+                {% set article_link = SITEURL + "/" + page.url %}
                 <div class="border-bottom"><hr></div>
                 {% include 'includes/social.html' %}
                 <ul class="menu-page clearfix bottom">

@@ -10,6 +10,7 @@
                 </ul>
                 <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
                 {% if article.source != "False" %}<span class="original">Оригинал: <a href="{{ article.source }}" target="blank">{{ article.sourcetitle }}<b></b></a></span> {% endif %}
+                {% set article_link = SITEURL + "/" + article.url %}
 
                 <div class="page">
                     {{ article.content }}

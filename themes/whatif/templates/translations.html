@@ -3,6 +3,8 @@
 {% block content %}
     <div class="main">
         <h1>Все переводы</h1>
+        {% set article_link = SITEURL + "/translations/" %}
+        {% include 'includes/social.html' %}
         <ol class="toc page" reversed>
     {% if articles %}
         {% for article in (articles_page.object_list if articles_page else articles) %}
