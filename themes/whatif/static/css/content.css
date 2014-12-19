@@ -196,7 +196,7 @@ p {
 	line-height: 1.6em;
 }
 
-.page ol li, 
+.page ol li,
 .page ul li {
 	padding-bottom: 1em;
 }
@@ -334,7 +334,7 @@ img.illustration {
 	background-color: rgba(141,199,63,0.3);
 	color: #7ab130;
 }
-span.active .refnum {
+span.active > nobr > .refnum {
 	background-color: #8dc73f;
 	color: #fff;
 }
@@ -417,6 +417,7 @@ figure.active figcaption {
 		word-wrap: break-word;
 		z-index: 100;
 		overflow: auto;
+		overflow: visible;
 
 		border: 2px solid #000;
 		box-shadow: 0px 0px 0 0 rgba(0,0,0,0);
@@ -439,16 +440,26 @@ figure.active figcaption {
 		left: -50%;
 		top: -100%;
 		margin-left: -7em;
-	} 
+	}
 
-	.ref:hover .refbody,
-	span.active .refbody {
+	.ref:hover > .refbody,
+	span.active > .refbody {
 		left: -7em;
 		bottom: 2em;
 
 		visibility: visible;
 		opacity: 1;
 		box-shadow: 0.4em 0.4em 2px 0 rgba(0,0,0,0.2);
+	}
+
+	/* Decreased offsets for nested footnotes */
+
+	.refbody .refnum {
+		top: 0.7em;
+	}
+	.refbody span.active > .refbody,
+	.refbody .ref:hover > .refbody {
+		bottom: 1em;
 	}
 }
 
@@ -491,7 +502,7 @@ figure.active figcaption {
 
 	/* Refs */
 	.refnum {
-		font-family: Arial, Helvetica, sans-serif; 
+		font-family: Arial, Helvetica, sans-serif;
 	}
 	.ref .bracket {
 		display: none;
@@ -515,7 +526,7 @@ figure.active figcaption {
 		background-color: #fff;
 		opacity: 0;
 	}
-	span.active .refbody {
+	span.active > .refbody {
 		visibility: visible;
 		font-size: 90%;
 		height: auto;
@@ -529,12 +540,23 @@ figure.active figcaption {
 		box-shadow: 0 3px 2px 0px rgba(0,0,0,0.2);
 	}
 
-	.active .ellipsis {
+	/* Left offset for nested footnotes. Also, 3 levels of color. */
+	.refbody span.active > .refbody {
+		background-color: #e4f1d3;
+		left: -5px;
+	}
+	.refbody span.active > .refbody span.active > .refbody
+	{
+		background-color: #d7e9bf;
+	}
+
+	.active > nobr > .ellipsis,
+	.active > .ellipsis {
 		display: inline-block;
 		color: #aaa;
 	}
 
-	.ref.active b {
+	.ref.active > b {
 		border-left: 1px solid #7ab130;
 		display: inline-block;
 		width: 1px;
@@ -557,7 +579,7 @@ figure.active figcaption {
 	background-image: url("../img/sprites.png");
 	display: inline-block;
 	width: 13px;
-	height: 14px; 
+	height: 14px;
 	background-position: -319px -270px;
 	position: relative;
 	top: 2px;

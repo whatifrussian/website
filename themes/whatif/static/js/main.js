@@ -50,7 +50,8 @@ $(document).ready(function(){
 	// Footnotes
 	//-------------------------------------------------------
 	$('a[rev=footnote]').remove();
-	$('a[rel=footnote]').each(function(){
+
+	$($('a[rel=footnote]').get().reverse()).each(function(){
 		var num = $(this).html();
 		var rel = $(this).attr('href').substring(1).replace(':', '\\:');
 		var body = $('.footnote li#' + rel + ' p').map(function(){
@@ -72,6 +73,7 @@ $(document).ready(function(){
 			.after('<span class="ellipsis">&#8627;</span>')
 			.after($('<span/>', {class: 'refbody', html: body}));
 	});
+
 	$('.footnote').remove();
 	$('.original+.page a').attr('target', '_blank');
 
