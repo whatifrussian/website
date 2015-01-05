@@ -24,4 +24,4 @@ Formulas: False
 
 Старые (пропущенные, не опубликованые ранее) переводы мы будем публиковать в другие дни недели.
 
-Информацию о новых выпусках теперь можно получать не только из [RSS](http://xkcd.ru/feeds/xkcd/) и [Livejournal](http://ru-xkcd.livejournal.com/), но и из [ВКонтакте](http://vk.com/xkcdrussian) и [Twitter](https://twitter.com/xkcdrussian).
+Информацию о новых выпусках теперь можно получать не только из [RSS](http://xkcd.ru/feeds/xkcd/) и [LiveJournal](http://ru-xkcd.livejournal.com/), но и из [ВКонтакте](http://vk.com/xkcdrussian) и [Twitter](https://twitter.com/xkcdrussian).
