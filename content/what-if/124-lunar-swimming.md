@@ -50,7 +50,7 @@ Image: http://chtoes.li/uploads/124-lunar-swimming/front.png
 
     Все это можно выразить одним большим и красивым уравнением:
 
-    $$ \text{Высота прыжка}=\left(\frac{\tfrac{1}{2}\times\text{масса тела}\times\left(\text{максимальная скорость}\right)^2+\text{сила отталкивания}\times\text{длина торса}}{\text{сила тяготения Земли}\times\text{масса тела}}\right)+\left(\text{коррекция плавучести} \right) $$
+    $$ \text{Высота прыжка}= \\\\~\\\\ =\left( \frac{\tfrac{1}{2}\times\text{масса тела}\times\left(\text{максимальная скорость}\right)^2+ \\\\ \quad+\;\text{сила отталкивания}\times\text{длина торса}}{\text{сила тяготения Земли}\times\text{масса тела}} \right)+ \\\\~\\\\ +\left(\text{коррекция плавучести} \right) $$
 
 ![](/uploads/124-lunar-swimming/jump_ru.png "Майкл Фелпс не устает дразнить исполнителя главной роли из «Освободите Вилли» и хихикает как псих.")
 
