@@ -432,6 +432,10 @@ figure.active figcaption {
 		-webkit-transition: all 200ms;
 	}
 
+	.refbody_wide {
+		min-width: 40em;
+	}
+
 	.ref:hover b {
 		display: inline-block;
 		width: 16em;

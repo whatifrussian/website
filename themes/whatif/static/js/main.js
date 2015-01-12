@@ -54,6 +54,7 @@ $(document).ready(function(){
 	$($('a[rel=footnote]').get().reverse()).each(function(){
 		var num = $(this).html();
 		var rel = $(this).attr('href').substring(1).replace(':', '\\:');
+		var is_multipar = $('.footnote li#' + rel + ' p').length > 1;
 		var body = $('.footnote li#' + rel + ' p').map(function(){
 			return $(this).html();
 		}).get().join('<br><br>');
@@ -68,10 +69,11 @@ $(document).ready(function(){
 			.wrap('<nobr></nobr>')
 			.after('<span class="ellipsis">&#8626;</span>');
 		$footnote = $footnote.parent();
+		var refbody_class = is_multipar ? 'refbody refbody_wide' : 'refbody';
 		$footnote
 			.wrap($('<span/>', {class: 'ref'}))
 			.after('<span class="ellipsis">&#8627;</span>')
-			.after($('<span/>', {class: 'refbody', html: body}));
+			.after($('<span/>', {class: refbody_class, html: body}));
 	});
 
 	$('.footnote').remove();
