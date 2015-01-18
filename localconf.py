@@ -47,9 +47,9 @@ TEMPLATE_PAGES = {
 
 SLUG_SUBSTITUTIONS = [
     ("what if?", "what-if"),
-    ("novosti proekta","news"),
+    ("novosti proekta", "news"),
     ("prochee", "other"),
-#("",""),
+    #("",""),
 ]
 
 DEFAULT_PAGINATION = False
@@ -61,8 +61,8 @@ EXTRA_PATH_METADATA = {
 }
 
 FILES_TO_COPY = (
-            ("uploads", "uploads")
-            )
+    ("uploads", "uploads"),
+)
 
 STATIC_PATHS = [
     'uploads',
@@ -74,7 +74,7 @@ STATIC_PATHS = [
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = False
-READERS={'html':None}
+READERS = {'html': None}
 
 
 SITEMAP = {
