@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-import logging
+# Currently not used, see below.
+#import logging
 
 AUTHOR = u'whatif'
 SITENAME = u'Что если?'
@@ -10,7 +11,7 @@ TIMEZONE = 'Europe/Moscow'
 
 DEFAULT_LANG = u'ru'
 
-PLUGIN_PATH = "plugins"
+PLUGIN_PATHS = [ "plugins" ]
 PLUGINS = ["neighbors", "sitemap"]
 THEME = "themes/whatif"
 PATH = 'content'
@@ -35,15 +36,17 @@ AUTHORS_SAVE_AS = ''
 ARCHIVES_SAVE_AS = ''
 CATEGORIES_SAVE_AS = ''
 
-LOG_FILTER = [
-    (logging.WARN, 'Empty alt attribute for image {} in {}')
-]
+# Currently that isn’t not working, see
+# https://github.com/getpelican/pelican/issues/1594
+#LOG_FILTER = [
+#    (logging.WARN, 'Empty alt attribute for image %s in %s')
+#]
 
 TEMPLATE_PAGES = {
     'translations.html': 'translations/index.html',
     '404.html': '404.html',
     'rewrite.html': 'rewrite.map'
-    }
+}
 
 SLUG_SUBSTITUTIONS = [
     ("what if?", "what-if"),
@@ -60,10 +63,6 @@ EXTRA_PATH_METADATA = {
     'extra/yandex_7e403715421012c7.txt': {'path': 'yandex_7e403715421012c7.txt'},
 }
 
-FILES_TO_COPY = (
-    ("uploads", "uploads"),
-)
-
 STATIC_PATHS = [
     'uploads',
     'extra/robots.txt',
@@ -71,11 +70,9 @@ STATIC_PATHS = [
     'extra/yandex_7e403715421012c7.txt'
 ]
 
-
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = False
 READERS = {'html': None}
-
 
 SITEMAP = {
     'format': 'xml',
