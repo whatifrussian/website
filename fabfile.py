@@ -14,7 +14,8 @@ env.user="www-data"
 env.hosts = ["chtoes.li"]
 path = {
         "dev": '/var/www/dev.chtoes.li/public/',
-        "prod": '/var/www/chtoes.li/public/'
+        "prod": '/var/www/chtoes.li/public/',
+        "ssl": '/var/www/ssl.chtoes.li/public/'
         }
 
 TEMPLATE = "Title:\n\
