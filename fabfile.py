@@ -10,11 +10,11 @@ DEPLOY_PATH = env.deploy_path
 
 # Remote server configuration
 
-env.user="chtoes_li"
-env.hosts = ["shared.libc6.org"]
+env.user="www-data"
+env.hosts = ["chtoes.li"]
 path = {
-        "dev": '/var/www/chtoes_li/data/www/dev.chtoes.li/',
-        "prod": '/var/www/chtoes_li/data/www/chtoes.li/'
+        "dev": '/var/www/dev.chtoes.li/public/',
+        "prod": '/var/www/chtoes.li/public/'
         }
 
 TEMPLATE = "Title:\n\
