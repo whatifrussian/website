@@ -173,7 +173,7 @@ TODO: Перевести в markdown статьи про отрисовку XKCD
 5. Собрать: `fab build:dev && fab publish:dev`, проверить: [http://dev.chtoes.li](http://dev.chtoes.li); поправить недочеты и повторить.
 6. Отправить новый материал в основной репозиторий: `git add content && git commit -v && git push`.
     * Если что-то пошло не так, то дать команду `git pull -r` и попробовать заново с пункта 5.
-7. Опубликовать на сайте: `fab build:prod && fab publish:prod`, проверить: [http://chtoes.li](http://chtoes.li).
+7. Опубликовать на сайте: `fab build:prod && fab publish:prod && fab build:ssl && fab publish:ssl`, проверить: [http://chtoes.li](http://chtoes.li) [ssl версию http://chtoes.li](http://chtoes.li).
 8. Опубликовать во [ВКонтакте](http://vk.com/whatifrussian) и [Twitter](http://twitter.com/whatifrussian)’е.
 
 Мы размещаем оригинальные изображения и их переводы в директории `content/uploads/nnn-article-name`, где `nnn` — номер статьи, а `article-name` — ее название в нижнем регистре с заменой букв на дефисы. Названия переведенных изображений оканчиваются на `_ru.png` и за исключением части `_ru` совпадают с оригинальными. Если переводить на картинке нечего, то загружается только оригинал.
