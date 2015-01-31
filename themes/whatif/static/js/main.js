@@ -85,7 +85,135 @@ $(document).ready(function(){
 		$(this).wrap('<div class="border-bottom"></div>');
 	});
 
+	// YouTube links
+	//-------------------------------------------------------
+	var playerShown = false;
+	var videoLink = null;
 
+	function getYouTubeId(url){
+	    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+	    var match = url.match(regExp);
+	    if (match&&match[7].length==11){
+	        return match[7];
+	    }else{
+	        return null;
+	    }
+	}
+
+	var ytIdAttr = "youtube-id";
+	$('.page a').each(function(){
+		var url = $(this).attr('href');
+		var ytID = getYouTubeId(url);
+		if (ytID) {
+			$(this).addClass('youtube');
+			$(this).attr(ytIdAttr, ytID);
+			$(this).append("<b></b>");
+		}
+	});
+
+	function getYouTubePlayer(ID, width, height) {
+		var YouTubeURL = "http://www.youtube.com/embed/" + ID + "?rel=0&showsearch=0&autohide=" + 0
+                        YouTubeURL += "&autoplay=" + 1 + "&controls=" + 1 + "&fs=" + 1 + "&loop=" + 0;
+                        YouTubeURL += "&showinfo=" + 0 + "&color=" + "white" + "&theme=" + "light"
+
+        var YouTubePlayer = '<iframe title="YouTube video player" style="margin:0; padding:0;" width="' + width + '" ';
+        YouTubePlayer += 'height="' + height + '" src="' + YouTubeURL + '" frameborder="0" allowfullscreen></iframe>';
+        
+        YouTubePlayer = "<span id='youtube-title'>...</span>" + YouTubePlayer;
+        YouTubePlayer += "<span id='youtube-close'>Закрыть ролик</span>";
+        YouTubePlayer = "<div class='youtube-player'>" + YouTubePlayer + "</div>";
+        return YouTubePlayer;
+    }
+
+	jQuery.fn.shake = function(times, distance, duration) {
+	    this.each(function() {
+	        $(this).css("position","relative"); 
+	        for (var x = 1; x <= times; x++) {
+		        $(this).animate({left: -distance}, (((duration / times) / 4)))
+					   .animate({left: distance}, ((duration / times) / 2))
+					   .animate({left: 0}, (((duration / times) / 4)));
+				distance *= 0.7;
+		    }
+	  });
+	return this;
+	};
+
+	var closePlayer = function(event){
+		if (event.target != $('.youtube-player iframe').get(0)) {
+        	$('.youtube-player').remove();
+        	playerShown = false;
+		}
+		videoLink.shake(3, 10, 500);
+		event.stopPropagation();
+		return false;
+	};
+
+	setVideoSize = function() {
+		var video = $('.youtube-player iframe');
+		var player = $('.youtube-player');
+		var ratio = video.attr("height") / video.attr("width");
+		var addedHeight = $('#youtube-title').height() + $('#youtube-close').height() + 60;
+		
+		var playerWidth = player.width() - 30;
+		var playerHeight = player.height() - 30;
+		
+		var newWidth = playerWidth > 600 ? 600 : playerWidth;
+		var newHeight = newWidth * ratio;
+
+		if (newHeight + addedHeight > playerHeight) {
+			newHeight = playerHeight - addedHeight;
+			newWidth = newHeight / ratio;
+		}
+
+		video
+			.attr("width", newWidth)
+			.attr("height", newHeight)
+
+		player.css("padding-top", (player.height() - newHeight - addedHeight) / 2);
+	}
+
+	setYouTubeTitle = function(id) {
+        var url = "https://gdata.youtube.com/feeds/api/videos/" + id + "?v=2&alt=json";
+        $.ajax({ url: url, dataType: 'jsonp', cache: true, 
+        	success: function(data){ 
+        		$('#youtube-title').html(data.entry.title.$t);
+        		//setVideoSize(); 
+        	} 
+    	});
+    }
+
+	$('a.youtube').click(function(event){
+		
+		if (!playerShown) {
+			var videoID = $(this).attr(ytIdAttr);
+			var player = getYouTubePlayer(videoID, 400, 300);
+		    $(this).after(player);
+		    $('.youtube-player').click(closePlayer);
+		    $('.youtube-player a').click(function(e){
+		    	e.preventDefault();
+		    	return false;
+		    });
+		    setVideoSize();
+		    setYouTubeTitle(videoID);
+
+		    playerShown = true;
+		    videoLink = $(this);
+		} else {
+			$('.youtube-player').remove();
+        	playerShown = false;
+		}
+
+		event.preventDefault();
+		event.stopPropagation();
+		return false;
+	});
+
+	$(window).on('resize', function(){
+		if (playerShown) {
+			setVideoSize();
+		}
+	})
+	
 	//=======================================================
 
 	// Menu
