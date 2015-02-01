@@ -322,13 +322,6 @@ img.illustration {
 	background-color: #CA97F3;
 }
 
-.page a.youtube:visited {
-	color: #7ab130;
-}
-.page a.youtube:visited:hover {
-	background-color: rgba(141,199,63,0.3);
-}
-
 .ref {
 	position: relative;
 	vertical-align: baseline;
@@ -410,15 +403,11 @@ figure.active figcaption {
 }
 
 /* Embedded YouTube player */
-a.youtube b {
-	display: inline-block;
-	width: 12px;
-	height: 13px;
-	background-image: url(../img/sprites.png);
-	background-position: -241px -196px;
-	position: relative;
-	top: 1px;
-	left: 3px;
+.page a.youtube {
+	padding-right: 12px;
+	background-image: url(../img/icon_video.png);
+	background-position: right 5px;
+	background-repeat: no-repeat;
 }
 
 .youtube-player {

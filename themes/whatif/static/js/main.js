@@ -93,9 +93,9 @@ $(document).ready(function(){
 	function getYouTubeId(url){
 	    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
 	    var match = url.match(regExp);
-	    if (match&&match[7].length==11){
+	    if (match && match[7].length == 11){
 	        return match[7];
-	    }else{
+	    } else {
 	        return null;
 	    }
 	}
@@ -107,7 +107,7 @@ $(document).ready(function(){
 		if (ytID) {
 			$(this).addClass('youtube');
 			$(this).attr(ytIdAttr, ytID);
-			$(this).append("<b></b>");
+			//$(this).append('&nbsp;&#8227;');
 		}
 	});
 
@@ -184,6 +184,8 @@ $(document).ready(function(){
 
 	$('a.youtube').click(function(event){
 		
+		if (event.which != 1) return true;
+
 		if (!playerShown) {
 			var videoID = $(this).attr(ytIdAttr);
 			var player = getYouTubePlayer(videoID, 400, 300);
