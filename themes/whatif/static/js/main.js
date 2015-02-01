@@ -173,13 +173,18 @@ $(document).ready(function(){
 	}
 
 	setYouTubeTitle = function(id) {
-        var url = "https://gdata.youtube.com/feeds/api/videos/" + id + "?v=2&alt=json";
-        $.ajax({ url: url, dataType: 'jsonp', cache: true, 
-        	success: function(data){ 
-        		$('#youtube-title').html(data.entry.title.$t);
-        		//setVideoSize(); 
-        	} 
-    	});
+        var title = videoLink.attr('title');
+        if (title) {
+        	$('#youtube-title').html(title);
+        } else {
+	        var url = "https://gdata.youtube.com/feeds/api/videos/" + id + "?v=2&alt=json";
+	        $.ajax({ url: url, dataType: 'jsonp', cache: true, 
+	        	success: function(data){ 
+	        		$('#youtube-title').html(data.entry.title.$t);
+	        		//setVideoSize(); 
+	        	} 
+	    	});
+    	}
     }
 
 	$('a.youtube').click(function(event){
@@ -195,11 +200,11 @@ $(document).ready(function(){
 		    	e.preventDefault();
 		    	return false;
 		    });
+		    videoLink = $(this);
 		    setVideoSize();
 		    setYouTubeTitle(videoID);
 
 		    playerShown = true;
-		    videoLink = $(this);
 		} else {
 			$('.youtube-player').remove();
         	playerShown = false;
