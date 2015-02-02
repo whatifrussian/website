@@ -112,9 +112,9 @@ $(document).ready(function(){
 	});
 
 	function getYouTubePlayer(ID, width, height) {
-		var YouTubeURL = "http://www.youtube.com/embed/" + ID + "?rel=0&showsearch=0&autohide=" + 0
-                        YouTubeURL += "&autoplay=" + 1 + "&controls=" + 1 + "&fs=" + 1 + "&loop=" + 0;
-                        YouTubeURL += "&showinfo=" + 0 + "&color=" + "white" + "&theme=" + "light"
+		var YouTubeURL = "//www.youtube.com/embed/" + ID + "?rel=0&showsearch=0&autohide=" + 0;
+        YouTubeURL += "&autoplay=" + 1 + "&controls=" + 1 + "&fs=" + 1 + "&loop=" + 0;
+        YouTubeURL += "&showinfo=" + 0 + "&color=" + "white" + "&theme=" + "light";
 
         var YouTubePlayer = '<iframe title="YouTube video player" style="margin:0; padding:0;" width="' + width + '" ';
         YouTubePlayer += 'height="' + height + '" src="' + YouTubeURL + '" frameborder="0" allowfullscreen></iframe>';
@@ -177,7 +177,7 @@ $(document).ready(function(){
         if (title) {
         	$('#youtube-title').html(title);
         } else {
-	        var url = "https://gdata.youtube.com/feeds/api/videos/" + id + "?v=2&alt=json";
+	        var url = "//gdata.youtube.com/feeds/api/videos/" + id + "?v=2&alt=json";
 	        $.ajax({ url: url, dataType: 'jsonp', cache: true, 
 	        	success: function(data){ 
 	        		$('#youtube-title').html(data.entry.title.$t);
