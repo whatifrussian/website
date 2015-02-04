@@ -44,6 +44,7 @@
 /* Page menu *****************************/
 
 .menu-page {
+	display: inline-block;
 	padding: 0;
 	margin: 0;
 	width: 100%;

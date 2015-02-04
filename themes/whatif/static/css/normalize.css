@@ -1,22 +1,8 @@
+/* http://css-tricks.com/snippets/css/clear-fix/ */
 .clearfix:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
-}
-
-.clearfix {
-    display: inline-block;
-}
-
-html[xmlns] .clearfix {
-    display: block;
-}
-
-* html .clearfix {
-    height: 1%;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
