@@ -225,8 +225,12 @@ $(document).ready(function(){
 
 	// Menu
 	function toggleNav(event) {
+		if (event.which != 1) return true;
 		var $nav = $("nav");
 		$nav.toggleClass("expanded");
+		event.preventDefault();
+		event.stopPropagation();
+		return false;
 	}
 
 	$(".menu-button, .menu-item.selected a").click(toggleNav);
