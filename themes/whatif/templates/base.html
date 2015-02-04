@@ -1,3 +1,16 @@
+{% set what_if_articles = [] %}
+{% set news_articles = [] %}
+{% for a in (all_articles if all_articles is defined else articles) %}
+    {% if a.category.slug == "what-if" %}
+        {# make side effect; like 'do' extension, but without it #}
+        {% if what_if_articles.append(a) %}{% endif %}
+    {% endif %}
+    {% if a.category.slug == "news" %}
+        {# make side effect; like 'do' extension, but without it #}
+        {% if news_articles.append(a) %}{% endif %}
+    {% endif %}
+{% endfor %}
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:og="http://ogp.me/ns#"
@@ -119,6 +132,19 @@
             {% else %}
                 {% set menu_selected = "" %}
             {% endif %}
+
+            {% if menu_selected == "translations" %}
+                {% set translations_title = "" %}
+            {% else %}
+                {% set translations_title = " title=\"" + what_if_articles[0].title + "\"" %}
+            {% endif %}
+
+            {% if menu_selected == "news" %}
+                {% set news_title = "" %}
+            {% else %}
+                {% set news_title = " title=\"" + news_articles[0].title + "\"" %}
+            {% endif %}
+
             {% macro get_classes(what) -%}
                 {% if what == menu_selected %}menu-item {{ what }} selected{% else %}menu-item {{ what }}{% endif %}
             {%- endmacro %}
@@ -126,8 +152,8 @@
             <nav>
                 <a class="menu-button"></a>
                 <ul class="menu">
-                    <li class="{{ get_classes("translations") }}"><a href="{{ SITEURL }}/"><b></b><span>Переводы</span></a></li>
-                    <li class="{{ get_classes("news") }}"><a href="{{ SITEURL }}/news/"><b></b><span>Новости</span></a></li>
+                    <li class="{{ get_classes("translations") }}"><a href="{{ SITEURL }}/"{{ translations_title }}><b></b><span>Переводы</span></a></li>
+                    <li class="{{ get_classes("news") }}"><a href="{{ SITEURL }}/news/"{{ news_title }}><b></b><span>Новости</span></a></li>
                     <li class="{{ get_classes("help") }}"><a href="{{ SITEURL }}/help/"><b></b><span>Как нам помочь</span></a></li>
                     <li class="{{ get_classes("about") }}"><a href="{{ SITEURL }}/about/"><b></b><span>О нас</span></a></li>
                     <li class="menu-item search"><form action="https://google.com/search" method="GET"><input type="hidden" name="as_sitesearch" value="chtoes.li" /><input type="search" name="q"/></form></li>

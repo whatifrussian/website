@@ -1,12 +1,8 @@
 {% extends "base.html" %}
 
-{% set category_slug = category.slug %}
-{% set articles_list = [] %}
-{% include 'includes/articles_list.html' %}
-
-{% block title %}{{ SITENAME }} — {{ articles_list[0].title }}{% endblock %}
+{% block title %}{{ SITENAME }} — {{ articles[0].title }}{% endblock %}
 
 {% block content %}
     {% from 'includes/article_content.html' import article_content %}
-    {{ article_content(articles_list[0], SITEURL) }}
+    {{ article_content(articles[0], SITEURL) }}
 {% endblock content %}
