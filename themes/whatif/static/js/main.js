@@ -236,7 +236,7 @@ $(document).ready(function(){
 	$(".menu-button, .menu-item.selected a").click(toggleNav);
 
 	$('html, .content').click(function(event) {
-		if ($(window).width() >= 800) {
+		if ($(window).width() >= 1000) {
 			$(".ref").removeClass("active");
 		}
 	});
@@ -253,7 +253,7 @@ $(document).ready(function(){
 	// Ref-popups
 	$(".refnum").click(function(e) {
 		var nowActive = $(this).parent().parent().hasClass("active");
-		if ($(window).width() >= 800) {
+		if ($(window).width() >= 1000) {
 			$(".ref").removeClass("active");
 		}
 		$(this).parent().parent().toggleClass("active", !nowActive);
