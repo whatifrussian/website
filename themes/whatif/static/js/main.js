@@ -74,6 +74,20 @@ $(document).ready(function(){
 			.wrap($('<span/>', {class: 'ref'}))
 			.after('<span class="ellipsis">&#8627;</span>')
 			.after($('<span/>', {class: refbody_class, html: body}));
+
+		// Adjust punctuation place (before a reference body,
+		// but after a reference icon)
+		var node_after = $footnote.parent()[0].nextSibling;
+		 /* 3 is Node.TEXT_NODE, IE7 does not define that */
+		if (node_after == null || node_after.nodeType != 3)
+			return;
+		var text_orig = node_after.textContent;
+		if (text_orig.length == 0)
+			return;
+		var text_split_2 = text_orig.replace(/^[,;:.]*/, '');
+		var text_split_1 = text_orig.substring(0, text_orig.length - text_split_2.length);
+		node_after.textContent = text_split_2;
+		$footnote.children('.refnum').after($('<span/>', { class: 'punctum', html: text_split_1 }));
 	});
 
 	$('.footnote').remove();

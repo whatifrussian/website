@@ -456,6 +456,10 @@ figure.active figcaption {
 	.ref {
 		top: -7px;
 	}
+	.punctum {
+		position: relative;
+		top: 7px;
+	}
 	.refnum {
 		margin: 0;
 		padding: 1px 1px;
