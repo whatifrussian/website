@@ -16,98 +16,67 @@
     <script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery-2.1.0.min.js"></script>
     <script type="text/javascript" src="{{ SITEURL }}/theme/js/main.js"></script>
 
-    {% if (page and page.formulas == 'True') or (article and article.formulas == 'True') %}
-      <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-        extensions: ["tex2jax.js"],
-        messageStyle: "none",
-        jax: ["input/TeX", "output/SVG"],
-        tex2jax: {
-            inlineMath: [ ['$','$'] ],
-            displayMath: [ ['$$','$$'] ],
-            processEscapes: true
-        },
-        TeX: {
-          extensions: ["AMSmath.js", "AMSsymbols.js"]
-        },
-        "SVG": { availableFonts: ["TeX"],  linebreaks: { automatic: true } }
-        });
-      </script>
-      <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+    {% if article %}
+        {# when used by article.html #}
+        {% set article_or_page = article %}
+        {% set add_canonical_rel = True %}
+        {% set on_canonical_place = True %}
+    {% elif page %}
+        {# when used by page.html #}
+        {% set article_or_page = page %}
+        {% set add_canonical_rel = True %}
+        {% set on_canonical_place = True %}
+    {% elif category %}
+        {# when used by category.html #}
+        {% set article_or_page = articles[0] %}
+        {% set add_canonical_rel = True %}
+        {% set on_canonical_place = False %}
+        {% if category == "what-if" %}
+            {% set canonical_place = SITEURL %}
+        {% else %}
+            {% set canonical_place = SITEURL + "/" + category.slug + "/" %}
+        {% endif %}
+    {% elif page_name == "index" %}
+        {# when used by index.html #}
+        {% set article_or_page = articles[0] %}
+        {% set add_canonical_rel = True %}
+        {% set on_canonical_place = False %}
+        {% set canonical_place = SITEURL %}
+    {% elif output_file == "translations/index.html" %}
+        {# when used by translations.html #}
+        {% set article_or_page = False %}
+        {% set add_canonical_rel = True %}
+        {% set on_canonical_place = False %}
+        {% set canonical_place = SITEURL + "/translations/" %}
+    {% else %}
+        {# when used by 404.html #}
+        {% set article_or_page = False %}
+        {% set add_canonical_rel = False %}
     {% endif %}
 
-    {% if page %}
-        {% if page.title %}
-            <meta property="og:title" content="{{ page.title }}" />
+    {% if article_or_page %}
+        {% if article_or_page.formulas == 'True' %}
+            {% include 'includes/mathjax.html' %}
         {% endif %}
-        {% if page.description %}
-            <meta property="og:description" content="{{ page.description }}" />
-            <meta name="description" content="{{ page.description }}" />
+
+        {% if article_or_page.title %}
+            <meta property="og:title" content="{{ article_or_page.title }}" />
         {% endif %}
-        {% if page.url %}
-            <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
-            <link rel="canonical" href="{{ SITEURL }}/{{ page.url }}">
+        {% if article_or_page.description %}
+            <meta property="og:description" content="{{ article_or_page.description }}" />
+            <meta name="description" content="{{ article_or_page.description }}" />
         {% endif %}
-        {% if page.image %}
-            <meta property="og:image" content="{{ page.image }}" />
+        {% if add_canonical_rel and on_canonical_place and article_or_page.url %}
+            <meta property="og:url" content="{{ SITEURL }}/{{ article_or_page.url }}" />
+            <link rel="canonical" href="{{ SITEURL }}/{{ article_or_page.url }}">
         {% endif %}
-    {% elif article %}
-        {% if article.title %}
-            <meta property="og:title" content="{{ article.title }}" />
+        {% if article_or_page.image %}
+            <meta property="og:image" content="{{ article_or_page.image }}" />
         {% endif %}
-        {% if article.description %}
-            <meta property="og:description" content="{{ article.description }}" />
-            <meta name="description" content="{{ article.description }}" />
-        {% endif %}
-        {% if article.url %}
-            <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
-            <link rel="canonical" href="{{ SITEURL }}/{{ article.url }}">
-        {% endif %}
-        {% if article.image %}
-            <meta property="og:image" content="{{ article.image }}" />
-        {% endif %}
-    {% elif articles %}
-        {% set count = 0 %}
-        {% for article in articles %}
-            {% if article.category.slug == "what-if" and count != 1 %}
-                {% if article.formulas == 'True' %}
-                  <script type="text/x-mathjax-config">
-                    MathJax.Hub.Config({
-                    extensions: ["tex2jax.js"],
-                    messageStyle: "none",
-                    jax: ["input/TeX", "output/SVG"],
-                    tex2jax: {
-                        inlineMath: [ ['$','$'] ],
-                        displayMath: [ ['$$','$$'] ],
-                        processEscapes: true
-                    },
-                    TeX: {
-                      extensions: ["AMSmath.js", "AMSsymbols.js"]
-                    },
-                    "SVG": { availableFonts: ["TeX"],  linebreaks: { automatic: true } }
-                    });
-                  </script>
-                  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
-                {% endif %}
-                {% if article.title %}
-                    <meta property="og:title" content="{{ article.title }}" />
-                {% endif %}
-                {% if article.description %}
-                    <meta property="og:description" content="{{ article.description }}" />
-                    <meta name="description" content="{{ article.description }}" />
-                {% endif %}
-                {% if article.url %}
-                    <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
-                    <link rel="canonical" href="{{ SITEURL }}/">
-                {% endif %}
-                {% if article.image %}
-                    <meta property="og:image" content="{{ article.image }}" />
-                {% endif %}
-                {% set count = 1 %}
-            {% endif %}
-        {% endfor %}
-    {% else %}
-	<link rel="canonical" href="{{ SITEURL }}">
+    {% endif %}
+
+    {% if add_canonical_rel and not on_canonical_place %}
+            <link rel="canonical" href="{{ canonical_place }}">
     {% endif %}
 
     {% if FEED_ALL_ATOM %}
@@ -137,21 +106,30 @@
                 <b class="t1"></b><b class="t2"></b><b class="t3"></b>
             </div>
 
+            {% if article_or_page and article_or_page.category.slug == "what-if" %}
+                {% set menu_selected = "translations" %}
+            {% elif output_file == "translations/index.html" %}
+                {% set menu_selected = "translations" %}
+            {% elif article_or_page and article_or_page.category.slug == "news" %}
+                {% set menu_selected = "news" %}
+            {% elif article_or_page and article_or_page.slug == "help" %}
+                {% set menu_selected = "help" %}
+            {% elif article_or_page and article_or_page.slug == "about" %}
+                {% set menu_selected = "about" %}
+            {% else %}
+                {% set menu_selected = "" %}
+            {% endif %}
+            {% macro get_classes(what) -%}
+                {% if what == menu_selected %}menu-item {{ what }} selected{% else %}menu-item {{ what }}{% endif %}
+            {%- endmacro %}
+
             <nav>
                 <a class="menu-button"></a>
                 <ul class="menu">
-                    {% block translations %}
-                        <li class="menu-item translations"><a href="{{ SITEURL }}/"><b></b><span>Переводы</span></a></li>
-                    {% endblock %}
-                    {% block news %}
-                        <li class="menu-item news"><a href="{{ SITEURL }}/news/"><b></b><span>Новости</span></a></li>
-                    {% endblock %}
-                    {% block help %}
-                        <li class="menu-item help"><a href="{{ SITEURL }}/help/"><b></b><span>Как нам помочь</span></a></li>
-                    {% endblock %}
-                    {% block about %}
-                        <li class="menu-item about"><a href="{{ SITEURL }}/about/"><b></b><span>О нас</span></a></li>
-                    {% endblock %}
+                    <li class="{{ get_classes("translations") }}"><a href="{{ SITEURL }}/"><b></b><span>Переводы</span></a></li>
+                    <li class="{{ get_classes("news") }}"><a href="{{ SITEURL }}/news/"><b></b><span>Новости</span></a></li>
+                    <li class="{{ get_classes("help") }}"><a href="{{ SITEURL }}/help/"><b></b><span>Как нам помочь</span></a></li>
+                    <li class="{{ get_classes("about") }}"><a href="{{ SITEURL }}/about/"><b></b><span>О нас</span></a></li>
                     <li class="menu-item search"><form action="https://google.com/search" method="GET"><input type="hidden" name="as_sitesearch" value="chtoes.li" /><input type="search" name="q"/></form></li>
                 </ul>
                 <ul class="menu-social">

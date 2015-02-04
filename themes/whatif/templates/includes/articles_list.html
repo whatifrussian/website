@@ -1,0 +1,8 @@
+{# Set the 'articles_list' variable to the list of articles with
+ # the corresponding category. #}
+{% for a in articles %}
+    {% if a.category.slug == category_slug and count != 1 %}
+        {# make side effect; like 'do' extension, but without it #}
+        {% if articles_list.append(a) %}{% endif %}
+    {% endif %}
+{% endfor %}

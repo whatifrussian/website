@@ -1,6 +1,6 @@
 Title: Астероид 4942 Монро
 Slug: asteroid-4942-munroe
-Category: Прочее
+Category: Новости проекта
 Date: 2013-10-11 00:38
 Source: http://blog.xkcd.com/2013/09/30/asteroid-4942-munroe/
 SourceTitle: Asteroid 4942 Munroe

@@ -1,36 +1,8 @@
 {% extends "base.html" %}
+
 {% block title %}{{ article.title|striptags }}{% endblock %}
+
 {% block content %}
-            <div class="main">
-                <ul class="menu-page clearfix">
-                    {% include 'includes/pagination.html' %}
-                </ul>
-                <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
-                {% if article.source != "False" %}<span class="original">Оригинал: <a href="{{ article.source }}" target="blank">{{ article.sourcetitle }}<b></b></a></span> {% endif %}
-                {% set article_link = SITEURL + "/" + article.url %}
-                <div class="page">
-                    {{ article.content }}
-                </div>
-                <div class="border-bottom"><hr></div>
-                {% include 'includes/social.html' %}
-                <ul class="menu-page clearfix bottom">
-                    {% include 'includes/pagination.html' %}
-                </ul>
-            </div>
+    {% from 'includes/article_content.html' import article_content %}
+    {{ article_content(article, SITEURL) }}
 {% endblock content %}
-
-{% block news %}
-{% if category == "Новости проекта" %}
-    <li class="menu-item news selected"><a href="{{ SITEURL }}/news/"><b></b><span>Новости</span></a></li>
-{% else %}
-    <li class="menu-item news"><a href="{{ SITEURL }}/news/"><b></b><span>Новости</span></a></li>
-{% endif %}
-{% endblock news %}
-
-{% block translations %}
-{% if category == "What If?" %}
-    <li class="menu-item translations selected"><a href="{{ SITEURL }}/"><b></b><span>Переводы</span></a></li>
-{% else %}
-    <li class="menu-item translations"><a href="{{ SITEURL }}/"><b></b><span>Переводы</span></a></li>
-{% endif %}
-{% endblock translations %}

@@ -1,31 +1,18 @@
 {% extends "base.html" %}
+
 {% block title %}{{ page.title|striptags }}{% endblock %}
+
 {% block content %}
-            <div class="main">
-                <h1><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></h1>
+    <div class="main">
+        <h1><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></h1>
 
-                <div class="page">
-                    {{ page.content }}
-                </div>
-                {% set article_link = SITEURL + "/" + page.url %}
-                <div class="border-bottom"><hr></div>
-                {% include 'includes/social.html' %}
-                <ul class="menu-page clearfix bottom">
-                </ul>
-            </div>
+        <div class="page">
+            {{ page.content }}
+        </div>
+
+        {% set article_link = SITEURL + "/" + page.url %}
+        <div class="border-bottom"><hr></div>
+        {% include 'includes/social.html' %}
+        <ul class="menu-page clearfix bottom"></ul>
+    </div>
 {% endblock content %}
-{% block help %}
-    {% if page.url == "help/" or page.url == "contact/" %}
-        <li class="menu-item help selected"><a href="{{ SITEURL }}/help/"><b></b><span>Как нам помочь</span></a></li>
-    {% else %}
-        <li class="menu-item help"><a href="{{ SITEURL }}/help/"><b></b><span>Как нам помочь</span></a></li>
-    {% endif %}
-{% endblock help %}
-
-{% block about %}
-{% if page.url == "about/" %}
-    <li class="menu-item about selected"><a href="{{ SITEURL }}/about/"><b></b><span>О нас</span></a></li>
-{% else %}
-    <li class="menu-item about"><a href="{{ SITEURL }}/about/"><b></b><span>О нас</span></a></li>
-{% endif %}
-{% endblock about %}

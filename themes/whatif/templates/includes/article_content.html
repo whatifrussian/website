@@ -1,0 +1,20 @@
+{% macro article_content(article, SITEURL) %}
+    <div class="main">
+        <ul class="menu-page clearfix">
+            {% include 'includes/pagination.html' %}
+        </ul>
+        <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+        {% if article.source != "False" %}
+            <span class="original">Оригинал: <a href="{{ article.source }}" target="_blank">{{ article.sourcetitle }}<b></b></a></span>
+        {% endif %}
+        <div class="page">
+            {{ article.content }}
+        </div>
+        <div class="border-bottom"><hr></div>
+            {% set article_link = SITEURL + "/" + article.url %}
+            {% include 'includes/social.html' %}
+        <ul class="menu-page clearfix bottom">
+            {% include 'includes/pagination.html' %}
+        </ul>
+    </div>
+{% endmacro %}
