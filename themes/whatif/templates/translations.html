@@ -1,21 +1,20 @@
 {% extends "base.html" %}
+
 {% block title %}{{ SITENAME }} — Оглавление{% endblock %}
+
 {% block content %}
     <div class="main">
         <h1>Все переводы</h1>
+
         {% set article_link = SITEURL + "/translations/" %}
         {% include 'includes/social.html' %}
+
         <ol class="toc page" reversed>
-    {% if articles %}
-        {% for article in (articles_page.object_list if articles_page else articles) %}
-            {% if article.category == "What If?" %}   
-                <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
+        {% for a in articles %}
+            {% if a.category.slug == "what-if" %}
+                <li><a href="{{ SITEURL }}/{{ a.url }}">{{ a.title }}</a></li>
             {% endif %}
         {% endfor %}
-    {% endif %}
-        </ul>
+        </ol>
     </div>
 {% endblock content %}
-{% block translations %}
-    <li class="menu-item translations selected"><a href="{{ SITEURL }}/"><b></b><span>Переводы</span></a></li>
-{% endblock translations %}

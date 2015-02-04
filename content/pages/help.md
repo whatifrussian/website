@@ -1,6 +1,6 @@
 Title: Как нам можно помочь
 Slug: help
-Category: Новости проекта
+Category: Прочее
 Date: 2013-02-17 15:46
 Source: False
 Formulas: False

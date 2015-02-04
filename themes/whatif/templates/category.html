@@ -1,43 +1,8 @@
 {% extends "base.html" %}
-{% block title %}{{ SITENAME }} — {{ category }}{% endblock %}
+
+{% block title %}{{ SITENAME }} — {{ articles[0].title }}{% endblock %}
+
 {% block content %}
-    {% if articles %}
-        {% for article in (articles_page.object_list if articles_page else articles) %}
-        {% if loop.index <= 1 %}
-            <div class="main">
-                <ul class="menu-page clearfix">
-                    {% include 'includes/pagination.html' %}
-                </ul>
-                <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
-                {% if article.source != "False" %}<span class="original">Оригинал: <a href="{{ article.source }}" target="blank">{{ article.sourcetitle }}<b></b></a></span> {% endif %}
-                {% set article_link = SITEURL + "/" + article.url %}
-
-                <div class="page">
-                    {{ article.content }}
-                </div>
-                <div class="border-bottom"><hr></div>
-                {% include 'includes/social.html' %}
-                <ul class="menu-page clearfix bottom">
-                    {% include 'includes/pagination.html' %}
-                </ul>
-            </div>
-        {% endif %}
-        {% endfor %}
-    {% endif %}
+    {% from 'includes/article_content.html' import article_content %}
+    {{ article_content(articles[0], SITEURL) }}
 {% endblock content %}
-
-{% block news %}
-{% if category.slug == "news" %}
-	<li class="menu-item news selected"><a href="{{ SITEURL }}/news/"><b></b><span>Новости</span></a></li>
-{% else %}
-	<li class="menu-item news"><a href="{{ SITEURL }}/news/"><b></b><span>Новости</span></a></li>
-{% endif %}
-{% endblock news %}
-
-{% block translations %}
-{% if category.slug == "what-if" %}
-    <li class="menu-item translations selected"><a href="{{ SITEURL }}/"><b></b><span>Переводы</span></a></li>
-{% else %}
-	<li class="menu-item translations"><a href="{{ SITEURL }}/"><b></b><span>Переводы</span></a></li>
-{% endif %}
-{% endblock translations %}
