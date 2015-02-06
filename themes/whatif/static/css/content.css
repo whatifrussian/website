@@ -207,13 +207,13 @@ p {
 	text-indent: 0;
 	margin: 0;
 }
+.refbody_wide > p:first-child {
+	margin-top: 0;
+}
 .refbody_wide > p {
 	line-height: normal;
 	text-indent: 1.5em;
-	margin-top: 0;
-	margin-bottom: 1em;
-}
-.refbody_wide > p:last-child {
+	margin-top: 1em;
 	margin-bottom: 0;
 }
 
