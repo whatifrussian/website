@@ -197,6 +197,10 @@ p {
 	line-height: 1.6em;
 }
 
+.page p {
+	text-indent: 1.5em;
+}
+
 /* Lists */
 
 .page ol,
