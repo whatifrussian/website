@@ -39,7 +39,7 @@ header, footer {
 
 .logo-main {
 	position: relative;
-	background-image: url("../img/foolsday_logo_main.png");
+	background-image: url("../img/logo_main.png");
 	width: 676px;
 	height: 136px;
 	left: 50%;
@@ -50,7 +50,7 @@ header, footer {
 
 .logo-trex {
 	position: absolute;
-	background: url("../img/foolsday_logo_trex.png");
+	background: url("../img/logo_trex.png");
 	width: 87px;
 	height: 93px;
 	left: 2px;
