@@ -51,7 +51,7 @@ Image: https://chtoes.li/uploads/135-digging-downward/front.png
 
 ![](/uploads/135-digging-downward/balrog.png "Быть может, на самом деле «карта температур на глубине 3,5&nbsp;км»&nbsp;— это путь к Балрогу.")
 
-[1]: https://chtoes.li/hotter-than-average/ "Теплее обычного"
+[1]: https://chtoes.li/rising-steadily/ "Равномерный подъём"
 
 [2]: http://www.smu.edu/Dedman/Academics/Programs/GeothermalLab/DataMaps/TemperatureMaps "Карты температур — Dedman College — ЮМУ (англ.)"
 
