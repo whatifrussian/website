@@ -7,7 +7,7 @@ SourceNum: 123
 SourceTitle: Fairy Demographics
 Formulas: True
 Description: Сколько фей порхало бы вокруг, если бы каждая фея рождалась с первым детским смехом и жила вечно?
-Image: http://chtoes.li/uploads/123-fairy-demographics/front.png
+Image: https://chtoes.li/uploads/123-fairy-demographics/front.png
 
 > Сколько фей порхало бы вокруг, если бы каждая фея рождалась с первым детским смехом и жила вечно?
 >

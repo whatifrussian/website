@@ -7,7 +7,7 @@ SourceNum: 99
 SourceTitle: Starlings
 Formulas: False
 Description: Я смотрел это видео и все думал: сколько нужно птиц, чтобы гравитация взяла верх и сжала их в колоссальный птичий шар?
-Image: http://chtoes.li/uploads/099-starlings/masks.png
+Image: https://chtoes.li/uploads/099-starlings/masks.png
 
 > Я смотрел [это видео](http://www.youtube.com/watch?v=eakKfY5aHmY) и все думал: сколько нужно птиц, чтобы гравитация взяла верх и сжала их в колоссальный птичий шар?
 >

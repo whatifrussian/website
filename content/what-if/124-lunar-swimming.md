@@ -7,7 +7,7 @@ SourceNum: 124
 SourceTitle: Lunar Swimming
 Formulas: True
 Description: Что, если бы на Луне было озеро? Каково было бы плавать в нем? Допустим, над озером обыкновенная атмосфера, удерживаемая под куполом или как-нибудь еще.
-Image: http://chtoes.li/uploads/124-lunar-swimming/front.png
+Image: https://chtoes.li/uploads/124-lunar-swimming/front.png
 
 
 > Что, если бы на Луне было озеро? Каково было бы плавать в нем? Допустим, над озером обыкновенная атмосфера, удерживаемая под куполом или как-нибудь еще.

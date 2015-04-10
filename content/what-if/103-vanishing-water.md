@@ -7,7 +7,7 @@ SourceNum: 103
 SourceTitle: Vanishing Water
 Formulas: False
 Description: Нет, товарищи, не зря Есть и реки и моря, Потому что без воды И ни туды и ни сюды!
-Image: http://chtoes.li/uploads/103-vanishing-water/whale_ru.png
+Image: https://chtoes.li/uploads/103-vanishing-water/whale_ru.png
 
 
 > Что произойдет, если с Земли магическим образом исчезнут все водоемы?

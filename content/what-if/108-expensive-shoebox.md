@@ -7,7 +7,7 @@ SourceNum: 108
 SourceTitle: Expensive Shoebox
 Formulas: False
 Description: Как максимально дорого заполнить коробку из-под обуви 44 размера (например, карточками MicroSD по 64 ГБ, полными легально купленной музыки)?
-Image: http://chtoes.li/uploads/108-expensive-shoebox/front.png
+Image: https://chtoes.li/uploads/108-expensive-shoebox/front.png
 
 > Как максимально дорого заполнить коробку из-под обуви 44 размера (например, карточками MicroSD по 64&nbsp;ГБ, полными легально купленной музыки)?
 >

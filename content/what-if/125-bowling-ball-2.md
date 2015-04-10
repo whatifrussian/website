@@ -7,7 +7,7 @@ SourceNum: 125
 SourceTitle: Bowling Ball
 Formulas: False
 Description: Вы находитесь в лодке прямо над Марианской впадиной. Если вы сбросите семикилограммовый шар для боулинга за борт, как быстро он достигнет дна?
-Image: http://chtoes.li/uploads/125-bowling-ball-2/front.png
+Image: https://chtoes.li/uploads/125-bowling-ball-2/front.png
 
 > Вы находитесь в лодке прямо над Марианской впадиной. Если вы сбросите семикилограммовый шар для боулинга за борт, как быстро он достигнет дна?
 >

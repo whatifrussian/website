@@ -7,7 +7,7 @@ SourceNum: 121
 SourceTitle: Frozen Rivers
 Formulas: False
 Description: Что произойдет, если все реки в США моментально замерзнут посреди лета?
-Image: http://chtoes.li/uploads/121-frozen-rivers/front.png
+Image: https://chtoes.li/uploads/121-frozen-rivers/front.png
 
 
 > Что произойдет, если все реки в США моментально замерзнут посреди лета?

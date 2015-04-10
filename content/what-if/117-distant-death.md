@@ -7,13 +7,13 @@ SourceNum: 117
 SourceTitle: Distant Death
 Formulas: False
 Description: На каком максимальном расстоянии от Земли что-нибудь с нашей планеты нашло свою смерть?
-Image: http://chtoes.li/uploads/117-distant-death/front.png
+Image: https://chtoes.li/uploads/117-distant-death/front.png
 
 > На каком максимальном расстоянии от Земли что-нибудь с нашей планеты нашло свою смерть?
 >
 > — Эйми из Новой Зеландии
 
-Раз уж Хэллоуин на носу, самое время для [вопросов, связанных со смертью](http://chtoes.li/facebook-of-the-dead/).
+Раз уж Хэллоуин на носу, самое время для [вопросов, связанных со смертью](https://chtoes.li/facebook-of-the-dead/).
 
 ![](/uploads/117-distant-death/usual_ru.png "Я не виноват, что мне все время задают вопросы об издевательствах над планетой.")
 

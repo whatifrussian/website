@@ -7,7 +7,7 @@ SourceNum: 118
 SourceTitle: Physical Salary
 Formulas: False
 Description: Что, если зарплата будет в реальном времени возникать прямо перед людьми? Сколько нужно зарабатывать, чтобы это стало серьезной проблемой?
-Image: http://chtoes.li/uploads/118-physical-salary/front.png
+Image: https://chtoes.li/uploads/118-physical-salary/front.png
 
 > Что, если зарплата будет в реальном времени возникать прямо перед людьми? Сколько нужно зарабатывать, чтобы это стало серьезной проблемой?
 >

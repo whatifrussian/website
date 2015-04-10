@@ -7,7 +7,7 @@ SourceNum: 120
 SourceTitle: Alternate Universe What Ifs
 Formulas: False
 Description: Корреспонденция из страшной альтернативной вселенной.
-Image: http://chtoes.li/uploads/120-alternate-universe-what-ifs/front.png
+Image: https://chtoes.li/uploads/120-alternate-universe-what-ifs/front.png
 
 > Корреспонденция из страшной альтернативной вселенной.
 

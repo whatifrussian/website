@@ -7,7 +7,7 @@ SourceNum: 107
 SourceTitle: Letter to Mom
 Formulas: False
 Description: Как быстрее всего доставить бумажное письмо из Чикаго, где я живу, моей маме в Нью-Джерси?
-Image: http://chtoes.li/uploads/107-letter-to-mom/front.png
+Image: https://chtoes.li/uploads/107-letter-to-mom/front.png
 
 > Как быстрее всего доставить бумажное письмо из Чикаго, где я живу, моей маме в Нью-Джерси?
 >

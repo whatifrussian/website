@@ -7,7 +7,7 @@ SourceNum: 98
 SourceTitle: Blood Alcohol
 Formulas: False
 Description: Можно ли опьянеть, выпив кровь пьяного человека?
-Image: http://chtoes.li/uploads/098-blood-alcohol/squirrel_2.png
+Image: https://chtoes.li/uploads/098-blood-alcohol/squirrel_2.png
 
 > Можно ли опьянеть, выпив кровь пьяного человека?
 >

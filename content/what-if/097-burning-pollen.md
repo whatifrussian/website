@@ -7,7 +7,7 @@ SourceNum: 97
 SourceTitle: Burning Pollen
 Formulas: False
 Description: Что, если как-нибудь поджечь пыльцу, летающую в воздухе по весне? Помимо того, что это плохая идея, к каким результатам это может привести?
-Image: http://chtoes.li/uploads/097-burning-pollen/car.png
+Image: https://chtoes.li/uploads/097-burning-pollen/car.png
 
 > Что, если как-нибудь поджечь пыльцу, летающую в воздухе по весне? Помимо того, что это плохая идея, к каким результатам это может привести?
 >
