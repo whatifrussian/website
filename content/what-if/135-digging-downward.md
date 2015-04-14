@@ -49,7 +49,7 @@ Image: https://chtoes.li/uploads/135-digging-downward/front.png
 
 Что, если подумать, делает ответ совершенно ясным.
 
-![](/uploads/135-digging-downward/balrog.png "Быть может, на самом деле «карта температур на глубине 3,5&nbsp;км»&nbsp;— это путь к Балрогу.")
+![](/uploads/135-digging-downward/balrog.png "Быть может, на самом деле «карта температур на глубине 3,5 км» — это путь к Балрогу.")
 
 [1]: https://chtoes.li/rising-steadily/ "Равномерный подъём"
 
