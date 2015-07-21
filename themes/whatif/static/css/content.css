@@ -30,12 +30,13 @@
 	display: block;
 	height: 15px;
 	position: relative;
-	top: 7px
+	top: 7px;
 }
 
 .main .border-bottom {
 	opacity: 0.3;
 	top: -7px;
+	padding: 0;
 }
 .main .border-bottom hr {
 	display: none;
