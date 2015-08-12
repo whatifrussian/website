@@ -102,31 +102,40 @@ $(document).ready(function(){
 	var playerShown = false;
 	var videoLink = null;
 
-	function getYouTubeId(url){
-		var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
-		var match = url.match(regExp);
-		if (match && match[7].length == 11){
-			return match[7];
-		} else {
-			return null;
+	function getYouTubeIdAndTime(url){
+		var yt = {
+			'id': null,
+			'time': null,
 		}
+		var urlRE = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*)(.*)$/;
+		var timeRE = /^.*#t=(\d+).*$/;
+		var matchUrl = url.match(urlRE);
+		if (matchUrl && matchUrl[7].length == 11){
+			yt['id'] = matchUrl[7];
+			var matchTime = matchUrl[8].match(timeRE);
+			yt['time'] = matchTime ? matchTime[1] : 0;
+		}
+		return yt;
 	}
 
 	var ytIdAttr = "youtube-id";
+	var ytTimeAttr = "youtube-time";
 	$('.page a').each(function(){
 		var url = $(this).attr('href');
-		var ytID = getYouTubeId(url);
-		if (ytID) {
+		var yt = getYouTubeIdAndTime(url);
+		if (yt['id']) {
 			$(this).addClass('youtube');
-			$(this).attr(ytIdAttr, ytID);
+			$(this).attr(ytIdAttr, yt['id']);
+			$(this).attr(ytTimeAttr, yt['time']);
 			//$(this).append('&nbsp;&#8227;');
 		}
 	});
 
-	function getYouTubePlayer(ID, width, height) {
+	function getYouTubePlayer(ID, time, width, height) {
 		var YouTubeURL = "//www.youtube.com/embed/" + ID + "?rel=0&showsearch=0&autohide=" + 0;
 		YouTubeURL += "&autoplay=" + 1 + "&controls=" + 1 + "&fs=" + 1 + "&loop=" + 0;
 		YouTubeURL += "&showinfo=" + 0 + "&color=" + "white" + "&theme=" + "light";
+		YouTubeURL += "&start=" + time;
 
 		var YouTubePlayer = '<iframe title="YouTube video player" style="margin:0; padding:0;" width="' + width + '" ';
 		YouTubePlayer += 'height="' + height + '" src="' + YouTubeURL + '" frameborder="0" allowfullscreen></iframe>';
@@ -205,7 +214,8 @@ $(document).ready(function(){
 
 		if (!playerShown) {
 			var videoID = $(this).attr(ytIdAttr);
-			var player = getYouTubePlayer(videoID, 400, 300);
+			var time = $(this).attr(ytTimeAttr);
+			var player = getYouTubePlayer(videoID, time, 400, 300);
 			$(this).after(player);
 			$('.youtube-player').click(closePlayer);
 			$('.youtube-player a').click(function(e){
