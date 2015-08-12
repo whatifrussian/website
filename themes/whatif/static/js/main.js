@@ -108,7 +108,7 @@ $(document).ready(function(){
 			'time': null,
 		}
 		var urlRE = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*)(.*)$/;
-		var timeRE = /^.*#t=(\d+).*$/;
+		var timeRE = /^.*[#\?\&]t=(\d+).*$/;
 		var matchUrl = url.match(urlRE);
 		if (matchUrl && matchUrl[7].length == 11){
 			yt['id'] = matchUrl[7];
