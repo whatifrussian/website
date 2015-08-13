@@ -107,7 +107,7 @@ $(document).ready(function(){
 			'id': null,
 			'time': null,
 		}
-		var urlRE = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*)(.*)$/;
+		var urlRE = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??(?:v=)?([^#\&\?]*)(.*)$/;
 		var timeRE = /^.*[#\?\&]t=(\d+).*$/;
 		var matchUrl = url.match(urlRE);
 		if (matchUrl && matchUrl[7].length == 11){
