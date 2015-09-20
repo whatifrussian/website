@@ -61,7 +61,7 @@ Image: https://chtoes.li/uploads/139-jupiter-descending/front.png
 
 [4]: http://visibleearth.nasa.gov/view.php?id=78314 "Видимая часть Земли — северная Африка и Европа со спутника Suomi NPP (англ.) | НАСА"
 
-[5]: http://stormandsky.smugmug.com/Thumbnail-Galleries "Галерея фотографий — гроза и небо (англ.)"
+[5]: http://web.archive.org/web/20150726214631/http://stormandsky.smugmug.com/Thumbnail-Galleries "Галерея фотографий — гроза и небо (англ.)"
 
 [6]: http://www.amazon.com/Drifting-Alien-Winds-Exploring-Weather/dp/1441969160 "Майкл Кэролл. Плавание неземными ветрами — исследование небес и погоды иных миров | Amazon"
 
