@@ -6,5 +6,5 @@ import sys
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from localconf import *
 
-SITEURL = 'http://dev.chtoes.li'
+SITEURL = 'https://dev.chtoes.li'
 FEED_DOMAIN = SITEURL
