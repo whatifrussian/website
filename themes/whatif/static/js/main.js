@@ -54,7 +54,9 @@ $(document).ready(function(){
 	$($('a[rel=footnote]').get().reverse()).each(function(){
 		var num = $(this).html();
 		var rel = $(this).attr('href').substring(1).replace(':', '\\:');
-		var is_multipar = $('.footnote li#' + rel + ' > p').length > 1;
+		var pars_cnt = $('.footnote li#' + rel + ' > p').length;
+		var imgs_cnt = $('.footnote li#' + rel + ' > p img').length;
+		var is_multipar = pars_cnt - imgs_cnt > 1;
 		var body = $('.footnote li#' + rel).contents();
 
 		var $footnote = $('<sup/>', {class: 'refnum', html: '<span>' + num + '</span>'});
