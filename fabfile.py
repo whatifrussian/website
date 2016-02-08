@@ -27,7 +27,7 @@ SourceNum: {{num}}\n\
 SourceTitle: {{title}}\n\
 Formulas: False\n\
 Description: \n\
-Image: \n\
+Image: https://chtoes.li/uploads/{{num}}-{{slug}}/front.png\n\
 \n\
 \n"
 
