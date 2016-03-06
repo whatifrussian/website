@@ -413,6 +413,17 @@ figure.active figcaption {
 	padding-bottom: 1em;
 }
 
+figure.figure_wide {
+	text-align: center;
+	margin: 1em 0px;
+}
+
+figure.figure_wide figure {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0px 2px;
+}
+
 .transcript {
 	display: none;
 }

@@ -21,6 +21,11 @@ $(document).ready(function(){
 
 	// Figures
 	//-------------------------------------------------------
+	// http://stackoverflow.com/a/3614218
+	jQuery.fn.outerHTML = function(){
+		return jQuery('<div />').append(this.eq(0).clone()).html();
+	};
+
 	$('p img').each(function(){
 		$(this).addClass('illustration');
 		var title = $(this).attr('title');
@@ -32,14 +37,37 @@ $(document).ready(function(){
 		// 	text: '[transcript]' + $transcript.html() + '[/transcript]'
 		// }).appendTo($parent).wrap('<figcaption></figcaption>').after($('<em/>', {text: title}));
 		// $transcript.remove();
-		// http://stackoverflow.com/questions/3614212/
-		var img = $('<div/>').append($(this).clone()).html();
+
+		var img = $(this).outerHTML();
 		var figcaption = '<figcaption><div><em>' + title + '</em></div></figcaption>';
-		var figure = '<figure>' + img + figcaption + '</figure>';
+		var figure = $('<figure>' + img + figcaption + '</figure>');
 
 		if ($parent.parent().hasClass('page')) {
-			// article content
-			$parent.replaceWith(figure);
+			if ($parent.children().length > 1) {
+				// a special case when two images are in an one paragraph
+				// we need to keep images side by side
+
+				// replace <img /> with a copy wrapped into <figure />
+				$(this).remove();
+				$parent.append(figure);
+
+				// adjust width of figcaption to width of image
+				var img_width = figure.children('img').width();
+				figure.children('figcaption').width(img_width);
+
+				// replace outer <p /> with <figure /> and add
+				// 'figure_wide' class to it.
+				if ($parent.children('img').length == 0) {
+					var $outer_figure = $('<figure />');
+					$outer_figure.append($parent.html());
+					$outer_figure.addClass('figure_wide');
+					$parent.replaceWith($outer_figure);
+				}
+			} else {
+				// usual article content when an image is in its own paragraph
+				// replace <p /> with <figure />, which holds an image
+				$parent.replaceWith(figure);
+			}
 		} else {
 			// footnote content
 			$(this).remove();
