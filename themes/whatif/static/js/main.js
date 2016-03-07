@@ -51,10 +51,6 @@ $(document).ready(function(){
 				$(this).remove();
 				$parent.append(figure);
 
-				// adjust width of figcaption to width of image
-				var img_width = figure.children('img').width();
-				figure.children('figcaption').width(img_width);
-
 				// replace outer <p /> with <figure /> and add
 				// 'figure_wide' class to it.
 				if ($parent.children('img').length == 0) {
