@@ -554,12 +554,15 @@ figure.active figcaption {
 	}
 
 	figure.figure_wide figure {
+		margin: 0px 2px;
+	}
+
+	figure.figure_in_row figure {
 		display: inline-block;
 		vertical-align: top;
 		width: -webkit-min-content;
 		width: -moz-min-content;
 		width: min-content;
-		margin: 0px 2px;
 	}
 }
 

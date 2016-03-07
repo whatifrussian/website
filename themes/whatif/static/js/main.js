@@ -26,6 +26,25 @@ $(document).ready(function(){
 		return jQuery('<div />').append(this.eq(0).clone()).html();
 	};
 
+	// Check for support intrinsic width in user's browser.
+	// It needed for enabling side by side images only when
+	// they can be correctly displayed in all cases.
+	// http://caniuse.com/#feat=intrinsic-width
+	// http://stackoverflow.com/a/3524592
+	function check_instrinsic_width(){
+		var res = false;
+		var elem = document.createElement('div');
+		var values = ['-webkit-min-content', '-moz-min-content',
+			'min-content'];
+		for (var i = 0; i < values.length; ++i) {
+			elem.style.width = '0px';
+			elem.style.width = values[i];
+			res = res || elem.style.width == values[i];
+		}
+		return res;
+	};
+	var have_intrinsic_width = check_instrinsic_width();
+
 	$('p img').each(function(){
 		$(this).addClass('illustration');
 		var title = $(this).attr('title');
@@ -51,12 +70,15 @@ $(document).ready(function(){
 				$(this).remove();
 				$parent.append(figure);
 
-				// replace outer <p /> with <figure /> and add
-				// 'figure_wide' class to it.
+				// replace outer <p /> with <figure /> and add proper
+				// classes, which depends on browser's features supporting.
 				if ($parent.children('img').length == 0) {
 					var $outer_figure = $('<figure />');
 					$outer_figure.append($parent.html());
 					$outer_figure.addClass('figure_wide');
+					if (have_intrinsic_width) {
+						$outer_figure.addClass('figure_in_row');
+					}
 					$parent.replaceWith($outer_figure);
 				}
 			} else {
