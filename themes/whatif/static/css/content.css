@@ -675,58 +675,6 @@ figure.active figcaption {
 	}
 }
 
-.usericon {
-	white-space: nowrap;
-}
-.usericon b {
-	background-image: url("../img/sprites.png");
-	display: inline-block;
-	width: 13px;
-	height: 14px;
-	background-position: -319px -270px;
-	position: relative;
-	top: 2px;
-}
-.usericon.female b {
-	background-position: -333px -270px;
-}
-.usericon.beret b {
-	background-position: -359px -270px;
-}
-.usericon.tux b {
-	background-position: -372px -270px;
-}
-.usericon.blackhat b {
-	background-position: -385px -270px;
-}
-.usericon.whitehat b {
-	background-position: -398px -270px;
-}
-.usericon.spider b {
-	background-position: -411px -270px;
-}
-.usericon.ninja b {
-	background-position: -424px -270px;
-}
-.usericon.milena b {
-	background-position: -437px -270px;
-}
-.usericon.meth b {
-	background-position: -450px -270px;
-}
-.usericon.bober b {
-	background-position: -463px -270px;
-}
-
-footer img {
-	position: relative;
-	float: right;
-	margin-top: -90px;
-	z-index: 99;
-	max-width: 100px;
-	margin-bottom: 10px;
-}
-
 /* Small */
 @media all and (max-width: 700px) {
 	footer img {
@@ -737,6 +685,15 @@ footer img {
 		max-width: 100px;
 		margin-bottom: 10px;
 	}
+}
+
+footer img {
+	position: relative;
+	float: right;
+	margin-top: -90px;
+	z-index: 99;
+	max-width: 100px;
+	margin-bottom: 10px;
 }
 
 .toc li {
