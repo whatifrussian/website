@@ -8,3 +8,10 @@ from localconf import *
 
 SITEURL = 'https://dev.chtoes.li'
 FEED_DOMAIN = SITEURL
+EXTRA_PATH_METADATA = {
+    'extra/robots-dev.txt': {'path': 'robots.txt'},
+}
+STATIC_PATHS = [
+    'uploads',
+    'extra/robots-dev.txt'
+]
