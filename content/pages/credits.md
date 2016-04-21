@@ -55,4 +55,7 @@ url: credits/
     <li><a class="usericon" href="http://vk.com/mirasaujan"><b></b>маке</a></li>
     <li><a class="usericon" href="http://vk.com/el_coon"><b></b>IMCOON</a></li>
     <li><a class="usericon" href="http://yegorf1.ru"><b></b>yegorf1</a></li>
+    <li><span class="usericon female"><b></b>ms_montag</span></li>
+    <li><span class="usericon"><b></b>Irek</span></li>
+    <li><span class="usericon"><b></b>bevalorous</span></li>
 </ul>
