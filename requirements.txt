@@ -2,4 +2,4 @@ Fabric==1.10.2
 pelican==3.6.3
 Markdown==2.6.6
 beautifulsoup4==4.4.1
-pycrypto=2.6.1
+pycrypto==2.6.1
