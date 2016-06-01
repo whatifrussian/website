@@ -57,7 +57,7 @@ $(document).ready(function(){
 		var pars_cnt = $('.footnote li#' + rel + ' > p').length;
 		var imgs_cnt = $('.footnote li#' + rel + ' > p img').length;
 		var is_multipar = pars_cnt - imgs_cnt > 1;
-		var body = $('.footnote li#' + rel).contents();
+		var body = $('.footnote li#' + rel).html();
 
 		var $footnote = $('<sup/>', {class: 'refnum', html: '<span>' + num + '</span>'});
 		$footnote
