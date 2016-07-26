@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/54/
 SourceNum: 54
 SourceTitle: Drain the Oceans: Part II
 Formulas: False
+Description: Положим, что мы уже совершили осушение океанов и сбросили воду прямо на ровер Curiosity. Как будет меняться Марс по мере накопления воды?
 
 > Положим, что мы уже совершили [осушение океанов](/drain-the-oceans/) и сбросили воду прямо на ровер Curiosity. Как будет меняться Марс по мере накопления воды?
 >

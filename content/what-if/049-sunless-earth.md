@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/49/
 SourceNum: 49
 SourceTitle: Sunless Earth
 Formulas: False
+Description: Что произойдет с Землёй, если Солнце внезапно отключится?
 
 > Что произойдет с Землёй, если Солнце внезапно отключится?
 >

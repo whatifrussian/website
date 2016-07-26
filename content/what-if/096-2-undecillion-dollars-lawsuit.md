@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/96/
 SourceNum: 96
 SourceTitle: $2 Undecillion Lawsuit
 Formulas: False
+Description: Что, если бы Au Bon Pain проиграли иск и были вынуждены заплатить истцу 2 ундециллиона долларов?
 
 > Что, если бы Au Bon Pain проиграли [этот иск](http://www.loweringthebar.net/2014/05/2-undecillion-dollar-demand.html) и были вынуждены заплатить истцу 2 ундециллиона долларов?
 >

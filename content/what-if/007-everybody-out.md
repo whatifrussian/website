@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/7/
 SourceNum: 7
 SourceTitle: Everybody Out
 Formulas: True
+Description: Достаточно ли энергии, чтобы всех людей убрать с планеты?
 
 > Достаточно ли энергии, чтобы всех людей убрать с планеты?
 >

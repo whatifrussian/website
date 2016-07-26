@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/39/
 SourceNum: 39
 SourceTitle: Hockey Puck
 Formulas: False
+Description: С какой силой нужно ударить по шайбе, чтобы забить вратаря в ворота?
 
 > С какой силой нужно ударить по шайбе, чтобы забить вратаря в ворота?
 >

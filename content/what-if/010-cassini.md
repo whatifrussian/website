@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/10/
 SourceNum: 10
 SourceTitle: Cassini
 Formulas: False
+Description: Что будет, если земная поверхность повернется на 90 градусов?
 
 > Что будет, если земная поверхность повернется на 90 градусов?
 >

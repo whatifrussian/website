@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/56/
 SourceNum: 56
 SourceTitle: Restraining an Airplane
 Formulas: False
+Description: Из чего нужно сделать верёвку, чтобы самолёт, привязанный с её помощью к земле, не мог взлететь?
 
 > Из чего нужно сделать верёвку, чтобы самолёт, привязанный с её помощью к земле, не мог взлететь?
 >

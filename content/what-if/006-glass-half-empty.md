@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/6/
 SourceNum: 6
 SourceTitle: Glass Half Empty
 Formulas: False
+Description: Что будет, если стакан воды внезапно станет наполовину пуст?
 
 > Что будет, если стакан воды внезапно станет наполовину пуст?
 >

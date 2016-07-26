@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/44/
 SourceNum: 44
 SourceTitle: High Throw
 Formulas: False
+Description: Насколько высоко человек может что-либо подбросить?
 
 > Насколько высоко человек может что-либо подбросить?
 >

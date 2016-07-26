@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/23/
 SourceNum: 23
 SourceTitle: Short Answer Section II
 Formulas: True
+Description: Короткие ответы на вопросы читателей. Часть 2.
 
 В сегодняшней заметке я дам короткие ответы на несколько вопросов читателей. (Предыдущий выпуск [здесь](/short-answers/).)
 

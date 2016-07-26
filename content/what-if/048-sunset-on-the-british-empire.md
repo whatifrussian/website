@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/48/
 SourceNum: 48
 SourceTitle: Sunset on the British Empire
 Formulas: False
+Description: Когда (если вообще когда-нибудь) солнце зайдёт для Британской империи?
 
 > Когда (если вообще когда-нибудь) солнце зайдёт для Британской империи?
 >

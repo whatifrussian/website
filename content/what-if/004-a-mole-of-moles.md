@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/4/
 SourceNum: 4
 SourceTitle: A Mole of Moles
 Formulas: True
+Description: Что произойдет, если вы соберете моль кротов в одном месте?
 
 > Что произойдет, если вы соберете моль кротов[^n] в одном месте?
 >

@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/83/
 SourceNum: 83
 SourceTitle: Star Sand
 Formulas: False
+Description: Как выглядел бы пляж, песчинки на котором пропорциональны звездам Млечного Пути?
 
 > Как выглядел бы пляж, песчинки на котором пропорциональны звездам Млечного Пути?
 >

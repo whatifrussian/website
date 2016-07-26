@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/90/
 SourceNum: 90
 SourceTitle: Great Tree, Great Axe
 Formulas: False
+Description: ... Насколько огромным все это было бы?
 
 > Кабы все моря планеты
 &nbsp;
