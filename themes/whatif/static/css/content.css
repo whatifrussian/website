@@ -564,6 +564,12 @@ figure.active figcaption {
 		width: -moz-min-content;
 		width: min-content;
 	}
+
+	/* 'width: min-content' doesn't supported for responsive images. */
+	/* Assumed that images small enough for side-by-side displacement. */
+	figure.figure_in_row img.illustration {
+		max-width: none;
+	}
 }
 
 /*************************************************/
