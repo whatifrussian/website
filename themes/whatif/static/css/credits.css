@@ -1,7 +1,26 @@
-.creators > dt {
+/* For creators: http://stackoverflow.com/a/31456554 */
+
+.creators {
+	text-align: center;
+}
+
+.creators > dt, dd {
+	display: inline-block;
 	white-space: nowrap;
-	width: 200px;
-	float: left;
+	vertical-align: middle;
+	width: 48%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.creators > dt {
+	text-align: right;
+	margin-right: 10px;
+}
+
+.creators > dd {
+	text-align: left;
+	margin-left: 10px;
 }
 
 .participants {
