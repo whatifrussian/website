@@ -7,6 +7,8 @@ Formulas: False
 save_as: credits/index.html
 url: credits/
 
+В главных ролях:
+
 <dl class="creators">
     <dt>Никита Менькович</dt>
     <dd><a class="usericon whitehat" href="https://libc6.org/"><b></b>librarian</a></dd>
