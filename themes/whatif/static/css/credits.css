@@ -23,23 +23,23 @@
 	margin-left: 10px;
 }
 
-.participants {
-	-webkit-column-count: 2;
-	-moz-column-count: 2;
-	column-count: 2;
-	-webkit-column-gap: 0;
-	-moz-column-gap: 0;
-	column-gap: 0;
-}
-
 .page .participants > li {
+	display: inline-block;
+	min-width: 48%;
 	list-style-type: none;
 	padding-top: 0;
 	padding-bottom: 0;
+	text-align: left;
 }
 
-.usericon {
+.participants > li > .usericon {
+	margin-left: 40%;
+}
+
+.page .usericon {
 	white-space: nowrap;
+	padding-left: 0;
+	padding-right: 0;
 }
 .usericon b {
 	background-image: url("../img/sprites.png");
