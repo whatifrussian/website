@@ -547,6 +547,29 @@ figure.active figcaption {
 	.refbody .ref:hover > .refbody {
 		bottom: 1em;
 	}
+
+	figure.figure_wide {
+		text-align: center;
+		margin: 1em 0px;
+	}
+
+	figure.figure_wide figure {
+		margin: 0px 2px;
+	}
+
+	figure.figure_in_row figure {
+		display: inline-block;
+		vertical-align: top;
+		width: -webkit-min-content;
+		width: -moz-min-content;
+		width: min-content;
+	}
+
+	/* 'width: min-content' doesn't supported for responsive images. */
+	/* Assumed that images small enough for side-by-side displacement. */
+	figure.figure_in_row img.illustration {
+		max-width: none;
+	}
 }
 
 /*************************************************/
@@ -658,8 +681,46 @@ figure.active figcaption {
 	}
 }
 
-.usericon {
+/* Small */
+@media all and (max-width: 700px) {
+	footer img {
+		position: relative;
+		float: right;
+		margin-top: -45px;
+		z-index: 1000;
+		max-width: 100px;
+		margin-bottom: 10px;
+	}
+}
+
+footer img {
+	position: relative;
+	float: right;
+	margin-top: -90px;
+	z-index: 99;
+	max-width: 100px;
+	margin-bottom: 10px;
+}
+
+.toc li {
+	color: #000;
+	margin-bottom: 10px;
+	font-size: 110%;
+}
+
+.error {
+	text-align: center;
+	padding-top: 20px;
+}
+
+.error img {
+	max-width: 100%;
+}
+
+.page .usericon {
 	white-space: nowrap;
+	padding-left: 0;
+	padding-right: 0;
 }
 .usericon b {
 	background-image: url("../img/sprites.png");
@@ -699,40 +760,4 @@ figure.active figcaption {
 }
 .usericon.bober b {
 	background-position: -463px -270px;
-}
-
-footer img {
-	position: relative;
-	float: right;
-	margin-top: -90px;
-	z-index: 99;
-	max-width: 100px;
-	margin-bottom: 10px;
-}
-
-/* Small */
-@media all and (max-width: 700px) {
-	footer img {
-		position: relative;
-		float: right;
-		margin-top: -45px;
-		z-index: 1000;
-		max-width: 100px;
-		margin-bottom: 10px;
-	}
-}
-
-.toc li {
-	color: #000;
-	margin-bottom: 10px;
-	font-size: 110%;
-}
-
-.error {
-	text-align: center;
-	padding-top: 20px;
-}
-
-.error img {
-	max-width: 100%;
 }
