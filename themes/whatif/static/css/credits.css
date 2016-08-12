@@ -1,37 +1,43 @@
-/* For creators: http://stackoverflow.com/a/31456554 */
-
-.creators {
-	text-align: center;
-}
-
-.creators > dt, dd {
-	display: inline-block;
-	white-space: nowrap;
-	vertical-align: middle;
-	width: 48%;
-	margin-left: 0;
-	margin-right: 0;
-}
-
-.creators > dt {
-	text-align: right;
-	margin-right: 10px;
-}
-
-.creators > dd {
-	text-align: left;
-	margin-left: 10px;
-}
-
 .page .participants > li {
-	display: inline-block;
-	min-width: 48%;
 	list-style-type: none;
 	padding-top: 0;
 	padding-bottom: 0;
-	text-align: left;
 }
 
-.participants > li > .usericon {
-	margin-left: 40%;
+/* 2 columns */
+@media all and (min-width: 750px) {
+	/* For creators: http://stackoverflow.com/a/31456554 */
+
+	.creators {
+		text-align: center;
+	}
+
+	.creators > dt, dd {
+		display: inline-block;
+		white-space: nowrap;
+		vertical-align: middle;
+		width: 48%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.creators > dt {
+		text-align: right;
+		margin-right: 10px;
+	}
+
+	.creators > dd {
+		text-align: left;
+		margin-left: 10px;
+	}
+
+	.page .participants > li {
+		display: inline-block;
+		min-width: 48%;
+		text-align: left;
+	}
+
+	.participants > li > .usericon {
+		margin-left: 40%;
+	}
 }
