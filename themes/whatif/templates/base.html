@@ -30,7 +30,9 @@
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/layout.css">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/content.css">
+    {% if page and page.slug == "credits" %}
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/credits.css">
+    {% endif %}
 
     <script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery-2.1.0.min.js"></script>
     <script type="text/javascript" src="{{ SITEURL }}/theme/js/main.js"></script>
