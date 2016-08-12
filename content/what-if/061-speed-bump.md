@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/61/
 SourceNum: 61
 SourceTitle: Speed Bump
 Formulas: False
+Description: Как быстро можно проехать через лежачий полицейский так, чтобы при этом выжить?
 
 > Как быстро можно проехать через лежачий полицейский так, чтобы при этом выжить?
 >

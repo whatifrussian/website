@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/28/
 SourceNum: 28
 SourceTitle: Steak Drop
 Formulas: False
+Description: С какой высоты нужно сбросить стейк, чтобы, падая на землю, он приготовился?
 
 > С какой высоты нужно сбросить стейк, чтобы, падая на землю, он приготовился?
 >

@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/15/
 SourceNum: 15
 SourceTitle: Mariana Trench Explosion
 Formulas: True
+Description: Что произойдёт, если взорвать ядерную бомбу (к примеру, "Кузькину мать") на дне Марианской впадины?
 
 > Что произойдёт, если взорвать ядерную бомбу (к примеру, "Кузькину мать") на дне Марианской впадины?
 >

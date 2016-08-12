@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/12/
 SourceNum: 12
 SourceTitle: Raindrop
 Formulas: True
+Description: Что, если ливень сбросит всю свою воду в одной гигантской капле?
 
 > Что, если ливень сбросит всю свою воду в одной гигантской капле?
 >

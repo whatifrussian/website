@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/63/
 SourceNum: 63
 SourceTitle: Google's Datacenters on Punch Cards
 Formulas: False
+Description: Если хранить данные на перфокартах, насколько большим будет хранилище дата-центра Google?
 
 > Если хранить данные на перфокартах, насколько большим будет хранилище дата-центра Google?
 >

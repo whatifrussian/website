@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/21/
 SourceNum: 21
 SourceTitle: Machine Gun Jetpack
 Formulas: True
+Description: Возможно ли создать аналог реактивного ранца, стреляющего вниз из пулеметов?
 
 > Возможно ли создать аналог реактивного ранца, стреляющего вниз из пулеметов?[^1]
 >

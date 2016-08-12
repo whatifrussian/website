@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/1/
 SourceNum: 1
 SourceTitle: Relativistic Baseball
 Formulas: False
+Description: Что случится, если вы попытаетесь кинуть бейсбольный мяч на 90% от скорости света?
 
 > Что случится, если вы попытаетесь кинуть бейсбольный мяч на 90% от скорости света?
 >

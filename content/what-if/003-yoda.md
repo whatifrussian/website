@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/3/
 SourceNum: 3
 SourceTitle: Yoda
 Formulas: True
+Description: Сколько Силы может произвести Йода?
 
 > Сколько Силы может произвести Йода?
 >

@@ -61,13 +61,15 @@ EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
     'extra/googleb52597a81842d95f.html': {'path': 'googleb52597a81842d95f.html'},
     'extra/yandex_7e403715421012c7.txt': {'path': 'yandex_7e403715421012c7.txt'},
+    'extra/manifest.json': {'path': 'manifest.json'},
 }
 
 STATIC_PATHS = [
     'uploads',
     'extra/robots.txt',
     'extra/googleb52597a81842d95f.html',
-    'extra/yandex_7e403715421012c7.txt'
+    'extra/yandex_7e403715421012c7.txt',
+    'extra/manifest.json'
 ]
 
 # Uncomment following line if you want document-relative URLs when developing

@@ -6,8 +6,9 @@ Source: http://what-if.xkcd.com/45/
 SourceNum: 45
 SourceTitle: ISS Music Video
 Formulas: True
+Description: Является ли клип Криса Хэдфилда самым дорогим музыкальным клипом в истории?
 
->[Это](http://www.youtube.com/watch?v=KaOC9danxNo) ли самый дорогой музыкальный клип в истории?
+> [Это](http://www.youtube.com/watch?v=KaOC9danxNo) ли самый дорогой музыкальный клип в истории?
 >
 > — Комментаторы на Youtube
 

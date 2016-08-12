@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/35/
 SourceNum: 35
 SourceTitle: Hair Dryer
 Formulas: False
+Description: Что случится, если включенный фен положить в коробку размером 1×1×1 метр?
 
 > Что случится, если включенный фен положить в коробку размером 1×1×1 метр?
 >

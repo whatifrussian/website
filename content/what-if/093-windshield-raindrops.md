@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/93/
 SourceNum: 93
 SourceTitle: Windshield Raindrops
 Formulas: False
+Description: С какой скоростью нужно ехать, чтобы дождь разбил ветровое стекло?
 
 > С какой скоростью нужно ехать, чтобы дождь разбил ветровое стекло?
 >

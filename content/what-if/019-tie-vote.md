@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/19/
 SourceNum: 19
 SourceTitle: Tie Vote
 Formulas: True
+Description: Что, если ДЕЙСТВИТЕЛЬНО будет ничья?
 
 > Что, если ДЕЙСТВИТЕЛЬНО будет ничья?
 >

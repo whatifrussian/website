@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/89/
 SourceNum: 89
 SourceTitle: Tungsten Countertop
 Formulas: False
+Description: Если сбросить в Солнце вольфрамовую столешницу, насколько глубоко она погрузится?
 
 > Если сбросить в Солнце вольфрамовую столешницу, насколько глубоко она погрузится?
 >

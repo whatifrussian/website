@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/16/
 SourceNum: 16
 SourceTitle: Today's topic: Lightning
 Formulas: True
+Description: Насколько в действительности опасно находиться в бассейне в грозу?
 
 > Насколько в действительности опасно находиться в бассейне в грозу?
 >

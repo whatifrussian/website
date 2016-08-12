@@ -6,6 +6,7 @@ Source: http://what-if.xkcd.com/5/
 SourceNum: 5
 SourceTitle: Robot Apocalypse
 Formulas: True
+Description: Что, если случится восстание роботов? Как долго человечество протянет?
 
 > Что, если случится восстание роботов? Как долго человечество протянет?
 >
