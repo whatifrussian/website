@@ -20,7 +20,7 @@ url: credits/
     <dd><a class="usericon blackhat" href="https://twitter.com/uncleLem"><b></b>uncle Lem</a></dd>
     <dt>Юрий Гордеев</dt>
     <dd><a class="usericon beret" href="https://vk.com/13x666"><b></b>13x666</a></dd>
-    <dt>Юля</dt>
+    <dt>Юля Мирошниченко</dt>
     <dd><span class="usericon female"><b></b>yulka</span></dd>
 </dl>
 
