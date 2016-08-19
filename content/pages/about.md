@@ -67,6 +67,6 @@ $$ \text{Количество людей}=\frac{\pi\times\left(\tfrac{3}{4}\text
 
 А еще нам нравятся комиксы xkcd, и мы время от времени добавляем новые переводы на [xkcd.ru](http://xkcd.ru).
 
-![](http://imgs.xkcd.com/comics/shadowfacts.png "'Look to my coming on the fifth day. At dawn, look to the east.' 'And look to the west to see our shadows!'")![](http://xkcd.ru/i/1272_v2.png "— Ждите меня с первыми лучами пятого дня. На заре взгляните на восток. — А потом на запад, чтоб убедиться, что нет машин.")
+![](/uploads/about/shadowfacts.png "'Look to my coming on the fifth day. At dawn, look to the east.' 'And look to the west to see our shadows!'")![](/uploads/about/shadowfacts_ru.png "— Ждите меня с первыми лучами пятого дня. На заре взгляните на восток. — А потом на запад, чтоб убедиться, что нет машин.")
 
 Если вам понравился рассказ о нашей работе, возможно, вы захотите к нам присоединиться. Мы всегда рады новым людям, и нам никогда не помешают лишние мозги и руки. [Напишите нам](/help/)!
