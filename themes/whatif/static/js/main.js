@@ -152,9 +152,11 @@ $(document).ready(function(){
 		if (text_orig.length == 0)
 			return;
 		var text_split_2 = text_orig.replace(/^[,;:.)]*/, '');
-		var text_split_1 = text_orig.substring(0, text_orig.length - text_split_2.length);
 		node_after.textContent = text_split_2;
-		$footnote.children('.refnum').after($('<span/>', { class: 'punctum', html: text_split_1 }));
+		if (text_split_2.length < text_orig.length) {
+			var text_split_1 = text_orig.substring(0, text_orig.length - text_split_2.length);
+			$footnote.children('.refnum').after($('<span/>', { class: 'punctum', html: text_split_1 }));
+		}
 	});
 
 	$('.footnote').remove();
