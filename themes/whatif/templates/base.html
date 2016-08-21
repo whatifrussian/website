@@ -28,13 +28,9 @@
     <link rel="shortcut icon" href="{{ SITEURL }}/theme/img/favicon.ico">
     <link rel="yandex-tableau-widget" href="{{ SITEURL }}/manifest.json" />
 
-    {% assets filters="cssmin", output="css/style.min.css", "css/normalize.css", "css/layout.css", "css/content.css" %}
+    {% assets filters="cssmin", output="css/style.min.css", "css/normalize.css", "css/layout.css", "css/content.css", "css/credits.css" %}
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ ASSET_URL }}">
     {% endassets %}
-    {% if page and page.slug == "credits" %}
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/credits.css">
-    {% endif %}
-
     {% assets filters="jsmin", output="js/packed.js", "js/jquery-2.1.0.min.js", "js/main.js" %}
     <script type="text/javascript" async src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
     {% endassets %}

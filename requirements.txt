@@ -6,3 +6,4 @@ pycrypto==2.6.1
 cssmin==0.2.0
 jsmin==2.2.1
 webassets==0.12.0
+pelican-minify==0.9

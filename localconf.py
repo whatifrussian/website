@@ -12,11 +12,18 @@ TIMEZONE = 'Europe/Moscow'
 DEFAULT_LANG = u'ru'
 
 PLUGIN_PATHS = [ "plugins" ]
-PLUGINS = ["neighbors", "sitemap", 'assets']
+PLUGINS = ["neighbors", "sitemap", 'assets', 'minify']
 THEME = "themes/whatif"
 PATH = 'content'
 OUTPUT_PATH = 'output'
 DELETE_OUTPUT_DIRECTORY = True
+
+
+MINIFY = {
+    'remove_comments': True,
+    'remove_all_empty_space': True,
+    'remove_optional_attribute_quotes': True,
+}
 
 # Feed generation is usually not desired when developing
 FEED_ALL_RSS = "feed/index.xml"
