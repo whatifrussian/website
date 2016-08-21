@@ -1,0 +1,11 @@
+{
+    "year": {{ article.date.strftime("%Y") }},
+    "month": {{ article.date.strftime("%m").lstrip('0') }},
+    "day": {{ article.date.strftime("%d").lstrip('0') }},
+    "link": "{{ SITEURL }}/{{ article.url }}",
+    "num": {{ article.sourcenum }},
+    "alt": "{{ article.description }}",
+    "title": "{{ article.title }}",
+    "text": "{{ article.content |quotes }}"
+    "img": "{{ article.image }}",
+}

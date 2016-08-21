@@ -1,0 +1,12 @@
+[
+{% for article in articles %}
+    {
+        "num": {{ article.sourcenum }},
+        "title": "{{ article.title }}",
+        "link":  "{{ SITEURL }}/{{ article.url }}"
+        "img": "{{ article.image }}",
+    }{% if not loop.last %}
+,
+    {% endif %}
+{% endfor %}
+]

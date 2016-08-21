@@ -12,7 +12,7 @@ TIMEZONE = 'Europe/Moscow'
 DEFAULT_LANG = u'ru'
 
 PLUGIN_PATHS = [ "plugins" ]
-PLUGINS = ["neighbors", "sitemap"]
+PLUGINS = ["neighbors", "sitemap", 'assets']
 THEME = "themes/whatif"
 PATH = 'content'
 OUTPUT_PATH = 'output'
