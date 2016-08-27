@@ -90,4 +90,10 @@ SITEMAP = {
     }
 }
 
-MD_EXTENSIONS = (['extra', 'abbr', 'footnotes'])
+from md_extensions.figures import FiguresExtension
+MD_EXTENSIONS = ([
+    'extra',
+    'abbr',
+    'footnotes',
+    FiguresExtension(),
+])

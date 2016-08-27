@@ -67,7 +67,6 @@ $(document).ready(function(){
 	var have_intrinsic_width = check_instrinsic_width();
 
 	$('p img').each(function(){
-		$(this).addClass('illustration');
 		var title = $(this).attr('title');
 
 		var $parent = $(this).parent();
