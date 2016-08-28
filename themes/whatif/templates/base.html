@@ -27,16 +27,15 @@
     <meta name="keywords" content="xkcd, what if, what if перевод, xkcd перевод, что если">
     <link rel="shortcut icon" href="{{ SITEURL }}/theme/img/favicon.ico">
     <link rel="yandex-tableau-widget" href="{{ SITEURL }}/manifest.json" />
-
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/layout.css">
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/content.css">
-    {% if page and page.slug == "credits" %}
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/credits.css">
-    {% endif %}
-
-    <script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery-2.1.0.min.js"></script>
-    <script type="text/javascript" src="{{ SITEURL }}/theme/js/main.js"></script>
+    <style type="text/css">
+    {% for img in ["sprites", "logo_main", "logo_front", "logo_trex", "border-h", "icon_video", "xkcd", "border-l"]%}preload-{{ loop.index }} { background: url(/theme/img/{{ img }}.png) no-repeat -9999px -9999px;}{% endfor %}
+    </style>
+    {% assets filters="cssmin", output="css/style.min.css", "css/normalize.css", "css/layout.css", "css/content.css", "css/credits.css" %}
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ ASSET_URL }}">
+    {% endassets %}
+    {% assets filters="jsmin", output="js/packed.js", "js/jquery-2.1.0.min.js", "js/main.js" %}
+    <script type="text/javascript" async src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+    {% endassets %}
 
     {% if article %}
         {# when used by article.html #}
