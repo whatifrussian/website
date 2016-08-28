@@ -42,10 +42,6 @@ $(document).ready(function(){
 
 	// Figures
 	//-------------------------------------------------------
-	// http://stackoverflow.com/a/3614218
-	jQuery.fn.outerHTML = function(){
-		return jQuery('<div />').append(this.eq(0).clone()).html();
-	};
 
 	// Check for support intrinsic width in user's browser.
 	// It needed for enabling side by side images only when
@@ -66,34 +62,9 @@ $(document).ready(function(){
 	};
 	var have_intrinsic_width = check_instrinsic_width();
 
-	$('p img').each(function(){
-		var $parent = $(this).parent();
-		if (!$parent.parent().hasClass('page') || $parent.children().length < 2)
-			return
-
-		// a special case when two images are in an one paragraph
-		// we need to keep images side by side
-
-		$(this).addClass('illustration');
-		var title = $(this).attr('title');
-		var img = $(this).outerHTML();
-		var figcaption = '<figcaption><div><em>' + title + '</em></div></figcaption>';
-		var figure = $('<figure>' + img + figcaption + '</figure>');
-
-		// replace <img /> with a copy wrapped into <figure />
-		$(this).remove();
-		$parent.append(figure);
-
-		// replace outer <p /> with <figure /> and add proper
-		// classes, which depends on browser's features supporting.
-		if ($parent.children('img').length == 0) {
-			var $outer_figure = $('<figure />');
-			$outer_figure.append($parent.html());
-			$outer_figure.addClass('figure_wide');
-			if (have_intrinsic_width) {
-				$outer_figure.addClass('figure_in_row');
-			}
-			$parent.replaceWith($outer_figure);
+	$('.figure_wide').each(function(){
+		if (have_intrinsic_width) {
+			$(this).addClass('figure_in_row');
 		}
 	});
 

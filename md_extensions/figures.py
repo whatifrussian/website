@@ -5,17 +5,27 @@ from markdown.util import etree
 class FiguresTreeprocessor(Treeprocessor):
     @staticmethod
     def wrap_imgs_into_figure(elem):
+        def add_figcaption(elem, title):
+            em = etree.SubElement(etree.SubElement(
+                etree.SubElement(elem, 'figcaption'), 'div'), 'em')
+            em.text = title
+
         for p in (p for p in elem if p.tag == 'p'):
             imgs = [img for img in p if img.tag == 'img']
             if len(imgs) == 1:
                 p.tag = 'figure'
-                em = etree.SubElement(etree.SubElement(
-                    etree.SubElement(p, 'figcaption'), 'div'), 'em')
-                em.text = imgs[0].get('title', '')
-                imgs[0].set('class', 'illustration')
+                img = imgs[0]
+                add_figcaption(p, img.get('title', ''))
+                img.set('class', 'illustration')
             elif len(imgs) > 1:
-                # figures in row case, processed now by JS
-                pass
+                p.tag = 'figure'
+                p.set('class', 'figure_wide')
+                for img in imgs:
+                    figure = etree.SubElement(p, 'figure')
+                    p.remove(img)
+                    figure.append(img)
+                    add_figcaption(figure, img.get('title', ''))
+                    img.set('class', 'illustration')
 
     def run(self, root):
         # wrap images in footnotes
