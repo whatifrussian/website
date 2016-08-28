@@ -96,6 +96,7 @@ SITEMAP = {
         'pages': 'monthly'
     }
 }
+
 from md_extensions.figures import FiguresExtension
 MD_EXTENSIONS = ([
     'extra',
