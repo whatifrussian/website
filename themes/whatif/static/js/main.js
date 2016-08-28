@@ -363,6 +363,6 @@ $(document).ready(function(){
 // http://stackoverflow.com/a/2969091
 var resizeTimer;
 $(window).resize(function() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(move_refbody_wide, 100);
+	clearTimeout(resizeTimer);
+	resizeTimer = setTimeout(move_refbody_wide, 100);
 });
