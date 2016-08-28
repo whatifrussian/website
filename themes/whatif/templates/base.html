@@ -27,7 +27,9 @@
     <meta name="keywords" content="xkcd, what if, what if перевод, xkcd перевод, что если">
     <link rel="shortcut icon" href="{{ SITEURL }}/theme/img/favicon.ico">
     <link rel="yandex-tableau-widget" href="{{ SITEURL }}/manifest.json" />
-
+    <style type="text/css">
+    {% for img in ["sprites", "logo_main", "logo_front", "logo_trex", "border-h", "icon_video", "xkcd", "border-l"]%}preload-{{ loop.index }} { background: url(/theme/img/{{ img }}.png) no-repeat -9999px -9999px;}{% endfor %}
+    </style>
     {% assets filters="cssmin", output="css/style.min.css", "css/normalize.css", "css/layout.css", "css/content.css", "css/credits.css" %}
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ ASSET_URL }}">
     {% endassets %}

@@ -12,7 +12,7 @@ TIMEZONE = 'Europe/Moscow'
 DEFAULT_LANG = u'ru'
 
 PLUGIN_PATHS = [ "plugins" ]
-PLUGINS = ["neighbors", "sitemap", 'assets', 'minify']
+PLUGINS = ["neighbors", "sitemap", 'assets', 'minify', 'gzip_cache']
 THEME = "themes/whatif"
 PATH = 'content'
 OUTPUT_PATH = 'output'
@@ -96,5 +96,10 @@ SITEMAP = {
         'pages': 'monthly'
     }
 }
-
-MD_EXTENSIONS = (['extra', 'abbr', 'footnotes'])
+from md_extensions.figures import FiguresExtension
+MD_EXTENSIONS = ([
+    'extra',
+    'abbr',
+    'footnotes',
+    FiguresExtension(),
+])
