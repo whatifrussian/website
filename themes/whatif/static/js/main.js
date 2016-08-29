@@ -25,21 +25,6 @@ $(document).ready(function(){
 	// Modify MD-generated HTML
 	//=======================================================
 
-	// Question
-	//-------------------------------------------------------
-	var $question = $('blockquote').first();
-	// $question
-	// 	.contents().filter(function() {
-	// 		return this.nodeType == 3;
-	// 	}).wrap('<p></p>');
-	// $question
-	// 	.contents().filter('br').remove();
-	$question
-		.addClass('question')
-		.html('<div>' + $question.html() + '</div>');
-	// var $author = $('.question div p').last();
-	// $author.addClass('q-author').html($author.html().trim());
-
 	// Figures
 	//-------------------------------------------------------
 
