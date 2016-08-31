@@ -6,7 +6,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'whatif'
 SITENAME = u'Что если?'
- 
+
 TIMEZONE = 'Europe/Moscow'
 
 DEFAULT_LANG = u'ru'

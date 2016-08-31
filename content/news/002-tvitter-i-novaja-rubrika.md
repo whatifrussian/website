@@ -4,6 +4,7 @@ Category: Новости проекта
 Date: 2013-03-08 03:06
 Source: False
 Formulas: False
+Description: У нас теперь есть твиттер!
 
 Ряд небольших обновлений:
 

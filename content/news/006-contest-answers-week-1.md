@@ -4,6 +4,7 @@ Category: Новости проекта
 Date: 2013-10-04 19:27
 Source: False
 Formulas: False
+Description: Ответы наших пользователей. Неделя 1.
 
 ## Ответ №1. Автор: Алексей
 

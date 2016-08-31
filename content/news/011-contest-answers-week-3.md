@@ -4,6 +4,7 @@ Category: Новости проекта
 Date: 2013-11-08 21:56
 Source: False
 Formulas: False
+Description: Ответы наших читателей. Неделя третья
 
 ## Ответ №1. Автор: Сергей
 

@@ -6,6 +6,7 @@ Source: False
 Formulas: False
 save_as: translations-style/index.html
 url: translations-style/
+Description: Рекомендации для переводчиков
 
 В процессе перевода мы часто задавали себе вопросы «как правильно?», «как лучше?» и выявили некоторые закономерности. На этой странице мы систематизируем опыт и делимся им.
 

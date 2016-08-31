@@ -56,6 +56,10 @@
             {% set canonical_place = SITEURL %}
         {% else %}
             {% set canonical_place = SITEURL + "/" + category.slug + "/" %}
+            {% if category.slug == "news" %}
+            <meta name="description" content="Новости проекта" />
+            <meta property="og:description" content="Новости проекта" />
+            {% endif %}
         {% endif %}
     {% elif page_name == "index" %}
         {# when used by index.html #}
@@ -69,6 +73,8 @@
         {% set add_canonical_rel = True %}
         {% set on_canonical_place = False %}
         {% set canonical_place = SITEURL + "/translations/" %}
+        <meta name="description" content="Оглавление для всех переводов Что если?" />
+        <meta property="og:description" content="Оглавление для всех переводов Что если?" />
     {% else %}
         {# when used by 404.html #}
         {% set article_or_page = False %}

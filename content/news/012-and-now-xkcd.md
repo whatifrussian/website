@@ -4,6 +4,7 @@ Category: Новости проекта
 Date: 2013-12-06 13:23
 Source: False
 Formulas: False
+Description: А теперь мы ещё и xkcd переводим!
 
 Летом мы говорили, что будем переводить не только «Что если?», но и XKCD.
 
