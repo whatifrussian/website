@@ -1,5 +1,5 @@
 Fabric3==1.12.post1
-pelican==3.6.3
+pelican==3.7.0
 Markdown==2.6.7
 beautifulsoup4==4.4.1
 pycrypto==2.6.1

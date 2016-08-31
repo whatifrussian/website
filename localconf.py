@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-# Currently not used, see below.
-#import logging
 
 AUTHOR = 'whatif'
 SITENAME = 'Что если?'
@@ -52,11 +50,10 @@ AUTHORS_SAVE_AS = ''
 ARCHIVES_SAVE_AS = ''
 CATEGORIES_SAVE_AS = ''
 
-# Currently that isn’t not working, see
-# https://github.com/getpelican/pelican/issues/1594
-#LOG_FILTER = [
-#    (logging.WARN, 'Empty alt attribute for image %s in %s')
-#]
+import logging
+LOG_FILTER = [
+    (logging.WARN, 'Empty alt attribute for image %s in %s')
+]
 
 TEMPLATE_PAGES = {
     'translations.html': 'translations/index.html',

@@ -92,14 +92,14 @@ def clean():
         local('mkdir {deploy_path}'.format(**env))
 
 def build(environment):
-    local('pelican -q -s pelicanconf-{}.py'.format(environment))
+    local('pelican -s pelicanconf-{}.py'.format(environment))
 
 def rebuild(environment):
     clean()
     build(environment)
 
 def regenerate(environment):
-    local('pelican -q -r -s pelicanconf-{}.py'.format(environment))
+    local('pelican -r -s pelicanconf-{}.py'.format(environment))
 
 def serve():
     import sys
@@ -118,7 +118,7 @@ def preview(environment):
     local('pelican -s pelicanconf-{}.py'.format(environment))
 
 def publish(environment):
-    local('pelican -q -s pelicanconf-{}.py'.format(environment))
+    local('pelican -s pelicanconf-{}.py'.format(environment))
     project.rsync_project(
         remote_dir=path[environment],
         exclude=".DS_Store",
