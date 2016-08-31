@@ -4,6 +4,7 @@ Category: Новости проекта
 Date: 2014-07-15 20:00
 Source: False
 Formulas: False
+Description: Большое обновление сайта
 
 Два года назад… А, к чёрту.
 
