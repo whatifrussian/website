@@ -15,7 +15,7 @@ env.hosts = ["chtoes.li"]
 path = {
         "dev": '/var/www/dev.chtoes.li/public/',
         "prod": '/var/www/chtoes.li/public/',
-        "ssl": '/var/www/ssl.chtoes.li/public/'
+        "ci": '/var/www/ci.chtoes.li/public/'
         }
 
 TEMPLATE = "Title:\n\
