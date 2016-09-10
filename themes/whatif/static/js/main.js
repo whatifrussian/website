@@ -53,51 +53,9 @@ $(document).ready(function(){
 		}
 	});
 
-	// Footnotes
+	// Footnotes & Links
 	//-------------------------------------------------------
-	$('a[rev=footnote]').remove();
 
-	$($('a[rel=footnote]').get().reverse()).each(function(){
-		var num = $(this).html();
-		var rel = $(this).attr('href').substring(1).replace(':', '\\:');
-		var pars_cnt = $('.footnote li#' + rel + ' > p').length;
-		var is_multipar = pars_cnt > 1;
-		var body = $('.footnote li#' + rel).html();
-
-		var $footnote = $('<sup/>', {class: 'refnum', html: '<span>' + num + '</span>'});
-		$footnote
-			.prepend('<span class="bracket">[</span>')
-			.append('<span class="bracket">]</span>')
-			.append('<b></b>');
-		$(this).parent().replaceWith($footnote);
-		$footnote
-			.wrap('<nobr></nobr>')
-			.after('<span class="ellipsis">&#8626;</span>');
-		$footnote = $footnote.parent();
-		var refbody_class = is_multipar ? 'refbody refbody_wide' : 'refbody';
-		$footnote
-			.wrap($('<span/>', {class: 'ref'}))
-			.after('<span class="ellipsis">&#8627;</span>')
-			.after($('<span/>', {class: refbody_class, html: body}));
-
-		// Adjust punctuation place (before a reference body,
-		// but after a reference icon)
-		var node_after = $footnote.parent()[0].nextSibling;
-		 /* 3 is Node.TEXT_NODE, IE7 does not define that */
-		if (node_after == null || node_after.nodeType != 3)
-			return;
-		var text_orig = node_after.textContent;
-		if (text_orig.length == 0)
-			return;
-		var text_split_2 = text_orig.replace(/^[,;:.)]*/, '');
-		node_after.textContent = text_split_2;
-		if (text_split_2.length < text_orig.length) {
-			var text_split_1 = text_orig.substring(0, text_orig.length - text_split_2.length);
-			$footnote.children('.refnum').after($('<span/>', { class: 'punctum', html: text_split_1 }));
-		}
-	});
-
-	$('.footnote').remove();
 	move_refbody_wide();
 	$('.original+.page a').attr('target', '_blank');
 
