@@ -99,6 +99,7 @@ SITEMAP = {
 
 from md_extensions.question import QuestionExtension
 from md_extensions.figures import FiguresExtension
+from md_extensions.footnote_ext import FootnoteExtExtension
 
 MD_EXTENSIONS = ([
     'extra',
@@ -106,4 +107,5 @@ MD_EXTENSIONS = ([
     'footnotes',
     QuestionExtension(),
     FiguresExtension(),
+    FootnoteExtExtension(),
 ])

@@ -203,16 +203,17 @@ p {
 .page p {
 	text-indent: 1.5em;
 }
-.refbody > p {
+.refbody > span.p {
+	display: block;
 	line-height: normal;
 	text-indent: 0;
 	margin: 0;
 }
-.refbody_wide > p:first-child {
+.refbody_wide > span.p:first-child {
 	margin-top: 0;
 }
-.refbody_wide > p {
-	line-height: normal;
+.refbody_wide > span.p {
+	display: block;
 	text-indent: 1.5em;
 	margin-top: 1em;
 	margin-bottom: 0;
@@ -385,11 +386,16 @@ span.active > nobr > .refnum {
 
 /* Figures */
 
-figure {
+span.div {
+	display: block;
+}
+
+figure, span.figure {
+	display: block;
 	margin: 1em 0;
 }
 
-figcaption {
+figcaption, span.figcaption {
 	height: 0px;
 	overflow: hidden;
 	opacity: 0;
@@ -406,7 +412,8 @@ figcaption {
 	-webkit-transition: opacity 500ms;
 }
 
-figure.active figcaption {
+figure.active figcaption, span.figure.active span.figcaption {
+	display: block;
 	height: auto;
 	opacity: 1;
 	padding-bottom: 1em;

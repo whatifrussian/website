@@ -1,6 +1,7 @@
 from markdown.extensions import Extension
 from markdown.treeprocessors import Treeprocessor
 from markdown.util import etree
+from .etree_utils import replace_element
 
 
 # Utility functions
@@ -17,14 +18,6 @@ def create_figure(img, non_imgs=[]):
     if len(non_imgs) > 0:
         figure.extend(non_imgs)
     return figure
-
-
-def replace_element(parent, old, new):
-    idx = list(parent).index(old)
-    parent.remove(old)
-    parent.insert(idx, new)
-    new.text = old.text
-    new.tail = old.tail
 
 
 def wrap_imgs_into_figure(elem):
