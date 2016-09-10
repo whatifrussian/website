@@ -17,6 +17,11 @@ def create_figure(img, non_imgs=[]):
     em.text = img.get('title', '')
     if len(non_imgs) > 0:
         figure.extend(non_imgs)
+    # Reattach text after an image to be after an figcaption. It helps with
+    # postprocessing footnotes with figures in FootnotesExtExtension (&nbsp;
+    # deleting).
+    figure.find('figcaption').tail = img.tail
+    img.tail = None
     return figure
 
 
