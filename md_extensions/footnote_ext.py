@@ -10,7 +10,7 @@ from .etree_utils import replace_element_inplace, create_etree
 # =================
 
 
-def tweak_footnote(place_to, num, li, punctum, is_multipar):
+def tweak_footnote(place_to, num, li, punctum, is_multipar, has_text_after):
     refbody = etree.Element('span')
     refbody_cls = 'refbody' + (' refbody_wide' if is_multipar else '')
     refbody.set('class', refbody_cls)
@@ -47,7 +47,7 @@ def tweak_footnote(place_to, num, li, punctum, is_multipar):
             ['span', 'punctum', punctum] if punctum is not None else [],
             ['span', 'ellipsis', '\u21b2']]],
         refbody,
-        ['span', 'ellipsis', '\u21b3']]]
+        ['span', 'ellipsis', '\u21b3'] if has_text_after else []]]
     replace_element_inplace(place_to, create_etree(fn_tree))
 
 
@@ -57,6 +57,13 @@ def tweak_footnote(place_to, num, li, punctum, is_multipar):
 
 class FootnoteExtTreeprocessor(Treeprocessor):
     def run(self, root):
+        # TODO: use precapculated child-parent map?
+        def get_sup_parent(root, id_):
+            for maybe_parent in root.findall('.//*[sup]'):
+                if maybe_parent.find("./sup[@id='%s']" % id_):
+                    return maybe_parent
+            return None
+
         sups = root.findall('.//sup[@id]')
         for sup in sups:
             fn = sup.find("a[@rel='footnote']")
@@ -73,13 +80,17 @@ class FootnoteExtTreeprocessor(Treeprocessor):
                 li[-1].remove(backref)
             # modify footnote
             punctum = None
+            siblings = list(get_sup_parent(root, sup.get('id')))
+            has_text_after = siblings.index(sup) < len(siblings) - 1
             if sup.tail is not None:
                 m = re.match(
                     r'^(?P<punctum>[,;:.)]*)(?P<rest>.*)$', sup.tail,
                     re.DOTALL)
                 punctum = m.group('punctum')
-                sup.tail = m.group('rest')
-            tweak_footnote(sup, num, li, punctum, is_multipar)
+                rest = m.group('rest')
+                sup.tail = rest if rest != '' else None
+                has_text_after = has_text_after or sup.tail is not None
+            tweak_footnote(sup, num, li, punctum, is_multipar, has_text_after)
         footnotes_div = root.find("div[@class='footnote']")
         if footnotes_div is not None:
             root.remove(footnotes_div)
