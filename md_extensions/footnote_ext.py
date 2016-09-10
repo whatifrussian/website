@@ -1,4 +1,5 @@
 from __future__ import unicode_literals
+import re
 from markdown.extensions import Extension
 from markdown.treeprocessors import Treeprocessor
 from markdown.util import etree
@@ -9,7 +10,7 @@ from .etree_utils import replace_element_inplace, create_etree
 # =================
 
 
-def tweak_footnote(place_to, num, li, is_multipar):
+def tweak_footnote(place_to, num, li, punctum, is_multipar):
     refbody = etree.Element('span')
     refbody_cls = 'refbody' + (' refbody_wide' if is_multipar else '')
     refbody.set('class', refbody_cls)
@@ -43,6 +44,7 @@ def tweak_footnote(place_to, num, li, is_multipar):
                 ['span', '', num],
                 ['span', 'bracket', ']'],
                 ['b', '', '']]],
+            ['span', 'punctum', punctum] if punctum is not None else [],
             ['span', 'ellipsis', '\u21b2']]],
         refbody,
         ['span', 'ellipsis', '\u21b3']]]
@@ -70,7 +72,14 @@ class FootnoteExtTreeprocessor(Treeprocessor):
             if backref is not None:
                 li[-1].remove(backref)
             # modify footnote
-            tweak_footnote(sup, num, li, is_multipar)
+            punctum = None
+            if sup.tail is not None:
+                m = re.match(
+                    r'^(?P<punctum>[,;:.)]*)(?P<rest>.*)$', sup.tail,
+                    re.DOTALL)
+                punctum = m.group('punctum')
+                sup.tail = m.group('rest')
+            tweak_footnote(sup, num, li, punctum, is_multipar)
         footnotes_div = root.find("div[@class='footnote']")
         if footnotes_div is not None:
             root.remove(footnotes_div)

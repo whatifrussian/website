@@ -38,6 +38,8 @@ def create_etree(in_tree):
 
     if isElementInstance(in_tree):
         return in_tree
+    if in_tree == []:
+        return None
     elem = etree.Element(tag(in_tree))
     set_class(elem, cls(in_tree))
     subel = sub(in_tree)
@@ -47,7 +49,9 @@ def create_etree(in_tree):
         elem.text = subel
     elif isinstance(subel, list):
         for s in subel:
-            elem.append(create_etree(s))
+            new_elem = create_etree(s)
+            if new_elem is not None:
+                elem.append(new_elem)
     else:
         raise NameError('create_etree: bad input')
     return elem
