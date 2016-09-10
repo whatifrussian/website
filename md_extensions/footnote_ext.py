@@ -3,7 +3,8 @@ import re
 from markdown.extensions import Extension
 from markdown.treeprocessors import Treeprocessor
 from markdown.util import etree
-from .etree_utils import replace_element_inplace, create_etree
+from markdown.extensions.footnotes import NBSP_PLACEHOLDER
+from .etree_utils import replace_element_inplace, create_etree, remove_suffix
 
 
 # Utility functions
@@ -16,12 +17,10 @@ def tweak_footnote(place_to, num, li, punctum, is_multipar, has_text_after):
     refbody.set('class', refbody_cls)
 
     # Having block element inside inline one is invalid.
-    # p -> span.p
-    # figure -> span.figure
-    # figcaption -> span.figcaption
-    # div -> span.div
+    # p, figure, figcaption, div -> span.p, span.figure, etc
     refbody.text = li.text
-    for child in li:
+    for i, child in enumerate(li):
+        # block -> inline
         if child.tag == 'p':
             child.tag = 'span'
             child.set('class', 'p')
@@ -34,6 +33,10 @@ def tweak_footnote(place_to, num, li, punctum, is_multipar, has_text_after):
             div = cap.find('div')
             div.tag = 'span'
             div.set('class', 'div')
+        # remove &nbsp; at end of last </p>
+        if i == len(li) - 1:
+            remove_suffix(child, NBSP_PLACEHOLDER)
+        # ready and go
         refbody.append(child)
 
     fn_tree = \

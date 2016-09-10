@@ -55,3 +55,17 @@ def create_etree(in_tree):
     else:
         raise NameError('create_etree: bad input')
     return elem
+
+
+def remove_suffix(elem, suffix):
+    if len(elem) == 0:
+        text = elem.text
+    else:
+        text = elem[-1].tail
+
+    if text.endswith(suffix):
+        text = text[:-len(suffix)]
+        if len(elem) == 0:
+            elem.text = text
+        else:
+            elem[-1].tail = text
