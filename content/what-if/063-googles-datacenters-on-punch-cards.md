@@ -131,7 +131,7 @@ Google очень скрытен в отношении своей деятель
 
 ![](/uploads/063-googles-datacenters-on-punch-cards/google_watchers.png "Quis mulgere ipsos lac homines?")[^19]
 
-По-видимому, Domino's[^20].
+По-видимому, Domino\'s[^20].
 
 [^1]: Data Center Knowledge: [Балмер: «У Microsoft миллион серверов»](http://www.datacenterknowledge.com/archives/2013/07/15/ballmer-microsoft-has-1-million-servers/).
 [^2]: Я не включаю стоимость чрезвычайно дорогого здания, которое они купили в Нью-Йорке.
@@ -152,4 +152,4 @@ Google очень скрытен в отношении своей деятель
 [^17]: Dailykos: [Дата-центр в штате Юта хранит от 1 эксабайта до 1 йоттабайта данных](http://www.dailykos.com/story/2013/08/05/1228923/-Utah-Data-Center-stores-data-between-1-exabyte-and-1-yottabyte).
 [^18]: reddit: [Может ли r/Australia помочь найти дата-центр Google в Сиднее? Кажется немного таинственным…](http://www.reddit.com/r/australia/comments/1hctj4/can_raustralia_help_find_googles_sydney_data/catef4f).
 [^19]: Примерный перевод с латыни: «Кто доит молочников?» Намёк на изречение из предыдущего абзаца, являющееся устоявшимся переводом фразы "Quis custodiet ipsos custodes?" — *Прим. пер.*
-[^20]: Игра слов: Domino's — популярная сеть пиццерий; в то же время намёк на слово Domini (Всевышний). — *Прим. пер.*
+[^20]: Игра слов: Domino\'s — популярная сеть пиццерий; в то же время намёк на слово Domini (Всевышний). — *Прим. пер.*

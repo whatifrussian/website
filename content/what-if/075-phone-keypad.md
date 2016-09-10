@@ -102,4 +102,4 @@ grep -P "(.)\1\1\1\1\1"
 
 **Только средний ряд**
 
-![](/uploads/075-phone-keypad/chtoesli_btc.png "А я накупил Bitcoin’ов год назад.")
+![](/uploads/075-phone-keypad/chtoesli_btc.png "А я накупил Bitcoin\'ов год назад.")

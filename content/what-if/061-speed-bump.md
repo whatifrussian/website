@@ -109,7 +109,7 @@ Description: Как быстро можно проехать через лежа
 [^7]: На высоких скоростях можно запросто потерять управление и без наезда на лежачий полицейский. Авария Джоуи Хоникатта на скорости 350 км/ч оставила от его Camaro [выжженный остов](http://gmauthority.com/blog/2013/03/worlds-fastest-camaro-crashes-at-220-mph-during-texas-mile-run/).
 [^8]: [Youtube: Speed bump in Dubai + flying Gallardo](http://www.youtube.com/watch?v=Vg79_mM2CNY).
 [^9]: Максимальная скорость [Bentley Continental Flying Spur](http://fastestlaps.com/articles/which_car_is_really_the_worlds_fastest_sedan.html) — 321 км/ч.
-[^10]: Барри Р. Паркер. В Школе вождения имени Исаака Ньютона: физика и ваша машина. — John's Hopkins University Press, Балтимор, шт. Мэриленд, 2003. Глава «Аэродинамический дизайн», стр. 155.
+[^10]: Барри Р. Паркер. В Школе вождения имени Исаака Ньютона: физика и ваша машина. — John\'s Hopkins University Press, Балтимор, шт. Мэриленд, 2003. Глава «Аэродинамический дизайн», стр. 155.
 [^11]: [Миф о «скорости отрыва» в 320 км/ч](http://www.buildingspeed.org/blog/2012/06/the-myth-of-the-200-mph-lift-off-speed/).
 [^12]: [Youtube: Porsche 911 GT2 (or GT1) crash](http://www.youtube.com/watch?v=_fQGm81x0EY).
 [^13]: [Youtube: Mercedes CLR-GTR Le Mans Flip](http://www.youtube.com/watch?v=rQbgSe9S54I).

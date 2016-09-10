@@ -1,4 +1,4 @@
-Title: Zippo’фон
+Title: Zippoʼфон
 Date: 2015-02-09
 Slug: zippo-phone
 Category: What If?

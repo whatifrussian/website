@@ -123,4 +123,4 @@ _Что случится, если молния ударит, когда вы п
 
 ![](/uploads/016-lightning/lightning_bios_ru.png "Буря устанавливает Microsoft Bob (версия для Gateway 2000).")[^4]
 
-[^4]: Для пытливых: “1:32 Gateway 2000 commercial (1994) - The smooth talkin' Daddy”. — *Прим. пер.*
+[^4]: Для пытливых: “1:32 Gateway 2000 commercial (1994) - The smooth talkin\' Daddy”. — *Прим. пер.*
