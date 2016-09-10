@@ -669,6 +669,7 @@ figure.active figcaption, span.figure.active span.figcaption {
 	.active > .ellipsis {
 		display: inline-block;
 		color: #aaa;
+		text-indent: 0;
 	}
 
 	.ref.active > b {
