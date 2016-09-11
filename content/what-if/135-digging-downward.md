@@ -49,7 +49,7 @@ Image: https://chtoes.li/uploads/135-digging-downward/front.png
 
 Что, если подумать, делает ответ совершенно ясным.
 
-![](/uploads/135-digging-downward/balrog.png "Быть может, на самом деле «карта температур на глубине 3,5 км» — это путь к Балрогу.")
+![](/uploads/135-digging-downward/balrog.png "Быть может, на самом деле «карта температур на глубине 3,5 км»\ — это путь к Балрогу.")
 
 [1]: https://chtoes.li/rising-steadily/ "Равномерный подъем | Что если?"
 
@@ -65,4 +65,4 @@ Image: https://chtoes.li/uploads/135-digging-downward/front.png
 
 [7]: http://barpro.ru/index.php/physiology/toxicity-of-oxygen "Токсичность кислорода | Barpro"
 
-[8]: https://www.youtube.com/watch?v=LOZuxwVk7TU "Britney Spears — Toxic (Official Video) | YouTube"
+[8]: https://www.youtube.com/watch?v=LOZuxwVk7TU "Britney Spears\ — Toxic (Official Video) | YouTube"
