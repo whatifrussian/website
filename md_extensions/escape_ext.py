@@ -1,5 +1,6 @@
+import re
 from markdown.extensions import Extension
-from markdown.inlinepatterns import Pattern
+from markdown.preprocessors import Preprocessor
 from markdown.util import AMP_SUBSTITUTE
 
 
@@ -16,11 +17,20 @@ def html_entity(html):
 # ==================
 
 
-class WhitespacesPattern(Pattern):
-    RE = r'(?P<before>.?)\\ (?P<after>.?)'
-
+class EscapeExtPreprocessor(Preprocessor):
     def __init__(self):
-        super(WhitespacesPattern, self).__init__(self.RE)
+        self.compiled_re = re.compile(self.RE, re.DOTALL | re.UNICODE)
+
+    def run(self, lines):
+        new_lines = []
+        for line in lines:
+            callback = lambda m: self.handleMatch(m)
+            new_lines.append(re.sub(self.compiled_re, callback, line))
+        return new_lines
+
+
+class WhitespacesPreprocessor(EscapeExtPreprocessor):
+    RE = r'(?P<before>.?)\\ (?P<after>.?)'
 
     def handleMatch(self, m):
         before = m.group('before')
@@ -31,11 +41,8 @@ class WhitespacesPattern(Pattern):
             return before + html_entity('&nbsp;') + after
 
 
-class ApostrophesPattern(Pattern):
+class ApostrophesPreprocessor(EscapeExtPreprocessor):
     RE = r'\\\''
-
-    def __init__(self):
-        super(ApostrophesPattern, self).__init__(self.RE)
 
     def handleMatch(self, m):
         # Modifier Letter Apostrophe
@@ -44,5 +51,7 @@ class ApostrophesPattern(Pattern):
 
 class EscapeExtExtension(Extension):
     def extendMarkdown(self, md, md_globals):
-        md.inlinePatterns.add('whitespaces', WhitespacesPattern(), '<escape')
-        md.inlinePatterns.add('apostrophes', ApostrophesPattern(), '<escape')
+        pps = md.preprocessors
+        order = '<html_block' if 'html_block' in pps.keys() else '<reference'
+        pps.add('whitespaces', WhitespacesPreprocessor(), order)
+        pps.add('apostrophes', ApostrophesPreprocessor(), order)
