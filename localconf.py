@@ -101,6 +101,7 @@ from md_extensions.question import QuestionExtension
 from md_extensions.figures import FiguresExtension
 from md_extensions.footnote_ext import FootnoteExtExtension
 from md_extensions.escape_ext import EscapeExtExtension
+from md_extensions.text_align import TextAlignExtension
 
 MD_EXTENSIONS = ([
     'extra',
@@ -110,4 +111,5 @@ MD_EXTENSIONS = ([
     FiguresExtension(),
     FootnoteExtExtension(),
     EscapeExtExtension(),
+    TextAlignExtension(),
 ])

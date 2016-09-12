@@ -198,6 +198,10 @@ p {
 	line-height: 1.6em;
 }
 
+.center {
+	text-align: center;
+}
+
 /* Line indents and paragraphs margins */
 
 .page p {
