@@ -112,17 +112,17 @@ from md_extensions.mathjax import MathJaxExtension
 from md_extensions.sub_super_script import SubSuperScriptExtension
 from md_extensions.article_links import ArticleLinksExtension
 
-MD_EXTENSIONS = ([
-    'meta',
-    'extra',
-    'abbr',
-    'footnotes',
-    QuestionExtension(),
-    FiguresExtension(),
-    FootnoteExtExtension(),
-    EscapeExtExtension(),
-    TextAlignExtension(),
-    MathJaxExtension(),
-    SubSuperScriptExtension(),
-    ArticleLinksExtension(),
-])
+MD_EXTENSIONS = {
+    'markdown.extensions.meta': {},
+    'markdown.extensions.extra': {},
+    'markdown.extensions.abbr': {},
+    'markdown.extensions.footnotes': {},
+    QuestionExtension(): {},
+    FiguresExtension(): {},
+    FootnoteExtExtension(): {},
+    EscapeExtExtension(): {},
+    TextAlignExtension(): {},
+    MathJaxExtension(): {},
+    SubSuperScriptExtension(): {},
+    ArticleLinksExtension(): {},
+}
