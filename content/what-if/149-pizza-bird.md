@@ -69,7 +69,7 @@ Image: https://chtoes.li/uploads/149-pizza-bird/front.png
 
 Но не удивляйтесь, если несколько кусков пропадут по дороге.
 
-[1]: https://www.youtube.com/watch?v=KMdKKpXSMVU "Темноспинный альбатрос, Кауаи | YouTube"
+[1]: https://www.youtube.com/watch?v=KMdKKpXSMVU "Темноспинный альбатрос, Кауаи"
 
 [2]: https://ru.wikipedia.org/wiki/Калифорнийский_кондор "Калифорнийский кондор | Википедия"
 

@@ -80,7 +80,7 @@ Image: https://chtoes.li/uploads/151-sun-bug/front.png
 
 [5]: https://legacy.mos.org/fireflywatch/images/MOS_FFW_Firefly_Flash_Chart.pdf "Диаграмма вспышек светлячков (англ.) | mos.org"
 
-[6]: https://www.youtube.com/watch?v=ZGvtnE1Wy6U "Синхронизация светлячков | YouTube"
+[6]: https://www.youtube.com/watch?v=ZGvtnE1Wy6U "Синхронизация светлячков"
 
 [7]: https://ru.wikipedia.org/wiki/Скважность "Скважность | Википедия"
 

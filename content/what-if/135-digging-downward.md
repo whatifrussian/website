@@ -65,4 +65,4 @@ Image: https://chtoes.li/uploads/135-digging-downward/front.png
 
 [7]: http://barpro.ru/index.php/physiology/toxicity-of-oxygen "Токсичность кислорода | Barpro"
 
-[8]: https://www.youtube.com/watch?v=LOZuxwVk7TU "Britney Spears\ — Toxic (Official Video) | YouTube"
+[8]: https://www.youtube.com/watch?v=LOZuxwVk7TU "Britney Spears\ — Toxic (Official Video)"

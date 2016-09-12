@@ -55,7 +55,7 @@ Image: https://chtoes.li/uploads/139-jupiter-descending/front.png
 
 [1]: https://chtoes.li/jupiter-submarine/ "Подлодка на Юпитере"
 
-[2]: https://youtu.be/vwrLR2kv5KA?t=1119 "Kerbal Space Program\ — корабль «Орион» с ядерно-импульсным двигателем (англ.) | YouTube"
+[2]: https://youtu.be/vwrLR2kv5KA?t=1119 "Kerbal Space Program\ — корабль «Орион» с ядерно-импульсным двигателем (англ.)"
 
 [3]: http://www.planetary.org/blogs/emily-lakdawalla/2010/2644.html "Наверное, лучшие изображения Большого красного пятна (англ.) | The Planetary Society"
 
@@ -75,4 +75,4 @@ Image: https://chtoes.li/uploads/139-jupiter-descending/front.png
 
 [11]: http://zelenyikot.com/lunar-cubes/ "NASA готовит рой микроспутников к Луне | Zelenyikot"
 
-[12]: https://www.youtube.com/watch?v=VyS9GKNUsWI "Браво\ — Дорога в облака | YouTube"
+[12]: https://www.youtube.com/watch?v=VyS9GKNUsWI "Браво\ — Дорога в облака"

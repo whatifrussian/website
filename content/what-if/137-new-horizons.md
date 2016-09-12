@@ -77,7 +77,7 @@ Image: https://chtoes.li/uploads/137-new-horizons/front.png
 
 [7]: http://www.esa.int/var/esa/storage/images/esa_multimedia/images/2013/hypervelocity_impact/12635239-1-eng-GB/Hypervelocity_Impact.png "Столкновение на сверхскорости"
 
-[8]: https://www.youtube.com/watch?v=sWZcT-kr-_o "20 тонн взрывчатки | YouTube"
+[8]: https://www.youtube.com/watch?v=sWZcT-kr-_o "20 тонн взрывчатки"
 
 [9]: https://ru.wikipedia.org/wiki/Конвенция_о_международной_ответственности_за_ущерб,_причиненный_космическими_объектами "Конвенция о международной ответственности за ущерб, причиненный космическими объектами | Википедия"
 

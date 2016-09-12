@@ -75,9 +75,9 @@ Image: https://chtoes.li/uploads/133-flagpole/front.png
 
 [9]: http://www.jbiomech.com/article/S0021-9290(09)00609-5/fulltext "Значения динамической силы на верхнем брусе, полученные с помощью 3D-записи движения (англ.) | Journal of Biomechanics"
 
-[10]: https://www.youtube.com/watch?v=V1JBx2Mm9e8 "Мертвый вис на одной руке с грузом в 100\ кг (общий вес\ — 193\ кг) | YouTube"
+[10]: https://www.youtube.com/watch?v=V1JBx2Mm9e8 "Мертвый вис на одной руке с грузом в 100\ кг (общий вес\ — 193\ кг)"
 
-[11]: https://www.youtube.com/watch?v=iJYOs5VFjwk "ВИС НА ОДНОЙ РУКЕ + 115,9\ кг (на левой и правой) + 95,5\ кг | YouTube"
+[11]: https://www.youtube.com/watch?v=iJYOs5VFjwk "ВИС НА ОДНОЙ РУКЕ + 115,9\ кг (на левой и правой) + 95,5\ кг"
 
 [12]: http://ria.ru/moscow/20140925/1025547512.html "«Башня Федерация» стала самым высоким зданием в Европе"
 
