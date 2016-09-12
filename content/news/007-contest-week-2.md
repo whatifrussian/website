@@ -25,7 +25,7 @@ Formulas: False
 * Medal of Honor (Origin),
 * Populous (Origin),
 * Crysis 2 Maximum Edition (Steam),
-* Mirror's Edge (Steam).
+* Mirror\'s Edge (Steam).
 
 По итогам конкурса может быть несколько победителей:
 
