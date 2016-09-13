@@ -314,11 +314,18 @@ blockquote {
 
 	line-height: 20px;
 }
+
 /* don't inherit .question styles */
-.refbody {
+.question .refbody {
 	background-color: #fff;
 	color: #000;
 	font-style: normal;
+}
+.question .youtube-player {
+	background: rgba(0, 0, 0, 0.8);
+	font-style: normal;
+	font-size: 100%;
+	margin-left: 0;
 }
 
 img.illustration {
@@ -457,6 +464,7 @@ figure.active figcaption, span.figure.active span.figcaption {
 	background: rgba(0, 0, 0, 0.8);
 	z-index: 99999;
 	text-align: center;
+	text-indent: 0;
 	cursor: pointer;
 	padding-top: 10px;
 }
