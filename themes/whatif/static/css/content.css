@@ -1,4 +1,3 @@
-
 .content {
 	border: 2px solid black;
 	border-top: none;
@@ -314,6 +313,12 @@ blockquote {
 	margin: 0;
 
 	line-height: 20px;
+}
+/* don't inherit .question styles */
+.refbody {
+	background-color: #fff;
+	color: #000;
+	font-style: normal;
 }
 
 img.illustration {
