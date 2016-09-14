@@ -69,3 +69,9 @@ def remove_suffix(elem, suffix):
             elem.text = text
         else:
             elem[-1].tail = text
+
+def add_suffix(elem, suffix):
+    if len(elem) == 0:
+        elem.text += suffix
+    else:
+        elem[-1].tail += suffix

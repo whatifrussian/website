@@ -1,17 +1,43 @@
+# -*- coding: utf-8 -*-
+
+
 from __future__ import unicode_literals
+import sys
 import re
 from markdown.extensions import Extension
 from markdown.treeprocessors import Treeprocessor
 from markdown.util import etree
 from markdown.extensions.footnotes import NBSP_PLACEHOLDER
-from .etree_utils import replace_element_inplace, create_etree, remove_suffix
+from .etree_utils import replace_element_inplace, create_etree, \
+    remove_suffix, add_suffix
+from .md_utils import html_entity
+
+
+PY3 = sys.version_info > (3,)
 
 
 # Utility functions
 # =================
 
 
-def tweak_footnote(place_to, num, li, punctum, is_multipar, has_text_after):
+NON_NUMBER_BODY_SUFFIX = [
+    html_entity('&nbsp;') + '— ',
+    ('em', 'Прим. пер.'),
+]
+
+
+def non_number_footnote_add_suffix(elem):
+    for s in NON_NUMBER_BODY_SUFFIX:
+        if isinstance(s, str if PY3 else basestring):
+            add_suffix(elem, s)
+        elif isinstance(s, tuple) and len(s) == 2:
+            etree.SubElement(elem, s[0]).text = s[1]
+        else:
+            raise NameError('non_number_footnote_add_suffix: bad input')
+
+
+def tweak_footnote(place_to, ref_text, li, punctum, is_multipar,
+                   has_text_after, is_non_number):
     refbody = etree.Element('span')
     refbody_cls = 'refbody' + (' refbody_wide' if is_multipar else '')
     refbody.set('class', refbody_cls)
@@ -36,6 +62,8 @@ def tweak_footnote(place_to, num, li, punctum, is_multipar, has_text_after):
         # remove &nbsp; at end of last </p>
         if i == len(li) - 1:
             remove_suffix(child, NBSP_PLACEHOLDER)
+            if is_non_number:
+                non_number_footnote_add_suffix(child)
         # ready and go
         refbody.append(child)
 
@@ -44,7 +72,7 @@ def tweak_footnote(place_to, num, li, punctum, is_multipar, has_text_after):
         ['nobr', '', [
             ['sup', 'refnum', [
                 ['span', 'bracket', '['],
-                ['span', '', num],
+                ['span', '', ref_text],
                 ['span', 'bracket', ']'],
                 ['b', '', '']]],
             ['span', 'punctum', punctum] if punctum is not None else [],
@@ -73,8 +101,12 @@ class FootnoteExtTreeprocessor(Treeprocessor):
             if fn is None:
                 continue
             # extract number and body
-            num = fn.text
             id_ = fn.get('href')[1:]
+            ref_text = id_[len('fn:'):]
+            is_non_number = False
+            if not ref_text.isdigit():
+                is_non_number = True
+                ref_text = '#'
             li = root.find("div[@class='footnote']/ol/li[@id='%s']" % id_)
             is_multipar = len(li.findall('p')) > 1
             # remove backreference
@@ -93,7 +125,8 @@ class FootnoteExtTreeprocessor(Treeprocessor):
                 rest = m.group('rest')
                 sup.tail = rest if rest != '' else None
                 has_text_after = has_text_after or sup.tail is not None
-            tweak_footnote(sup, num, li, punctum, is_multipar, has_text_after)
+            tweak_footnote(sup, ref_text, li, punctum, is_multipar,
+                           has_text_after, is_non_number)
         footnotes_div = root.find("div[@class='footnote']")
         if footnotes_div is not None:
             root.remove(footnotes_div)
