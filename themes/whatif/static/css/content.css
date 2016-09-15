@@ -315,7 +315,7 @@ blockquote {
 	line-height: 20px;
 }
 
-/* don't inherit .question styles */
+/* don't inherit blockquote and .question styles */
 .question .refbody {
 	background-color: #fff;
 	color: #000;
@@ -326,6 +326,10 @@ blockquote {
 	font-style: normal;
 	font-size: 100%;
 	margin-left: 0;
+}
+blockquote .refbody {
+	font-style: normal;
+	color: #000;
 }
 
 img.illustration {
