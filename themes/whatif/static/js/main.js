@@ -166,10 +166,12 @@ $(document).ready(function(){
 		if (title) {
 			$('#youtube-title').html(title);
 		} else {
-			var url = "//gdata.youtube.com/feeds/api/videos/" + id + "?v=2&alt=json";
+			var url = "https://www.googleapis.com/youtube/v3/videos" +
+				"?part=snippet&fields=items/snippet/title&prettyPrint=false" +
+				"&id=" + id + "&key=AIzaSyDHgqe2iHORox_6rxmlT19JjDlBuWYlygU";
 			$.ajax({ url: url, dataType: 'jsonp', cache: true,
 				success: function(data){
-					$('#youtube-title').html(data.entry.title.$t);
+					$('#youtube-title').html(data.items[0].snippet.title);
 					//setVideoSize();
 				}
 			});
