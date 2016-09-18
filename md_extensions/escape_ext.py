@@ -1,64 +1,85 @@
 import re
 from markdown.extensions import Extension
 from markdown.preprocessors import Preprocessor
-from markdown.inlinepatterns import BACKTICK_RE
-from .md_utils import html_entity
-
-
-# TODO: refactor to inline pattern
-# The problem with inline patterns is that it don't processing images' titles.
-# The another problem that inline patters required to create Element. Both can
-# be worked around.
-# Handling escape sequences during preprocessing causes complex issues / needs
-# complex workarounds because it takes place before code blocks and mathjax
-# formulas inline processing.
+from markdown.inlinepatterns import Pattern
 
 
 # Markdown extension
 # ==================
 
 
-class EscapeExtPreprocessor(Preprocessor):
-    def __init__(self):
-        full_re = '(%s|%s)' % (BACKTICK_RE, self.RE)
-        self.compiled_full_re = re.compile(full_re, re.DOTALL | re.UNICODE)
+class TrivialPreprocessor(Preprocessor):
+    def __init__(self, markdown, RE, repl):
+        super(TrivialPreprocessor, self).__init__(markdown)
+        self.compiled_re = re.compile(RE)
+        self.repl = repl
 
+    def store(self, x):
+        return self.markdown.htmlStash.store(x)
+
+    def handleMatch(self, m):
+        return self.store(self.repl)
+
+
+class AbbrTitlePreprocessor(TrivialPreprocessor):
     def run(self, lines):
-        def callback(m):
-            # detect and skip `block code`
-            text = m.group(0)
-            if text[0] == r'`' and text[0] == text[-1]:
-                return m.group(0)
-            return self.handleMatch(m)
-        new_lines = []
-        for line in lines:
-            new_lines.append(re.sub(self.compiled_full_re, callback, line))
-        return new_lines
+        for k, v in self.markdown.inlinePatterns.items():
+            if not k.startswith('abbr-'):
+                continue
+            v.title = self.compiled_re.sub(self.handleMatch, v.title)
+        return lines
 
 
-class WhitespacesPreprocessor(EscapeExtPreprocessor):
-    RE = r'(?P<before>^|[^\\])\\ (?P<after>.?)'
+class ReferenceTitlePreprocessor(TrivialPreprocessor):
+    def run(self, lines):
+        new_ref = {}
+        for k, v in self.markdown.references.items():
+            if v[1]:
+                t = v[1]
+                new_title = self.compiled_re.sub(self.handleMatch, v[1])
+                new_ref[k] = (v[0], new_title)
+            else:
+                new_ref[k] = v
+        self.markdown.references = new_ref
+        return lines
+
+
+class TrivialTextPattern(Pattern):
+    def __init__(self, markdown, RE, repl):
+        super(TrivialTextPattern, self).__init__(RE, markdown)
+        self.repl = repl
+
+    def store(self, x):
+        return self.markdown.htmlStash.store(x)
 
     def handleMatch(self, m):
-        before = m.group('before') or ''
-        after = m.group('after') or ''
-        if before.isdigit() and after.isdigit():
-            return before + html_entity('&thinsp;') + after
-        else:
-            return before + html_entity('&nbsp;') + after
-
-
-class ApostrophesPreprocessor(EscapeExtPreprocessor):
-    RE = r'\\\''
-
-    def handleMatch(self, m):
-        # Modifier Letter Apostrophe
-        return html_entity('&#x2bc;')
+        return self.store(self.repl)
 
 
 class EscapeExtExtension(Extension):
     def extendMarkdown(self, md, md_globals):
-        pps = md.preprocessors
-        order = '<html_block' if 'html_block' in pps.keys() else '<reference'
-        pps.add('whitespaces', WhitespacesPreprocessor(), order)
-        pps.add('apostrophes', ApostrophesPreprocessor(), order)
+        processors = [
+            (md.preprocessors, AbbrTitlePreprocessor, '>abbr'),
+            (md.preprocessors, ReferenceTitlePreprocessor, '>reference'),
+            (md.inlinePatterns, TrivialTextPattern, '<link'),
+        ]
+
+        # Thin space processing should be before non-breaking space, because of
+        # nbsp regexp matched some cases of thinsp.
+        patterns = [
+            ('thinsp-', r'(?<=[0-9])\\ (?=[0-9])', '&thinsp;'),
+            ('nbsp-', r'(?<!\\)\\ ', '&nbsp;'),
+            # Modifier Letter Apostrophe
+            ('apostrophe-', r'(?<!\\)\\\'', '&#x2bc;'),
+        ]
+
+        for parsers, cls, order in processors:
+            add = lambda name, re, repl: parsers.add(
+                name, cls(md, re, repl), order)
+            cls_name = cls.__name__
+            # odict.add() adds in reverse order when '>smth' used
+            patterns_local = patterns
+            if order.startswith('>'):
+                patterns_local = list(reversed(patterns))
+            for prefix, re, repl in patterns_local:
+                add(prefix + cls_name, re, repl)
