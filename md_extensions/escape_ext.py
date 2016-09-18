@@ -1,24 +1,9 @@
-import re
 from markdown.extensions import Extension
-from markdown.preprocessors import Preprocessor
-from markdown.inlinepatterns import Pattern
+from .md_utils import TrivialPreprocessor, TrivialTextPattern
 
 
 # Markdown extension
 # ==================
-
-
-class TrivialPreprocessor(Preprocessor):
-    def __init__(self, markdown, RE, repl):
-        super(TrivialPreprocessor, self).__init__(markdown)
-        self.compiled_re = re.compile(RE)
-        self.repl = repl
-
-    def store(self, x):
-        return self.markdown.htmlStash.store(x)
-
-    def handleMatch(self, m):
-        return self.store(self.repl)
 
 
 class AbbrTitlePreprocessor(TrivialPreprocessor):
@@ -42,18 +27,6 @@ class ReferenceTitlePreprocessor(TrivialPreprocessor):
                 new_ref[k] = v
         self.markdown.references = new_ref
         return lines
-
-
-class TrivialTextPattern(Pattern):
-    def __init__(self, markdown, RE, repl):
-        super(TrivialTextPattern, self).__init__(RE, markdown)
-        self.repl = repl
-
-    def store(self, x):
-        return self.markdown.htmlStash.store(x)
-
-    def handleMatch(self, m):
-        return self.store(self.repl)
 
 
 class EscapeExtExtension(Extension):

@@ -77,24 +77,3 @@ def add_suffix(elem, suffix):
         elem.text += suffix
     else:
         elem[-1].tail += suffix
-
-
-# Expands <tag class="cls"/> into just text
-# All children tag will be skipped.
-def unbox_text_element(root, tag, cls):
-    def match(elem):
-        actual_class = elem.get('class', '')
-        return elem.tag == tag and re.match(r'\b%s\b' % cls, actual_class)
-    for parent in root.findall(".//%s[@class='%s']/.." % (tag, cls)):
-        prev = None
-        for elem in list(parent):
-            if match(elem):
-                if prev is not None:
-                    prev.tail = (prev.tail or '') + elem.text + \
-                        (elem.tail or '')
-                else:
-                    parent.text = (parent.text or '') + elem.text + \
-                        (elem.tail or '')
-                parent.remove(elem)
-            else:
-                prev = elem
