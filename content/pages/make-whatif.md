@@ -79,7 +79,7 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0x97 in position 218: invali
 ![](/uploads/101-plastic-dinosaurs/cycle.png "It\'s the ciiiiiiircle of deaaaaaath ♫")
 [labels]
 Sunlight
-CO<sub>2</sub>
+CO_{2}
 Water
 Photosynthesis
 Food chain
@@ -88,7 +88,7 @@ Oil rigs
 Water vapor
 Cars
 Speed
-CO<sub>2</sub>
+CO_{2}
 [/labels]
 ```
 
@@ -111,7 +111,7 @@ Lorem ipsum[^1][^2] dolor sit amet, consectetur adipisicing elit[^a]
     Обратите внимание на расстановку отступов.
 [^a]: Эта сноска отобразится как [#], и в конец добавится «— Прим. пер».
 ```
-* «Приподнятый» текст (пример<sup>[источник?]</sup>) делается с использованием тега `sup`: `пример<sup>[источник?]</sup>`.
+* Под- и надстрочный текст: `H_{2}O` и `E=mc^{2}`.
 * Формулы оборачиваются в `$` (внутристрочные) или в `$$` (на отдельной строке): `$F_i(x)$`, `$$F_i(x) = i*log_2(x)$$`. Часто нужны:
     * десятичная запятая: `$1{,}5$` → $1{,}5$;
     * разделитель разрядов (тонкий пробел): `$10\,000$` → $10\,000$;

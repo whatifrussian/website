@@ -1,4 +1,5 @@
 import sys
+import re
 from markdown.util import etree
 
 
@@ -69,6 +70,7 @@ def remove_suffix(elem, suffix):
             elem.text = text
         else:
             elem[-1].tail = text
+
 
 def add_suffix(elem, suffix):
     if len(elem) == 0:
