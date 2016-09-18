@@ -5,7 +5,7 @@ The licenses of the repository content are different in dependence of its origin
 1. The [Pelican plugins][1] in `plugins/` are under [GNU AGPLv3][2].
 2. The [JQuery][3] copy in `themes/whatif/static/js/jquery-2.1.0.min.js` is under [MIT][4].
 3. The [website][5] content in `content/` is under [CC BY-NC 2.5][6].
-4. The website templates in `themes/what-if`, the our own [Python-Markdown][8]’s extensions in `md_extensions/`, the configuration files, and the other repository content are [public domain][7], the full text below.
+4. The website templates in `themes/what-if`, [Python-Markdown][8]’s extensions in `md_extensions/`, configuration files, and other repository content are [public domain][7], the full text below.
 
 [1]: https://github.com/getpelican/pelican-plugins
 [2]: https://github.com/getpelican/pelican-plugins/blob/master/LICENSE
