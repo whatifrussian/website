@@ -103,6 +103,7 @@ from md_extensions.footnote_ext import FootnoteExtExtension
 from md_extensions.escape_ext import EscapeExtExtension
 from md_extensions.text_align import TextAlignExtension
 from md_extensions.mathjax import MathJaxExtension
+from md_extensions.sub_super_script import SubSuperScriptExtension
 
 MD_EXTENSIONS = ([
     'extra',
@@ -114,4 +115,5 @@ MD_EXTENSIONS = ([
     EscapeExtExtension(),
     TextAlignExtension(),
     MathJaxExtension(),
+    SubSuperScriptExtension(),
 ])
