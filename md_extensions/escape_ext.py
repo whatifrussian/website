@@ -5,6 +5,15 @@ from markdown.inlinepatterns import BACKTICK_RE
 from .md_utils import html_entity
 
 
+# TODO: refactor to inline pattern
+# The problem with inline patterns is that it don't processing images' titles.
+# The another problem that inline patters required to create Element. Both can
+# be worked around.
+# Handling escape sequences during preprocessing causes complex issues / needs
+# complex workarounds because it takes place before code blocks and mathjax
+# formulas inline processing.
+
+
 # Markdown extension
 # ==================
 
