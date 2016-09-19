@@ -201,6 +201,17 @@ p {
 	text-align: center;
 }
 
+.page hr {
+	background-image: url("../img/border-h.png");
+	background-position: 50% -15px;
+	height: 15px;
+	position: relative;
+	top: -7px;
+	opacity: 0.3;
+	border: none;
+	margin: 0;
+}
+
 /* Line indents and paragraphs margins */
 
 .page p {

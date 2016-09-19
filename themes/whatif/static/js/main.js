@@ -59,12 +59,6 @@ $(document).ready(function(){
 	move_refbody_wide();
 	$('.original+.page a').attr('target', '_blank');
 
-	// Horizontal lines
-	//-------------------------------------------------------
-	$('div[class=page]').find('hr').each(function(){
-		$(this).wrap('<div class="border-bottom"></div>');
-	});
-
 	// YouTube links
 	//-------------------------------------------------------
 	var playerShown = false;
