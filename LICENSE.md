@@ -1,12 +1,20 @@
 ## Overview
 
-Licenses of the repository content are different in depend of content type:
+The licenses for the repository content depend on its origin. Unless the directory itself contains a LICENSE stating otherwise the files are distributed under the following licenses:
 
-1. [Pelican plugins](https://github.com/getpelican/pelican-plugins) in ${REPO}/plugins/{extract_toc,neighbors,sitemap} — [GNU AGPLv3](https://github.com/getpelican/pelican-plugins/blob/master/LICENSE).
-2. [JQuery](http://jquery.com/) in ${REPO}/themes/whatif/static/js/jquery-2.1.0.min.js — [MIT](https://jquery.org/license/).
-3. [The site](https://chtoes.li) content in ${REPO}/content — [CC BY-NC 2.5](http://xkcd.com/license.html).
-4. The site template in ${REPO}/themes/what-if — [public domain](http://unlicense.org/), full text below.
-5. Configuration files and other repository content — [public domain](http://unlicense.org/), full text below.
+1. The [Pelican plugins][1] in `plugins/` — [GNU AGPLv3][2].
+2. The [JQuery][3] copy in `themes/whatif/static/js/jquery-2.1.0.min.js` — [MIT][4].
+3. The [website][5] content in `content/` — [CC BY-NC 2.5][6].
+4. The website templates in `themes/what-if`, [Python-Markdown][8] extensions in `md_extensions/`, configuration files, and other repository content — [public domain][7] (see full text below).
+
+[1]: https://github.com/getpelican/pelican-plugins
+[2]: https://github.com/getpelican/pelican-plugins/blob/master/LICENSE
+[3]: https://jquery.com/
+[4]: https://jquery.org/license/
+[5]: https://chtoes.li
+[6]: http://xkcd.com/license.html
+[7]: http://unlicense.org/
+[8]: https://github.com/waylan/Python-Markdown/
 
 ## The unlicense
 
