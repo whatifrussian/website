@@ -800,3 +800,42 @@ footer img {
 .usericon.bober b {
 	background-position: -463px -270px;
 }
+
+.issue_form {
+	position: absolute;
+	width: 40em;
+	padding: 7px;
+	font-size: 90%;
+	background-color: #fff;
+	word-wrap: break-word;
+	z-index: 150;
+	border: 2px solid #000;
+	box-shadow: 0.4em 0.4em 2px 0 rgba(0,0,0,0.2);
+	overflow: auto;
+	overflow: visible;
+	font-family: Georgia, serif;
+}
+
+.issue_form > label, .issue_form > input, .issue_form > textarea,
+.issue_form > a.close {
+	display: block;
+}
+
+.issue_form textarea {
+	resize: none;
+	overflow: auto;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.issue_form h4 {
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.issue_form p:last-child {
+	margin-bottom: 0;
+}
