@@ -331,7 +331,7 @@ window.addEventListener('resize', function(){
 
 var cmdKey = false;
 
-// Old Opera maps it to Ctrl, but we processed Ctrl already.
+// Old Opera maps it to Ctrl, but we handled it by KeyboardEvent.ctrlKey.
 // Key codes: http://unixpapa.com/js/key.html
 function isCmdKeyCode(keyCode) {
     return keyCode == 0xE0 || keyCode == 0x5B || keyCode == 0x5D;
@@ -343,6 +343,10 @@ document.onkeydown = function(evt) {
     if (isCmdKeyCode(keyCode)) {
         cmdKey = true;
     }
+    // Ctrl+Enter || Cmd+Enter
+    if ((evt.ctrlKey || cmdKey) && keyCode == 0x0D) {
+        showIssueForm();
+    }
 };
 
 document.onkeyup = function(evt) {
@@ -350,14 +354,5 @@ document.onkeyup = function(evt) {
     var keyCode = evt.keyCode || evt.which;
     if (isCmdKeyCode(keyCode)) {
         cmdKey = false;
-    }
-};
-
-document.onkeypress = function(evt) {
-    evt = evt || window.event;
-    var keyCode = evt.keyCode || evt.which;
-    // Ctrl+Enter || Cmd+Enter
-    if ((evt.ctrlKey || cmdKey) && keyCode == 0x0D) {
-        showIssueForm();
     }
 };
