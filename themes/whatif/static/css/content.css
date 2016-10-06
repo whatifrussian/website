@@ -823,8 +823,7 @@ footer img {
 	font-family: Georgia, serif;
 }
 
-.issue_form > label, .issue_form > input, .issue_form > textarea,
-.issue_form > a.close {
+.issue_form > label, .issue_form > input, .issue_form > textarea {
 	display: block;
 }
 
