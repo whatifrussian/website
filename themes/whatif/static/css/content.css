@@ -43,6 +43,13 @@
 
 /* Page menu *****************************/
 
+/* http://css-tricks.com/snippets/css/clear-fix/ */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .menu-page {
 	display: inline-block;
 	padding: 0;
