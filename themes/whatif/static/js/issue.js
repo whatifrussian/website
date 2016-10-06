@@ -1,5 +1,4 @@
 // TODO's:
-// * hidden textarea and sumbit button or make it mode gray when disabled
 // * Ctrl+Enter to send the form and leave it on the screen
 // * replace <script/> with '', footnote with its number/id
 // * create form ahead and make it visible when needed with animation
