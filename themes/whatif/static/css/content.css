@@ -727,25 +727,27 @@ figure.active figcaption, span.figure.active span.figcaption {
 	}
 }
 
-/* Small */
-@media all and (max-width: 700px) {
-	footer img {
-		position: relative;
-		float: right;
-		margin-top: -45px;
-		z-index: 1000;
-		max-width: 100px;
-		margin-bottom: 10px;
-	}
-}
-
 footer img {
 	position: relative;
 	float: right;
-	margin-top: -90px;
-	z-index: 99;
 	max-width: 100px;
 	margin-bottom: 10px;
+}
+
+/* Small */
+@media all and (max-width: 700px) {
+	footer img {
+		margin-top: -45px;
+		z-index: 1000;
+	}
+}
+
+/* Non-small */
+@media all and (min-width: 701px) {
+	footer img {
+		margin-top: -90px;
+		z-index: 99;
+	}
 }
 
 .toc li {
