@@ -4,12 +4,12 @@ from __future__ import unicode_literals
 # Currently not used, see below.
 #import logging
 
-AUTHOR = u'whatif'
-SITENAME = u'Что если?'
+AUTHOR = 'whatif'
+SITENAME = 'Что если?'
 
 TIMEZONE = 'Europe/Moscow'
 
-DEFAULT_LANG = u'ru'
+DEFAULT_LANG = 'ru'
 
 PLUGIN_PATHS = [ "plugins" ]
 PLUGINS = ["neighbors", "sitemap", 'assets', 'minify', 'gzip_cache']
