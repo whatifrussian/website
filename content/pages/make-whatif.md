@@ -157,7 +157,7 @@ TODO: Перевести в markdown статьи про отрисовку XKCD
     * [Beautiful Soup 4](http://www.crummy.com/software/BeautifulSoup/);
     * [git](http://git-scm.com/downloads);
     * rsync (под Windows нет).
-2. Нужно зарегистрироваться на [github.com](https://github.com) (в т. ч. сгенерировать ключ) и убедиться, что вы включены в организацию [whatifrussian](https://github.com/whatifrussian).
+2. Нужно зарегистрироваться на [github.com](https://github.com) (в т.\ ч. сгенерировать ключ) и убедиться, что вы включены в организацию [whatifrussian](https://github.com/whatifrussian).
 3. Передать **публичный** ключ (`id_rsa.pub`) librarian (aka Nikita Menkovich), чтобы он предоставил вам доступ к сайту.
 4. Склонировать репозиторий [website](https://github.com/whatifrussian/website).
 

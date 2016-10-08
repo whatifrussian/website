@@ -1,4 +1,4 @@
-Fabric==1.10.2
+Fabric3==1.12.post1
 pelican==3.6.3
 Markdown==2.6.6
 beautifulsoup4==4.4.1

@@ -52,7 +52,7 @@
         {% set article_or_page = articles[0] %}
         {% set add_canonical_rel = True %}
         {% set on_canonical_place = False %}
-        {% if category == "what-if" %}
+        {% if category.slug == "what-if" %}
             {% set canonical_place = SITEURL %}
         {% else %}
             {% set canonical_place = SITEURL + "/" + category.slug + "/" %}
@@ -87,11 +87,11 @@
         {% endif %}
 
         {% if article_or_page.title %}
-            <meta property="og:title" content="{{ article_or_page.title }}" />
+            <meta property="og:title" content="{{ article_or_page.title|e }}" />
         {% endif %}
         {% if article_or_page.description %}
-            <meta property="og:description" content="{{ article_or_page.description }}" />
-            <meta name="description" content="{{ article_or_page.description }}" />
+            <meta property="og:description" content="{{ article_or_page.description|e }}" />
+            <meta name="description" content="{{ article_or_page.description|e }}" />
         {% endif %}
         {% if add_canonical_rel and on_canonical_place and article_or_page.url %}
             <meta property="og:url" content="{{ SITEURL }}/{{ article_or_page.url }}" />
@@ -150,13 +150,13 @@
             {% if menu_selected == "translations" %}
                 {% set translations_title = "" %}
             {% else %}
-                {% set translations_title = " title=\"" + what_if_articles[0].title + "\"" %}
+                {% set translations_title = " title=\""|safe + what_if_articles[0].title|e + "\""|safe %}
             {% endif %}
 
             {% if menu_selected == "news" %}
                 {% set news_title = "" %}
             {% else %}
-                {% set news_title = " title=\"" + news_articles[0].title + "\"" %}
+                {% set news_title = " title=\""|safe + news_articles[0].title|e + "\""|safe %}
             {% endif %}
 
             {% macro get_classes(what) -%}

@@ -101,7 +101,13 @@ def regenerate(environment):
     local('pelican -q -r -s pelicanconf-{}.py'.format(environment))
 
 def serve():
-    local('cd {deploy_path} && python2 -m SimpleHTTPServer'.format(**env))
+    import sys
+    PY3 = sys.version_info > (3,)
+    # Determine major version of python as the one executes this script now.
+    if PY3:
+        local('cd {deploy_path} && python3 -m http.server'.format(**env))
+    else:
+        local('cd {deploy_path} && python2 -m SimpleHTTPServer'.format(**env))
 
 def reserve(environment):
     build(environment)
