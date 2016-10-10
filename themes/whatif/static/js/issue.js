@@ -222,12 +222,12 @@ function ajaxJSON(opts) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function(){
         var COMPLETED = 4;
-        if (xhr.readyState === COMPLETED) {
-            if (xhr.status === 200) {
-                var response = JSON.parse(xhr.responseText);
-                opts.success(response, xhr);
+        if (this.readyState === COMPLETED) {
+            if (this.status === 200) {
+                var response = JSON.parse(this.responseText);
+                opts.success(response, this);
             } else {
-                opts.error(xhr.responseText, xhr);
+                opts.error(this.responseText, this);
             }
         }
     };
