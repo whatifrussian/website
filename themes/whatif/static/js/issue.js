@@ -217,7 +217,6 @@ function dropIssueForm() {
 
 // Adopted from
 // https://ponyfoo.com/articles/uncovering-the-native-dom-api#meet-xmlhttprequest
-// TODO: IE 9
 function ajaxJSON(opts) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function(){
@@ -270,7 +269,6 @@ function sendIssueForm(evt) {
     evt.preventDefault();
     var form = this;
     toogleForm(form, false);
-    var url = 'https://chtoes.li/api/issue/';
     var responseP = form.querySelector('.response');
     if (responseP == null) {
         responseP = document.createElement('p');
@@ -306,7 +304,7 @@ function sendIssueForm(evt) {
         }
     });
     ajaxJSON({
-        'url': url,
+        'url': '/api/issue/',
         'method': 'POST',
         'json': json,
         'success': success,
