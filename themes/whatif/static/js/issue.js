@@ -3,6 +3,98 @@
 // * selection / context for images? What with images selected with the footnote just before?
 // * touchscreen?
 
+// Utils
+// =====
+
+function cutStart(str, maxlen) {
+    if (str.length > maxlen) {
+        return  '<…>' + str.substring(str.length - maxlen);
+    } else {
+        return str;
+    }
+}
+
+function cutEnd(str, maxlen) {
+    if (str.length > maxlen) {
+        return str.substring(0, maxlen) + '<…>';
+    } else {
+        return str;
+    }
+}
+
+// strips 'px' from end of string and returns a float value
+function getPxSize(str) {
+    return parseFloat(str.match(/^(\d+(?:\.\d+)?)px$/)[1]);
+}
+
+// em size in pixels as a float value
+function getEm() {
+    var fontSizeStr = window.getComputedStyle(document.body).fontSize;
+    return getPxSize(fontSizeStr);
+}
+
+// creates node from HTML and append it to the parent node
+function appendHTML(parent, html) {
+    var tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    var elem = tmp.firstElementChild;
+    parent.appendChild(elem);
+    return elem;
+}
+
+function escapeTags(str) {
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;')
+        .replace(/</g, '&gt;');
+}
+
+// Adopted from
+// https://ponyfoo.com/articles/uncovering-the-native-dom-api#meet-xmlhttprequest
+function ajaxJSON(opts) {
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function(){
+        var COMPLETED = 4;
+        if (this.readyState === COMPLETED) {
+            if (this.status === 200) {
+                var response = JSON.parse(this.responseText);
+                opts.success(response, this);
+            } else {
+                opts.error(this.responseText, this);
+            }
+        }
+    };
+    xhr.open(opts.method, opts.url, true);
+    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+    xhr.send(JSON.stringify(opts.json));
+}
+
+// makes email link opens in a new window
+function tweakMailToNewWindow(a, url, name) {
+    a.addEventListener('click', function(evt){
+        evt = evt || window.event;
+        evt.preventDefault();
+        window.open(url, name);
+        return false;
+    }, false);
+}
+
+// slug (sort of id) of the current page
+function getPageSlug() {
+    var slug = window.location.pathname.replace(/(^\/+)|(\/+$)/g, '');
+    var cLinkNode = document.body.querySelector('.main h1 a');
+    if (cLinkNode != null) {
+        var cLink = cLinkNode.getAttribute('href');
+        slug = cLink.match(/^.*?\/([^\/]+)\/*$/)[1];
+    }
+    return slug;
+}
+
+// useful to disable all features at once when the browser is not supported
+function isAllNeededSupported() {
+    // false for IE < 9
+    return !!window.getSelection;
+}
+
 // Selection & context
 // ===================
 
@@ -32,22 +124,6 @@ function getContextNode(node, minLength) {
         node = node.parentNode;
     }
     return document.body;
-}
-
-function cutStart(str, maxlen) {
-    if (str.length > maxlen) {
-        return  '<...>' + str.substring(str.length - maxlen);
-    } else {
-        return str;
-    }
-}
-
-function cutEnd(str, maxlen) {
-    if (str.length > maxlen) {
-        return str.substring(0, maxlen) + '<...>';
-    } else {
-        return str;
-    }
 }
 
 function splitContext(sel, context) {
@@ -85,10 +161,6 @@ function splitContext(sel, context) {
 }
 
 function getSel() {
-    if (!window.getSelection) {
-        // IE < 9
-        return null;
-    }
     var selection = window.getSelection();
     if (selection.rangeCount == 0) {
         // no selection
@@ -130,24 +202,10 @@ var FORM_RIGHT_AIRGAP = 30;
 
 var lastSelContext = null;
 
-function getPxSize(str) {
-    return parseFloat(str.match(/^(\d+(?:\.\d+)?)px$/)[1]);
-}
-
-function getEm() {
-    var fontSizeStr = window.getComputedStyle(document.body).fontSize;
-    return getPxSize(fontSizeStr);
-}
-
-function appendHTML(parent, html) {
-    var tmp = document.createElement('div');
-    tmp.innerHTML = html;
-    var elem = tmp.firstElementChild;
-    parent.appendChild(elem);
-    return elem;
-}
-
 function createIssueForm() {
+    if (!isAllNeededSupported()) {
+        return;
+    }
     var formHTML = '<form class="issue_form">' +
         '<h4>Сообщение об ошибке</h4>' +
         '<p class="context"></p>' +
@@ -184,11 +242,6 @@ function createIssueForm() {
     }, false);
 }
 
-function escapeTags(str) {
-    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;')
-        .replace(/</g, '&gt;');
-}
-
 function clearIssueForm(form) {
     form.querySelector('.context').innerHTML = '';
     form.querySelector('textarea').value = '';
@@ -200,7 +253,10 @@ function clearIssueForm(form) {
 }
 
 function showIssueForm() {
-    dropIssueForm(null);
+    if (!isAllNeededSupported()) {
+        return;
+    }
+    dropIssueForm();
     var context = getSelContext();
     if (!context) {
         return;
@@ -236,6 +292,7 @@ function showIssueForm() {
     form.querySelector('textarea').focus();
 }
 
+// silently returns when the form is not exists or is not active
 function tweakIssueFormPos() {
     var form = document.body.querySelector('.issue_form.active');
     if (form == null) {
@@ -260,27 +317,6 @@ function dropIssueForm() {
     return false;
 }
 
-// Adopted from
-// https://ponyfoo.com/articles/uncovering-the-native-dom-api#meet-xmlhttprequest
-function ajaxJSON(opts) {
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function(){
-        var COMPLETED = 4;
-        if (this.readyState === COMPLETED) {
-            if (this.status === 200) {
-                var response = JSON.parse(this.responseText);
-                opts.success(response, this);
-            } else {
-                opts.error(this.responseText, this);
-            }
-        }
-    };
-    xhr.open(opts.method, opts.url, true);
-    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-    xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-    xhr.send(JSON.stringify(opts.json));
-}
-
 function toogleForm(form, enable) {
     [].slice.call(form.children).forEach(function(node){
         var tag = node.nodeName.toLowerCase();
@@ -288,25 +324,6 @@ function toogleForm(form, enable) {
             node.disabled = !enable;
         }
     });
-}
-
-function tweakMailToNewWindow(a, url, name) {
-    a.addEventListener('click', function(evt){
-        evt = evt || window.event;
-        evt.preventDefault();
-        window.open(url, name);
-        return false;
-    }, false);
-}
-
-function getSlug() {
-    var slug = window.location.pathname.replace(/(^\/+)|(\/+$)/g, '');
-    var cLinkNode = document.body.querySelector('.main h1 a');
-    if (cLinkNode != null) {
-        var cLink = cLinkNode.getAttribute('href');
-        slug = cLink.match(/^.*?\/([^\/]+)\/*$/)[1];
-    }
-    return slug;
 }
 
 function sendIssueForm(form) {
@@ -338,7 +355,7 @@ function sendIssueForm(form) {
     var textarea = form.querySelector('textarea');
     var json = {
         'comment': textarea.value,
-        'slug': getSlug(),
+        'slug': getPageSlug(),
     };
     Object.keys(lastSelContext).forEach(function(key) {
         if (/^(?:before_(?:far|near)|sel|after_(?:far|near))$/.test(key)) {
