@@ -51,7 +51,7 @@ function escapeTags(str) {
 // https://ponyfoo.com/articles/uncovering-the-native-dom-api#meet-xmlhttprequest
 function ajaxJSON(opts) {
     var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function(){
+    xhr.onreadystatechange = function() {
         var COMPLETED = 4;
         if (this.readyState === COMPLETED) {
             if (this.status === 200) {
@@ -70,11 +70,9 @@ function ajaxJSON(opts) {
 
 // makes email link opens in a new window
 function tweakMailToNewWindow(a, url, name) {
-    a.addEventListener('click', function(evt){
-        evt = evt || window.event;
-        evt.preventDefault();
+    a.addEventListener('click', function(event) {
+        event.preventDefault();
         window.open(url, name);
-        return false;
     }, false);
 }
 
@@ -203,9 +201,6 @@ var FORM_RIGHT_AIRGAP = 30;
 var lastSelContext = null;
 
 function createIssueForm() {
-    if (!isAllNeededSupported()) {
-        return;
-    }
     var formHTML = '<form class="issue_form">' +
         '<h4>Сообщение об ошибке</h4>' +
         '<p class="context"></p>' +
@@ -215,30 +210,26 @@ function createIssueForm() {
         '</form>';
     var form = appendHTML(document.body, formHTML);
 
-    // submit
-    form.addEventListener('submit', function(evt) {
-        evt = evt || window.event;
-        evt.preventDefault();
+    // submit by button or Ctrl+Enter
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
         sendIssueForm(form);
-        return false;
     }, false);
-    form.querySelector('textarea').onkeydown = function(evt) {
-        evt = evt || window.event;
-        var keyCode = evt.keyCode || evt.which;
-        if (isCtrlEnter(evt, keyCode)) {
-            evt.stopPropagation();
+    var textarea = form.querySelector('textarea');
+    textarea.addEventListener('keydown', function(event) {
+        var keyCode = event.keyCode || event.which;
+        if (isCtrlEnter(event, keyCode)) {
+            event.stopPropagation();
             sendIssueForm(form);
-            return false;
         }
-    };
+    }, false);
+
     // close on click outside
-    document.documentElement.addEventListener('click', dropIssueForm, false);
     var content = document.body.querySelector('.content');
+    document.documentElement.addEventListener('click', dropIssueForm, false);
     content.addEventListener('click', dropIssueForm, false);
-    form.addEventListener('click', function(evt) {
-        evt = evt || window.event;
-        evt.stopPropagation();
-        return false;
+    form.addEventListener('click', function(event) {
+        event.stopPropagation();
     }, false);
 }
 
@@ -253,9 +244,6 @@ function clearIssueForm(form) {
 }
 
 function showIssueForm() {
-    if (!isAllNeededSupported()) {
-        return;
-    }
     dropIssueForm();
     var context = getSelContext();
     if (!context) {
@@ -314,11 +302,10 @@ function tweakIssueFormPos() {
 function dropIssueForm() {
     var form = document.body.querySelector('.issue_form');
     form.setAttribute('class', 'issue_form'); // remove 'active'
-    return false;
 }
 
 function toogleForm(form, enable) {
-    [].slice.call(form.children).forEach(function(node){
+    [].slice.call(form.children).forEach(function(node) {
         var tag = node.nodeName.toLowerCase();
         if (tag == 'textarea' || tag  == 'input') {
             node.disabled = !enable;
@@ -335,13 +322,13 @@ function sendIssueForm(form) {
         responseP.innerHTML = 'Отправка запроса…';
         form.appendChild(responseP);
     }
-    var success = function(response){
+    var success = function(response) {
         responseP.innerHTML =
             'Успех! Следить за обновлениями можно здесь: ' +
             '<a href="' + response.url + '" target="_blank">#' +
             response.num + '</a>.';
     };
-    var error = function(response){
+    var error = function(response) {
         responseP.innerHTML = 'К сожалению, что-то пошло не так. Мы очень ' +
             'извиняемся за это. Попробуйте отправить запрос еще раз — вдруг ' +
             'были проблемы со связью. Если ошибка не проходит, вы можете ' +
@@ -371,20 +358,16 @@ function sendIssueForm(form) {
     });
 }
 
-// Create form when script loaded
-// ==============================
+// Window resizing
+// ===============
 
-createIssueForm();
-
-// Handle window resizing
-// ======================
+var resizeTimer_issue_js;
 
 // It's skipped too frequently events to be more responsible.
-var resizeTimer_issueForm;
-window.addEventListener('resize', function(){
-	clearTimeout(resizeTimer_issueForm);
-	resizeTimer_issueForm = setTimeout(tweakIssueFormPos, 100);
-});
+function resizeHandler() {
+    clearTimeout(resizeTimer_issue_js);
+    resizeTimer_issue_js = setTimeout(tweakIssueFormPos, 100);
+}
 
 // Keyboard events
 // ===============
@@ -398,25 +381,33 @@ function isCmdKeyCode(keyCode) {
 }
 
 // Ctrl+Enter || Cmd+Enter
-function isCtrlEnter(evt, keyCode) {
-    return (evt.ctrlKey || cmdKey) && (keyCode == 0x0A || keyCode == 0x0D);
+function isCtrlEnter(event, keyCode) {
+    return (event.ctrlKey || cmdKey) && (keyCode == 0x0A || keyCode == 0x0D);
 }
 
-document.onkeydown = function(evt) {
-    evt = evt || window.event;
-    var keyCode = evt.keyCode || evt.which;
+function keyDownHandler(event) {
+    var keyCode = event.keyCode || event.which;
     if (isCmdKeyCode(keyCode)) {
         cmdKey = true;
     }
-    if (isCtrlEnter(evt, keyCode)) {
+    if (isCtrlEnter(event, keyCode)) {
         showIssueForm();
     }
-};
+}
 
-document.onkeyup = function(evt) {
-    evt = evt || window.event;
-    var keyCode = evt.keyCode || evt.which;
+function keyUpHandler(event) {
+    var keyCode = event.keyCode || event.which;
     if (isCmdKeyCode(keyCode)) {
         cmdKey = false;
     }
-};
+}
+
+// Main
+// ====
+
+if (isAllNeededSupported()) {
+    createIssueForm();
+    window.addEventListener('resize', resizeHandler, false);
+    document.addEventListener('keydown', keyDownHandler, false);
+    document.addEventListener('keyup', keyUpHandler, false);
+}
