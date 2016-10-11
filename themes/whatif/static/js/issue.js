@@ -1,8 +1,5 @@
 // TODO's:
-// * Ctrl+Enter to send the form and leave it on the screen
 // * replace <script/> with '', footnote with its number/id
-// * create form ahead and make it visible when needed with animation
-// * readable template for the form
 // * selection / context for images? What with images selected with the footnote just before?
 // * touchscreen?
 
@@ -106,9 +103,18 @@ function getSel() {
     return sel;
 }
 
+function isSelInsideIssueForm(sel) {
+    var form = document.body.querySelector('.issue_form');
+    if (form == null) {
+        return false;
+    }
+    return form.contains(sel.startContainer) ||
+        form.contains(sel.endContainer);
+}
+
 function getSelContext() {
     var sel = getSel();
-    if (sel == null) {
+    if (sel == null || isSelInsideIssueForm(sel)) {
         return null;
     }
     var context = getContextNode(sel.commonAncestorContainer,
@@ -133,6 +139,66 @@ function getEm() {
     return getPxSize(fontSizeStr);
 }
 
+function appendHTML(parent, html) {
+    var tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    var elem = tmp.firstElementChild;
+    parent.appendChild(elem);
+    return elem;
+}
+
+function createIssueForm() {
+    var formHTML = '<form class="issue_form">' +
+        '<h4>Сообщение об ошибке</h4>' +
+        '<p class="context"></p>' +
+        '<label>Комментарий:</label>' +
+        '<textarea rows="' + TEXTAREA_ROWS + '"></textarea>' +
+        '<input type="submit" value="Отправить">'
+        '</form>';
+    var form = appendHTML(document.body, formHTML);
+
+    // submit
+    form.addEventListener('submit', function(evt) {
+        evt = evt || window.event;
+        evt.preventDefault();
+        sendIssueForm(form);
+        return false;
+    }, false);
+    form.querySelector('textarea').onkeydown = function(evt) {
+        evt = evt || window.event;
+        var keyCode = evt.keyCode || evt.which;
+        if (isCtrlEnter(evt, keyCode)) {
+            evt.stopPropagation();
+            sendIssueForm(form);
+            return false;
+        }
+    };
+    // close on click outside
+    document.documentElement.addEventListener('click', dropIssueForm, false);
+    var content = document.body.querySelector('.content');
+    content.addEventListener('click', dropIssueForm, false);
+    form.addEventListener('click', function(evt) {
+        evt = evt || window.event;
+        evt.stopPropagation();
+        return false;
+    }, false);
+}
+
+function escapeTags(str) {
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;')
+        .replace(/</g, '&gt;');
+}
+
+function clearIssueForm(form) {
+    form.querySelector('.context').innerHTML = '';
+    form.querySelector('textarea').value = '';
+    var responseP = form.querySelector('.response');
+    if (responseP != null) {
+        form.removeChild(responseP);
+    }
+    toogleForm(form, true);
+}
+
 function showIssueForm() {
     dropIssueForm(null);
     var context = getSelContext();
@@ -143,42 +209,20 @@ function showIssueForm() {
     // all checks passed, so hold the context
     lastSelContext = context;
 
-    form = document.createElement('form');
-    form.setAttribute('class', 'issue_form');
-    title = document.createElement('h4');
-    title.innerHTML = 'Сообщение об ошибке';
-    form.appendChild(title);
-    contextP = document.createElement('p');
-    contextP.innerHTML =
-        context.before_far +
-        '<strong>' + context.before_near +
-        '|' + context.sel + '|' +
-        context.after_near + '</strong>' +
-        context.after_far;
-    form.appendChild(contextP)
-    document.body.appendChild(form);
-    label = document.createElement('label');
-    label.innerHTML = 'Комментарий:';
-    form.appendChild(label);
-    textarea = document.createElement('textarea');
-    textarea.setAttribute('rows', TEXTAREA_ROWS);
-    form.appendChild(textarea);
-    submit = document.createElement('input');
-    submit.setAttribute('type', 'submit');
-    submit.setAttribute('value', 'Отправить');
-    form.appendChild(submit);
-    form.addEventListener('submit', sendIssueForm, false);
+    var form = document.body.querySelector('.issue_form');
+    clearIssueForm(form);
+    form.querySelector('.context').innerHTML =
+        escapeTags(context.before_far) +
+        '<strong>' +
+        escapeTags(context.before_near) +
+        '|' +
+        escapeTags(context.sel) +
+        '|' +
+        escapeTags(context.after_near) +
+        '</strong>' +
+        escapeTags(context.after_far);
 
-    // close on click outside
-    stopPropagation = function(evt) {
-        evt = evt || window.event;
-        evt.stopPropagation();
-        return false;
-    };
-    document.documentElement.addEventListener('click', dropIssueForm, false);
-    var content = document.body.querySelector('.content');
-    content.addEventListener('click', dropIssueForm, false);
-    form.addEventListener('click', stopPropagation, false);
+    form.setAttribute('class', 'issue_form active'); // add 'active'
 
     // set initial position
     var em = getEm();
@@ -186,11 +230,12 @@ function showIssueForm() {
     var formH = form.clientHeight;
     form.style.left = (window.scrollX + r.left - 6.6*em) + 'px';
     form.style.top = (window.scrollY + r.top - formH - 1.2*em) + 'px';
+
     tweakIssueFormPos();
 }
 
 function tweakIssueFormPos() {
-    var form = document.body.querySelector('.issue_form');
+    var form = document.body.querySelector('.issue_form.active');
     if (form == null) {
         return;
     }
@@ -208,10 +253,8 @@ function tweakIssueFormPos() {
 }
 
 function dropIssueForm() {
-    var childs = document.body.querySelectorAll('.issue_form');
-    Array.prototype.forEach.call(childs, function(node){
-        document.body.removeChild(node);
-    });
+    var form = document.body.querySelector('.issue_form');
+    form.setAttribute('class', 'issue_form'); // remove 'active'
     return false;
 }
 
@@ -264,10 +307,7 @@ function getSlug() {
     return slug;
 }
 
-function sendIssueForm(evt) {
-    evt = evt || window.event;
-    evt.preventDefault();
-    var form = this;
+function sendIssueForm(form) {
     toogleForm(form, false);
     var responseP = form.querySelector('.response');
     if (responseP == null) {
@@ -310,8 +350,12 @@ function sendIssueForm(evt) {
         'success': success,
         'error': error,
     });
-    return false;
 }
+
+// Create form when script loaded
+// ==============================
+
+createIssueForm();
 
 // Handle window resizing
 // ======================
@@ -334,14 +378,18 @@ function isCmdKeyCode(keyCode) {
     return keyCode == 0xE0 || keyCode == 0x5B || keyCode == 0x5D;
 }
 
+// Ctrl+Enter || Cmd+Enter
+function isCtrlEnter(evt, keyCode) {
+    return (evt.ctrlKey || cmdKey) && (keyCode == 0x0A || keyCode == 0x0D);
+}
+
 document.onkeydown = function(evt) {
     evt = evt || window.event;
     var keyCode = evt.keyCode || evt.which;
     if (isCmdKeyCode(keyCode)) {
         cmdKey = true;
     }
-    // Ctrl+Enter || Cmd+Enter
-    if ((evt.ctrlKey || cmdKey) && keyCode == 0x0D) {
+    if (isCtrlEnter(evt, keyCode)) {
         showIssueForm();
     }
 };
