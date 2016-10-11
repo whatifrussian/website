@@ -230,8 +230,10 @@ function showIssueForm() {
     var formH = form.clientHeight;
     form.style.left = (window.scrollX + r.left - 6.6*em) + 'px';
     form.style.top = (window.scrollY + r.top - formH - 1.2*em) + 'px';
-
+    // and tweak it more left if needed
     tweakIssueFormPos();
+
+    form.querySelector('textarea').focus();
 }
 
 function tweakIssueFormPos() {
