@@ -1,7 +1,6 @@
 // TODO's:
 // * replace <script/> with '', footnote with its number/id
 // * selection / context for images? What with images selected with the footnote just before?
-// * touchscreen?
 
 // Utils
 // =====
@@ -154,8 +153,19 @@ function splitContext(sel, context) {
         'sel': selStr,
         'after_near': after_near,
         'after_far': after_far,
-        'rect': sel.getBoundingClientRect(),
+        // for recalculating selection position after resizing
+        // using .getBoundingClientRect()
+        'sel_range': sel,
     };
+}
+
+function isSelInsideForm(sel) {
+    var form = document.body.querySelector('.issue_form');
+    if (form == null) {
+        return false;
+    }
+    return form.contains(sel.startContainer) ||
+        form.contains(sel.endContainer);
 }
 
 function getSel() {
@@ -170,33 +180,28 @@ function getSel() {
         // the selection is zero or too big
         return null;
     }
-    return sel;
-}
-
-function isSelInsideIssueForm(sel) {
-    var form = document.body.querySelector('.issue_form');
-    if (form == null) {
-        return false;
+    if (isSelInsideForm(sel)) {
+        // the selection inside the issue form
+        return null;
     }
-    return form.contains(sel.startContainer) ||
-        form.contains(sel.endContainer);
+    return sel;
 }
 
 function getSelContext() {
     var sel = getSel();
-    if (sel == null || isSelInsideIssueForm(sel)) {
+    if (sel == null) {
         return null;
     }
-    var context = getContextNode(sel.commonAncestorContainer,
+    var contextNode = getContextNode(sel.commonAncestorContainer,
         CONTEXT_MIN_LENGTH + sel.toString().length);
-    return splitContext(sel, context);
+    return splitContext(sel, contextNode);
 }
 
 // Issue form
 // ==========
 
 var TEXTAREA_ROWS = 4;
-var FORM_RIGHT_AIRGAP = 30;
+var FORM_RIGHT_AIRGAP = 20;
 
 var lastSelContext = null;
 
@@ -240,18 +245,24 @@ function clearIssueForm(form) {
     if (responseP != null) {
         form.removeChild(responseP);
     }
-    toogleForm(form, true);
+    toogleFormFreeze(form, true);
 }
 
-function showIssueForm() {
+function saveSelContext(context) {
+    context = context || getSelContext();
+    if (context) {
+        lastSelContext = context;
+    }
+}
+
+function showIssueForm(useSavedContext) {
     dropIssueForm();
-    var context = getSelContext();
+    var context = useSavedContext ? lastSelContext : getSelContext();
     if (!context) {
         return;
     }
 
-    // all checks passed, so hold the context
-    lastSelContext = context;
+    saveSelContext(context);
 
     var form = document.body.querySelector('.issue_form');
     clearIssueForm(form);
@@ -267,44 +278,43 @@ function showIssueForm() {
         escapeTags(context.after_far);
 
     form.setAttribute('class', 'issue_form active'); // add 'active'
-
-    // set initial position
-    var em = getEm();
-    var r = context.rect;
-    var formH = form.clientHeight;
-    form.style.left = (window.scrollX + r.left - 6.6*em) + 'px';
-    form.style.top = (window.scrollY + r.top - formH - 1.2*em) + 'px';
-    // and tweak it more left if needed
-    tweakIssueFormPos();
-
+    setIssueFormPos();
     form.querySelector('textarea').focus();
 }
 
 // silently returns when the form is not exists or is not active
-function tweakIssueFormPos() {
+// as well as when last selection is not available
+function setIssueFormPos() {
     var form = document.body.querySelector('.issue_form.active');
-    if (form == null) {
+    if (form == null || lastSelContext == null) {
         return;
     }
+
+    var em = getEm();
+    var r = lastSelContext.sel_range.getBoundingClientRect();
     var windowW = window.innerWidth;
+
     if (windowW >= 1000) {
         var formW = form.clientWidth;
-        var formLeft = getPxSize(window.getComputedStyle(form).left);
-        var gap = windowW - (formLeft + formW + FORM_RIGHT_AIRGAP);
-        if (gap < 0) {
-            form.style.left = (formLeft + gap) + 'px';
-        }
+        var desiredLeft = window.scrollX + r.left - 6.6*em;
+        var gap = windowW - (desiredLeft + formW + FORM_RIGHT_AIRGAP);
+        form.style.left = (desiredLeft + (gap < 0 ? gap : 0)) + 'px';
     } else {
-        $(this).removeAttr('style'); // TODO: ???
+        form.removeAttribute('style');
     }
+
+    var formH = form.clientHeight;
+    form.style.top = (scrollY + r.top - formH - 1.2*em) + 'px';
 }
 
 function dropIssueForm() {
     var form = document.body.querySelector('.issue_form');
+    // prevent horizontal scrollbar from appears after window resizing
+    form.removeAttribute('style');
     form.setAttribute('class', 'issue_form'); // remove 'active'
 }
 
-function toogleForm(form, enable) {
+function toogleFormFreeze(form, enable) {
     [].slice.call(form.children).forEach(function(node) {
         var tag = node.nodeName.toLowerCase();
         if (tag == 'textarea' || tag  == 'input') {
@@ -314,7 +324,7 @@ function toogleForm(form, enable) {
 }
 
 function sendIssueForm(form) {
-    toogleForm(form, false);
+    toogleFormFreeze(form, false);
     var responseP = form.querySelector('.response');
     if (responseP == null) {
         responseP = document.createElement('p');
@@ -337,7 +347,7 @@ function sendIssueForm(form) {
         var a = responseP.querySelector('a');
         tweakMailToNewWindow(a, 'mailto:contact@chtoes.li',
             'chtoesli_feedback');
-        toogleForm(form, true);
+        toogleFormFreeze(form, true);
     };
     var textarea = form.querySelector('textarea');
     var json = {
@@ -366,7 +376,7 @@ var resizeTimer_issue_js;
 // It's skipped too frequently events to be more responsible.
 function resizeHandler() {
     clearTimeout(resizeTimer_issue_js);
-    resizeTimer_issue_js = setTimeout(tweakIssueFormPos, 100);
+    resizeTimer_issue_js = setTimeout(setIssueFormPos, 100);
 }
 
 // Keyboard events
@@ -391,7 +401,7 @@ function keyDownHandler(event) {
         cmdKey = true;
     }
     if (isCtrlEnter(event, keyCode)) {
-        showIssueForm();
+        showIssueForm(false);
     }
 }
 
@@ -402,6 +412,60 @@ function keyUpHandler(event) {
     }
 }
 
+// Touch events
+// ============
+
+var watchSelectionID;
+
+function watchSelection() {
+    saveSelContext();
+    clearInterval(watchSelectionID);
+    watchSelectionID = setInterval(function (){
+        var context = getSelContext();
+        if (context) {
+            saveSelContext(context);
+        } else {
+            unwatchSelection();
+            toogleHelperButton(false);
+        }
+    }, 200);
+}
+
+function unwatchSelection() {
+    clearInterval(watchSelectionID);
+}
+
+function createHelperButton()
+{
+    var buttonHTML = '<a href="#" class="issue_helper">Ошибка?</a>';
+    var button = appendHTML(document.body, buttonHTML);
+    button.addEventListener('click', function(event) {
+        // prevent default link behaviour
+        event.preventDefault();
+        // prevent closing of the form
+        event.stopPropagation();
+        toogleHelperButton(false);
+        showIssueForm(true);
+    }, false);
+}
+
+function toogleHelperButton(enable)
+{
+    var button = document.body.querySelector('.issue_helper');
+    var cls = 'issue_helper' + (enable ? ' active' : '');
+    button.setAttribute('class', cls);
+    if (enable) {
+        watchSelection();
+    } else {
+        unwatchSelection();
+    }
+}
+
+function touchHandler(event)
+{
+    toogleHelperButton(!!getSel());
+}
+
 // Main
 // ====
 
@@ -410,4 +474,25 @@ if (isAllNeededSupported()) {
     window.addEventListener('resize', resizeHandler, false);
     document.addEventListener('keydown', keyDownHandler, false);
     document.addEventListener('keyup', keyUpHandler, false);
+
+    // Test events:
+    // * http://quirksmode.org/m/tests/touch.html
+    // Sightings on touch events (Chrome on Android 4.4.4):
+    // * touchcancel fired up when a word selected using long tap, not touchend
+    // * touchmove are not generated when a selection changed
+    // As result of such sightings (un)watchSelection approach is used.
+    // TODO: on mobile
+    // * expanded footnote caused horizontal scroll to appear
+    createHelperButton();
+    document.addEventListener('touchstart', touchHandler, false);
+    document.addEventListener('touchend', touchHandler, false);
+    document.addEventListener('touchcancel', touchHandler, false);
+
+    // TODO: on desktop:
+    // * mouse down should cause selection watching, but button should be hidden,
+    //   because initially the selection is empty
+    // * selection can be changed from keyboard (resolved by (un)watchSelection)
+    // * hide helper button by Ctrl+Enter
+    document.addEventListener('mousedown', touchHandler, false);
+    document.addEventListener('mouseup', touchHandler, false);
 }
