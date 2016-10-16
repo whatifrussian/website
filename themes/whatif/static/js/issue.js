@@ -1,6 +1,32 @@
-// TODO's:
-// * replace <script/> with '', footnote with its number/id
-// * selection / context for images? What with images selected with the footnote just before?
+/* Known issues / areas for enhancaments
+ * =====================================
+ *
+ * Images
+ * ------
+ *
+ * There are few peculiarities with images:
+ *
+ * An image can be selected, but it has empty textual representation. So it’s
+ * not possible to select an image and report only it (the issue form will not
+ * shown). When an image selected with a text near it, the image will not shown
+ * in the report.
+ *
+ * Let the desktop layout to be on the screen. Let an image follows after a
+ * paragraph which ends with a footnote. It’s seems to be not possible (Desktop
+ * Firefox) to select the image w/o the start ellipsis symbol in some cases
+ * (true for sun-bug/^4, false for sun-bug/^6). When the selection contains
+ * such ellipsis the issue form appears on top of the non-visible footnote
+ * block.
+ *
+ * Prettify a context
+ * ------------------
+ *
+ * It would be nice to don’t show in a selection’s context elements not shown
+ * on the screen: <script/> tags, footnotes’ bodies.
+ *
+ * The related enhancement is give textual representation to images (see
+ * above).
+ */
 
 // Utils
 // =====
