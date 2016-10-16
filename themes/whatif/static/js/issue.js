@@ -485,12 +485,4 @@ if (isAllNeededSupported()) {
     document.addEventListener('touchstart', touchHandler, false);
     document.addEventListener('touchend', touchHandler, false);
     document.addEventListener('touchcancel', touchHandler, false);
-
-    // TODO: on desktop:
-    // * mouse down should cause selection watching, but button should be hidden,
-    //   because initially the selection is empty
-    // * selection can be changed from keyboard (resolved by (un)watchSelection)
-    // * hide helper button by Ctrl+Enter
-    document.addEventListener('mousedown', touchHandler, false);
-    document.addEventListener('mouseup', touchHandler, false);
 }
