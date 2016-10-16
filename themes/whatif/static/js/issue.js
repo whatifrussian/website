@@ -481,8 +481,6 @@ if (isAllNeededSupported()) {
     // * touchcancel fired up when a word selected using long tap, not touchend
     // * touchmove are not generated when a selection changed
     // As result of such sightings (un)watchSelection approach is used.
-    // TODO: on mobile
-    // * expanded footnote caused horizontal scroll to appear
     createHelperButton();
     document.addEventListener('touchstart', touchHandler, false);
     document.addEventListener('touchend', touchHandler, false);
