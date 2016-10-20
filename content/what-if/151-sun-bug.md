@@ -95,4 +95,3 @@ Image: https://chtoes.li/uploads/151-sun-bug/front.png
 [12]: https://ru.wikipedia.org/wiki/Излучение_Хокинга "Излучение Хокинга | Википедия"
 
 [13]: https://ru.wikipedia.org/wiki/Будущее_расширяющейся_Вселенной#.D0.AD.D1.80.D0.B0_.D1.87.D1.91.D1.80.D0.BD.D1.8B.D1.85_.D0.B4.D1.8B.D1.80 "Будущее расширяющейся Вселенной | Википедия"
-
