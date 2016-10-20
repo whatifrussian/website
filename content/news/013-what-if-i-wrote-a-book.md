@@ -8,16 +8,28 @@ Formulas: False
 
 > Запись в блоге xkcd от 12 марта 2014 года.
 
-Последнюю пару лет я отвечал на ваши научные вопросы в [What If](http://what-if.xkcd.com/).
+Последнюю пару лет я отвечал на ваши научные вопросы в [What If][1].
 
 Сегодня я с волнением объявляю: книга по *«Что если?»* выйдет!
 
 ![](/uploads/static/whatif_1_ru.png "Если учесть погрешность, то всё, что я могу сказать: число книг, которые я сегодня анонсирую, где-то между 0,6 и 1,8.")
 
-**«Что если?: Серьезные научные ответы на абсурдные гипотетические вопросы»** будет опубликована 2 сентября издательством Houghton Mifflin Harcourt. Начиная с сегодняшнего дня вы можете сделать предзаказ у вашего любимого поставщика: ([Barnes & Noble](http://www.barnesandnoble.com/w/what-if-serious-scientific-answers-to-absurd-hypothetical-questions-randall-munroe/1118864093?ean=9780544272996), [Amazon](http://www.amazon.com/What-If-Scientific-Hypothetical-Questions/dp/0544272994/ref=sr_1_1?s=books&ie=UTF8&qid=1394474740&sr=1-1&keywords=what+if%3F%2C+munroe), [Indie Bound](http://www.indiebound.org/book/9780544272996)). Есть также заграничные издания, включая [издание для Соединенного Королевства и стран Содружества](http://www.amazon.co.uk/What-If-Randall-Munroe/dp/1848549571/) и [немецкое издание](http://www.amazon.de/What-w%C3%A4re-wenn-wissenschaftliche-hypothetische/dp/3813506525/).
+**«Что если?: Серьезные научные ответы на абсурдные гипотетические вопросы»** будет опубликована 2 сентября издательством Houghton Mifflin Harcourt. Начиная с сегодняшнего дня вы можете сделать предзаказ у вашего любимого поставщика: ([Barnes & Noble][2], [Amazon][3], [Indie Bound][4]). Есть также заграничные издания, включая [издание для Соединенного Королевства и стран Содружества][5] и [немецкое издание][6].
 
 Пока я разбирал письма с вопросами для «Что если?» каждую неделю, я время от времени откладывал в сторону ясно сформулированные вопросы, на которые я хотел бы потратить больше времени, чем обычно. В книге представлены ответы на эти вопросы, а вместе с ними — исправленные и обновленные версии некоторых из моих любимых статей с сайта. (Я также включил туда личный список самых странных вопросов, которые мне задали.)
 
 ![](/uploads/static/whatif_2_ru.png "У издателя были кое-какие проблемы с моим предложением выпустить тираж из антиматерии.")
 
 Заказывайте сейчас и получите свой экземпляр, как только книга выйдет в свет!
+
+[1]: http://what-if.xkcd.com/
+
+[2]: http://www.barnesandnoble.com/w/what-if-serious-scientific-answers-to-absurd-hypothetical-questions-randall-munroe/1118864093?ean=9780544272996
+
+[3]: http://www.amazon.com/What-If-Scientific-Hypothetical-Questions/dp/0544272994/ref=sr_1_1?s=books&ie=UTF8&qid=1394474740&sr=1-1&keywords=what+if%3F%2C+munroe
+
+[4]: http://www.indiebound.org/book/9780544272996
+
+[5]: http://www.amazon.co.uk/What-If-Randall-Munroe/dp/1848549571/
+
+[6]: http://www.amazon.de/What-w%C3%A4re-wenn-wissenschaftliche-hypothetische/dp/3813506525/

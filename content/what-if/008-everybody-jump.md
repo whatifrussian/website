@@ -12,7 +12,7 @@ Description: Что произойдёт, если все люди на Земл
 >
 > — Томас Беннет (и многие другие)
 
-Это один из наиболее популярных вопросов, отправленных в этот блог. Он уже был ранее освещён блогами [ScienceBlogs](http://scienceblogs.com/dotphysics/2010/08/26/what-if-everyone-jumped/) и [Straight Dope](http://www.straightdope.com/columns/read/142/if-all-chinese-jumped-at-once-would-cataclysm-result). Они достаточно хорошо осветили кинетические эффекты. Тем не менее они рассказали не всё.
+Это один из наиболее популярных вопросов, отправленных в этот блог. Он уже был ранее освещён блогами [ScienceBlogs][1] и [Straight Dope][2]. Они достаточно хорошо осветили кинетические эффекты. Тем не менее они рассказали не всё.
 
 Давайте рассмотрим ситуацию полнее.
 
@@ -71,3 +71,7 @@ Description: Что произойдёт, если все люди на Земл
 ![](/uploads/008-everybody-jump/everybody_jump_earth_ru.png "Вы сделали это, Брандон.")
 
 [^1]: Легкорельсовый транспорт\ — что-то вроде трамвая, но быстрее.
+
+[1]: http://scienceblogs.com/dotphysics/2010/08/26/what-if-everyone-jumped/
+
+[2]: http://www.straightdope.com/columns/read/142/if-all-chinese-jumped-at-once-would-cataclysm-result

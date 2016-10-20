@@ -25,4 +25,12 @@ Description: А теперь мы ещё и xkcd переводим!
 
 Старые (пропущенные, не опубликованые ранее) переводы мы будем публиковать в другие дни недели.
 
-Информацию о новых выпусках теперь можно получать не только из [RSS](http://xkcd.ru/feeds/xkcd/) и [LiveJournal](http://ru-xkcd.livejournal.com/), но и из [ВКонтакте](http://vk.com/xkcdrussian) и [Twitter](https://twitter.com/xkcdrussian).
+Информацию о новых выпусках теперь можно получать не только из [RSS][1] и [LiveJournal][2], но и из [ВКонтакте][3] и [Twitter][4].
+
+[1]: http://xkcd.ru/feeds/xkcd/
+
+[2]: http://ru-xkcd.livejournal.com/
+
+[3]: http://vk.com/xkcdrussian
+
+[4]: https://twitter.com/xkcdrussian

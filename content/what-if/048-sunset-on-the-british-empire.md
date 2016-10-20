@@ -32,7 +32,7 @@ Description: Когда (если вообще когда-нибудь) солн
 
 ![](/uploads/048-sunset-on-the-british-empire/empire_map_ru.png "Карта, показывающая занимаемую территорию в 386/10000 от общей площади Земли.")
 
-_(Много ставших независимыми британских колоний вступили в [Содружество наций](http://en.wikipedia.org/wiki/Commonwealth_of_Nations). У некоторых из них, например, у Канады и Австралии, королева Елизавета является официальным монархом. Однако, это только разные страны, у которых одна королева; они не являются частью империи.)_
+_(Много ставших независимыми британских колоний вступили в [Содружество наций][1]. У некоторых из них, например, у Канады и Австралии, королева Елизавета является официальным монархом. Однако, это только разные страны, у которых одна королева; они не являются частью империи.)_
 
 Солнце не заходит над всеми четырнадцатью британскими территориями одновременно (или даже над тринадцатью, если не считать антарктических территорий Британии). Однако, если Объединенное Королевство потеряет одну крошечную территорию, то может произойти первый полный закат в истории империи за последние два века.
 
@@ -56,9 +56,23 @@ _(Много ставших независимыми британских кол
 
 ![](/uploads/048-sunset-on-the-british-empire/empire_eclipse_ru.png "Стены Букингемского дворца выложены коробками с надписью «В случае опасности разбить стекло». Внутри каждой коробки\ — чашка чая.")
 
-[^1]: [Видео комика Eddie Izzard\ — «У вас есть флаг?»](http://www.youtube.com/watch?v=uEx5G-GOS1k).
-[^2]: [Интерактивная карта британских территорий](http://www.bbc.co.uk/radio4/history/empire/map/).
-[^3]: [Официальный отчет о заморских территориях из The Telegraph, переданный им WikiLeaks](http://www.telegraph.co.uk/news/wikileaks-files/london-wikileaks/8305236/A-GUIDE-TO-THE-BRITISH-OVERSEAS-TERRITORIES.html).
-[^4]: [Проблемы в раю](http://www.vanityfair.com/culture/features/2008/01/pitcairn200801).
-[^5]: [Репортаж о педофилии на островах Питкэрн](http://www.npr.org/templates/story/story.php?storyId=103569364).
-[^6]: [Калькулятор затмений NASA](http://eclipse.gsfc.nasa.gov/JSEX/JSEX-index.html).
+[^1]: [Видео комика Eddie Izzard\ — «У вас есть флаг?»][2].
+[^2]: [Интерактивная карта британских территорий][3].
+[^3]: [Официальный отчет о заморских территориях из The Telegraph, переданный им WikiLeaks][4].
+[^4]: [Проблемы в раю][5].
+[^5]: [Репортаж о педофилии на островах Питкэрн][6].
+[^6]: [Калькулятор затмений NASA][7].
+
+[1]: http://en.wikipedia.org/wiki/Commonwealth_of_Nations
+
+[2]: http://www.youtube.com/watch?v=uEx5G-GOS1k
+
+[3]: http://www.bbc.co.uk/radio4/history/empire/map/
+
+[4]: http://www.telegraph.co.uk/news/wikileaks-files/london-wikileaks/8305236/A-GUIDE-TO-THE-BRITISH-OVERSEAS-TERRITORIES.html
+
+[5]: http://www.vanityfair.com/culture/features/2008/01/pitcairn200801
+
+[6]: http://www.npr.org/templates/story/story.php?storyId=103569364
+
+[7]: http://eclipse.gsfc.nasa.gov/JSEX/JSEX-index.html
