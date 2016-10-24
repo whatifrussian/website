@@ -43,6 +43,13 @@
 
 /* Page menu *****************************/
 
+/* http://css-tricks.com/snippets/css/clear-fix/ */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .menu-page {
 	display: inline-block;
 	padding: 0;
@@ -680,6 +687,7 @@ figure.active figcaption, span.figure.active span.figcaption {
 		padding: 1em 10px;
 		width: 100%;
 		left: -10px;
+		margin-right: -10px;
 		border: 1px solid #7ab130;
 		margin-top: 5px;
 		background-color: #f0f8e6;
@@ -720,25 +728,27 @@ figure.active figcaption, span.figure.active span.figcaption {
 	}
 }
 
-/* Small */
-@media all and (max-width: 700px) {
-	footer img {
-		position: relative;
-		float: right;
-		margin-top: -45px;
-		z-index: 1000;
-		max-width: 100px;
-		margin-bottom: 10px;
-	}
-}
-
 footer img {
 	position: relative;
 	float: right;
-	margin-top: -90px;
-	z-index: 99;
 	max-width: 100px;
 	margin-bottom: 10px;
+}
+
+/* Small */
+@media all and (max-width: 700px) {
+	footer img {
+		margin-top: -45px;
+		z-index: 1000;
+	}
+}
+
+/* Non-small */
+@media all and (min-width: 701px) {
+	footer img {
+		margin-top: -90px;
+		z-index: 99;
+	}
 }
 
 .toc li {
@@ -799,4 +809,103 @@ footer img {
 }
 .usericon.bober b {
 	background-position: -463px -270px;
+}
+
+/* Issues */
+
+@media all and (min-width: 1000px) {
+	.issue_form {
+		width: 40em;
+	}
+}
+@media all and (max-width: 999px) {
+	.issue_form {
+		left: 5px;
+		right: 5px;
+		margin: 0 auto;
+	}
+}
+
+.issue_form {
+	position: absolute;
+	padding: 7px;
+	font-size: 90%;
+	background-color: #fff;
+	word-wrap: break-word;
+	z-index: 150;
+	border: 2px solid #000;
+	overflow: auto;
+	overflow: visible;
+	font-family: Georgia, serif;
+
+	box-shadow: 0px 0px 0 0 rgba(0,0,0,0);
+	visibility: hidden;
+	opacity: 0;
+
+	/* don't occupy a space below footer */
+	top: 0;
+
+	transition: opacity 200ms;
+	-webkit-transition: opacity 200ms;
+}
+
+.issue_form.active {
+	box-shadow: 0.4em 0.4em 2px 0 rgba(0,0,0,0.2);
+	visibility: visible;
+	opacity: 1;
+}
+
+.issue_form > label, .issue_form > input, .issue_form > textarea {
+	display: block;
+	font: inherit;
+	color: inherit;
+}
+
+.issue_form textarea {
+	resize: none;
+	overflow: auto;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.issue_form input[disabled],
+.issue_form textarea[disabled] {
+	color: graytext;
+}
+
+.issue_form h4 {
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.issue_form p:last-child {
+	margin-bottom: 0;
+}
+
+.issue_helper {
+	display: block;
+	position: fixed;
+	bottom: 5px;
+	left: 5px;
+	z-index: 99999;
+
+	padding: 7px 4px;
+	background-color: #5319e7;
+	color: #fff;
+	border: 1px solid #000;
+	border-radius: 5px;
+
+	font-family: Georgia, serif;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 90%;
+
+	visibility: hidden;
+}
+
+.issue_helper.active {
+	visibility: visible;
 }

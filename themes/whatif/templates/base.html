@@ -33,7 +33,7 @@
     {% assets filters="cssmin", output="css/style.min.css", "css/normalize.css", "css/layout.css", "css/content.css", "css/credits.css" %}
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ ASSET_URL }}">
     {% endassets %}
-    {% assets filters="jsmin", output="js/packed.js", "js/jquery-2.1.0.min.js", "js/main.js" %}
+    {% assets filters="jsmin", output="js/packed.js", "js/jquery-2.1.0.min.js", "js/main.js", "js/issue.js" %}
     <script type="text/javascript" async src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
     {% endassets %}
 
@@ -129,7 +129,7 @@
             </a>
 
             <div class="header-title">
-                <span>Каждый четверг отвечаем на ваши гипотетические вопросы с точки зрения физики</span>
+                <span>Каждую неделю отвечаем на ваши гипотетические вопросы с точки зрения физики</span>
                 <b class="t1"></b><b class="t2"></b><b class="t3"></b>
             </div>
 
@@ -198,6 +198,7 @@
             В материалах сайта используются оригинальные тексты и изображения с сайта <a href="http://what-if.xkcd.com/">what-if.xkcd.com</a>.<br>
             Материалы сайта источника и этого сайта распространяются по лицензии <a href="http://creativecommons.org/licenses/by-nc/2.5/">Creative Commons Attribution-NonCommercial 2.5 License</a>. Также авторы этого сайта полностью солидарны с <a href="http://xkcd.com/license.html">комментариями к лицензии</a>.
         </p>
+        <p>Нашли опечатку? Чтобы сообщить нам, выделите текст ошибки и нажмите Ctrl+Enter (со смартфона&nbsp;— кнопку «Ошибка?»).</p>
         <p>Ах, да, <a href="{{ SITEURL }}/credits/">создатели этого сайта</a>.</p>
         <p style="opacity: 0.6">Дизайн — <a class="usericon beret" href="https://vk.com/13x666"><b></b>13x666</a></p>
     </footer>

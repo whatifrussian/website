@@ -146,6 +146,8 @@ nav {
 	padding-right: 22px;
 	font-family: Georgia, serif;
 	font-weight: normal;
+
+	box-sizing: content-box;
 }
 
 .menu-item.search input:hover,
