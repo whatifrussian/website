@@ -118,7 +118,7 @@ $(document).ready(function(){
 		return YouTubePlayer;
 	}
 
-	jQuery.fn.shake = function(times, distance, duration) {
+	$.fn.shake = function(times, distance, duration) {
 		this.each(function() {
 			$(this).css("position","relative");
 			for (var x = 1; x <= times; x++) {
