@@ -63,7 +63,7 @@
         {% endif %}
     {% elif page_name == "index" %}
         {# when used by index.html #}
-        {% set article_or_page = articles[0] %}
+        {% set article_or_page = what_if_articles[0] %}
         {% set add_canonical_rel = True %}
         {% set on_canonical_place = False %}
         {% set canonical_place = SITEURL %}
