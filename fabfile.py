@@ -37,7 +37,8 @@ def new(num, title=None, category="What If?", overwrite="no"):
     if title is None:
         import urllib2
         from bs4 import BeautifulSoup
-        title = BeautifulSoup(urllib2.urlopen("http://what-if.xkcd.com/{}/".format(num))).title.string
+        html = urllib2.urlopen("http://what-if.xkcd.com/{}/".format(num))
+        title = BeautifulSoup(html, "lxml").title.string
 
     slug = slugify(title)
 
