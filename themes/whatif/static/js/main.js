@@ -43,6 +43,8 @@ $(document).ready(function(){
 	// Will clear all dynamic styling when small display layout is on.
 	function move_wide_refbodies() {
 		$('.refbody_wide').each(function(){
+			$(this).removeAttr('style');
+
 			if ($(window).width() >= 1000) {
 				var elem_left = $(this).parent().offset().left +
 					parseInt($(this).css('left'));
@@ -54,8 +56,6 @@ $(document).ready(function(){
 						left: elem_left + gap
 					});
 				}
-			} else {
-				$(this).removeAttr('style');
 			}
 		});
 	}
