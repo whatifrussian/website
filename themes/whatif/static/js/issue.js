@@ -495,7 +495,15 @@ function touchHandler(event)
 // Main
 // ====
 
-if (isAllNeededSupported()) {
+var mainStarted = false;
+
+function main() {
+    if (mainStarted || !isAllNeededSupported()) {
+        return;
+    }
+
+    mainStarted = true;
+
     createIssueForm();
     window.addEventListener('resize', resizeHandler, false);
     document.addEventListener('keydown', keyDownHandler, false);
@@ -512,3 +520,8 @@ if (isAllNeededSupported()) {
     document.addEventListener('touchend', touchHandler, false);
     document.addEventListener('touchcancel', touchHandler, false);
 }
+
+// 'DOMContentLoaded' can be not fired at all (when a DOM content loaded
+// before the script), so 'load' fallback is necessary.
+document.addEventListener('DOMContentLoaded', main, false);
+window.addEventListener('load', main, false);
