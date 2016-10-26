@@ -34,7 +34,8 @@
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ ASSET_URL }}">
     {% endassets %}
     {% assets filters="jsmin", output="js/packed.js", "js/jquery-2.1.0.min.js", "js/main.js", "js/issue.js" %}
-    <script type="text/javascript" async src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+    {% set js_async = "" if ASSET_DEBUG|default(False) else "async" %}
+    <script type="text/javascript" {{ js_async }} src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
     {% endassets %}
 
     {% if article %}
