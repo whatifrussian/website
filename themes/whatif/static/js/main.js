@@ -1,25 +1,3 @@
-// Adjust position of the multiparagraph footnote to fit a viewport.
-// It designed for non-small layout and will clear all dynamic styling
-// when small display layout is on.
-function move_refbody_wide(){
-	$('.refbody_wide').each(function(){
-		if ($(window).width() >= 1000) {
-			var elem_left = $(this).parent().offset().left +
-				parseInt($(this).css('left'));
-			var elem_width = parseInt($(this).css('min-width')) + 30;
-			var gap = $(window).width() - (elem_left + elem_width);
-			if (gap < 0) {
-				$(this).offset({
-					top: $(this).offset().top,
-					left: elem_left + gap
-				});
-			}
-		} else {
-			$(this).removeAttr('style');
-		}
-	});
-}
-
 $(document).ready(function(){
 
 	// Modify MD-generated HTML
@@ -53,11 +31,43 @@ $(document).ready(function(){
 		}
 	});
 
-	// Footnotes & Links
+	// Links
 	//-------------------------------------------------------
 
-	move_refbody_wide();
 	$('.original+.page a').attr('target', '_blank');
+
+	// Footnotes
+	//-------------------------------------------------------
+
+	// Adjust position of all multiparagraph footnotes to fit a viewport.
+	// Will clear all dynamic styling when small display layout is on.
+	function move_wide_refbodies() {
+		$('.refbody_wide').each(function(){
+			if ($(window).width() >= 1000) {
+				var elem_left = $(this).parent().offset().left +
+					parseInt($(this).css('left'));
+				var elem_width = parseInt($(this).css('min-width')) + 30;
+				var gap = $(window).width() - (elem_left + elem_width);
+				if (gap < 0) {
+					$(this).offset({
+						top: $(this).offset().top,
+						left: elem_left + gap
+					});
+				}
+			} else {
+				$(this).removeAttr('style');
+			}
+		});
+	}
+
+	move_wide_refbodies();
+
+	// It's skipped too frequently events to be more responsible.
+	var resizeTimer;
+	$(window).on('resize', function(){
+		clearTimeout(resizeTimer);
+		resizeTimer = setTimeout(move_wide_refbodies, 100);
+	});
 
 	// YouTube links
 	//-------------------------------------------------------
@@ -250,11 +260,4 @@ $(document).ready(function(){
 		$(this).parent().toggleClass("active");
 	});
 
-});
-
-// http://stackoverflow.com/a/2969091
-var resizeTimer;
-$(window).resize(function() {
-	clearTimeout(resizeTimer);
-	resizeTimer = setTimeout(move_refbody_wide, 100);
 });
