@@ -28,6 +28,8 @@
  * above).
  */
 
+(function () { // module
+
 // Utils
 // =====
 
@@ -397,12 +399,12 @@ function sendIssueForm(form) {
 // Window resizing
 // ===============
 
-var resizeTimer_issue_js;
+var resizeTimer;
 
 // It's skipped too frequently events to be more responsible.
 function resizeHandler() {
-    clearTimeout(resizeTimer_issue_js);
-    resizeTimer_issue_js = setTimeout(setIssueFormPos, 100);
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(setIssueFormPos, 100);
 }
 
 // Keyboard events
@@ -525,3 +527,5 @@ function main() {
 // before the script), so 'load' fallback is necessary.
 document.addEventListener('DOMContentLoaded', main, false);
 window.addEventListener('load', main, false);
+
+}()); // module
