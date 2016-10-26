@@ -2,7 +2,6 @@
 
 
 from __future__ import unicode_literals
-import sys
 import re
 from markdown.extensions import Extension
 from markdown.treeprocessors import Treeprocessor
@@ -11,9 +10,7 @@ from markdown.extensions.footnotes import NBSP_PLACEHOLDER
 from .etree_utils import replace_element_inplace, create_etree, \
     remove_suffix, add_suffix
 from .md_utils import html_entity
-
-
-PY3 = sys.version_info > (3,)
+from .six_mini import string_types
 
 
 # Utility functions
@@ -28,7 +25,7 @@ NON_NUMBER_BODY_SUFFIX = [
 
 def non_number_footnote_add_suffix(elem):
     for s in NON_NUMBER_BODY_SUFFIX:
-        if isinstance(s, str if PY3 else basestring):
+        if isinstance(s, string_types):
             add_suffix(elem, s)
         elif isinstance(s, tuple) and len(s) == 2:
             etree.SubElement(elem, s[0]).text = s[1]
@@ -68,17 +65,17 @@ def tweak_footnote(place_to, ref_text, li, punctum, is_multipar,
         refbody.append(child)
 
     fn_tree = \
-    ['span', 'ref', [
-        ['nobr', '', [
-            ['sup', 'refnum', [
-                ['span', 'bracket', '['],
-                ['span', '', ref_text],
-                ['span', 'bracket', ']'],
-                ['b', '', '']]],
-            ['span', 'punctum', punctum] if punctum is not None else [],
-            ['span', 'ellipsis', '\u21b2']]],
-        refbody,
-        ['span', 'ellipsis', '\u21b3'] if has_text_after else []]]
+        ['span', 'ref', [
+            ['nobr', '', [
+                ['sup', 'refnum', [
+                    ['span', 'bracket', '['],
+                    ['span', '', ref_text],
+                    ['span', 'bracket', ']'],
+                    ['b', '', '']]],
+                ['span', 'punctum', punctum] if punctum is not None else [],
+                ['span', 'ellipsis', '\u21b2']]],
+            refbody,
+            ['span', 'ellipsis', '\u21b3'] if has_text_after else []]]
     replace_element_inplace(place_to, create_etree(fn_tree))
 
 

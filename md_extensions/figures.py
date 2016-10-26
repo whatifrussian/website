@@ -52,6 +52,7 @@ class FiguresTreeprocessor(Treeprocessor):
         # wrap images in an article
         wrap_imgs_into_figure(root)
 
+
 class FiguresExtension(Extension):
     def extendMarkdown(self, md, md_globals):
         md.treeprocessors['figures'] = FiguresTreeprocessor()

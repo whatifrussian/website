@@ -1,4 +1,3 @@
-import re
 from markdown.extensions import Extension
 from markdown.inlinepatterns import SimpleTagPattern
 

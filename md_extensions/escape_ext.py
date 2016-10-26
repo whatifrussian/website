@@ -19,10 +19,10 @@ class ReferenceTitlePreprocessor(TrivialPreprocessor):
     def run(self, lines):
         new_ref = {}
         for k, v in self.markdown.references.items():
-            if v[1]:
-                t = v[1]
-                new_title = self.compiled_re.sub(self.handleMatch, v[1])
-                new_ref[k] = (v[0], new_title)
+            url, title = v
+            if title:
+                new_title = self.compiled_re.sub(self.handleMatch, title)
+                new_ref[k] = (url, new_title)
             else:
                 new_ref[k] = v
         self.markdown.references = new_ref
@@ -47,12 +47,12 @@ class EscapeExtExtension(Extension):
         ]
 
         for parsers, cls, order in processors:
-            add = lambda name, re, repl: parsers.add(
-                name, cls(md, re, repl), order)
             cls_name = cls.__name__
             # odict.add() adds in reverse order when '>smth' used
             patterns_local = patterns
             if order.startswith('>'):
                 patterns_local = list(reversed(patterns))
             for prefix, re, repl in patterns_local:
-                add(prefix + cls_name, re, repl)
+                name = prefix + cls_name
+                inst = cls(md, re, repl)
+                parsers.add(name, inst, order)

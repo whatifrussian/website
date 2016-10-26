@@ -8,7 +8,9 @@ from .md_utils import TrivialTextPattern
 
 class MathJaxExtension(Extension):
     def extendMarkdown(self, md, md_globals):
+        def repl(match):
+            return ''.join(match.group('edge', 'body', 'edge'))
+
         MATHJAX_RE = r'(?<!\\)(?P<edge>\$\$?)(?P<body>.+?)(?P=edge)'
-        repl = lambda m: ''.join(m.group('edge', 'body', 'edge'))
         mathJaxPattern = TrivialTextPattern(md, MATHJAX_RE, repl)
         md.inlinePatterns.add('mathjax', mathJaxPattern, '<escape')

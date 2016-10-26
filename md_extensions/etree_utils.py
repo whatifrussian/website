@@ -1,9 +1,5 @@
-import sys
-import re
 from markdown.util import etree
-
-
-PY3 = sys.version_info > (3,)
+from .six_mini import string_types
 
 
 def replace_element(parent, old, new):
@@ -26,12 +22,10 @@ def replace_element_inplace(old, new):
 
 
 def create_etree(in_tree):
-    tag = lambda l: l[0]
-    cls = lambda l: l[1]
-    sub = lambda l: l[2]
     def set_class(elem, val):
         if val != '':
             elem.set('class', val)
+
     # `isinstance(x, etree.Element)` doesn't work well in Python 2
     def isElementInstance(x):
         elementType = type(etree.Element(None))
@@ -41,12 +35,12 @@ def create_etree(in_tree):
         return in_tree
     if in_tree == []:
         return None
-    elem = etree.Element(tag(in_tree))
-    set_class(elem, cls(in_tree))
-    subel = sub(in_tree)
+    tag, cls, subel = in_tree
+    elem = etree.Element(tag)
+    set_class(elem, cls)
     if isElementInstance(subel):
         elem.append(subel)
-    elif isinstance(subel, str if PY3 else basestring):
+    elif isinstance(subel, string_types):
         elem.text = subel
     elif isinstance(subel, list):
         for s in subel:
