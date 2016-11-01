@@ -106,6 +106,7 @@ from md_extensions.mathjax import MathJaxExtension
 from md_extensions.sub_super_script import SubSuperScriptExtension
 
 MD_EXTENSIONS = ([
+    'meta',
     'extra',
     'abbr',
     'footnotes',
