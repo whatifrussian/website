@@ -11,6 +11,7 @@ class MathJaxExtension(Extension):
         def repl(match):
             return ''.join(match.group('edge', 'body', 'edge'))
 
+        # exclude formulas from processing as a markdown
         MATHJAX_RE = r'(?<!\\)(?P<edge>\$\$?)(?P<body>.+?)(?P=edge)'
         mathJaxPattern = TrivialTextPattern(md, MATHJAX_RE, repl)
         md.inlinePatterns.add('mathjax', mathJaxPattern, '<escape')
