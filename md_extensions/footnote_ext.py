@@ -94,12 +94,12 @@ class FootnoteExtTreeprocessor(Treeprocessor):
 
         sups = root.findall('.//sup[@id]')
         for sup in sups:
-            fn = sup.find("a[@rel='footnote']")
+            fn = sup.find("a[@class='footnote-ref']")
             if fn is None:
                 continue
             # extract number and body
             id_ = fn.get('href')[1:]
-            ref_text = id_[len('fn:'):]
+            ref_text = id_[len('fn-'):]
             is_non_number = False
             if not ref_text.isdigit():
                 is_non_number = True
@@ -107,7 +107,7 @@ class FootnoteExtTreeprocessor(Treeprocessor):
             li = root.find("div[@class='footnote']/ol/li[@id='%s']" % id_)
             is_multipar = len(li.findall('p')) > 1
             # remove backreference
-            backref = li[-1].find("./a[@rev='footnote']")
+            backref = li[-1].find("./a[@class='footnote-backref']")
             if backref is not None:
                 li[-1].remove(backref)
             # modify footnote
