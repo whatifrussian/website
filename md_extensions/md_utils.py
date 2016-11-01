@@ -50,7 +50,7 @@ class TrivialTextPattern(Pattern):
 
 
 # Fake preprocessor to make an action when metadata will be available. It leans
-# on 'meta' extension. Inherit the class and redefine 'available' method.
+# on the 'meta' extension. Inherit the class and redefine 'available' method.
 class MetadataAction(Preprocessor):
     def run(self, lines):
         self.available(self.markdown.Meta)

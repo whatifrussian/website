@@ -104,6 +104,7 @@ from md_extensions.escape_ext import EscapeExtExtension
 from md_extensions.text_align import TextAlignExtension
 from md_extensions.mathjax import MathJaxExtension
 from md_extensions.sub_super_script import SubSuperScriptExtension
+from md_extensions.article_links import ArticleLinksExtension
 
 MD_EXTENSIONS = ([
     'meta',
@@ -117,4 +118,5 @@ MD_EXTENSIONS = ([
     TextAlignExtension(),
     MathJaxExtension(),
     SubSuperScriptExtension(),
+    ArticleLinksExtension(),
 ])
