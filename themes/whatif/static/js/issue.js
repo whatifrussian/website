@@ -428,8 +428,11 @@ function keyDownHandler(event) {
     if (isCmdKeyCode(keyCode)) {
         cmdKey = true;
     }
+
     if (isCtrlEnter(event, keyCode)) {
         showIssueForm(false);
+    } else if (keyCode == 0x1B) { // Esc
+        dropIssueForm();
     }
 }
 
