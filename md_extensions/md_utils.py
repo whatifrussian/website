@@ -47,3 +47,14 @@ class TrivialTextPattern(Pattern):
         if callable(self.repl):
             return self.store(self.repl(m))
         return self.store(self.repl)
+
+
+# Fake preprocessor to make an action when metadata will be available. It leans
+# on 'meta' extension. Inherit the class and redefine 'available' method.
+class MetadataAction(Preprocessor):
+    def run(self, lines):
+        self.available(self.markdown.Meta)
+        return lines
+
+    def available(self, meta):
+        pass
