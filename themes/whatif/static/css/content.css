@@ -397,7 +397,6 @@ img.illustration {
 	border-radius: 10px;
 	cursor: pointer;
 
-	background-color: #fff;
 	color: #7ab130;
 	border: 1px solid #7ab130;
 
@@ -530,7 +529,6 @@ figure.active figcaption, span.figure.active span.figcaption {
 		margin: 0;
 		padding: 1px 1px;
 		border: none;
-		border-radius: 2px;
 	}
 
 	.refbody {
