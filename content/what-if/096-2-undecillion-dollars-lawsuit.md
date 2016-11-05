@@ -12,7 +12,14 @@ Description: Что, если бы Au Bon Pain проиграли иск и бы
 >
 > — Кевин Андерхилл
 
-На сеть кафе-пекарен Au Bon Pain (и на несколько других организаций) [подали в суд][2]. Вот сколько денег требует истец:
+На сеть кафе-пекарен Au Bon Pain (и на несколько других организаций) [подали в суд][2][^a]. Вот сколько денег требует истец:
+
+[^a]:
+    &nbsp;
+
+    ![](/uploads/096-2-undecillion-dollars-lawsuit/prayer_ru.png "Страница 13.")
+
+    Тот самый [иск][a].
 
 ![](/uploads/096-2-undecillion-dollars-lawsuit/1ud_ru.png "(в натуральную величину)")
 
@@ -79,6 +86,8 @@ Description: Что, если бы Au Bon Pain проиграли иск и бы
 [1]: http://www.loweringthebar.net/2014/05/2-undecillion-dollar-demand.html
 
 [2]: http://www.loweringthebar.net/2014/05/2-undecillion-dollar-demand.html
+
+[a]: https://www.scribd.com/document/224615078/Anton-Purisima-s-lawsuit-against-numerous-individuals-for-2-undecillion-dollars
 
 [3]: http://en.wikipedia.org/wiki/The_Five_Ages_of_the_Universe#Stelliferous_Era
 
