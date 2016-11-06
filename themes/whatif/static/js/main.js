@@ -47,7 +47,6 @@ $(document).ready(function(){
 				var gap = $(window).width() - (elem_left + elem_width);
 				if (gap < 0) {
 					$(this).offset({
-						top: $(this).offset().top,
 						left: elem_left + gap
 					});
 				}
