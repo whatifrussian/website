@@ -9,3 +9,6 @@ webassets==0.12.0
 cssmin==0.2.0
 jsmin==2.2.1
 pelican-minify==0.9
+
+# The following packages are necessary only for CI.
+flake8==3.0.4
