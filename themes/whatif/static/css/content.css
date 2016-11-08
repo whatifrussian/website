@@ -363,6 +363,7 @@ img.illustration {
 	color: #7ab130;
 	border-radius: 2px;
 	padding: 0 2px;
+	margin: 0 -2px;
 	transition: background-color 200ms;
 	-webkit-transition: background-color 200ms;
 }
