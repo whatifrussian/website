@@ -14,7 +14,7 @@ Description: Оправдан ли мой страх перед скоровар
 
 В _худшем_ случае?
 
-![](/uploads/040-pressure-cooker/pressure_cooker_hmm_ru.png "Почему ты напеваешь “Ice ice baby”?")
+![](/uploads/040-pressure-cooker/pressure_cooker_hmm_ru.png "Почему ты напеваешь Ice Ice Baby?")
 
 Скороварки действительно опасны.
 

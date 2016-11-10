@@ -167,7 +167,7 @@ Google очень скрытен в отношении своей деятель
 
 ![](/uploads/063-googles-datacenters-on-punch-cards/google_watchers.png "Quis mulgere ipsos lac homines?")[^a]
 
-[^a]: Примерный перевод с латыни: «Кто доит молочников?» Намёк на изречение из предыдущего абзаца, являющееся устоявшимся переводом фразы “Quis custodiet ipsos custodes?”.
+[^a]: Примерный перевод с латыни: «Кто доит молочников?» Намёк на изречение из предыдущего абзаца, являющееся устоявшимся переводом фразы «Quis custodiet ipsos custodes?».
 
 По-видимому, Domino\'s[^b].
 

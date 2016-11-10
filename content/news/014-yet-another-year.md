@@ -1,4 +1,4 @@
-Title: Ещё один год “What If?”
+Title: Ещё один год «What If?»
 Slug: yet-another-year
 Category: Новости проекта
 Date: 2014-07-15 20:00
