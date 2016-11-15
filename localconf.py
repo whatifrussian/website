@@ -37,6 +37,7 @@ TRANSLATION_FEED_ATOM = None
 TAG_FEED_ATOM = None
 # Feeds options
 FEED_MAX_ITEMS = 5
+RSS_FEED_SUMMARY_ONLY = False
 
 # Save as URL
 ARTICLE_URL = '{slug}/'
