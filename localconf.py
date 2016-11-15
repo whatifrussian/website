@@ -25,10 +25,19 @@ MINIFY = {
     'remove_optional_attribute_quotes': True,
 }
 
-# Feed generation is usually not desired when developing
+# RSS feeds
 FEED_ALL_RSS = "feed/index.xml"
 CATEGORY_FEED_RSS = "feed/category/%s/index.xml"
-TAG_FEED_RSS = "feed/category/%s/index.xml"
+AUTHOR_FEED_RSS = None
+TRANSLATION_FEED_RSS = None
+TAG_FEED_RSS = None
+# Atom feeds
+FEED_ALL_ATOM = "feeds/all.atom.xml"
+CATEGORY_FEED_ATOM = "feeds/%s.atom.xml"
+AUTHOR_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
+TAG_FEED_ATOM = None
+# Feeds options
 FEED_MAX_ITEMS = 5
 
 # Save as URL
