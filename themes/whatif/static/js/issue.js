@@ -324,7 +324,7 @@ function setIssueFormPos() {
 
     if (windowW >= 1000) {
         var formW = form.clientWidth;
-        var desiredLeft = window.scrollX + r.left - 6.6*em;
+        var desiredLeft = window.pageXOffset + r.left - 6.6*em;
         var gap = windowW - (desiredLeft + formW + FORM_RIGHT_AIRGAP);
         form.style.left = (desiredLeft + (gap < 0 ? gap : 0)) + 'px';
     } else {
@@ -332,7 +332,7 @@ function setIssueFormPos() {
     }
 
     var formH = form.clientHeight;
-    form.style.top = (scrollY + r.top - formH - 1.2*em) + 'px';
+    form.style.top = (window.pageYOffset + r.top - formH - 1.2*em) + 'px';
 }
 
 function dropIssueForm() {
