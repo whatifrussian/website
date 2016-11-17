@@ -3,34 +3,6 @@ $(document).ready(function(){
 	// Modify MD-generated HTML
 	//=======================================================
 
-	// Figures
-	//-------------------------------------------------------
-
-	// Check for support intrinsic width in user's browser.
-	// It needed for enabling side by side images only when
-	// they can be correctly displayed in all cases.
-	// http://caniuse.com/#feat=intrinsic-width
-	// http://stackoverflow.com/a/3524592
-	function check_instrinsic_width(){
-		var res = false;
-		var elem = document.createElement('div');
-		var values = ['-webkit-min-content', '-moz-min-content',
-			'min-content'];
-		for (var i = 0; i < values.length; ++i) {
-			elem.style.width = '0px';
-			elem.style.width = values[i];
-			res = res || elem.style.width == values[i];
-		}
-		return res;
-	};
-	var have_intrinsic_width = check_instrinsic_width();
-
-	$('.figure_wide').each(function(){
-		if (have_intrinsic_width) {
-			$(this).addClass('figure_in_row');
-		}
-	});
-
 	// Footnotes
 	//-------------------------------------------------------
 
@@ -56,7 +28,7 @@ $(document).ready(function(){
 
 	move_wide_refbodies();
 
-	// It's skipped too frequently events to be more responsible.
+	// It skips too frequent events to be more responsible.
 	var resizeTimer;
 	$(window).on('resize', function(){
 		clearTimeout(resizeTimer);
@@ -65,6 +37,7 @@ $(document).ready(function(){
 
 	// YouTube links
 	//-------------------------------------------------------
+
 	var playerShown = false;
 	var videoLink = null;
 

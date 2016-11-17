@@ -602,21 +602,22 @@ figure.active figcaption, span.figure.active span.figcaption {
 		margin: 1em 0px;
 	}
 
+	/* 100% width when min-content don't supported guaranteed that images will
+	 * placed one under another despite 'display: inline-block'. */
 	figure.figure_wide figure {
-		margin: 0px 2px;
-	}
-
-	figure.figure_in_row figure {
 		display: inline-block;
 		vertical-align: top;
+		margin: 0px 2px;
+		width: 100%;
 		width: -webkit-min-content;
 		width: -moz-min-content;
 		width: min-content;
 	}
 
-	/* 'width: min-content' doesn't supported for responsive images. */
-	/* Assumed that images small enough for side-by-side displacement. */
-	figure.figure_in_row img.illustration {
+	/* 'width: min-content' doesn't supported for responsive images, so scaling
+	 * need to be disabled. We assume images that intended to be in row are
+	 * small enough for such displacement. */
+	figure.figure_wide img.illustration {
 		max-width: none;
 	}
 }
