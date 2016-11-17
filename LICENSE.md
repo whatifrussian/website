@@ -3,14 +3,14 @@
 The licenses for the repository content depend on its origin. Unless the directory itself contains a LICENSE stating otherwise the files are distributed under the following licenses:
 
 1. The [Pelican plugins][1] in `plugins/` — [GNU AGPLv3][2].
-2. The [JQuery][3] copy in `themes/whatif/static/js/jquery-2.1.0.min.js` — [MIT][4].
+2. The [Zepto][3] bundle in `themes/whatif/static/js/zepto-1.2.0.min.js` — [MIT][4].
 3. The [website][5] content in `content/` — [CC BY-NC 2.5][6].
 4. The website templates in `themes/what-if`, [Python-Markdown][8] extensions in `md_extensions/`, configuration files, and other repository content — [public domain][7] (see full text below).
 
 [1]: https://github.com/getpelican/pelican-plugins
 [2]: https://github.com/getpelican/pelican-plugins/blob/master/LICENSE
-[3]: https://jquery.com/
-[4]: https://jquery.org/license/
+[3]: http://zeptojs.com/
+[4]: https://github.com/madrobby/zepto/blob/master/MIT-LICENSE
 [5]: https://chtoes.li
 [6]: http://xkcd.com/license.html
 [7]: http://unlicense.org/
