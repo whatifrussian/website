@@ -224,6 +224,10 @@ p {
 .page p {
 	text-indent: 1.5em;
 }
+.page li > p {
+	text-indent: 0;
+	margin-bottom: 0;
+}
 .refbody > span.p {
 	display: block;
 	line-height: normal;
