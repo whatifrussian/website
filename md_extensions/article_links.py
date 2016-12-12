@@ -10,7 +10,8 @@ class ArticleLinksTreeprocessor(Treeprocessor):
             return None
         links = root.findall('.//a[@href]')
         for link in links:
-            link.set('target', '_blank')
+            if not link.get('href').startswith('#'):
+                link.set('target', '_blank')
 
 
 class ArticleLinksExtension(Extension):

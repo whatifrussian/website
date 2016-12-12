@@ -11,7 +11,7 @@ DEFAULT_LANG = 'ru'
 
 PLUGIN_PATHS = [ "plugins" ]
 PLUGINS = ["neighbors", "sitemap", 'assets', 'minify', 'gzip_cache',
-    'preserve_old_feed_items']
+    'preserve_old_feed_items', 'feed_alter_settings']
 THEME = "themes/whatif"
 PATH = 'content'
 OUTPUT_PATH = 'output'
@@ -131,3 +131,20 @@ MARKDOWN = {
     ],
     'output_format': 'html5',
 }
+
+# remove footnotes extension
+# remove footnotes_ext extension
+# add footnotes extension with UNIQUE_IDS=True
+def FEED_ALTER_SETTINGS(settings):
+    import six
+    from markdown.extensions.footnotes import FootnoteExtension
+
+    markdown_opts = settings['MARKDOWN']
+    for ext in list(markdown_opts['extensions']):
+        is_str = isinstance(ext, six.string_types)
+        if is_str and ext == 'markdown.extensions.footnotes':
+            markdown_opts['extensions'].remove(ext)
+        elif isinstance(ext, FootnoteExtExtension):
+            markdown_opts['extensions'].remove(ext)
+    # it's necessary to create instance to get unique_prefix being persistent
+    markdown_opts['extensions'].append(FootnoteExtension(UNIQUE_IDS=True))

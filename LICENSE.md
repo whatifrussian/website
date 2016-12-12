@@ -2,7 +2,8 @@
 
 The licenses for the repository content depend on its origin. Unless the directory itself contains a LICENSE stating otherwise the files are distributed under the following licenses:
 
-1. The [Pelican plugins][1] in `plugins/` — [GNU AGPLv3][2].
+1. The [Pelican plugins][1] in `plugins/` — [GNU AGPLv3][2], except the following:
+    * `preserve_old_feed_items` and `feed_alter_settings` plugins — [public domain][7] (see full text below).
 2. The [Zepto][3] bundle in `themes/whatif/static/js/zepto-1.2.0.min.js` — [MIT][4].
 3. The [website][5] content in `content/` — [CC BY-NC 2.5][6].
 4. The website templates in `themes/what-if`, [Python-Markdown][8] extensions in `md_extensions/`, configuration files, and other repository content — [public domain][7] (see full text below).
