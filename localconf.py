@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-# Currently not used, see below.
-#import logging
 
 AUTHOR = 'whatif'
 SITENAME = 'Что если?'
@@ -12,7 +10,8 @@ TIMEZONE = 'Europe/Moscow'
 DEFAULT_LANG = 'ru'
 
 PLUGIN_PATHS = [ "plugins" ]
-PLUGINS = ["neighbors", "sitemap", 'assets', 'minify', 'gzip_cache']
+PLUGINS = ["neighbors", "sitemap", 'assets', 'minify', 'gzip_cache',
+    'preserve_old_feed_items']
 THEME = "themes/whatif"
 PATH = 'content'
 OUTPUT_PATH = 'output'
@@ -39,6 +38,7 @@ TRANSLATION_FEED_ATOM = None
 TAG_FEED_ATOM = None
 # Feeds options
 FEED_MAX_ITEMS = 5
+RSS_FEED_SUMMARY_ONLY = False
 
 # Save as URL
 ARTICLE_URL = '{slug}/'
@@ -52,11 +52,10 @@ AUTHORS_SAVE_AS = ''
 ARCHIVES_SAVE_AS = ''
 CATEGORIES_SAVE_AS = ''
 
-# Currently that isn’t not working, see
-# https://github.com/getpelican/pelican/issues/1594
-#LOG_FILTER = [
-#    (logging.WARN, 'Empty alt attribute for image %s in %s')
-#]
+import logging
+LOG_FILTER = [
+    (logging.WARN, 'Empty alt attribute for image %s in %s')
+]
 
 TEMPLATE_PAGES = {
     'translations.html': 'translations/index.html',
@@ -115,17 +114,20 @@ from md_extensions.mathjax import MathJaxExtension
 from md_extensions.sub_super_script import SubSuperScriptExtension
 from md_extensions.article_links import ArticleLinksExtension
 
-MD_EXTENSIONS = ([
-    'meta',
-    'extra',
-    'abbr',
-    'footnotes',
-    QuestionExtension(),
-    FiguresExtension(),
-    FootnoteExtExtension(),
-    EscapeExtExtension(),
-    TextAlignExtension(),
-    MathJaxExtension(),
-    SubSuperScriptExtension(),
-    ArticleLinksExtension(),
-])
+MARKDOWN = {
+    'extensions': [
+        'markdown.extensions.meta',
+        'markdown.extensions.extra',
+        'markdown.extensions.abbr',
+        'markdown.extensions.footnotes',
+        QuestionExtension(),
+        FiguresExtension(),
+        FootnoteExtExtension(),
+        EscapeExtExtension(),
+        TextAlignExtension(),
+        MathJaxExtension(),
+        SubSuperScriptExtension(),
+        ArticleLinksExtension(),
+    ],
+    'output_format': 'html5',
+}
