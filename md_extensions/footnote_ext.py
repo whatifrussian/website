@@ -66,7 +66,7 @@ def tweak_footnote(place_to, ref_text, li, punctum, is_multipar,
 
     fn_tree = \
         ['span', 'ref', [
-            ['nobr', '', [
+            ['span', 'nobr', [
                 ['sup', 'refnum', [
                     ['span', 'bracket', '['],
                     ['span', '', ref_text],

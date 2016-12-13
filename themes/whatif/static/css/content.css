@@ -208,6 +208,10 @@ p {
 	text-align: center;
 }
 
+.nobr {
+	white-space: nowrap;
+}
+
 .page hr {
 	background-image: url("../img/border-h.png");
 	background-position: 50% -15px;
@@ -413,7 +417,7 @@ img.illustration {
 	background-color: rgba(141,199,63,0.3);
 	color: #7ab130;
 }
-span.active > nobr > .refnum {
+span.active > .nobr > .refnum {
 	background-color: #8dc73f;
 	color: #fff;
 }
@@ -537,7 +541,7 @@ figure.active figcaption, span.figure.active span.figcaption {
 		border: none;
 	}
 
-	.refnum:hover, span.active > nobr > .refnum {
+	.refnum:hover, span.active > .nobr > .refnum {
 		border-radius: 2px;
 	}
 
@@ -714,7 +718,7 @@ figure.active figcaption, span.figure.active span.figcaption {
 		background-color: #d7e9bf;
 	}
 
-	.active > nobr > .ellipsis,
+	.active > .nobr > .ellipsis,
 	.active > .ellipsis {
 		display: inline-block;
 		color: #aaa;
