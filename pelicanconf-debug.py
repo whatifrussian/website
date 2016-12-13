@@ -4,10 +4,10 @@ from __future__ import unicode_literals
 import os
 import sys
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-from localconf import *
+from localconf import *  # NOQA: F401, F402, F403
 
 SITEURL = 'http://localhost:8000'
 FEED_DOMAIN = SITEURL
 
 ASSET_DEBUG = True
-PLUGINS = [p for p in PLUGINS if p not in ('minify', 'gzip_cache')]
+PLUGINS = [p for p in PLUGINS if p not in ('minify', 'gzip_cache')]  # NOQA: F405

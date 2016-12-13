@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import logging
+import md_extensions
 
 AUTHOR = 'whatif'
 SITENAME = 'Что если?'
@@ -9,14 +11,13 @@ TIMEZONE = 'Europe/Moscow'
 
 DEFAULT_LANG = 'ru'
 
-PLUGIN_PATHS = [ "plugins" ]
-PLUGINS = ["neighbors", "sitemap", 'assets', 'minify', 'gzip_cache',
-    'preserve_old_feed_items', 'feed_alter_settings']
-THEME = "themes/whatif"
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['neighbors', 'sitemap', 'assets', 'minify', 'gzip_cache',
+           'preserve_old_feed_items', 'feed_alter_settings']
+THEME = 'themes/whatif'
 PATH = 'content'
 OUTPUT_PATH = 'output'
 DELETE_OUTPUT_DIRECTORY = True
-
 
 MINIFY = {
     'remove_comments': True,
@@ -25,13 +26,13 @@ MINIFY = {
 }
 
 # RSS feeds
-FEED_ALL_RSS = "feed/index.xml"
+FEED_ALL_RSS = 'feed/index.xml'
 CATEGORY_FEED_RSS = None
 AUTHOR_FEED_RSS = None
 TRANSLATION_FEED_RSS = None
 TAG_FEED_RSS = None
 # Atom feeds
-FEED_ALL_ATOM = "feeds/all.atom.xml"
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
@@ -52,7 +53,6 @@ AUTHORS_SAVE_AS = ''
 ARCHIVES_SAVE_AS = ''
 CATEGORIES_SAVE_AS = ''
 
-import logging
 LOG_FILTER = [
     (logging.WARN, 'Empty alt attribute for image %s in %s')
 ]
@@ -64,18 +64,20 @@ TEMPLATE_PAGES = {
 }
 
 SLUG_SUBSTITUTIONS = [
-    ("what if?", "what-if"),
-    ("novosti proekta", "news"),
-    ("prochee", "other"),
-    #("",""),
+    ('what if?', 'what-if'),
+    ('novosti proekta', 'news'),
+    ('prochee', 'other'),
+    # ('',''),
 ]
 
 DEFAULT_PAGINATION = False
 
 EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
-    'extra/googleb52597a81842d95f.html': {'path': 'googleb52597a81842d95f.html'},
-    'extra/yandex_7e403715421012c7.txt': {'path': 'yandex_7e403715421012c7.txt'},
+    'extra/googleb52597a81842d95f.html':
+        {'path': 'googleb52597a81842d95f.html'},
+    'extra/yandex_7e403715421012c7.txt':
+        {'path': 'yandex_7e403715421012c7.txt'},
     'extra/manifest.json': {'path': 'manifest.json'},
 }
 
@@ -88,7 +90,7 @@ STATIC_PATHS = [
 ]
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = False
+# RELATIVE_URLS = False
 READERS = {'html': None}
 
 SITEMAP = {
@@ -105,32 +107,24 @@ SITEMAP = {
     }
 }
 
-from md_extensions.question import QuestionExtension
-from md_extensions.figures import FiguresExtension
-from md_extensions.footnote_ext import FootnoteExtExtension
-from md_extensions.escape_ext import EscapeExtExtension
-from md_extensions.text_align import TextAlignExtension
-from md_extensions.mathjax import MathJaxExtension
-from md_extensions.sub_super_script import SubSuperScriptExtension
-from md_extensions.article_links import ArticleLinksExtension
-
 MARKDOWN = {
     'extensions': [
         'markdown.extensions.meta',
         'markdown.extensions.extra',
         'markdown.extensions.abbr',
         'markdown.extensions.footnotes',
-        QuestionExtension(),
-        FiguresExtension(),
-        FootnoteExtExtension(),
-        EscapeExtExtension(),
-        TextAlignExtension(),
-        MathJaxExtension(),
-        SubSuperScriptExtension(),
-        ArticleLinksExtension(),
+        md_extensions.QuestionExtension(),
+        md_extensions.FiguresExtension(),
+        md_extensions.FootnoteExtExtension(),
+        md_extensions.EscapeExtExtension(),
+        md_extensions.TextAlignExtension(),
+        md_extensions.MathJaxExtension(),
+        md_extensions.SubSuperScriptExtension(),
+        md_extensions.ArticleLinksExtension(),
     ],
     'output_format': 'html5',
 }
+
 
 # remove footnotes extension
 # remove footnotes_ext extension
@@ -144,7 +138,7 @@ def FEED_ALTER_SETTINGS(settings):
         is_str = isinstance(ext, six.string_types)
         if is_str and ext == 'markdown.extensions.footnotes':
             markdown_opts['extensions'].remove(ext)
-        elif isinstance(ext, FootnoteExtExtension):
+        elif isinstance(ext, md_extensions.FootnoteExtExtension):
             markdown_opts['extensions'].remove(ext)
     # it's necessary to create instance to get unique_prefix being persistent
     markdown_opts['extensions'].append(FootnoteExtension(UNIQUE_IDS=True))
