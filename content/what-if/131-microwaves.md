@@ -28,7 +28,7 @@ Image: https://chtoes.li/uploads/131-microwaves/front.png
 
 Начнем с того, что у микроволновых печей есть «холодные» и «горячие» зоны. Можете сами убедиться\ — положите в печь влажную термобумагу, [маршмэллоу][2], [шоколадку][3], а лучше всего\ — [пападам][4].
 
-[2]: http://earth-chronicles.ru/news/2014-02-12-59517 "Тайны микроволнового излучения"
+[2]: https://physicamechanica.wordpress.com/2013/12/04/speed-of-light-in-a-microwave/ "Измеряем скорость света в микроволновке (с маршмэллоу!) [англ.] | For Science!"
 [3]: http://bsrgin.ru/2013-07-30.4156/how-to-get-the-speed-of-light-chocolate "Как извлечь скорость света из шоколадки"
 [4]: http://www.evilmadscientist.com/2011/microwave-oven-diagnostics-with-indian-snack-food/ "Проверка микроволновой печи с помощью индийской закуски (англ.)"
 
