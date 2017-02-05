@@ -14,8 +14,8 @@ before_install:
 after_success:
     if [ "$TRAVIS_BRANCH" = master ] && [ "$TRAVIS_PULL_REQUEST" = false ] &&
             [ "TRAVIS_PYTHON_VERSION" = 3.5 ] ; then
-        eval "$(ssh-agent -s)"
-        chmod 600 $TRAVIS_BUILD_DIR/deploy_key
-        ssh-add $TRAVIS_BUILD_DIR/deploy_key
-        fab publish:ci
-    fi
+        eval "$(ssh-agent -s)";
+        chmod 600 $TRAVIS_BUILD_DIR/deploy_key;
+        ssh-add $TRAVIS_BUILD_DIR/deploy_key;
+        fab publish:ci;
+    fi;
