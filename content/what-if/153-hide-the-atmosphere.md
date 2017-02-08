@@ -6,7 +6,7 @@ Source: http://what-if.xkcd.com/153/
 SourceNum: 153
 SourceTitle: Hide the Atmosphere
 Formulas: False
-Description: 
+Description: Толщина земной атмосферы очень мала в сравнении с радиусом планеты. Насколько глубокую яму нужно вырыть, чтобы человечество задохнулось?
 Image: https://chtoes.li/uploads/153-hide-the-atmosphere/front.png
 
 > Толщина земной атмосферы очень мала в сравнении с радиусом планеты. Насколько глубокую яму нужно вырыть, чтобы человечество задохнулось?
