@@ -4,6 +4,9 @@ from fabric.api import env, local, puts
 import fabric.contrib.project as project
 import os
 
+import sys
+PY3 = sys.version_info > (3,)
+
 # Local path configuration (can be absolute or relative to fabfile)
 env.deploy_path = 'output'
 DEPLOY_PATH = env.deploy_path
@@ -35,9 +38,12 @@ def new(num, title=None, category='What If?', overwrite='no'):
     import datetime
 
     if title is None:
-        import urllib2
+        if PY3:
+            from urllib.request import urlopen
+        else:
+            from urllib2 import urlopen
         from bs4 import BeautifulSoup
-        html = urllib2.urlopen('http://what-if.xkcd.com/{}/'.format(num))
+        html = urlopen('http://what-if.xkcd.com/{}/'.format(num))
         title = BeautifulSoup(html, 'lxml').title.string
 
     slug = slugify(title)
@@ -85,7 +91,10 @@ def render(template, destination, **kwargs):
     text = template.render(**kwargs)
     with open(destination, 'w') as output:
         puts('Rendering to {}'.format(destination))
-        output.write(text.encode('utf-8'))
+        if PY3:
+            output.write(text)
+        else:
+            output.write(text.encode('utf-8'))
 
 
 def clean():
@@ -108,8 +117,6 @@ def regenerate(environment):
 
 
 def serve():
-    import sys
-    PY3 = sys.version_info > (3,)
     # Determine major version of python as the one executes this script now.
     if PY3:
         local('cd {deploy_path} && python3 -m http.server'.format(**env))

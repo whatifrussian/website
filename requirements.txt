@@ -12,3 +12,6 @@ pelican-minify==0.9
 
 # The following packages are necessary only for CI.
 flake8==3.0.4
+
+# fab new:xxx
+lxml
