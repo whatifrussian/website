@@ -9,9 +9,17 @@
             processEscapes: true
         },
         TeX: {
-          extensions: ["AMSmath.js", "AMSsymbols.js"]
+            extensions: ["AMSmath.js", "AMSsymbols.js"],
+            Macros: {
+                goodbreak: '\\mmlToken{mo}[linebreak="goodbreak"]{}'
+            }
         },
-        "SVG": { availableFonts: ["TeX"],  linebreaks: { automatic: true } }
+        "SVG": {
+            availableFonts: ["TeX"],
+            linebreaks: {
+                automatic: true
+            }
+        }
     });
 </script>
 <script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
