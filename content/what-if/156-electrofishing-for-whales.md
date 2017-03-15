@@ -37,7 +37,7 @@ Image: https://chtoes.li/uploads/156-electrofishing-for-whales/front.png
 
 Есть один момент: обычно на электрорыбалку ходят в пресные водоемы. Синие киты живут в океане[^5], а соленая вода проводит электричество намного лучше. Казалось бы, отличные новости, но это только все усложняет.
 
-[^5]: Это плохо для Меделайн, но киты будут счастливы.
+[^5]: Это плохо для Меделайн, но хорошо для китов.
 
 Для электрорыбалки лучше всего, когда проводимость воды и животного примерно одинакова. В соленой воде, которая хорошо проводит ток, бóльшая его часть пройдет мимо животного в воде, а не сквозь него. Следовательно, в океане нужна куда более мощная электроудочка. Наша простая эсктраполяция показывает, что потребуется мощность порядка гигаватта, а не 20\ мегаватт. Выражусь иначе\ — захватите с собой крупную атомную станцию.
 
@@ -71,7 +71,7 @@ Image: https://chtoes.li/uploads/156-electrofishing-for-whales/front.png
 
 [3]: http://news.nationalgeographic.com/news/2015/02/150217-irrawaddy-dolphins-myanmar-electro-fishing-mandalay/ "Незаконная электрорыбалка поставила под угрозу речных дельфинов в Мьянме (англ.) | National Geographic"
 
-[4]: https://nctc.fws.gov/courses/CSP/CSP2C01/resources/5-Power-Transfer-Theory-Standardization/2_Electrofishing,%20A%20Power%20Related%20Phenomenon.pdf "Определение кривых граничных значений мощности для получения эффекта (англ.)"
+[4]: https://nctc.fws.gov/courses/CSP/CSP2C01/resources/5-Power-Transfer-Theory-Standardization/2_Electrofishing,%20A%20Power%20Related%20Phenomenon.pdf "Кривые чувствительности граничных значений мощности — расшифровка (англ.)"
 
 [5]: http://electrofishing.net/2015/12/30/man-overboard/ "Человек за бортом! (англ.) | electrofishing.net"
 
