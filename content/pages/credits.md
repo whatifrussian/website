@@ -60,4 +60,5 @@ url: credits/
     <li><span class="usericon female"><b></b>ms_montag</span></li>
     <li><span class="usericon"><b></b>Irek</span></li>
     <li><span class="usericon"><b></b>bevalorous</span></li>
+    <li><a class="usericon" href="https://vk.com/tujeek"><b></b>tujeek</a></li>
 </ul>
