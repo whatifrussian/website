@@ -85,7 +85,7 @@ Description: Насколько детализированым получитс�
 
 [8]: http://www.dept.aoe.vt.edu/~cdhall/courses/aoe5984/bs.pdf
 
-[9]: http://www.onorbit.com/node/3850
+[9]: http://spaceref.com/onorbit/kh-9-hexagon-spy-satellite-makes-a-rare-public-outing-(photos-and-video).html
 
 [10]: http://ru.wikipedia.org/wiki/Пояс_Койпера
 
