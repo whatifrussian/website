@@ -229,6 +229,7 @@ function getSelContext() {
 // ==========
 
 var TEXTAREA_ROWS = 4;
+var FORM_TOP_AIRGAP = 20;
 var FORM_RIGHT_AIRGAP = 20;
 
 var lastSelContext = null;
@@ -325,14 +326,17 @@ function setIssueFormPos() {
     if (windowW >= 1000) {
         var formW = form.clientWidth;
         var desiredLeft = window.pageXOffset + r.left - 6.6*em;
-        var gap = windowW - (desiredLeft + formW + FORM_RIGHT_AIRGAP);
-        form.style.left = (desiredLeft + (gap < 0 ? gap : 0)) + 'px';
+        var rightGap = windowW - (desiredLeft + formW + FORM_RIGHT_AIRGAP);
+        form.style.left = (desiredLeft + (rightGap < 0 ? rightGap : 0)) + 'px';
     } else {
         form.removeAttribute('style');
     }
 
     var formH = form.clientHeight;
-    form.style.top = (window.pageYOffset + r.top - formH - 1.2*em) + 'px';
+    var desiredTopRelViewport = r.top - formH - 1.2*em;
+    if (desiredTopRelViewport < FORM_TOP_AIRGAP)
+        desiredTopRelViewport = FORM_TOP_AIRGAP;
+    form.style.top = (window.pageYOffset + desiredTopRelViewport) + 'px';
 }
 
 function dropIssueForm() {
