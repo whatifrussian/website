@@ -2,7 +2,6 @@ language: python
 addons:
   ssh_known_hosts: chtoes.li
 python:
-- '2.7'
 - '3.5'
 install:
 - pip install -r requirements.txt
@@ -10,6 +9,7 @@ script:
 - fab build:ci
 - flake8 md_extensions/*.py
 before_install:
-- openssl aes-256-cbc -K $encrypted_1695f9421a83_key -iv $encrypted_1695f9421a83_iv -in deploy_key.enc -out deploy_key -d -in deploy_key.enc -out deploy_key -d
+- openssl aes-256-cbc -K $encrypted_3829a9af3a1a_key -iv $encrypted_3829a9af3a1a_iv
+  -in ci.chtoes.li.enc -out deploy_key -d
 after_success:
 - bash deploy.sh
