@@ -56,7 +56,7 @@ url: credits/
     <li><a class="usericon milena" href="https://vk.com/plamenika"><b></b>Milena</a></li>
     <li><a class="usericon" href="http://vk.com/mirasaujan"><b></b>маке</a></li>
     <li><a class="usericon" href="http://vk.com/el_coon"><b></b>IMCOON</a></li>
-    <li><a class="usericon" href="http://yegorf1.ru"><b></b>yegorf1</a></li>
+    <li><a class="usericon" href="https://ygrt.ru"><b></b>YogurtTheHorse</a></li>
     <li><span class="usericon female"><b></b>ms_montag</span></li>
     <li><span class="usericon"><b></b>Irek</span></li>
     <li><span class="usericon"><b></b>bevalorous</span></li>
