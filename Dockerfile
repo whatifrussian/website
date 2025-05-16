@@ -1,0 +1,23 @@
+FROM python:3.5-slim AS builder
+
+WORKDIR /site
+ARG BUILD_MODE=prod
+ENV BUILD_MODE=${BUILD_MODE}
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    libxml2-dev \
+    libxslt1-dev \
+    zlib1g-dev \        
+    openssh-client \
+    && rm -rf /var/lib/apt/lists/*
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+RUN fab build:${BUILD_MODE}
+
+FROM alpine:latest AS final
+
+COPY --from=builder /site/output /output
+
+ENTRYPOINT ["sh", "-c", "cp -r /output/* /mnt && echo '✅ Copy done' || (echo '❌ Copy failed' && exit 1)"]

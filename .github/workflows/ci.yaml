@@ -1,0 +1,29 @@
+name: CI Build
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  build-ci:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Log in to GitHub Container Registry
+      uses: docker/login-action@v3
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Build and push CI Docker image
+      run: |
+        IMAGE=ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}
+        docker build --build-arg BUILD_MODE=ci -t $IMAGE:ci .
+        docker push $IMAGE:ci

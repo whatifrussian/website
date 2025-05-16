@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/whatifrussian/website.svg)](https://travis-ci.org/whatifrussian/website)
+![Release Status](https://github.com/whatifrussian/website/actions/workflows/release.yml/badge.svg)
 
 ## Useful links
 
