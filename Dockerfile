@@ -18,6 +18,10 @@ RUN fab build:${BUILD_MODE}
 
 FROM alpine:latest AS final
 
-COPY --from=builder /site/output /output
+RUN addgroup -g 33 -S www-data && adduser -u 33 -S www-data -G www-data
+
+COPY --from=builder --chown=33:33 /site/output /output
+
+RUN echo "Build date: $(date)" | tee -a /output/.build_info.txt
 
 ENTRYPOINT ["sh", "-c", "cp -r /output/* /mnt && echo '✅ Copy done' || (echo '❌ Copy failed' && exit 1)"]
