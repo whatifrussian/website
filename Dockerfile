@@ -18,8 +18,10 @@ RUN fab build:${BUILD_MODE}
 
 FROM alpine:latest AS final
 
-COPY --from=builder --chown=33:33 /site/output /output
+COPY --from=builder /site/output /output
 
-RUN echo "Build date: $(date)" | tee -a /output/.build_info.txt
+RUN echo "Build date: $(date)" | tee -a /output/build_info.txt
 
-ENTRYPOINT ["sh", "-c", "cp -r /output/* /mnt && echo '✅ Copy done' || (echo '❌ Copy failed' && exit 1)"]
+RUN apk add --no-cache rsync
+
+ENTRYPOINT ["sh", "-c", "rsync -av /output/ /mnt/what-if/ && echo 'Copied'"]
