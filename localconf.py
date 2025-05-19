@@ -12,7 +12,7 @@ TIMEZONE = 'Europe/Moscow'
 DEFAULT_LANG = 'ru'
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['neighbors', 'sitemap', 'assets', 'minify', 'gzip_cache',
+PLUGINS = ['neighbors', 'sitemap', 'assets', 'minify', 'block', 'gzip_cache',
            'preserve_old_feed_items', 'feed_alter_settings']
 THEME = 'themes/whatif'
 PATH = 'content'
