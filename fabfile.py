@@ -104,7 +104,7 @@ def clean():
 
 
 def build(environment):
-    local('pelican -s pelicanconf-{}.py'.format(environment))
+    local('pelican --debug -s pelicanconf-{}.py'.format(environment))
 
 
 def rebuild(environment):
