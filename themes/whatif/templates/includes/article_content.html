@@ -8,7 +8,11 @@
             <span class="original">Оригинал: <a href="{{ article.source }}" target="_blank">{{ article.sourcetitle }}<b></b></a></span>
         {% endif %}
         <div class="page">
+        {% if article.blocked_content_override %}
+            {{ article.blocked_content_override }}
+        {% else %}
             {{ article.content }}
+        {% endif %}
         </div>
         <div class="border-bottom"><hr></div>
             {% set article_link = SITEURL + "/" + article.url %}
