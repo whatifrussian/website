@@ -4,11 +4,17 @@ WORKDIR /site
 ARG BUILD_MODE=prod
 ENV BUILD_MODE=${BUILD_MODE}
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN printf '%s\n' \
+    'deb https://archive.debian.org/debian buster main' \
+    'deb https://archive.debian.org/debian-security buster/updates main' \
+    > /etc/apt/sources.list \
+    && printf 'Acquire::Check-Valid-Until "false";\n' > /etc/apt/apt.conf.d/99archive \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends \
     build-essential \
     libxml2-dev \
     libxslt1-dev \
-    zlib1g-dev \        
+    zlib1g-dev \
     openssh-client \
     && rm -rf /var/lib/apt/lists/*
 COPY requirements.txt .

@@ -3,3 +3,6 @@ output/
 cache/
 .*.sw[a-z]
 .DS_Store
+docker.log
+outputs/
+output
