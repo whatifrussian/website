@@ -67,7 +67,7 @@ Blocked_Content_Override: > В соответствии с частью 7 ста
 
 …специалисты из Центра исследования дикой природы в Денвере могут подсобить.
 
-[1]: http://opensample.info/effect-of-electrofishing-pulse-shape-and-electrofishing-induced-spinal-injury-on-long-term-growth-and-survival-of-wild-rainbow-trout "Влияние профиля импульса при электрорыбалке и связанных с ней повреждений спинного мозга на рост и выживание дикой радужной форели в долгосрочной перспективе (англ.) | Open science"
+[1]: https://academic.oup.com/najfm/article-abstract/16/3/560/7882352 "Влияние профиля импульса при электрорыбалке и связанных с ней повреждений спинного мозга на рост и выживание дикой радужной форели в долгосрочной перспективе (англ.) | North American Journal of Fisheries Management"
 
 [2]: http://electrofishing.net/2016/01/23/535/ "Размер имеет значение (англ.) | electrofishing.net"
 
