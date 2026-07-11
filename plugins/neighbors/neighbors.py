@@ -11,7 +11,9 @@ from pelican import signals
 def iter3(seq):
     it = iter(seq)
     nxt = None
-    cur = next(it)
+    cur = next(it, None)
+    if cur is None:
+        return
     for prv in it:
         yield nxt, cur, prv
         nxt, cur = cur, prv

@@ -13,7 +13,7 @@ DEFAULT_LANG = 'ru'
 
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['neighbors', 'sitemap', 'assets', 'minify',
-            'block', 'gzip_cache', 'preserve_old_feed_items',
+            'block', 'feed_compat', 'gzip_cache', 'preserve_old_feed_items',
             'feed_alter_settings']
 THEME = 'themes/whatif'
 PATH = 'content'
@@ -142,4 +142,5 @@ def FEED_ALTER_SETTINGS(settings):
         elif isinstance(ext, md_extensions.FootnoteExtExtension):
             markdown_opts['extensions'].remove(ext)
     # it's necessary to create instance to get unique_prefix being persistent
-    markdown_opts['extensions'].append(FootnoteExtension(UNIQUE_IDS=True))
+    markdown_opts['extensions'].append(
+        FootnoteExtension(UNIQUE_IDS=True, SEPARATOR='-'))

@@ -1,6 +1,6 @@
 from markdown.extensions import Extension
 from markdown.treeprocessors import Treeprocessor
-from markdown.util import etree
+from xml.etree import ElementTree as etree
 from .etree_utils import replace_element
 
 
@@ -54,5 +54,5 @@ class FiguresTreeprocessor(Treeprocessor):
 
 
 class FiguresExtension(Extension):
-    def extendMarkdown(self, md, md_globals):
-        md.treeprocessors['figures'] = FiguresTreeprocessor()
+    def extendMarkdown(self, md):
+        md.treeprocessors.register(FiguresTreeprocessor(md), 'figures', 0)

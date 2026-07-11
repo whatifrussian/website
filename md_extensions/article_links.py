@@ -5,7 +5,7 @@ from markdown.treeprocessors import Treeprocessor
 # Lean on the 'meta' extension.
 class ArticleLinksTreeprocessor(Treeprocessor):
     def run(self, root):
-        meta = self.markdown.Meta
+        meta = self.md.Meta
         if 'category' not in meta or meta['category'] != ['What If?']:
             return None
         links = root.findall('.//a[@href]')
@@ -15,5 +15,6 @@ class ArticleLinksTreeprocessor(Treeprocessor):
 
 
 class ArticleLinksExtension(Extension):
-    def extendMarkdown(self, md, md_globals):
-        md.treeprocessors['article_links'] = ArticleLinksTreeprocessor(md)
+    def extendMarkdown(self, md):
+        md.treeprocessors.register(
+            ArticleLinksTreeprocessor(md), 'article_links', 0)

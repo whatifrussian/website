@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 import re
 from markdown.extensions import Extension
 from markdown.treeprocessors import Treeprocessor
-from markdown.util import etree
+from xml.etree import ElementTree as etree
 from markdown.extensions.footnotes import NBSP_PLACEHOLDER
 from .etree_utils import replace_element_inplace, create_etree, \
     remove_suffix, add_suffix
@@ -111,7 +111,7 @@ class FootnoteExtTreeprocessor(Treeprocessor):
             if backref is not None:
                 li[-1].remove(backref)
             # modify footnote
-            punctum = None
+            punctum = ''
             siblings = list(get_sup_parent(root, sup.get('id')))
             has_text_after = siblings.index(sup) < len(siblings) - 1
             if sup.tail is not None:
@@ -130,5 +130,6 @@ class FootnoteExtTreeprocessor(Treeprocessor):
 
 
 class FootnoteExtExtension(Extension):
-    def extendMarkdown(self, md, md_globals):
-        md.treeprocessors['footnote_ext'] = FootnoteExtTreeprocessor()
+    def extendMarkdown(self, md):
+        md.treeprocessors.register(
+            FootnoteExtTreeprocessor(md), 'footnote_ext', 0)

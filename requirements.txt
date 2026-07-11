@@ -1,17 +1,7 @@
-Fabric3==1.12.post1
-pelican==3.7.1
-Markdown==2.6.7
-beautifulsoup4==4.4.1
-pycrypto==2.6.1
-webassets==0.12.1
-
-# The following packages aren't necessary for `fab build:debug` target.
+pelican==4.12.0
+Markdown==3.10.2
+webassets==3.0.0
 cssmin==0.2.0
-jsmin==2.2.1
-pelican-minify==0.9
-
-# The following packages are necessary only for CI.
-flake8==3.0.4
-
-# fab new:xxx
-lxml
+jsmin==3.0.1
+htmlmin2==0.1.13
+pytz==2026.2

@@ -37,5 +37,5 @@ class TextAlignTreeprocessor(Treeprocessor):
 
 
 class TextAlignExtension(Extension):
-    def extendMarkdown(self, md, md_globals):
-        md.treeprocessors['text_align'] = TextAlignTreeprocessor()
+    def extendMarkdown(self, md):
+        md.treeprocessors.register(TextAlignTreeprocessor(md), 'text_align', 0)

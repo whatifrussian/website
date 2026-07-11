@@ -1,0 +1,1 @@
+from .minify import register
