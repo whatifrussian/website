@@ -75,7 +75,7 @@ Image: https://chtoes.li/uploads/137-new-horizons/front.png
 
 [6]: https://twitter.com/elakdawalla "Emily Lakdawalla (@elakdawalla) | Твиттер (англ.)"
 
-[7]: http://www.esa.int/var/esa/storage/images/esa_multimedia/images/2013/hypervelocity_impact/12635239-1-eng-GB/Hypervelocity_Impact.png "Столкновение на сверхскорости"
+[7]: https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2013/04/hypervelocity_impact/12635239-1-eng-GB/Hypervelocity_Impact_node_full_image_2.png "Столкновение на сверхскорости"
 
 [8]: https://www.youtube.com/watch?v=sWZcT-kr-_o "20 тонн взрывчатки"
 
