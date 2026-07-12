@@ -3,5 +3,5 @@ Markdown==3.10.2
 webassets==3.0.0
 cssmin==0.2.0
 jsmin==3.0.1
-htmlmin2==0.1.13
+pelican-minify==2.0.2
 pytz==2026.2

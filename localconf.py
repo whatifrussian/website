@@ -13,18 +13,12 @@ DEFAULT_LANG = 'ru'
 
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['neighbors', 'sitemap', 'assets', 'minify',
-            'block', 'feed_compat', 'gzip_cache', 'preserve_old_feed_items',
+            'block', 'gzip_cache',
             'feed_alter_settings']
 THEME = 'themes/whatif'
 PATH = 'content'
 OUTPUT_PATH = 'output'
 DELETE_OUTPUT_DIRECTORY = True
-
-MINIFY = {
-    'remove_comments': True,
-    'remove_empty_space': True,
-    'remove_optional_attribute_quotes': True,
-}
 
 # RSS feeds
 FEED_ALL_RSS = 'feed/index.xml'
@@ -64,11 +58,10 @@ TEMPLATE_PAGES = {
     'rewrite.html': 'rewrite.map'
 }
 
-SLUG_SUBSTITUTIONS = [
-    ('what if?', 'what-if'),
-    ('novosti proekta', 'news'),
-    ('prochee', 'other'),
-    # ('',''),
+SLUG_REGEX_SUBSTITUTIONS = [
+    (r'^what if\?$', 'what-if'),
+    (r'^novosti proekta$', 'news'),
+    (r'^prochee$', 'other'),
 ]
 
 DEFAULT_PAGINATION = False
@@ -111,7 +104,10 @@ SITEMAP = {
 MARKDOWN = {
     'extensions': [
         'markdown.extensions.meta',
-        'markdown.extensions.extra',
+        'markdown.extensions.fenced_code',
+        'markdown.extensions.attr_list',
+        'markdown.extensions.def_list',
+        'markdown.extensions.tables',
         'markdown.extensions.abbr',
         'markdown.extensions.footnotes',
         md_extensions.QuestionExtension(),
