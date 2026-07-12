@@ -52,7 +52,9 @@ Image: https://chtoes.li/uploads/099-starlings/masks.png
 
 ![](/uploads/099-starlings/birdsun.png "Впрочем, спектр этой звезды выглядел бы очень странно.")
 
-…стали бы звездой.
+…стали бы звездой.[^a]
+
+[^a]: Игра слов: английское _starling_ («скворец») содержит _star_ («звезда»).
 
 [1]: http://www.youtube.com/watch?v=eakKfY5aHmY
 
