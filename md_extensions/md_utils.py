@@ -19,7 +19,7 @@ class TrivialPreprocessor(Preprocessor):
         self.repl = repl
 
     def store(self, x):
-        return self.markdown.htmlStash.store(x)
+        return self.md.htmlStash.store(x)
 
     def handleMatch(self, m):
         if callable(self.repl):
@@ -41,7 +41,7 @@ class TrivialTextPattern(Pattern):
         self.repl = repl
 
     def store(self, x):
-        return self.markdown.htmlStash.store(x)
+        return self.md.htmlStash.store(x)
 
     def handleMatch(self, m):
         if callable(self.repl):
@@ -53,7 +53,7 @@ class TrivialTextPattern(Pattern):
 # on the 'meta' extension. Inherit the class and redefine 'available' method.
 class MetadataAction(Preprocessor):
     def run(self, lines):
-        self.available(self.markdown.Meta)
+        self.available(self.md.Meta)
         return lines
 
     def available(self, meta):

@@ -51,10 +51,10 @@ def create_assets_env(generator):
         for name, args, kwargs in generator.settings['ASSET_BUNDLES']:
             generator.env.assets_environment.register(name, *args, **kwargs)
 
-    if 'ASSET_DEBUG' in generator.settings:
-        generator.env.assets_environment.debug = generator.settings['ASSET_DEBUG']
-    elif logging.getLevelName(logger.getEffectiveLevel()) == "DEBUG":
-        generator.env.assets_environment.debug = True
+    # The legacy build ran Pelican with --debug, which made Webassets emit
+    # individual source assets. Keep that output without enabling Pelican's
+    # global debug mode.
+    generator.env.assets_environment.debug = True
 
     for path in (generator.settings['THEME_STATIC_PATHS'] +
                  generator.settings.get('ASSET_SOURCE_PATHS', [])):

@@ -1,26 +1,13 @@
-FROM python:3.5-slim AS builder
+FROM python:3.13-slim AS builder
 
 WORKDIR /site
 ARG BUILD_MODE=prod
 ENV BUILD_MODE=${BUILD_MODE}
 
-RUN printf '%s\n' \
-    'deb https://archive.debian.org/debian buster main' \
-    'deb https://archive.debian.org/debian-security buster/updates main' \
-    > /etc/apt/sources.list \
-    && printf 'Acquire::Check-Valid-Until "false";\n' > /etc/apt/apt.conf.d/99archive \
-    && apt-get update \
-    && apt-get install -y --no-install-recommends \
-    build-essential \
-    libxml2-dev \
-    libxslt1-dev \
-    zlib1g-dev \
-    openssh-client \
-    && rm -rf /var/lib/apt/lists/*
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
-RUN fab build:${BUILD_MODE}
+RUN pelican -s pelicanconf-${BUILD_MODE}.py
 
 FROM alpine:latest AS final
 

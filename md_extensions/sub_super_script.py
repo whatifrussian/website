@@ -7,10 +7,12 @@ from markdown.inlinepatterns import SimpleTagPattern
 
 
 class SubSuperScriptExtension(Extension):
-    def extendMarkdown(self, md, md_globals):
+    def extendMarkdown(self, md):
         patterns = md.inlinePatterns
         # H_{2}O and E=mc^{2}
         SUBSCRIPT_RE = r'(_)\{([^}]+)\}'
         SUPERSCRIPT_RE = r'(\^)\{([^}]+)\}'
-        patterns['subscript'] = SimpleTagPattern(SUBSCRIPT_RE, 'sub')
-        patterns['superscript'] = SimpleTagPattern(SUPERSCRIPT_RE, 'sup')
+        patterns.register(SimpleTagPattern(SUBSCRIPT_RE, 'sub'),
+                          'subscript', 0)
+        patterns.register(SimpleTagPattern(SUPERSCRIPT_RE, 'sup'),
+                          'superscript', 0)

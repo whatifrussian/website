@@ -1,4 +1,4 @@
-from markdown.util import etree
+from xml.etree import ElementTree as etree
 from .six_mini import string_types
 
 
@@ -58,7 +58,7 @@ def remove_suffix(elem, suffix):
     else:
         text = elem[-1].tail
 
-    if text.endswith(suffix):
+    if text and text.endswith(suffix):
         text = text[:-len(suffix)]
         if len(elem) == 0:
             elem.text = text

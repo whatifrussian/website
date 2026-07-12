@@ -1,7 +1,7 @@
 import re
 from markdown.extensions import Extension
 from markdown.treeprocessors import Treeprocessor
-from markdown.util import etree
+from xml.etree import ElementTree as etree
 from markdown.blockprocessors import BlockQuoteProcessor
 
 
@@ -45,7 +45,7 @@ class QuestionTreeprocessor(Treeprocessor):
 
 
 class QuestionExtension(Extension):
-    def extendMarkdown(self, md, md_globals):
-        md.parser.blockprocessors.add(
-            'question', QuestionBlockProcessor(md.parser), '<quote')
-        md.treeprocessors['question'] = QuestionTreeprocessor()
+    def extendMarkdown(self, md):
+        md.parser.blockprocessors.register(
+            QuestionBlockProcessor(md.parser), 'question', 21)
+        md.treeprocessors.register(QuestionTreeprocessor(md), 'question', 0)

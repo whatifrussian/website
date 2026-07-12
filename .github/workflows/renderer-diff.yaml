@@ -1,0 +1,63 @@
+name: Compare rendering after code changes
+
+on:
+  pull_request:
+    paths-ignore:
+      - 'content/**'
+  workflow_dispatch:
+    inputs:
+      base_ref:
+        description: Git ref to compare against
+        required: true
+        default: master
+
+permissions:
+  contents: read
+
+jobs:
+  renderer-diff:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out base revision
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.base.sha || inputs.base_ref }}
+          path: base
+
+      - name: Check out branch revision
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          path: branch
+
+      - name: Build unminified base output
+        run: docker build --target builder --build-arg BUILD_MODE=debug -t website-base base
+
+      - name: Build unminified branch output
+        run: docker build --target builder --build-arg BUILD_MODE=debug -t website-branch branch
+
+      - name: Export generated sites
+        run: |
+          mkdir -p output/base output/branch
+          docker create --name website-base-export website-base
+          docker create --name website-branch-export website-branch
+          docker cp website-base-export:/site/output/. output/base/
+          docker cp website-branch-export:/site/output/. output/branch/
+
+      - name: Install HTML diff renderer
+        run: npm install --global diff2html-cli@5.1.2
+
+      - name: Generate browsable comparison
+        run: bash branch/.github/scripts/render-site-diff.sh output/base output/branch report
+
+      - name: Add comparison summary
+        run: cat report/summary.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload HTML and raw diff
+        uses: actions/upload-artifact@v7
+        with:
+          name: base-branch-renderer-diff
+          path: report/
+          if-no-files-found: error
+          retention-days: 30
+

@@ -4,8 +4,9 @@
 from __future__ import unicode_literals
 import re
 from markdown.extensions import Extension
+from markdown.postprocessors import Postprocessor
 from markdown.treeprocessors import Treeprocessor
-from markdown.util import etree
+from xml.etree import ElementTree as etree
 from markdown.extensions.footnotes import NBSP_PLACEHOLDER
 from .etree_utils import replace_element_inplace, create_etree, \
     remove_suffix, add_suffix
@@ -129,6 +130,78 @@ class FootnoteExtTreeprocessor(Treeprocessor):
             root.remove(footnotes_div)
 
 
+class ImageMapFootnotePostprocessor(Postprocessor):
+    """Restore inline footnotes attached to raw-HTML image maps.
+
+    ``FootnoteExtTreeprocessor`` normally decides whether to emit the closing
+    ``ellipsis`` marker by looking for elements after the original ``sup`` in
+    its parent. That works for Markdown elements, but not for a raw-HTML
+    ``map``. Python-Markdown removes raw HTML into ``htmlStash`` before tree
+    processors run and restores it later in its ``raw_html`` postprocessor.
+    Consequently, while ``FootnoteExtTreeprocessor`` is running, it sees the
+    footnote as the final child of a paragraph: the following map is not an
+    ElementTree sibling, ``has_text_after`` is false, and both the closing
+    arrow and the empty punctuation anchor are omitted. When raw HTML is
+    restored, Markdown 3 also places the map after ``</p>``. Markdown 2 kept
+    that map inside the paragraph, which is the DOM expected by the site's
+    inline-footnote CSS and JavaScript.
+
+    This cannot be corrected reliably in ``FootnoteExtTreeprocessor`` without
+    depending on Python-Markdown's private stash-placeholder format and moving
+    opaque placeholder text between ElementTree ``text``/``tail`` fields.
+    Such a workaround would be more fragile than waiting until raw HTML has
+    been restored. This postprocessor therefore runs after ``raw_html`` (its
+    priority is lower), matches an image and map through their standard
+    ``usemap``/``name`` relationship, and restores only the legacy relationship
+    needed by the footnote widget:
+
+    * the map is moved back inside the image paragraph;
+    * the empty ``punctum`` span is restored; and
+    * the closing ``ellipsis`` arrow is restored.
+
+    Ordinary footnotes and raw-HTML blocks without a matching image map are
+    returned unchanged.
+    """
+
+    def run(self, source):
+        search_from = 0
+        while True:
+            map_start = source.find('<map name="', search_from)
+            if map_start < 0:
+                return source
+            name_start = map_start + len('<map name="')
+            name_end = source.find('"', name_start)
+            name = source[name_start:name_end]
+            usemap = source.rfind('usemap="#{}"'.format(name), 0, map_start)
+            paragraph_end = source.rfind('</p>', usemap, map_start)
+            map_end = source.find('</map>', map_start)
+            if usemap < 0 or paragraph_end < 0 or map_end < 0:
+                search_from = name_end
+                continue
+
+            segment = source[usemap:paragraph_end]
+            segment = segment.replace(
+                '</sup><span class="ellipsis">',
+                '</sup><span class="punctum"></span>'
+                '<span class="ellipsis">',
+                1,
+            )
+            final_span = segment.rfind('</span>')
+            segment = (segment[:final_span] +
+                       '<span class="ellipsis">↳</span>' +
+                       segment[final_span:])
+            source = (
+                source[:usemap] + segment +
+                source[paragraph_end + len('</p>'):
+                       map_end + len('</map>')] +
+                '</p>' + source[map_end + len('</map>'):]
+            )
+            search_from = map_end + len('</map>')
+
+
 class FootnoteExtExtension(Extension):
-    def extendMarkdown(self, md, md_globals):
-        md.treeprocessors['footnote_ext'] = FootnoteExtTreeprocessor()
+    def extendMarkdown(self, md):
+        md.treeprocessors.register(
+            FootnoteExtTreeprocessor(md), 'footnote_ext', 0)
+        md.postprocessors.register(
+            ImageMapFootnotePostprocessor(md), 'image_map_footnotes', 0)
