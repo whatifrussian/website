@@ -15,6 +15,12 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = ['neighbors', 'sitemap', 'assets', 'minify',
             'block', 'gzip_cache',
             'feed_alter_settings']
+
+# JavaScript is bundled and minified by Webassets/jsmin. pelican-minify uses
+# minify-html for JavaScript too; it collapses line comments in standalone JS
+# files and can turn valid source into invalid one-line scripts.
+JS_MIN = False
+INLINE_JS_MIN = False
 THEME = 'themes/whatif'
 PATH = 'content'
 OUTPUT_PATH = 'output'
