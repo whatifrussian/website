@@ -1,9 +1,10 @@
 import re
 
 from markdown.extensions import Extension
+from markdown.postprocessors import Postprocessor
 from markdown.preprocessors import Preprocessor
 from markdown.treeprocessors import Treeprocessor
-from .md_utils import TrivialPreprocessor, TrivialTextPattern
+from .md_utils import TrivialPreprocessor, TrivialTextPattern, html_entity
 
 
 # Markdown extension
@@ -43,7 +44,9 @@ class QuotedTitlePreprocessor(Preprocessor):
             line = line.replace('] (/', '](/')
             line = line.replace(' " :', ' "&#32;:')
             if line.startswith('[^') and line.endswith(' '):
-                line += '&#32;'
+                # Protect the existing trailing space; do not add a second
+                # one. Markdown 3 otherwise trims it before parsing the note.
+                line = line[:-1] + '&#32;'
             if result and result[-1].endswith(']') and line.startswith('(/'):
                 result[-1] += line
                 continue
@@ -55,10 +58,27 @@ class ReferenceTitleTreeprocessor(Treeprocessor):
     def run(self, root):
         for elem in root.iter():
             for name, value in elem.attrib.items():
-                value = re.sub(r'(?<=\d)\\ (?=\d)', '\u2009', value)
-                value = value.replace(r'\ ', '\u00a0')
-                value = value.replace(r"\'", '\u02bc')
+                # Keep the legacy entity spelling, not merely the equivalent
+                # Unicode character. Besides making old/new output stable,
+                # &nbsp; makes the typographic intent visible in HTML diffs.
+                value = re.sub(
+                    r'(?<=\d)\\ (?=\d)', html_entity('&thinsp;'), value)
+                value = value.replace(r'\ ', html_entity('&nbsp;'))
+                value = value.replace(r"\'", html_entity('&#x2bc;'))
                 elem.set(name, value)
+
+
+class LegacyEntityPostprocessor(Postprocessor):
+    """Undo compatibility entities needed only while parsing Markdown.
+
+    Modern Markdown interprets apostrophe-delimited text inside an image title
+    differently from the old release. QuotedTitlePreprocessor protects those
+    apostrophes until parsing is complete; the old renderer emitted them as
+    literal characters, so restore that representation in the final fragment.
+    """
+
+    def run(self, text):
+        return text.replace('&#39;', "'").replace('&#32;', ' ')
 
 
 class EscapeExtExtension(Extension):
@@ -93,3 +113,5 @@ class EscapeExtExtension(Extension):
 
         md.treeprocessors.register(
             ReferenceTitleTreeprocessor(md), 'reference_titles', 1)
+        md.postprocessors.register(
+            LegacyEntityPostprocessor(md), 'legacy_entities', 0)
